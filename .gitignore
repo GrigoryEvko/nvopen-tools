@@ -1,0 +1,63 @@
+# Build artifacts
+*.o
+*.a
+*.so
+*.so.*
+*.out
+*.exe
+
+# Binaries
+fatbin_dump
+fatbin_create
+fatbin_unpack
+fatbin_filter
+fatbin_pack
+
+# Compressed files
+*.zst
+*.gz
+*.bz2
+*.xz
+
+# Editor files
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+*.bak
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+.cache/
+
+# Test files
+test_*
+*_test
+*.test
+
+# Core dumps
+core
+core.*
+vgcore.*
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Documentation build
+/docs/_build/
+*.pyc
+__pycache__/
