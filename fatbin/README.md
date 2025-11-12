@@ -120,16 +120,7 @@ Only type 0x02 and 0x10 entries are counted:
 
 CUBIN data is ZSTD compressed with magic 0xFD2FB528. Files are extracted as .cubin.zst to preserve exact compression.
 
-## SM Architectures
-
-| Code | Architecture | Hardware |
-|------|--------------|----------|
-| 75   | Turing       | RTX 20 series |
-| 80   | Ampere       | A100 |
-| 86   | Ampere       | RTX 30 series |
-| 89   | Lovelace     | RTX 40 series |
-| 90   | Hopper       | H100 |
-| 100  | Blackwell    | Next-gen |
+Neat detail - you can repack it with much zstd -19 or -22 conversion and get smaller size for free lol.
 
 ## Implementation
 
