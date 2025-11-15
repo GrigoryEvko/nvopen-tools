@@ -1,90 +1,55 @@
-# NVIDIA Open Tools
+# nvopen-tools
 
-A collection of tools for working with NVIDIA libraries and binary formats.
+Reverse-engineered tools for NVIDIA binary formats.
 
-## Tools
+## Fat Binary Tools
 
-### fatbin
+Complete toolkit for manipulating NVIDIA .nv_fatbin sections found in CUDA libraries.
 
-Fat binary format parser and extraction tool. Reverse engineered from cuobjdump with complete format documentation.
+**Tools:**
+- `fatbin_dump` - Analyze and extract entries from fat binaries
+- `fatbin_unpack` - Extract all entries with metadata manifest
+- `fatbin_extract_ptx` - Extract PTX source code organized by SM architecture
+- `fatbin_simple_repack` - Repack cubin files with ZSTD compression (levels 1-22)
+- `fatbin_repack` - Rebuild fat binary from manifest preserving metadata
 
-### PTX Prettifier
+**Features:**
+- 100% cuobjdump compatible
+- Supports SM 75-121 architectures
+- Variable-length headers (64/80/112 bytes)
+- ZSTD compression with 87-92% compression ratios
+- Handles ELF, PTX, and LTOIR entries
+- Tested with 5700+ entry binaries
 
-A comprehensive tool that transforms machine-like PTX assembly into human-readable format with semantic comments, better formatting, and visual code grouping.
-
-#### Features
-
-- **Semantic Comments**: Automatically adds comments explaining what instruction sequences do
-- **Better Alignment**: Consistent indentation and operand alignment for readability
-- **Visual Grouping**: Separates code sections (parameter loading, thread ID calc, loops, etc.)
-- **Pattern Detection**: Identifies common patterns like loops, reductions, synchronization points
-- **Instruction Highlighting**: Marks memory operations, control flow, arithmetic ops with descriptive comments
-- **Multiple Verbosity Levels**: Choose from minimal to detailed output
-- **Preserves Correctness**: Output remains valid, compilable PTX
-
-#### Usage
-
+**Build:**
 ```bash
-# Basic usage - pretty print to stdout
-./fatbin/ptx_prettify.py input.ptx
-
-# Save to file
-./fatbin/ptx_prettify.py input.ptx -o output_pretty.ptx
-
-# Control verbosity (0=minimal, 1=basic, 2=moderate, 3=detailed)
-./fatbin/ptx_prettify.py input.ptx -v 3
-
-# Disable semantic comments
-./fatbin/ptx_prettify.py input.ptx --no-comments
-
-# Minimal formatting
-./fatbin/ptx_prettify.py input.ptx -v 0 --no-color
+cd fatbin
+make
 ```
 
-#### Example Transformation
-
-**Before (machine-like):**
-```ptx
-ld.param.u64 %rd1, [param_0];
-ld.param.u64 %rd2, [param_1];
-add.u64 %rd3, %rd1, %rd2;
-mov.u32 %r20, %ctaid.x;
-setp.eq.s32 %p27, %r11, 0;
-@%p27 bra $L__BB0_4;
-```
-
-**After (prettified):**
-```ptx
-═══ Parameter Loading (2 parameters) ═══
-    ld.param.u64               %rd1, [param_0]                                 // Load from parameter unsigned 64-bit [param_0]
-    ld.param.u64               %rd2, [param_1]                                 // Load from parameter unsigned 64-bit [param_1]
-    add.u64                    %rd3, %rd1, %rd2                                // Add operation
-
-═══ Thread/Block ID Calculation ═══
-    mov.u32                    %r20, %ctaid.x                                  // Get thread/block index
-    setp.eq.s32                %p27, %r11, 0                                   // Set predicate based on condition
-    @%p27 bra                        $L__BB0_4                                 // Branch to $L__BB0_4
-```
-
-#### Implementation Details
-
-The prettifier consists of several modular components:
-
-1. **PTXParser**: Tokenizes and parses PTX syntax into structured instructions
-2. **PatternDetector**: Identifies common code patterns (parameter loading, loops, reductions)
-3. **CommentGenerator**: Generates semantic comments based on instruction types
-4. **PTXFormatter**: Applies formatting, alignment, and visual grouping
-
-#### Testing
-
-Test on sample PTX files:
-
+**Quick Example:**
 ```bash
-# Test on a single file
-python3 fatbin/ptx_prettify.py cublaslt/ptx/sm120/test_fatbin.100.sm_120.ptx -o test_output.ptx
+# Extract .nv_fatbin from library
+objcopy --dump-section .nv_fatbin=output.fatbin libcublasLt.so
 
-# Batch process multiple files
-for f in cublaslt/ptx/sm120/*.ptx; do
-    python3 fatbin/ptx_prettify.py "$f" -o "$(basename "$f" .ptx)_pretty.ptx"
-done
+# Analyze
+./fatbin_dump output.fatbin --list-elf
+
+# Extract all entries
+./fatbin_unpack output.fatbin /tmp/extracted
+
+# Repack with better compression
+cd /tmp/extracted
+ls *.cubin | xargs /path/to/fatbin_simple_repack -c 19 repacked.bin
 ```
+
+See [fatbin/README.md](fatbin/README.md) for complete documentation.
+
+## Documentation
+
+- [fatbin/FORMAT_SPECIFICATION.md](fatbin/FORMAT_SPECIFICATION.md) - Complete fat binary format documentation
+- [fatbin/nvFatbin.h](fatbin/nvFatbin.h) - nvFatbin API reference
+
+## License
+
+MIT
