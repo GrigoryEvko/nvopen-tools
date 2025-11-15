@@ -1,0 +1,34 @@
+# Compiled binaries
+fatbin_dump
+fatbin_unpack
+fatbin_extract_ptx
+fatbin_repack
+fatbin_simple_repack
+
+# Test files
+*.bin
+*.cubin
+*.ptx
+
+# Build artifacts
+*.o
+*.a
+*.so
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
