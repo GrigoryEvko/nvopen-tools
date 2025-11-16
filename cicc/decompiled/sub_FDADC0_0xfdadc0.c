@@ -1,0 +1,7 @@
+// Function: sub_FDADC0
+// Address: 0xfdadc0
+//
+__int64 __fastcall sub_FDADC0(__int64 a1, unsigned int a2)
+{
+  return *(_QWORD *)(*(_QWORD *)(a1 + 16) + 48LL * a2 + 16);
+}

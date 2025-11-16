@@ -1,0 +1,143 @@
+// Function: ctor_128
+// Address: 0x4ae630
+//
+int ctor_128()
+{
+  int v0; // eax
+  int v1; // eax
+  int v2; // eax
+  int v3; // eax
+
+  qword_4F99F80 = (__int64)&unk_49EED30;
+  v0 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4F99F8C &= 0xF000u;
+  qword_4F99FC8 = (__int64)&unk_4FA01C0;
+  qword_4F99F90 = 0;
+  qword_4F99F98 = 0;
+  qword_4F99FA0 = 0;
+  dword_4F99F88 = v0;
+  qword_4F99FD8 = (__int64)&unk_4F99FF8;
+  qword_4F99FE0 = (__int64)&unk_4F99FF8;
+  qword_4F99FA8 = 0;
+  qword_4F99FB0 = 0;
+  qword_4F9A028 = (__int64)&unk_49E74C8;
+  qword_4F99F80 = (__int64)&unk_49EEB70;
+  qword_4F9A038 = (__int64)&unk_49EEDF0;
+  qword_4F99FB8 = 0;
+  qword_4F99FC0 = 0;
+  qword_4F99FD0 = 0;
+  qword_4F99FE8 = 4;
+  dword_4F99FF0 = 0;
+  byte_4F9A018 = 0;
+  dword_4F9A020 = 0;
+  byte_4F9A034 = 1;
+  dword_4F9A030 = 0;
+  sub_16B8280(&qword_4F99F80, "profile-summary-cutoff-hot", 26);
+  dword_4F9A020 = 990000;
+  byte_4F9A034 = 1;
+  dword_4F9A030 = 990000;
+  qword_4F99FB0 = 88;
+  LOBYTE(word_4F99F8C) = word_4F99F8C & 0x98 | 0x21;
+  qword_4F99FA8 = (__int64)"A count is hot if it exceeds the minimum count to reach this percentile of total counts.";
+  sub_16B88A0(&qword_4F99F80);
+  __cxa_atexit(sub_12EDEA0, &qword_4F99F80, &qword_4A427C0);
+  qword_4F99EA0 = (__int64)&unk_49EED30;
+  v1 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4F99EAC &= 0xF000u;
+  qword_4F99EB0 = 0;
+  qword_4F99EB8 = 0;
+  qword_4F99EC0 = 0;
+  qword_4F99F48 = (__int64)&unk_49E74C8;
+  qword_4F99EA0 = (__int64)&unk_49EEB70;
+  dword_4F99EA8 = v1;
+  qword_4F99F58 = (__int64)&unk_49EEDF0;
+  qword_4F99EE8 = (__int64)&unk_4FA01C0;
+  qword_4F99EF8 = (__int64)&unk_4F99F18;
+  qword_4F99F00 = (__int64)&unk_4F99F18;
+  qword_4F99EC8 = 0;
+  qword_4F99ED0 = 0;
+  qword_4F99ED8 = 0;
+  qword_4F99EE0 = 0;
+  qword_4F99EF0 = 0;
+  qword_4F99F08 = 4;
+  dword_4F99F10 = 0;
+  byte_4F99F38 = 0;
+  dword_4F99F40 = 0;
+  byte_4F99F54 = 1;
+  dword_4F99F50 = 0;
+  sub_16B8280(&qword_4F99EA0, "profile-summary-cutoff-cold", 27);
+  dword_4F99F40 = 999999;
+  byte_4F99F54 = 1;
+  dword_4F99F50 = 999999;
+  qword_4F99ED0 = 90;
+  LOBYTE(word_4F99EAC) = word_4F99EAC & 0x98 | 0x21;
+  qword_4F99EC8 = (__int64)"A count is cold if it is below the minimum count to reach this percentile of total counts.";
+  sub_16B88A0(&qword_4F99EA0);
+  __cxa_atexit(sub_12EDEA0, &qword_4F99EA0, &qword_4A427C0);
+  qword_4F99DC0 = (__int64)&unk_49EED30;
+  v2 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4F99DCC &= 0xF000u;
+  qword_4F99DD0 = 0;
+  qword_4F99DD8 = 0;
+  qword_4F99DE0 = 0;
+  qword_4F99DE8 = 0;
+  qword_4F99DF0 = 0;
+  dword_4F99DC8 = v2;
+  qword_4F99E18 = (__int64)&unk_4F99E38;
+  qword_4F99E20 = (__int64)&unk_4F99E38;
+  qword_4F99E08 = (__int64)&unk_4FA01C0;
+  qword_4F99DF8 = 0;
+  qword_4F99E68 = (__int64)&unk_49E74E8;
+  word_4F99E70 = 256;
+  qword_4F99E00 = 0;
+  qword_4F99E10 = 0;
+  qword_4F99DC0 = (__int64)&unk_49EEC70;
+  qword_4F99E28 = 4;
+  byte_4F99E58 = 0;
+  qword_4F99E78 = (__int64)&unk_49EEDB0;
+  dword_4F99E30 = 0;
+  byte_4F99E60 = 0;
+  sub_16B8280(&qword_4F99DC0, "profile-sample-accurate", 23);
+  word_4F99E70 = 256;
+  byte_4F99E60 = 0;
+  qword_4F99DF0 = 144;
+  LOBYTE(word_4F99DCC) = word_4F99DCC & 0x9F | 0x20;
+  qword_4F99DE8 = (__int64)"If the sample profile is accurate, we will mark all un-sampled callsite as cold. Otherwise, t"
+                           "reat un-sampled callsites as if we have no profile.";
+  sub_16B88A0(&qword_4F99DC0);
+  __cxa_atexit(sub_12EDEC0, &qword_4F99DC0, &qword_4A427C0);
+  qword_4F99CE0 = (__int64)&unk_49EED30;
+  v3 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4F99CEC &= 0xF000u;
+  qword_4F99CF0 = 0;
+  qword_4F99CF8 = 0;
+  qword_4F99D00 = 0;
+  qword_4F99D08 = 0;
+  qword_4F99D10 = 0;
+  dword_4F99CE8 = v3;
+  qword_4F99D38 = (__int64)&unk_4F99D58;
+  qword_4F99D40 = (__int64)&unk_4F99D58;
+  qword_4F99D28 = (__int64)&unk_4FA01C0;
+  qword_4F99D18 = 0;
+  qword_4F99D88 = (__int64)&unk_49E74A8;
+  qword_4F99D20 = 0;
+  qword_4F99D30 = 0;
+  qword_4F99CE0 = (__int64)&unk_49EEAF0;
+  qword_4F99D48 = 4;
+  dword_4F99D50 = 0;
+  qword_4F99D98 = (__int64)&unk_49EEE10;
+  byte_4F99D78 = 0;
+  dword_4F99D80 = 0;
+  byte_4F99D94 = 1;
+  dword_4F99D90 = 0;
+  sub_16B8280(&qword_4F99CE0, "profile-summary-huge-working-set-size-threshold", 47);
+  dword_4F99D80 = 15000;
+  byte_4F99D94 = 1;
+  dword_4F99D90 = 15000;
+  qword_4F99D10 = 149;
+  LOBYTE(word_4F99CEC) = word_4F99CEC & 0x98 | 0x21;
+  qword_4F99D08 = (__int64)"The code working set size is considered huge if the number of blocks required to reach the -p"
+                           "rofile-summary-cutoff-hot percentile exceeds this count.";
+  sub_16B88A0(&qword_4F99CE0);
+  return __cxa_atexit(sub_12EDE60, &qword_4F99CE0, &qword_4A427C0);
+}

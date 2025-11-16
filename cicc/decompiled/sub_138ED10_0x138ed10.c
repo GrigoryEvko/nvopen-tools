@@ -1,0 +1,76 @@
+// Function: sub_138ED10
+// Address: 0x138ed10
+//
+void __fastcall sub_138ED10(__int64 a1, char **a2)
+{
+  char *v4; // r13
+  char *v5; // rsi
+  void *v6; // rdi
+  unsigned __int64 v7; // rdx
+  unsigned __int64 v8; // rax
+  int v9; // r14d
+  char *v10; // rsi
+  __int64 v11; // r15
+  __int64 v12; // rdx
+
+  if ( (char **)a1 != a2 )
+  {
+    v4 = (char *)(a2 + 2);
+    v5 = *a2;
+    if ( v5 == v4 )
+    {
+      v7 = *((unsigned int *)a2 + 2);
+      v8 = *(unsigned int *)(a1 + 8);
+      v9 = *((_DWORD *)a2 + 2);
+      if ( v7 <= v8 )
+      {
+        if ( *((_DWORD *)a2 + 2) )
+          memmove(*(void **)a1, v5, 16 * v7);
+      }
+      else
+      {
+        if ( v7 > *(unsigned int *)(a1 + 12) )
+        {
+          *(_DWORD *)(a1 + 8) = 0;
+          sub_16CD150(a1, a1 + 16, v7, 16);
+          v4 = *a2;
+          v7 = *((unsigned int *)a2 + 2);
+          v8 = 0;
+          v10 = *a2;
+        }
+        else
+        {
+          v10 = v4;
+          v11 = 16 * v8;
+          if ( *(_DWORD *)(a1 + 8) )
+          {
+            memmove(*(void **)a1, v4, 16 * v8);
+            v4 = *a2;
+            v7 = *((unsigned int *)a2 + 2);
+            v8 = v11;
+            v10 = &(*a2)[v11];
+          }
+        }
+        v12 = 16 * v7;
+        if ( v10 != &v4[v12] )
+          memcpy((void *)(v8 + *(_QWORD *)a1), v10, v12 - v8);
+      }
+      *(_DWORD *)(a1 + 8) = v9;
+      *((_DWORD *)a2 + 2) = 0;
+    }
+    else
+    {
+      v6 = *(void **)a1;
+      if ( v6 != (void *)(a1 + 16) )
+      {
+        _libc_free((unsigned __int64)v6);
+        v5 = *a2;
+      }
+      *(_QWORD *)a1 = v5;
+      *(_DWORD *)(a1 + 8) = *((_DWORD *)a2 + 2);
+      *(_DWORD *)(a1 + 12) = *((_DWORD *)a2 + 3);
+      *a2 = v4;
+      a2[1] = 0;
+    }
+  }
+}

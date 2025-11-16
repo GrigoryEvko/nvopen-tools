@@ -1,0 +1,33 @@
+// Function: sub_20C1CE0
+// Address: 0x20c1ce0
+//
+__int64 __fastcall sub_20C1CE0(__int64 a1)
+{
+  _QWORD *v1; // r12
+  __int64 v3; // rdi
+  __int64 v4; // rdi
+  __int64 v5; // rdi
+  __int64 v6; // rdi
+  __int64 result; // rax
+
+  v1 = *(_QWORD **)(a1 + 72);
+  if ( v1 )
+  {
+    v3 = v1[16];
+    if ( v3 )
+      j_j___libc_free_0(v3, v1[18] - v3);
+    v4 = v1[13];
+    if ( v4 )
+      j_j___libc_free_0(v4, v1[15] - v4);
+    sub_20C1A30(v1[9]);
+    v5 = v1[4];
+    if ( v5 )
+      j_j___libc_free_0(v5, v1[6] - v5);
+    v6 = v1[1];
+    if ( v6 )
+      j_j___libc_free_0(v6, v1[3] - v6);
+    result = j_j___libc_free_0(v1, 152);
+  }
+  *(_QWORD *)(a1 + 72) = 0;
+  return result;
+}

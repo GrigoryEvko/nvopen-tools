@@ -1,0 +1,18 @@
+// Function: sub_15958A0
+// Address: 0x15958a0
+//
+bool __fastcall sub_15958A0(__int64 a1)
+{
+  char v1; // dl
+  bool result; // al
+
+  v1 = *(_BYTE *)(a1 + 8);
+  result = 1;
+  if ( (unsigned __int8)(v1 - 1) > 2u )
+  {
+    result = 0;
+    if ( v1 == 11 && (((*(_DWORD *)(a1 + 8) >> 8) + 16777208) & 0xFFFFFFu) <= 0x38 )
+      return ((1LL << (BYTE1(*(_DWORD *)(a1 + 8)) - 8)) & 0x100000001000101LL) != 0;
+  }
+  return result;
+}

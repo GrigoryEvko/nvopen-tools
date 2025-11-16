@@ -1,0 +1,8 @@
+// Function: sub_2300130
+// Address: 0x2300130
+//
+__int64 __fastcall sub_2300130(__int64 a1, __int64 a2)
+{
+  sub_2A58060(a1, a2 + 8);
+  return a1;
+}

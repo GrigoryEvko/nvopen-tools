@@ -1,0 +1,7 @@
+// Function: sub_B996C0
+// Address: 0xb996c0
+//
+void __fastcall sub_B996C0(__int64 a1, __int64 a2)
+{
+  sub_B994D0(a1, 0, a2);
+}

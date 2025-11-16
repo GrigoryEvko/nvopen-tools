@@ -1,0 +1,10 @@
+// Function: sub_2784000
+// Address: 0x2784000
+//
+__int64 __fastcall sub_2784000(_QWORD *a1, __int64 a2)
+{
+  if ( (unsigned __int8)sub_BB98D0(a1, a2) )
+    return 0;
+  else
+    return sub_2783E30((__int64)a1, a2);
+}

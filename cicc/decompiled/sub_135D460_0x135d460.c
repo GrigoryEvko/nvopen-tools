@@ -1,0 +1,69 @@
+// Function: sub_135D460
+// Address: 0x135d460
+//
+__int64 __fastcall sub_135D460(__int64 a1)
+{
+  sub_1353870(a1);
+  sub_135A500(a1);
+  sub_1361770(a1);
+  sub_1368E50(a1);
+  sub_1376ED0(a1);
+  sub_1398760(a1);
+  sub_1399B70(a1);
+  sub_1398940(a1);
+  sub_1399970(a1);
+  sub_139DBA0(a1);
+  sub_137EE40(a1);
+  sub_137F1E0(a1);
+  sub_137F010(a1);
+  sub_137F3B0(a1);
+  sub_13838A0(a1);
+  sub_138F5C0(a1);
+  sub_13A5DC0(a1);
+  sub_139EE20(a1);
+  sub_139F770(a1);
+  sub_13B36A0(a1);
+  sub_13BF890(a1);
+  sub_13B68A0(a1);
+  sub_13B70A0(a1);
+  sub_13B6AA0(a1);
+  sub_13B6CA0(a1);
+  sub_13B72A0(a1);
+  sub_13B74A0(a1);
+  sub_13B6EA0(a1);
+  sub_13B76A0(a1);
+  sub_134D8E0(a1);
+  sub_13C2E30(a1);
+  sub_13C9BF0(a1);
+  sub_13CB450(a1);
+  sub_13E50C0(a1);
+  sub_13E71F0(a1);
+  sub_13E6630(a1);
+  sub_13EAF90(a1);
+  sub_13EBCA0(a1);
+  sub_13F4FE0(a1);
+  sub_13FBE20(a1);
+  sub_1409CC0(a1);
+  sub_140A610(a1);
+  sub_1414030(a1);
+  sub_142AF50(a1);
+  sub_142D6B0(a1);
+  sub_1437440(a1);
+  sub_1438670(a1);
+  sub_143AAC0(a1);
+  sub_143D780(a1);
+  sub_1440EE0(a1);
+  sub_1444480(a1);
+  sub_144D2E0(a1);
+  sub_144CEC0(a1);
+  sub_144D4F0(a1);
+  sub_144D0D0(a1);
+  sub_1498BD0(a1);
+  sub_1458320(a1);
+  sub_14A3D70(a1);
+  sub_14A7370(a1);
+  sub_149A4A0(a1);
+  sub_1404790(a1);
+  sub_1420CE0(a1);
+  return sub_1420DE0(a1);
+}

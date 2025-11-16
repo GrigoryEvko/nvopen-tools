@@ -1,0 +1,8 @@
+// Function: sub_18F17C0
+// Address: 0x18f17c0
+//
+void *__fastcall sub_18F17C0(_QWORD *a1)
+{
+  *a1 = &unk_49EE120;
+  return sub_16366C0(a1);
+}

@@ -1,0 +1,52 @@
+// Function: sub_227A520
+// Address: 0x227a520
+//
+unsigned int __fastcall sub_227A520(__int64 a1)
+{
+  sub_D05480(a1);
+  sub_FDC5A0(a1);
+  sub_FEEC20(a1);
+  sub_D108B0(a1);
+  sub_2285D70(a1);
+  sub_2285CF0(a1);
+  sub_11FC600(a1);
+  sub_22A9A90(a1);
+  sub_22A98A0(a1);
+  sub_228CA40(a1);
+  sub_22A4190(a1);
+  sub_229BC30(a1);
+  sub_229C370(a1);
+  sub_229BE00(a1);
+  sub_229BFD0(a1);
+  sub_229C540(a1);
+  sub_229C710(a1);
+  sub_229C1A0(a1);
+  sub_229C8E0(a1);
+  sub_CF6DB0(a1);
+  sub_D1D8C0(a1);
+  sub_22ABEF0(a1);
+  sub_22AF940(a1);
+  sub_1028300(a1);
+  sub_1027850(a1);
+  sub_22C1050(a1);
+  sub_D4AA90(a1);
+  sub_102CFA0(a1);
+  sub_D78240(a1);
+  sub_1049990(a1);
+  sub_22D5CC0(a1);
+  sub_104C240(a1);
+  sub_22DC340(a1);
+  sub_22E5630(a1);
+  sub_22E5290(a1);
+  sub_22E5800(a1);
+  sub_22E5460(a1);
+  sub_DF4610(a1);
+  sub_D9A960(a1);
+  sub_D8A240(a1);
+  sub_D8A010(a1);
+  sub_DFEA20(a1);
+  sub_E00570(a1);
+  sub_DF5010(a1);
+  sub_D57FB0(a1);
+  return sub_103BB40(a1);
+}

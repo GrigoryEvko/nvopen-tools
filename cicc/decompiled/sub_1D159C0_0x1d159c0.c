@@ -1,0 +1,141 @@
+// Function: sub_1D159C0
+// Address: 0x1d159c0
+//
+__int64 __fastcall sub_1D159C0(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __int64 a5, __int64 a6)
+{
+  char v6; // r12
+  __int64 v7; // rdx
+  __int64 result; // rax
+  char v9[8]; // [rsp+0h] [rbp-20h] BYREF
+  __int64 v10; // [rsp+8h] [rbp-18h]
+
+  v6 = *(_BYTE *)a1;
+  if ( !*(_BYTE *)a1 )
+  {
+    if ( (unsigned __int8)sub_1F58D20(a1) )
+    {
+      v6 = sub_1F596B0(a1);
+LABEL_4:
+      v9[0] = v6;
+      v10 = v7;
+      if ( v6 )
+        return sub_1D13440(v6);
+      else
+        return ((__int64 (__fastcall *)(char *, __int64, __int64, __int64, __int64, __int64))sub_1F58D40)(
+                 v9,
+                 a2,
+                 v7,
+                 a4,
+                 a5,
+                 a6);
+    }
+LABEL_3:
+    v7 = *(_QWORD *)(a1 + 8);
+    goto LABEL_4;
+  }
+  if ( (unsigned __int8)(v6 - 14) > 0x5Fu )
+    goto LABEL_3;
+  switch ( v6 )
+  {
+    case 24:
+    case 25:
+    case 26:
+    case 27:
+    case 28:
+    case 29:
+    case 30:
+    case 31:
+    case 32:
+    case 62:
+    case 63:
+    case 64:
+    case 65:
+    case 66:
+    case 67:
+      result = sub_1D13440(3);
+      break;
+    case 33:
+    case 34:
+    case 35:
+    case 36:
+    case 37:
+    case 38:
+    case 39:
+    case 40:
+    case 68:
+    case 69:
+    case 70:
+    case 71:
+    case 72:
+    case 73:
+      v6 = 4;
+      return sub_1D13440(v6);
+    case 41:
+    case 42:
+    case 43:
+    case 44:
+    case 45:
+    case 46:
+    case 47:
+    case 48:
+    case 74:
+    case 75:
+    case 76:
+    case 77:
+    case 78:
+    case 79:
+      result = sub_1D13440(5);
+      break;
+    case 49:
+    case 50:
+    case 51:
+    case 52:
+    case 53:
+    case 54:
+    case 80:
+    case 81:
+    case 82:
+    case 83:
+    case 84:
+    case 85:
+      result = sub_1D13440(6);
+      break;
+    case 55:
+      result = sub_1D13440(7);
+      break;
+    case 86:
+    case 87:
+    case 88:
+    case 98:
+    case 99:
+    case 100:
+      result = sub_1D13440(8);
+      break;
+    case 89:
+    case 90:
+    case 91:
+    case 92:
+    case 93:
+    case 101:
+    case 102:
+    case 103:
+    case 104:
+    case 105:
+      result = sub_1D13440(9);
+      break;
+    case 94:
+    case 95:
+    case 96:
+    case 97:
+    case 106:
+    case 107:
+    case 108:
+    case 109:
+      result = sub_1D13440(10);
+      break;
+    default:
+      result = sub_1D13440(2);
+      break;
+  }
+  return result;
+}

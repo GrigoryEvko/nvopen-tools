@@ -1,0 +1,60 @@
+// Function: sub_6864B0
+// Address: 0x6864b0
+//
+__int64 __fastcall sub_6864B0(unsigned __int8 a1, unsigned int a2, _DWORD *a3, __int64 a4, __int64 a5)
+{
+  __int64 v7; // rsi
+  _DWORD *v10; // r12
+  __int64 v11; // rax
+  __int64 v12; // rdx
+  __int64 v13; // rax
+  __int64 v14; // rdx
+
+  v7 = (__int64)a3;
+  v10 = sub_67D610(a2, a3, a1);
+  if ( a4 )
+  {
+    v11 = qword_4D039F0;
+    if ( !qword_4D039F0 || dword_4D03A00 == -1 )
+    {
+      v7 = 40;
+      v11 = sub_823020((unsigned int)dword_4D03A00, 40);
+    }
+    else
+    {
+      qword_4D039F0 = *(_QWORD *)(qword_4D039F0 + 8);
+    }
+    *(_QWORD *)(v11 + 8) = 0;
+    *(_DWORD *)v11 = 3;
+    *(_QWORD *)(v11 + 16) = a4;
+    if ( !*((_QWORD *)v10 + 23) )
+      *((_QWORD *)v10 + 23) = v11;
+    v12 = *((_QWORD *)v10 + 24);
+    if ( v12 )
+      *(_QWORD *)(v12 + 8) = v11;
+    *((_QWORD *)v10 + 24) = v11;
+  }
+  if ( a5 )
+  {
+    v13 = qword_4D039F0;
+    if ( !qword_4D039F0 || dword_4D03A00 == -1 )
+    {
+      v7 = 40;
+      v13 = sub_823020((unsigned int)dword_4D03A00, 40);
+    }
+    else
+    {
+      qword_4D039F0 = *(_QWORD *)(qword_4D039F0 + 8);
+    }
+    *(_QWORD *)(v13 + 8) = 0;
+    *(_DWORD *)v13 = 3;
+    *(_QWORD *)(v13 + 16) = a5;
+    if ( !*((_QWORD *)v10 + 23) )
+      *((_QWORD *)v10 + 23) = v13;
+    v14 = *((_QWORD *)v10 + 24);
+    if ( v14 )
+      *(_QWORD *)(v14 + 8) = v13;
+    *((_QWORD *)v10 + 24) = v13;
+  }
+  return sub_6837D0((__int64)v10, (FILE *)v7);
+}

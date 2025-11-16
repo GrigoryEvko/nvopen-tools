@@ -1,0 +1,67 @@
+// Function: sub_16E2120
+// Address: 0x16e2120
+//
+__int64 __fastcall sub_16E2120(__int64 *a1)
+{
+  __int64 v1; // rax
+  __int64 v2; // rax
+  unsigned __int64 v3; // rax
+  unsigned __int64 v4; // rdx
+  __int64 v5; // rax
+  __int64 v6; // rax
+  unsigned __int64 v7; // rax
+  unsigned __int64 v8; // rdx
+  __int64 v9; // rax
+  __int64 v10; // rax
+  unsigned __int64 v11; // rax
+  __int64 v13; // [rsp+0h] [rbp-30h] BYREF
+  unsigned __int64 v14; // [rsp+8h] [rbp-28h]
+  __int64 v15; // [rsp+10h] [rbp-20h] BYREF
+  unsigned __int64 v16; // [rsp+18h] [rbp-18h]
+
+  v1 = *a1;
+  LOBYTE(v13) = 45;
+  v15 = v1;
+  v16 = a1[1];
+  v2 = sub_16D20C0(&v15, (char *)&v13, 1u, 0);
+  if ( v2 == -1 )
+  {
+    v4 = 0;
+    v5 = 0;
+  }
+  else
+  {
+    v3 = v2 + 1;
+    if ( v3 > v16 )
+      v3 = v16;
+    v4 = v16 - v3;
+    v5 = v15 + v3;
+  }
+  v14 = v4;
+  v13 = v5;
+  LOBYTE(v15) = 45;
+  v6 = sub_16D20C0(&v13, (char *)&v15, 1u, 0);
+  if ( v6 == -1 )
+  {
+    v8 = 0;
+    v9 = 0;
+  }
+  else
+  {
+    v7 = v6 + 1;
+    if ( v7 > v14 )
+      v7 = v14;
+    v8 = v14 - v7;
+    v9 = v13 + v7;
+  }
+  v14 = v8;
+  v13 = v9;
+  LOBYTE(v15) = 45;
+  v10 = sub_16D20C0(&v13, (char *)&v15, 1u, 0);
+  if ( v10 == -1 )
+    return 0;
+  v11 = v10 + 1;
+  if ( v11 > v14 )
+    v11 = v14;
+  return v13 + v11;
+}

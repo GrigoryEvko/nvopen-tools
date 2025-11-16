@@ -1,0 +1,122 @@
+// Function: sub_24F3C30
+// Address: 0x24f3c30
+//
+__int64 __fastcall sub_24F3C30(unsigned __int8 *a1, __int64 a2)
+{
+  int v2; // edx
+  __int64 v3; // r12
+  __int64 v4; // rax
+  __int64 v5; // rdx
+  __int64 v6; // r13
+  int v7; // r13d
+  __int64 v8; // rax
+  __int64 v9; // rdx
+  __int64 v10; // rcx
+  __int64 result; // rax
+  int v12; // edx
+  int v13; // r12d
+  __int64 v14; // r13
+  __int64 v15; // rax
+  __int64 v16; // rdx
+  __int64 v17; // r14
+  int v18; // r14d
+  __int64 v19; // rax
+  __int64 v20; // rdx
+  __int64 v21; // rdx
+
+  v2 = *a1;
+  if ( v2 == 40 )
+  {
+    v3 = 32LL * (unsigned int)sub_B491D0((__int64)a1);
+  }
+  else
+  {
+    v3 = 0;
+    if ( v2 != 85 )
+    {
+      v3 = 64;
+      if ( v2 != 34 )
+LABEL_38:
+        BUG();
+    }
+  }
+  if ( (a1[7] & 0x80u) == 0 )
+    goto LABEL_10;
+  v4 = sub_BD2BC0((__int64)a1);
+  v6 = v4 + v5;
+  if ( (a1[7] & 0x80u) == 0 )
+  {
+    if ( (unsigned int)(v6 >> 4) )
+LABEL_39:
+      BUG();
+LABEL_10:
+    v10 = 0;
+    goto LABEL_11;
+  }
+  if ( !(unsigned int)((v6 - sub_BD2BC0((__int64)a1)) >> 4) )
+    goto LABEL_10;
+  if ( (a1[7] & 0x80u) == 0 )
+    goto LABEL_39;
+  v7 = *(_DWORD *)(sub_BD2BC0((__int64)a1) + 8);
+  if ( (a1[7] & 0x80u) == 0 )
+    BUG();
+  v8 = sub_BD2BC0((__int64)a1);
+  v10 = 32LL * (unsigned int)(*(_DWORD *)(v8 + v9 - 4) - v7);
+LABEL_11:
+  result = (32LL * (*((_DWORD *)a1 + 1) & 0x7FFFFFF) - 32 - v3 - v10) >> 5;
+  if ( (unsigned int)result > 2 )
+  {
+    result = (__int64)sub_BD3990(*(unsigned __int8 **)&a1[32 * (2LL - (*((_DWORD *)a1 + 1) & 0x7FFFFFF))], a2);
+    if ( result )
+    {
+      v12 = *a1;
+      v13 = *(_DWORD *)(*(_QWORD *)(result + 24) + 12LL) - 1;
+      if ( v12 == 40 )
+      {
+        v14 = 32LL * (unsigned int)sub_B491D0((__int64)a1);
+        if ( (a1[7] & 0x80u) == 0 )
+          goto LABEL_24;
+      }
+      else
+      {
+        v14 = 0;
+        if ( v12 != 85 )
+        {
+          v14 = 64;
+          if ( v12 != 34 )
+            goto LABEL_38;
+        }
+        if ( (a1[7] & 0x80u) == 0 )
+          goto LABEL_24;
+      }
+      v15 = sub_BD2BC0((__int64)a1);
+      v17 = v15 + v16;
+      if ( (a1[7] & 0x80u) == 0 )
+      {
+        if ( (unsigned int)(v17 >> 4) )
+          goto LABEL_35;
+      }
+      else if ( (unsigned int)((v17 - sub_BD2BC0((__int64)a1)) >> 4) )
+      {
+        if ( (a1[7] & 0x80u) != 0 )
+        {
+          v18 = *(_DWORD *)(sub_BD2BC0((__int64)a1) + 8);
+          if ( (a1[7] & 0x80u) == 0 )
+            BUG();
+          v19 = sub_BD2BC0((__int64)a1);
+          v21 = 32LL * (unsigned int)(*(_DWORD *)(v19 + v20 - 4) - v18);
+          goto LABEL_25;
+        }
+LABEL_35:
+        BUG();
+      }
+LABEL_24:
+      v21 = 0;
+LABEL_25:
+      result = (unsigned int)((32LL * (*((_DWORD *)a1 + 1) & 0x7FFFFFF) - 32 - v14 - v21) >> 5) - 3;
+      if ( (_DWORD)result != v13 )
+        sub_C64ED0("llvm.coro.end.async must tail call function argument type must match the tail arguments", 1u);
+    }
+  }
+  return result;
+}

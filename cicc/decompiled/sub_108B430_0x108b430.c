@@ -1,0 +1,27 @@
+// Function: sub_108B430
+// Address: 0x108b430
+//
+__int64 __fastcall sub_108B430(__int64 *a1)
+{
+  __int64 v1; // rax
+  __int64 v2; // rdx
+  __int64 *v3; // r12
+  __int64 result; // rax
+
+  a1[1] = 8;
+  v1 = sub_22077B0(64);
+  v2 = a1[1];
+  *a1 = v1;
+  v3 = (__int64 *)(v1 + ((4 * v2 - 4) & 0xFFFFFFFFFFFFFFF8LL));
+  result = sub_22077B0(480);
+  a1[5] = (__int64)v3;
+  *v3 = result;
+  a1[9] = (__int64)v3;
+  a1[3] = result;
+  a1[4] = result + 480;
+  a1[7] = result;
+  a1[8] = result + 480;
+  a1[2] = result;
+  a1[6] = result;
+  return result;
+}

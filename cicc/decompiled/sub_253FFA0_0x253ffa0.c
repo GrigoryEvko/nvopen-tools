@@ -1,0 +1,38 @@
+// Function: sub_253FFA0
+// Address: 0x253ffa0
+//
+void __fastcall sub_253FFA0(__int64 a1)
+{
+  bool v2; // cc
+  unsigned __int64 v3; // rdi
+  unsigned __int64 v4; // rdi
+  unsigned __int64 v5; // rdi
+  unsigned __int64 v6; // rdi
+
+  v2 = *(_DWORD *)(a1 + 72) <= 0x40u;
+  *(_QWORD *)a1 = &unk_4A16D38;
+  if ( !v2 )
+  {
+    v3 = *(_QWORD *)(a1 + 64);
+    if ( v3 )
+      j_j___libc_free_0_0(v3);
+  }
+  if ( *(_DWORD *)(a1 + 56) > 0x40u )
+  {
+    v4 = *(_QWORD *)(a1 + 48);
+    if ( v4 )
+      j_j___libc_free_0_0(v4);
+  }
+  if ( *(_DWORD *)(a1 + 40) > 0x40u )
+  {
+    v5 = *(_QWORD *)(a1 + 32);
+    if ( v5 )
+      j_j___libc_free_0_0(v5);
+  }
+  if ( *(_DWORD *)(a1 + 24) > 0x40u )
+  {
+    v6 = *(_QWORD *)(a1 + 16);
+    if ( v6 )
+      j_j___libc_free_0_0(v6);
+  }
+}

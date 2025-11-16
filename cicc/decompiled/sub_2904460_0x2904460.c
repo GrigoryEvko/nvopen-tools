@@ -1,0 +1,63 @@
+// Function: sub_2904460
+// Address: 0x2904460
+//
+__int64 __fastcall sub_2904460(__int64 a1, unsigned __int64 a2, __int64 a3, __int64 a4, __int64 a5, __int64 a6)
+{
+  __int64 v6; // r15
+  __int64 v8; // rax
+  __int64 v9; // rcx
+  __int64 v10; // r8
+  __int64 v11; // r9
+  __int64 *v12; // rbx
+  _QWORD *v13; // r14
+  unsigned __int64 v14; // r12
+  __int64 v15; // rdx
+  __int64 *v16; // rbx
+  unsigned __int64 v17; // rdi
+  int v18; // ebx
+  __int64 v20; // [rsp+8h] [rbp-48h]
+  unsigned __int64 v21[7]; // [rsp+18h] [rbp-38h] BYREF
+
+  v6 = a1 + 16;
+  v8 = sub_C8D7D0(a1, a1 + 16, a2, 0x38u, v21, a6);
+  v12 = *(__int64 **)a1;
+  v20 = v8;
+  v13 = (_QWORD *)v8;
+  v14 = *(_QWORD *)a1 + 56LL * *(unsigned int *)(a1 + 8);
+  if ( *(_QWORD *)a1 != v14 )
+  {
+    do
+    {
+      if ( v13 )
+      {
+        v15 = *v12;
+        *v13 = *v12;
+        sub_2900F20((__int64)(v13 + 1), (__int64)(v12 + 1), v15, v9, v10, v11);
+      }
+      v12 += 7;
+      v13 += 7;
+    }
+    while ( (__int64 *)v14 != v12 );
+    v16 = *(__int64 **)a1;
+    v14 = *(_QWORD *)a1 + 56LL * *(unsigned int *)(a1 + 8);
+    if ( *(_QWORD *)a1 != v14 )
+    {
+      do
+      {
+        v14 -= 56LL;
+        v17 = *(_QWORD *)(v14 + 40);
+        if ( v17 != v14 + 56 )
+          _libc_free(v17);
+        sub_C7D6A0(*(_QWORD *)(v14 + 16), 8LL * *(unsigned int *)(v14 + 32), 8);
+      }
+      while ( (__int64 *)v14 != v16 );
+      v14 = *(_QWORD *)a1;
+    }
+  }
+  v18 = v21[0];
+  if ( v6 != v14 )
+    _libc_free(v14);
+  *(_DWORD *)(a1 + 12) = v18;
+  *(_QWORD *)a1 = v20;
+  return v20;
+}

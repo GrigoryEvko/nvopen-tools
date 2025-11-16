@@ -1,0 +1,137 @@
+// Function: ctor_215
+// Address: 0x4e5640
+//
+int ctor_215()
+{
+  int v0; // eax
+  int v1; // eax
+  int v2; // eax
+  int v3; // eax
+
+  qword_4FB2180 = (__int64)&unk_49EED30;
+  v0 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4FB218C &= 0xF000u;
+  qword_4FB2190 = 0;
+  qword_4FB2198 = 0;
+  qword_4FB21A0 = 0;
+  qword_4FB21A8 = 0;
+  qword_4FB21B0 = 0;
+  dword_4FB2188 = v0;
+  qword_4FB21B8 = 0;
+  qword_4FB21C8 = (__int64)qword_4FA01C0;
+  qword_4FB21D8 = (__int64)&unk_4FB21F8;
+  qword_4FB21E0 = (__int64)&unk_4FB21F8;
+  qword_4FB21C0 = 0;
+  qword_4FB21D0 = 0;
+  qword_4FB2228 = (__int64)&unk_49E74E8;
+  word_4FB2230 = 256;
+  qword_4FB21E8 = 4;
+  byte_4FB2218 = 0;
+  qword_4FB2180 = (__int64)&unk_49EEC70;
+  dword_4FB21F0 = 0;
+  byte_4FB2220 = 0;
+  qword_4FB2238 = (__int64)&unk_49EEDB0;
+  sub_16B8280(&qword_4FB2180, "allow-unroll-and-jam", 20);
+  qword_4FB21B0 = 37;
+  LOBYTE(word_4FB218C) = word_4FB218C & 0x9F | 0x20;
+  qword_4FB21A8 = (__int64)"Allows loops to be unroll-and-jammed.";
+  sub_16B88A0(&qword_4FB2180);
+  __cxa_atexit(sub_12EDEC0, &qword_4FB2180, &qword_4A427C0);
+  qword_4FB20A0 = (__int64)&unk_49EED30;
+  v1 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4FB20AC &= 0xF000u;
+  qword_4FB20B0 = 0;
+  qword_4FB20B8 = 0;
+  qword_4FB20C0 = 0;
+  qword_4FB20C8 = 0;
+  qword_4FB20D0 = 0;
+  dword_4FB20A8 = v1;
+  qword_4FB20D8 = 0;
+  qword_4FB20E8 = (__int64)qword_4FA01C0;
+  qword_4FB20F8 = (__int64)&unk_4FB2118;
+  qword_4FB2100 = (__int64)&unk_4FB2118;
+  qword_4FB20E0 = 0;
+  qword_4FB20F0 = 0;
+  qword_4FB2148 = (__int64)&unk_49E74A8;
+  qword_4FB20A0 = (__int64)&unk_49EEAF0;
+  byte_4FB2138 = 0;
+  qword_4FB2158 = (__int64)&unk_49EEE10;
+  qword_4FB2108 = 4;
+  dword_4FB2110 = 0;
+  dword_4FB2140 = 0;
+  byte_4FB2154 = 1;
+  dword_4FB2150 = 0;
+  sub_16B8280(&qword_4FB20A0, "unroll-and-jam-count", 20);
+  qword_4FB20D0 = 113;
+  LOBYTE(word_4FB20AC) = word_4FB20AC & 0x9F | 0x20;
+  qword_4FB20C8 = (__int64)"Use this unroll count for all loops including those with unroll_and_jam_count pragma values, "
+                           "for testing purposes";
+  sub_16B88A0(&qword_4FB20A0);
+  __cxa_atexit(sub_12EDE60, &qword_4FB20A0, &qword_4A427C0);
+  qword_4FB1FC0 = (__int64)&unk_49EED30;
+  v2 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4FB1FCC &= 0xF000u;
+  qword_4FB1FD0 = 0;
+  qword_4FB1FD8 = 0;
+  qword_4FB1FE0 = 0;
+  qword_4FB2068 = (__int64)&unk_49E74A8;
+  qword_4FB1FE8 = 0;
+  dword_4FB1FC8 = v2;
+  qword_4FB1FC0 = (__int64)&unk_49EEAF0;
+  qword_4FB2008 = (__int64)qword_4FA01C0;
+  qword_4FB2018 = (__int64)&unk_4FB2038;
+  qword_4FB2020 = (__int64)&unk_4FB2038;
+  qword_4FB2078 = (__int64)&unk_49EEE10;
+  qword_4FB1FF0 = 0;
+  qword_4FB1FF8 = 0;
+  qword_4FB2000 = 0;
+  qword_4FB2010 = 0;
+  qword_4FB2028 = 4;
+  dword_4FB2030 = 0;
+  byte_4FB2058 = 0;
+  dword_4FB2060 = 0;
+  byte_4FB2074 = 1;
+  dword_4FB2070 = 0;
+  sub_16B8280(&qword_4FB1FC0, "unroll-and-jam-threshold", 24);
+  dword_4FB2060 = 60;
+  byte_4FB2074 = 1;
+  dword_4FB2070 = 60;
+  qword_4FB1FF0 = 58;
+  LOBYTE(word_4FB1FCC) = word_4FB1FCC & 0x9F | 0x20;
+  qword_4FB1FE8 = (__int64)"Threshold to use for inner loop when doing unroll and jam.";
+  sub_16B88A0(&qword_4FB1FC0);
+  __cxa_atexit(sub_12EDE60, &qword_4FB1FC0, &qword_4A427C0);
+  qword_4FB1EE0 = (__int64)&unk_49EED30;
+  v3 = _InterlockedExchangeAdd64((volatile signed __int64 *)&unk_4FA0230, 1u);
+  word_4FB1EEC &= 0xF000u;
+  qword_4FB1EF0 = 0;
+  qword_4FB1EF8 = 0;
+  qword_4FB1F00 = 0;
+  qword_4FB1F88 = (__int64)&unk_49E74A8;
+  qword_4FB1F08 = 0;
+  dword_4FB1EE8 = v3;
+  qword_4FB1EE0 = (__int64)&unk_49EEAF0;
+  qword_4FB1F28 = (__int64)qword_4FA01C0;
+  qword_4FB1F38 = (__int64)&unk_4FB1F58;
+  qword_4FB1F40 = (__int64)&unk_4FB1F58;
+  qword_4FB1F98 = (__int64)&unk_49EEE10;
+  qword_4FB1F10 = 0;
+  qword_4FB1F18 = 0;
+  qword_4FB1F20 = 0;
+  qword_4FB1F30 = 0;
+  qword_4FB1F48 = 4;
+  dword_4FB1F50 = 0;
+  byte_4FB1F78 = 0;
+  dword_4FB1F80 = 0;
+  byte_4FB1F94 = 1;
+  dword_4FB1F90 = 0;
+  sub_16B8280(&qword_4FB1EE0, "pragma-unroll-and-jam-threshold", 31);
+  dword_4FB1F80 = 1024;
+  byte_4FB1F94 = 1;
+  dword_4FB1F90 = 1024;
+  qword_4FB1F10 = 82;
+  LOBYTE(word_4FB1EEC) = word_4FB1EEC & 0x9F | 0x20;
+  qword_4FB1F08 = (__int64)"Unrolled size limit for loops with an unroll_and_jam(full) or unroll_count pragma.";
+  sub_16B88A0(&qword_4FB1EE0);
+  return __cxa_atexit(sub_12EDE60, &qword_4FB1EE0, &qword_4A427C0);
+}

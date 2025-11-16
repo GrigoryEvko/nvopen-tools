@@ -1,0 +1,70 @@
+// Function: sub_39EC970
+// Address: 0x39ec970
+//
+_BYTE *__fastcall sub_39EC970(__int64 a1, __int64 a2, __int64 a3)
+{
+  __int64 v5; // rdi
+  void *v6; // rdx
+  __int64 v7; // rdi
+  _WORD *v8; // rdx
+  unsigned __int64 v9; // r13
+  _BYTE *result; // rax
+  __int64 v11; // rdi
+  __int64 v12; // r14
+  char *v13; // rsi
+  size_t v14; // rdx
+  void *v15; // rdi
+
+  sub_38DF9D0(a1, a2, a3);
+  v5 = *(_QWORD *)(a1 + 272);
+  v6 = *(void **)(v5 + 24);
+  if ( *(_QWORD *)(v5 + 16) - (_QWORD)v6 <= 0xDu )
+  {
+    sub_16E7EE0(v5, "\t.cfi_def_cfa ", 0xEu);
+  }
+  else
+  {
+    qmemcpy(v6, "\t.cfi_def_cfa ", 14);
+    *(_QWORD *)(v5 + 24) += 14LL;
+  }
+  sub_39DFA10(a1, a2);
+  v7 = *(_QWORD *)(a1 + 272);
+  v8 = *(_WORD **)(v7 + 24);
+  if ( *(_QWORD *)(v7 + 16) - (_QWORD)v8 <= 1u )
+  {
+    v7 = sub_16E7EE0(v7, ", ", 2u);
+  }
+  else
+  {
+    *v8 = 8236;
+    *(_QWORD *)(v7 + 24) += 2LL;
+  }
+  sub_16E7AB0(v7, a3);
+  v9 = *(unsigned int *)(a1 + 312);
+  if ( *(_DWORD *)(a1 + 312) )
+  {
+    v12 = *(_QWORD *)(a1 + 272);
+    v13 = *(char **)(a1 + 304);
+    v14 = *(unsigned int *)(a1 + 312);
+    v15 = *(void **)(v12 + 24);
+    if ( v9 > *(_QWORD *)(v12 + 16) - (_QWORD)v15 )
+    {
+      sub_16E7EE0(*(_QWORD *)(a1 + 272), v13, v14);
+    }
+    else
+    {
+      memcpy(v15, v13, v14);
+      *(_QWORD *)(v12 + 24) += v9;
+    }
+  }
+  *(_DWORD *)(a1 + 312) = 0;
+  if ( (*(_BYTE *)(a1 + 680) & 1) != 0 )
+    return sub_39E0440(a1);
+  v11 = *(_QWORD *)(a1 + 272);
+  result = *(_BYTE **)(v11 + 24);
+  if ( (unsigned __int64)result >= *(_QWORD *)(v11 + 16) )
+    return (_BYTE *)sub_16E7DE0(v11, 10);
+  *(_QWORD *)(v11 + 24) = result + 1;
+  *result = 10;
+  return result;
+}
