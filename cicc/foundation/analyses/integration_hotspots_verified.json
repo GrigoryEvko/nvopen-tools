@@ -1,0 +1,279 @@
+{
+  "hotspot_count": 18,
+  "top_hotspots": [
+    {
+      "name": "__libc_free",
+      "called_by_modules": 9,
+      "total_calls": 33432,
+      "modules": [
+        "architecture_detection",
+        "instruction_selection",
+        "error_handling",
+        "tensor_core_codegen",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "j_j___libc_free_0",
+      "called_by_modules": 9,
+      "total_calls": 33413,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "instruction_selection",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_22077B0",
+      "called_by_modules": 9,
+      "total_calls": 12744,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "instruction_selection",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_C8D5F0",
+      "called_by_modules": 9,
+      "total_calls": 12426,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "instruction_selection",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_CB6200",
+      "called_by_modules": 8,
+      "total_calls": 11342,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "j_j___libc_free_0_0",
+      "called_by_modules": 8,
+      "total_calls": 10816,
+      "modules": [
+        "architecture_detection",
+        "instruction_selection",
+        "error_handling",
+        "tensor_core_codegen",
+        "register_allocation",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_C7D6A0",
+      "called_by_modules": 8,
+      "total_calls": 7557,
+      "modules": [
+        "architecture_detection",
+        "instruction_selection",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": ".memcpy",
+      "called_by_modules": 8,
+      "total_calls": 7217,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_B91220",
+      "called_by_modules": 8,
+      "total_calls": 3793,
+      "modules": [
+        "architecture_detection",
+        "instruction_selection",
+        "error_handling",
+        "tensor_core_codegen",
+        "register_allocation",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": ".memcmp",
+      "called_by_modules": 8,
+      "total_calls": 3649,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_C7D670",
+      "called_by_modules": 8,
+      "total_calls": 2758,
+      "modules": [
+        "architecture_detection",
+        "instruction_selection",
+        "error_handling",
+        "tensor_core_codegen",
+        "register_allocation",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": ".__cxa_atexit",
+      "called_by_modules": 8,
+      "total_calls": 2750,
+      "modules": [
+        "architecture_detection",
+        "instruction_selection",
+        "tensor_core_codegen",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": ".strlen",
+      "called_by_modules": 8,
+      "total_calls": 2288,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": ".memset",
+      "called_by_modules": 8,
+      "total_calls": 1967,
+      "modules": [
+        "instruction_selection",
+        "error_handling",
+        "tensor_core_codegen",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_22409D0",
+      "called_by_modules": 8,
+      "total_calls": 1530,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_2241130",
+      "called_by_modules": 8,
+      "total_calls": 806,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "register_allocation",
+        "unknown",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_C64ED0",
+      "called_by_modules": 8,
+      "total_calls": 424,
+      "modules": [
+        "architecture_detection",
+        "tensor_core_codegen",
+        "error_handling",
+        "instruction_selection",
+        "register_allocation",
+        "unknown",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    },
+    {
+      "name": "sub_AE2980",
+      "called_by_modules": 8,
+      "total_calls": 329,
+      "modules": [
+        "architecture_detection",
+        "instruction_selection",
+        "error_handling",
+        "tensor_core_codegen",
+        "register_allocation",
+        "compilation_pipeline",
+        "optimization_framework",
+        "ptx_emission"
+      ]
+    }
+  ]
+}
