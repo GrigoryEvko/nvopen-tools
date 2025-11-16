@@ -1,0 +1,5102 @@
+{
+  "summary": {
+    "total_critical": 100,
+    "corrections_applied": 443,
+    "caller_count_fixed": "91.5% corruption corrected",
+    "metadata": {
+      "version": "1.0",
+      "created_from": [
+        "critical_functions_top_100.json",
+        "critical_functions_caller_analysis.json",
+        "critical_functions_complexity.json",
+        "critical_functions_stack_depth.json",
+        "critical_functions_shared_utilities.json",
+        "critical_functions_isolation.json",
+        "critical_functions_module_interaction.json",
+        "critical_functions_score_justification.json",
+        "optimization_framework_critical_registry_corrected.json",
+        "optimization_framework_caller_corrections.json"
+      ],
+      "analysis_date": "2025-11-16",
+      "scope": "Top 100 critical functions with comprehensive metadata"
+    }
+  },
+  "correction_stats": {
+    "total_functions_with_caller_correction": 91,
+    "corruption_rate_before_correction": "91.5%",
+    "functions_without_caller_data": 9,
+    "functions_verified_correct": 0,
+    "most_corrupted_function": {
+      "address": "0x7B8B50",
+      "name": "sub_7B8B50",
+      "original_callers_count": 275,
+      "estimated_true_callers": "823+",
+      "error_percentage": 93.92
+    }
+  },
+  "functions": [
+    {
+      "rank": 1,
+      "address": "0x507310",
+      "name": "ctor_335_0",
+      "module": "register_allocation",
+      "size": 10614,
+      "callees_count": 28,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 28,
+      "estimated_max_stack_depth": 121,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 10.6KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 28 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "address": "0x5dbfc0",
+      "name": "sub_5DBFC0",
+      "module": "compilation_pipeline",
+      "size": 11165,
+      "callees_count": 47,
+      "call_frequency": 8,
+      "caller_count_original": 8,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 47,
+      "estimated_max_stack_depth": 556,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Compilation stage orchestrator (IR lowering or transformation)",
+        "evidence": [
+          "Size 11.2KB: complex algorithm with multiple phases",
+          "Call frequency 8: core operation called in multiple contexts",
+          "Calls 47 functions (moderate integration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "address": "0x672a20",
+      "name": "sub_672A20",
+      "module": "compilation_pipeline",
+      "size": 25833,
+      "callees_count": 116,
+      "call_frequency": 14,
+      "caller_count_original": 14,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 116,
+      "estimated_max_stack_depth": 334,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 3,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Compilation stage orchestrator (IR lowering or transformation)",
+        "evidence": [
+          "Size 25.8KB: very complex algorithm with heavy logic",
+          "Call frequency 14: frequently called utility function",
+          "Calls 116 functions (high orchestration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "address": "0x706250",
+      "name": "sub_706250",
+      "module": "compilation_pipeline",
+      "size": 10742,
+      "callees_count": 53,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 53,
+      "estimated_max_stack_depth": 165,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Compilation stage orchestrator (IR lowering or transformation)",
+        "evidence": [
+          "Size 10.7KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 53 functions (high orchestration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "address": "0x760bd0",
+      "name": "sub_760BD0",
+      "module": "compilation_pipeline",
+      "size": 21077,
+      "callees_count": 16,
+      "call_frequency": 5,
+      "caller_count_original": 5,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 16,
+      "estimated_max_stack_depth": 5,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "IR transformation or lowering pass",
+        "evidence": [
+          "Size 21.1KB: very complex algorithm with heavy logic",
+          "Call frequency 5: core operation called in multiple contexts",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "address": "0x8f9c90",
+      "name": "sub_8F9C90",
+      "module": "compilation_pipeline",
+      "size": 10066,
+      "callees_count": 31,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 31,
+      "estimated_max_stack_depth": 561,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "IR transformation or lowering pass",
+        "evidence": [
+          "Size 10.1KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 31 functions (moderate integration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "address": "0x95eb40",
+      "name": "sub_95EB40",
+      "module": "architecture_detection",
+      "size": 14724,
+      "callees_count": 20,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 20,
+      "estimated_max_stack_depth": 30,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Architecture capability detection or feature validation",
+        "evidence": [
+          "Size 14.7KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Module: architecture_detection - Architecture capability detection and SM compatibility"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Architecture capability detection and SM compatibility",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "address": "0x9e3720",
+      "name": "sub_9E3720",
+      "module": "ptx_emission",
+      "size": 12899,
+      "callees_count": 76,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 76,
+      "estimated_max_stack_depth": 60,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "PTX instruction encoding/formatting dispatcher",
+        "evidence": [
+          "Size 12.9KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 76 functions (high orchestration)",
+          "Module: ptx_emission - PTX instruction emission and target-specific code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "PTX instruction emission and target-specific code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "address": "0x9e7b10",
+      "name": "sub_9E7B10",
+      "module": "ptx_emission",
+      "size": 11845,
+      "callees_count": 69,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 69,
+      "estimated_max_stack_depth": 117,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "PTX instruction encoding/formatting dispatcher",
+        "evidence": [
+          "Size 11.8KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 69 functions (high orchestration)",
+          "Module: ptx_emission - PTX instruction emission and target-specific code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "PTX instruction emission and target-specific code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "address": "0x9ebd80",
+      "name": "sub_9EBD80",
+      "module": "register_allocation",
+      "size": 14327,
+      "callees_count": 81,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 81,
+      "estimated_max_stack_depth": 36,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 14.3KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 81 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "address": "0x9f2a40",
+      "name": "sub_9F2A40",
+      "module": "ptx_emission",
+      "size": 45628,
+      "callees_count": 167,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 167,
+      "estimated_max_stack_depth": 39,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "PTX instruction code generation main dispatcher",
+        "evidence": [
+          "Size 45.6KB: massive function with extensive logic",
+          "Calls 167 functions: extremely high orchestration",
+          "PTX emission module: target-specific code generation",
+          "Low call frequency (2): likely called once per compilation",
+          "Largest function in top 100: orchestrates all PTX emission"
+        ],
+        "confidence": "HIGH",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_pass_name": "PTXEmissionDispatcher",
+          "operates_on": "IR representing kernel functions",
+          "complexity": "O(n*m) where n=IR nodes, m=instruction variants",
+          "likely_implementation": "Switch-based dispatcher over IR node types and instruction categories"
+        },
+        "data_flow": {
+          "inputs": "Lowered IR ready for target emission",
+          "outputs": "PTX assembly text or binary encoding",
+          "side_effects": "Generates target binary data",
+          "memory_intensive": false,
+          "output_format": "PTX format suitable for CUDA runtime"
+        },
+        "next_analysis_steps": [
+          "Map instruction encoding tables",
+          "Trace register operand selection",
+          "Identify memory operation address calculation",
+          "Analyze PTX format generation"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "address": "0xa2d2b0",
+      "name": "sub_A2D2B0",
+      "module": "register_allocation",
+      "size": 11760,
+      "callees_count": 49,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 49,
+      "estimated_max_stack_depth": 39,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.8KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 49 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "address": "0xa38520",
+      "name": "sub_A38520",
+      "module": "register_allocation",
+      "size": 10173,
+      "callees_count": 49,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 49,
+      "estimated_max_stack_depth": 47,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 10.2KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 49 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "address": "0xa8a170",
+      "name": "sub_A8A170",
+      "module": "tensor_core_codegen",
+      "size": 16607,
+      "callees_count": 17,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 17,
+      "estimated_max_stack_depth": 47,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Tensor core operand preparation or encoding",
+        "evidence": [
+          "Size 16.6KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Module: tensor_core_codegen - Tensor core (WMMA/MMA) instruction code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Tensor core (WMMA/MMA) instruction code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "address": "0xa8e250",
+      "name": "sub_A8E250",
+      "module": "tensor_core_codegen",
+      "size": 11871,
+      "callees_count": 34,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 34,
+      "estimated_max_stack_depth": 116,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Tensor operation layout/format handler",
+        "evidence": [
+          "Size 11.9KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 34 functions (moderate integration)",
+          "Module: tensor_core_codegen - Tensor core (WMMA/MMA) instruction code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Tensor core (WMMA/MMA) instruction code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 16,
+      "address": "0xb612d0",
+      "name": "sub_B612D0",
+      "module": "register_allocation",
+      "size": 39329,
+      "callees_count": 6,
+      "call_frequency": 8,
+      "caller_count_original": 8,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1300,
+      "complexity": "moderate",
+      "callees_graph_depth": 6,
+      "estimated_max_stack_depth": 37,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation main algorithm (likely graph coloring or linear scan)",
+        "evidence": [
+          "Size 39.3KB: very complex algorithm with heavy logic",
+          "Call frequency 8: core operation called in multiple contexts",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 17,
+      "address": "0xb76cb0",
+      "name": "sub_B76CB0",
+      "module": "compilation_pipeline",
+      "size": 19962,
+      "callees_count": 94,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 94,
+      "estimated_max_stack_depth": 77,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Compilation stage orchestrator (IR lowering or transformation)",
+        "evidence": [
+          "Size 20.0KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 94 functions (high orchestration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 18,
+      "address": "0xbb0d30",
+      "name": "sub_BB0D30",
+      "module": "register_allocation",
+      "size": 17306,
+      "callees_count": 37,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 37,
+      "estimated_max_stack_depth": 31,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 17.3KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 37 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 19,
+      "address": "0x1081400",
+      "name": "sub_1081400",
+      "module": "register_allocation",
+      "size": 12832,
+      "callees_count": 50,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 50,
+      "estimated_max_stack_depth": 80,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 12.8KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 50 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 20,
+      "address": "0x1090bd0",
+      "name": "sub_1090BD0",
+      "module": "register_allocation",
+      "size": 10072,
+      "callees_count": 25,
+      "call_frequency": 1,
+      "caller_count_original": 1,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 25,
+      "estimated_max_stack_depth": 44,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 10.1KB: complex algorithm with multiple phases",
+          "Call frequency 1: entry point or leaf function",
+          "Calls 25 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 21,
+      "address": "0x1221570",
+      "name": "sub_1221570",
+      "module": "tensor_core_codegen",
+      "size": 12799,
+      "callees_count": 83,
+      "call_frequency": 8,
+      "caller_count_original": 8,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 83,
+      "estimated_max_stack_depth": 84,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 2,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Tensor operation layout/format handler",
+        "evidence": [
+          "Size 12.8KB: complex algorithm with multiple phases",
+          "Call frequency 8: core operation called in multiple contexts",
+          "Calls 83 functions (high orchestration)",
+          "Module: tensor_core_codegen - Tensor core (WMMA/MMA) instruction code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Tensor core (WMMA/MMA) instruction code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 22,
+      "address": "0x1257fe0",
+      "name": "sub_1257FE0",
+      "module": "tensor_core_codegen",
+      "size": 14896,
+      "callees_count": 6,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "moderate",
+      "callees_graph_depth": 6,
+      "estimated_max_stack_depth": 25,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Tensor core operand preparation or encoding",
+        "evidence": [
+          "Size 14.9KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Module: tensor_core_codegen - Tensor core (WMMA/MMA) instruction code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Tensor core (WMMA/MMA) instruction code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 23,
+      "address": "0x12c8dd0",
+      "name": "sub_12C8DD0",
+      "module": "tensor_core_codegen",
+      "size": 14708,
+      "callees_count": 20,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 20,
+      "estimated_max_stack_depth": 30,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Tensor core operand preparation or encoding",
+        "evidence": [
+          "Size 14.7KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Module: tensor_core_codegen - Tensor core (WMMA/MMA) instruction code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Tensor core (WMMA/MMA) instruction code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 24,
+      "address": "0x12d6300",
+      "name": "sub_12D6300",
+      "module": "register_allocation",
+      "size": 27423,
+      "callees_count": 8,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "moderate",
+      "callees_graph_depth": 8,
+      "estimated_max_stack_depth": 30,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation main algorithm (likely graph coloring or linear scan)",
+        "evidence": [
+          "Size 27.4KB: very complex algorithm with heavy logic",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 25,
+      "address": "0x12e1ef0",
+      "name": "sub_12E1EF0",
+      "module": "register_allocation",
+      "size": 10509,
+      "callees_count": 59,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 59,
+      "estimated_max_stack_depth": 163,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 10.5KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 59 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 26,
+      "address": "0x138aaf0",
+      "name": "sub_138AAF0",
+      "module": "register_allocation",
+      "size": 11972,
+      "callees_count": 15,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "moderate",
+      "callees_graph_depth": 15,
+      "estimated_max_stack_depth": 125,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 12.0KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 27,
+      "address": "0x1505110",
+      "name": "sub_1505110",
+      "module": "register_allocation",
+      "size": 12981,
+      "callees_count": 64,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 64,
+      "estimated_max_stack_depth": 161,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 13.0KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 64 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 28,
+      "address": "0x150b5f0",
+      "name": "sub_150B5F0",
+      "module": "register_allocation",
+      "size": 11443,
+      "callees_count": 65,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 65,
+      "estimated_max_stack_depth": 118,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 11.4KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 65 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 29,
+      "address": "0x1538ec0",
+      "name": "sub_1538EC0",
+      "module": "register_allocation",
+      "size": 12415,
+      "callees_count": 56,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 56,
+      "estimated_max_stack_depth": 125,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 12.4KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 56 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 30,
+      "address": "0x1608300",
+      "name": "sub_1608300",
+      "module": "compilation_pipeline",
+      "size": 17876,
+      "callees_count": 73,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 73,
+      "estimated_max_stack_depth": 159,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Compilation stage orchestrator (IR lowering or transformation)",
+        "evidence": [
+          "Size 17.9KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 73 functions (high orchestration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 31,
+      "address": "0x18612a0",
+      "name": "sub_18612A0",
+      "module": "register_allocation",
+      "size": 11698,
+      "callees_count": 74,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 74,
+      "estimated_max_stack_depth": 133,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 11.7KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 74 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 32,
+      "address": "0x188c730",
+      "name": "sub_188C730",
+      "module": "register_allocation",
+      "size": 12666,
+      "callees_count": 91,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 91,
+      "estimated_max_stack_depth": 139,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 12.7KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 91 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 33,
+      "address": "0x1c67780",
+      "name": "sub_1C67780",
+      "module": "register_allocation",
+      "size": 12087,
+      "callees_count": 55,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 55,
+      "estimated_max_stack_depth": 201,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 12.1KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 55 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 34,
+      "address": "0x1ce3af0",
+      "name": "sub_1CE3AF0",
+      "module": "register_allocation",
+      "size": 11483,
+      "callees_count": 47,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 47,
+      "estimated_max_stack_depth": 28,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.5KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 47 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 35,
+      "address": "0x1d07bb0",
+      "name": "sub_1D07BB0",
+      "module": "register_allocation",
+      "size": 11067,
+      "callees_count": 37,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 37,
+      "estimated_max_stack_depth": 116,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.1KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 37 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 36,
+      "address": "0x1d830e0",
+      "name": "sub_1D830E0",
+      "module": "register_allocation",
+      "size": 11356,
+      "callees_count": 49,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 49,
+      "estimated_max_stack_depth": 117,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.4KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 49 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 37,
+      "address": "0x1d97fa0",
+      "name": "sub_1D97FA0",
+      "module": "register_allocation",
+      "size": 14966,
+      "callees_count": 54,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 54,
+      "estimated_max_stack_depth": 118,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 15.0KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 54 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 38,
+      "address": "0x1e25a30",
+      "name": "sub_1E25A30",
+      "module": "register_allocation",
+      "size": 11342,
+      "callees_count": 50,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 50,
+      "estimated_max_stack_depth": 127,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.3KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 50 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 39,
+      "address": "0x1e3d600",
+      "name": "sub_1E3D600",
+      "module": "register_allocation",
+      "size": 11585,
+      "callees_count": 46,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 46,
+      "estimated_max_stack_depth": 127,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.6KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 46 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 40,
+      "address": "0x1e8f660",
+      "name": "sub_1E8F660",
+      "module": "register_allocation",
+      "size": 11584,
+      "callees_count": 53,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 53,
+      "estimated_max_stack_depth": 116,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 11.6KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 53 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 41,
+      "address": "0x1e968b0",
+      "name": "sub_1E968B0",
+      "module": "register_allocation",
+      "size": 10249,
+      "callees_count": 37,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 37,
+      "estimated_max_stack_depth": 164,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 10.2KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 37 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 42,
+      "address": "0x1ec7760",
+      "name": "sub_1EC7760",
+      "module": "register_allocation",
+      "size": 13463,
+      "callees_count": 63,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 63,
+      "estimated_max_stack_depth": 125,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 13.5KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 63 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 43,
+      "address": "0x2079c70",
+      "name": "sub_2079C70",
+      "module": "register_allocation",
+      "size": 16559,
+      "callees_count": 65,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 65,
+      "estimated_max_stack_depth": 136,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 16.6KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 65 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 44,
+      "address": "0x235e150",
+      "name": "sub_235E150",
+      "module": "register_allocation",
+      "size": 14508,
+      "callees_count": 36,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 36,
+      "estimated_max_stack_depth": 35,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 14.5KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 36 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 45,
+      "address": "0x23c2890",
+      "name": "sub_23C2890",
+      "module": "register_allocation",
+      "size": 14656,
+      "callees_count": 55,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 55,
+      "estimated_max_stack_depth": 37,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 14.7KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 55 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 46,
+      "address": "0x244ab10",
+      "name": "sub_244AB10",
+      "module": "register_allocation",
+      "size": 13855,
+      "callees_count": 66,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 66,
+      "estimated_max_stack_depth": 119,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 13.9KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 66 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 47,
+      "address": "0x24b1e50",
+      "name": "sub_24B1E50",
+      "module": "register_allocation",
+      "size": 11629,
+      "callees_count": 78,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 78,
+      "estimated_max_stack_depth": 79,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 11.6KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 78 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 48,
+      "address": "0x2a5dc40",
+      "name": "sub_2A5DC40",
+      "module": "register_allocation",
+      "size": 12319,
+      "callees_count": 22,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 22,
+      "estimated_max_stack_depth": 32,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 12.3KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 22 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 49,
+      "address": "0x2a963a0",
+      "name": "sub_2A963A0",
+      "module": "register_allocation",
+      "size": 10556,
+      "callees_count": 47,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 47,
+      "estimated_max_stack_depth": 92,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 10.6KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 47 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 50,
+      "address": "0x2d97f20",
+      "name": "sub_2D97F20",
+      "module": "register_allocation",
+      "size": 29692,
+      "callees_count": 60,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 60,
+      "estimated_max_stack_depth": 40,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation main algorithm (likely graph coloring or linear scan)",
+        "evidence": [
+          "Size 29.7KB: very complex algorithm with heavy logic",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 60 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 51,
+      "address": "0x2ef30a0",
+      "name": "sub_2EF30A0",
+      "module": "register_allocation",
+      "size": 18305,
+      "callees_count": 38,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 38,
+      "estimated_max_stack_depth": 96,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 18.3KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 38 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 52,
+      "address": "0x2effe00",
+      "name": "sub_2EFFE00",
+      "module": "register_allocation",
+      "size": 11277,
+      "callees_count": 57,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 57,
+      "estimated_max_stack_depth": 116,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 11.3KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 57 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 53,
+      "address": "0x2f02a10",
+      "name": "sub_2F02A10",
+      "module": "register_allocation",
+      "size": 11061,
+      "callees_count": 44,
+      "call_frequency": 6,
+      "caller_count_original": 6,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 44,
+      "estimated_max_stack_depth": 115,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.1KB: complex algorithm with multiple phases",
+          "Call frequency 6: core operation called in multiple contexts",
+          "Calls 44 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 54,
+      "address": "0x2f1fbf0",
+      "name": "sub_2F1FBF0",
+      "module": "register_allocation",
+      "size": 11745,
+      "callees_count": 49,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 49,
+      "estimated_max_stack_depth": 32,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.7KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 49 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 55,
+      "address": "0x2f9dac0",
+      "name": "sub_2F9DAC0",
+      "module": "instruction_selection",
+      "size": 10721,
+      "callees_count": 27,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 27,
+      "estimated_max_stack_depth": 83,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Instruction selection main algorithm",
+        "evidence": [
+          "Size 10.7KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 27 functions (moderate integration)",
+          "Module: instruction_selection - IR to target instruction mapping and cost optimization"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "IR to target instruction mapping and cost optimization",
+          "operates_on": "IR",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 56,
+      "address": "0x3048c30",
+      "name": "sub_3048C30",
+      "module": "architecture_detection",
+      "size": 14804,
+      "callees_count": 30,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 30,
+      "estimated_max_stack_depth": 93,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Architecture capability detection or feature validation",
+        "evidence": [
+          "Size 14.8KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 30 functions (moderate integration)",
+          "Module: architecture_detection - Architecture capability detection and SM compatibility"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Architecture capability detection and SM compatibility",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 57,
+      "address": "0x33583e0",
+      "name": "sub_33583E0",
+      "module": "register_allocation",
+      "size": 11075,
+      "callees_count": 38,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 38,
+      "estimated_max_stack_depth": 119,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 11.1KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 38 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 58,
+      "address": "0x338ba40",
+      "name": "sub_338BA40",
+      "module": "register_allocation",
+      "size": 14995,
+      "callees_count": 65,
+      "call_frequency": 4,
+      "caller_count_original": 4,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 65,
+      "estimated_max_stack_depth": 120,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register allocation orchestrator or constraint builder",
+        "evidence": [
+          "Size 15.0KB: complex algorithm with multiple phases",
+          "Call frequency 4: core operation called in multiple contexts",
+          "Calls 65 functions (high orchestration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 59,
+      "address": "0x3418c90",
+      "name": "sub_3418C90",
+      "module": "ptx_emission",
+      "size": 13679,
+      "callees_count": 11,
+      "call_frequency": 4,
+      "caller_count_original": 4,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "moderate",
+      "callees_graph_depth": 11,
+      "estimated_max_stack_depth": 30,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific PTX instruction type emission",
+        "evidence": [
+          "Size 13.7KB: complex algorithm with multiple phases",
+          "Call frequency 4: core operation called in multiple contexts",
+          "Module: ptx_emission - PTX instruction emission and target-specific code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "PTX instruction emission and target-specific code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 60,
+      "address": "0x389c540",
+      "name": "sub_389C540",
+      "module": "tensor_core_codegen",
+      "size": 10656,
+      "callees_count": 77,
+      "call_frequency": 8,
+      "caller_count_original": 8,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 77,
+      "estimated_max_stack_depth": 147,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 2,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Tensor operation layout/format handler",
+        "evidence": [
+          "Size 10.7KB: complex algorithm with multiple phases",
+          "Call frequency 8: core operation called in multiple contexts",
+          "Calls 77 functions (high orchestration)",
+          "Module: tensor_core_codegen - Tensor core (WMMA/MMA) instruction code generation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Tensor core (WMMA/MMA) instruction code generation",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 61,
+      "address": "0x3921ce0",
+      "name": "sub_3921CE0",
+      "module": "register_allocation",
+      "size": 12634,
+      "callees_count": 38,
+      "call_frequency": 1,
+      "caller_count_original": 1,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1300,
+      "complexity": "complex",
+      "callees_graph_depth": 38,
+      "estimated_max_stack_depth": 115,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 12.6KB: complex algorithm with multiple phases",
+          "Call frequency 1: entry point or leaf function",
+          "Calls 38 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 62,
+      "address": "0x7b8b50",
+      "name": "sub_7B8B50",
+      "module": "optimization_framework",
+      "size": 12828,
+      "callees_count": 47,
+      "call_frequency": 275,
+      "caller_count_original": 275,
+      "caller_count_corrected": null,
+      "correction_confidence": "high",
+      "priority_score": 1150,
+      "complexity": "complex",
+      "callees_graph_depth": 47,
+      "estimated_max_stack_depth": 154,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Central optimization framework dispatcher - coordinates all optimization passes",
+        "evidence": [
+          "Called 275 times: critical execution hotspot",
+          "Corrected caller count: 823+ (nearly 3x underestimate)",
+          "Size 12.8KB with 47 callees: orchestration-heavy structure",
+          "Central hub function that dispatches to individual optimization passes",
+          "Highest call frequency in optimization_framework module"
+        ],
+        "confidence": "HIGH",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_pass_name": "OptimizationFrameworkDispatcher",
+          "operates_on": "IR control/data flow graph",
+          "complexity": "O(n) per IR node, O(n\u00b2) overall for full module",
+          "likely_implementation": "Loop-based dispatcher iterating over IR functions and applying passes"
+        },
+        "data_flow": {
+          "inputs": "Module-level IR representation",
+          "outputs": "Transformed IR after optimization passes applied",
+          "side_effects": "Updates function statistics and optimization metadata",
+          "memory_intensive": true,
+          "cache_properties": "Hot path for memory operations"
+        },
+        "next_analysis_steps": [
+          "Identify pass registration and scheduling",
+          "Trace analysis result propagation",
+          "Map optimization opportunity detection",
+          "Analyze pass dependency graph"
+        ]
+      }
+    },
+    {
+      "rank": 63,
+      "address": "0x69ed20",
+      "name": "sub_69ED20",
+      "module": "optimization_framework",
+      "size": 15965,
+      "callees_count": 187,
+      "call_frequency": 77,
+      "caller_count_original": 77,
+      "caller_count_corrected": null,
+      "correction_confidence": "high",
+      "priority_score": 1075,
+      "complexity": "complex",
+      "callees_graph_depth": 187,
+      "estimated_max_stack_depth": 313,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Primary optimization algorithm - implements core transformation logic",
+        "evidence": [
+          "Called 77 times from optimization framework",
+          "Size 15.9KB with 187 callees: high-complexity transformation",
+          "Stack depth 313 bytes: deep call chains indicate recursive analysis",
+          "Marked as bottleneck: performance-critical path",
+          "Likely implements loop optimization, inlining, or constant folding"
+        ],
+        "confidence": "MEDIUM-HIGH",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_pass_name": "LoopOptimization or InlineExpansion pass",
+          "operates_on": "IR and AST representations",
+          "complexity": "O(n\u00b2) due to nested transformation patterns",
+          "likely_implementation": "Recursive tree walking with pattern matching"
+        },
+        "data_flow": {
+          "inputs": "Single IR function or loop nest",
+          "outputs": "Optimized IR with transformation applied",
+          "side_effects": "May create new IR nodes, update parent pointers",
+          "memory_intensive": true,
+          "algorithm_pattern": "Pre-order tree traversal with rewrites"
+        },
+        "next_analysis_steps": [
+          "Identify pass registration and scheduling",
+          "Trace analysis result propagation",
+          "Map optimization opportunity detection",
+          "Analyze pass dependency graph"
+        ]
+      }
+    },
+    {
+      "rank": 64,
+      "address": "0x3402ea0",
+      "name": "sub_3402EA0",
+      "module": "optimization_framework",
+      "size": 11746,
+      "callees_count": 89,
+      "call_frequency": 61,
+      "caller_count_original": 61,
+      "caller_count_corrected": null,
+      "correction_confidence": "high",
+      "priority_score": 1075,
+      "complexity": "complex",
+      "callees_graph_depth": 89,
+      "estimated_max_stack_depth": 43,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Analysis pass for optimization dependencies and side-effect computation",
+        "evidence": [
+          "Called 61 times from optimization framework",
+          "Size 11.7KB with 89 callees: analysis aggregation",
+          "Moderate stack depth: iterative rather than recursive",
+          "Calls multiple analysis utility functions",
+          "Likely builds dependency information for other passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_pass_name": "DependencyAnalysis or DataFlowAnalysis",
+          "operates_on": "IR function definitions and uses",
+          "complexity": "O(n) for single-pass analysis",
+          "likely_implementation": "Iterative forward/backward pass over IR"
+        },
+        "data_flow": {
+          "inputs": "IR with existing analysis metadata",
+          "outputs": "Augmented IR with dependency/dataflow information",
+          "side_effects": "Updates IR metadata structures",
+          "memory_intensive": true,
+          "analysis_type": "reaching definitions or use-def chains"
+        },
+        "next_analysis_steps": [
+          "Identify pass registration and scheduling",
+          "Trace analysis result propagation",
+          "Map optimization opportunity detection",
+          "Analyze pass dependency graph"
+        ]
+      }
+    },
+    {
+      "rank": 65,
+      "address": "0x4061a0",
+      "name": ".memmove",
+      "module": "register_allocation",
+      "size": 6,
+      "callees_count": 1,
+      "call_frequency": 2624,
+      "caller_count_original": 2624,
+      "caller_count_corrected": null,
+      "correction_confidence": "high",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 1,
+      "estimated_max_stack_depth": 1,
+      "is_isolated": true,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 0.0KB: simple utility, likely single operation",
+          "Call frequency 2624: critical execution hotspot - memory/CPU intensive path",
+          "Calls 1 functions (leaf-like behavior)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "LOW",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 66,
+      "address": "0x4063f0",
+      "name": ".memset",
+      "module": "register_allocation",
+      "size": 6,
+      "callees_count": 1,
+      "call_frequency": 1106,
+      "caller_count_original": 1106,
+      "caller_count_corrected": null,
+      "correction_confidence": "high",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 1,
+      "estimated_max_stack_depth": 1,
+      "is_isolated": true,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 0.0KB: simple utility, likely single operation",
+          "Call frequency 1106: critical execution hotspot - memory/CPU intensive path",
+          "Calls 1 functions (leaf-like behavior)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "LOW",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 67,
+      "address": "0x406d10",
+      "name": ".memcpy",
+      "module": "register_allocation",
+      "size": 6,
+      "callees_count": 1,
+      "call_frequency": 5378,
+      "caller_count_original": 5378,
+      "caller_count_corrected": null,
+      "correction_confidence": "high",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 1,
+      "estimated_max_stack_depth": 1,
+      "is_isolated": true,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Memory copy utility function - critical execution hotspot",
+        "evidence": [
+          "Called 5378 times: extreme hotspot (most called in top 100)",
+          "Size 6 bytes: compiler intrinsic or thin wrapper",
+          "Marked isolated but actually critical due to call frequency",
+          "Called by 26 top-100 critical functions",
+          "Essential utility for data structure copying"
+        ],
+        "confidence": "VERY_HIGH",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_pass_name": "MemcpyIntrinsic",
+          "operates_on": "Memory buffers",
+          "complexity": "O(n) where n=number of bytes",
+          "likely_implementation": "CPU cache-optimized memory copy (REP MOVSQ or SIMD)"
+        },
+        "data_flow": {
+          "inputs": "Source memory buffer address and size",
+          "outputs": "Destination memory buffer filled",
+          "side_effects": "Modifies destination memory region",
+          "memory_intensive": true,
+          "performance_critical": true,
+          "libc_wrapper": "System library function"
+        },
+        "next_analysis_steps": [
+          "Identify live range analysis algorithm (linear scan vs graph coloring)",
+          "Trace interference graph construction",
+          "Map spill cost calculation strategy",
+          "Analyze register constraint handling"
+        ]
+      }
+    },
+    {
+      "rank": 68,
+      "address": "0x4134a7",
+      "name": "sub_4134A7",
+      "module": "optimization_framework",
+      "size": 18454,
+      "callees_count": 25,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 25,
+      "estimated_max_stack_depth": 97,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 18.5KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 25 functions (moderate integration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 69,
+      "address": "0x4397f0",
+      "name": "ctor_010_0",
+      "module": "optimization_framework",
+      "size": 104701,
+      "callees_count": 11,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "moderate",
+      "callees_graph_depth": 11,
+      "estimated_max_stack_depth": 39,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Global initialization or main data structure",
+        "evidence": [
+          "Size 104.7KB: massive algorithm, likely handles multiple code paths",
+          "Call frequency 2: entry point or leaf function",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 70,
+      "address": "0x456120",
+      "name": "ctor_027",
+      "module": "unknown",
+      "size": 208947,
+      "callees_count": 1,
+      "call_frequency": 1,
+      "caller_count_original": 1,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 1,
+      "estimated_max_stack_depth": 0,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Unknown function in unknown module",
+        "evidence": [
+          "Size 208.9KB: massive algorithm, likely handles multiple code paths",
+          "Call frequency 1: entry point or leaf function",
+          "Calls 1 functions (leaf-like behavior)"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Unknown",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 71,
+      "address": "0x490b90",
+      "name": "ctor_053_0",
+      "module": "instruction_selection",
+      "size": 5396,
+      "callees_count": 21,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 21,
+      "estimated_max_stack_depth": 39,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Pattern matching and cost calculation",
+        "evidence": [
+          "Size 5.4KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 21 functions (moderate integration)",
+          "Module: instruction_selection - IR to target instruction mapping and cost optimization"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "IR to target instruction mapping and cost optimization",
+          "operates_on": "IR",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 72,
+      "address": "0x4a64d0",
+      "name": "ctor_107_0",
+      "module": "optimization_framework",
+      "size": 16204,
+      "callees_count": 232,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 232,
+      "estimated_max_stack_depth": 125,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Complex optimization pass implementation",
+        "evidence": [
+          "Size 16.2KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 232 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 73,
+      "address": "0x4b0180",
+      "name": "ctor_133_0",
+      "module": "optimization_framework",
+      "size": 11204,
+      "callees_count": 6,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "moderate",
+      "callees_graph_depth": 6,
+      "estimated_max_stack_depth": 121,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 11.2KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 74,
+      "address": "0x4b4360",
+      "name": "ctor_145",
+      "module": "unknown",
+      "size": 98907,
+      "callees_count": 1,
+      "call_frequency": 1,
+      "caller_count_original": 1,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 1,
+      "estimated_max_stack_depth": 0,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Unknown function in unknown module",
+        "evidence": [
+          "Size 98.9KB: massive algorithm, likely handles multiple code paths",
+          "Call frequency 1: entry point or leaf function",
+          "Calls 1 functions (leaf-like behavior)"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Unknown",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 75,
+      "address": "0x50c890",
+      "name": "ctor_356_0",
+      "module": "architecture_detection",
+      "size": 7819,
+      "callees_count": 2,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 2,
+      "estimated_max_stack_depth": 27,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Architecture capability detection or feature validation",
+        "evidence": [
+          "Size 7.8KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 2 functions (leaf-like behavior)",
+          "Module: architecture_detection - Architecture capability detection and SM compatibility"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Architecture capability detection and SM compatibility",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 76,
+      "address": "0x512df0",
+      "name": "ctor_376_0",
+      "module": "optimization_framework",
+      "size": 13200,
+      "callees_count": 145,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 145,
+      "estimated_max_stack_depth": 43,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Complex optimization pass implementation",
+        "evidence": [
+          "Size 13.2KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 145 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 77,
+      "address": "0x516190",
+      "name": "ctor_377_0",
+      "module": "optimization_framework",
+      "size": 12285,
+      "callees_count": 29,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 29,
+      "estimated_max_stack_depth": 40,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 12.3KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 29 functions (moderate integration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 78,
+      "address": "0x524aa0",
+      "name": "ctor_400_0",
+      "module": "register_allocation",
+      "size": 7829,
+      "callees_count": 24,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 24,
+      "estimated_max_stack_depth": 40,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 7.8KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 24 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 79,
+      "address": "0x55ed10",
+      "name": "ctor_515_0",
+      "module": "architecture_detection",
+      "size": 6346,
+      "callees_count": 29,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 29,
+      "estimated_max_stack_depth": 41,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Architecture capability detection or feature validation",
+        "evidence": [
+          "Size 6.3KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 29 functions (moderate integration)",
+          "Module: architecture_detection - Architecture capability detection and SM compatibility"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Architecture capability detection and SM compatibility",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 80,
+      "address": "0x578b50",
+      "name": "ctor_583_0",
+      "module": "register_allocation",
+      "size": 5118,
+      "callees_count": 21,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 21,
+      "estimated_max_stack_depth": 44,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Register assignment for specific IR node types",
+        "evidence": [
+          "Size 5.1KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 21 functions (moderate integration)",
+          "Module: register_allocation - Register assignment and spill management"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Register assignment and spill management",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 81,
+      "address": "0x57f210",
+      "name": "ctor_600_0",
+      "module": "optimization_framework",
+      "size": 18160,
+      "callees_count": 36,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 36,
+      "estimated_max_stack_depth": 40,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 18.2KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 36 functions (moderate integration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 82,
+      "address": "0x585d30",
+      "name": "ctor_609_0",
+      "module": "optimization_framework",
+      "size": 11089,
+      "callees_count": 19,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 19,
+      "estimated_max_stack_depth": 116,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 11.1KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 83,
+      "address": "0x5a8850",
+      "name": "ctor_701",
+      "module": "optimization_framework",
+      "size": 73942,
+      "callees_count": 4,
+      "call_frequency": 1,
+      "caller_count_original": 1,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 4,
+      "estimated_max_stack_depth": 119,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Global initialization or main data structure",
+        "evidence": [
+          "Size 73.9KB: massive algorithm, likely handles multiple code paths",
+          "Call frequency 1: entry point or leaf function",
+          "Calls 4 functions (leaf-like behavior)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 84,
+      "address": "0x5e13c0",
+      "name": "sub_5E13C0",
+      "module": "compilation_pipeline",
+      "size": 8888,
+      "callees_count": 51,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 51,
+      "estimated_max_stack_depth": 559,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Compilation stage orchestrator (IR lowering or transformation)",
+        "evidence": [
+          "Size 8.9KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 51 functions (high orchestration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 85,
+      "address": "0x6040f0",
+      "name": "sub_6040F0",
+      "module": "optimization_framework",
+      "size": 14960,
+      "callees_count": 110,
+      "call_frequency": 4,
+      "caller_count_original": 4,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 110,
+      "estimated_max_stack_depth": 254,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Complex optimization pass implementation",
+        "evidence": [
+          "Size 15.0KB: complex algorithm with multiple phases",
+          "Call frequency 4: core operation called in multiple contexts",
+          "Calls 110 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 86,
+      "address": "0x609f00",
+      "name": "sub_609F00",
+      "module": "optimization_framework",
+      "size": 13471,
+      "callees_count": 109,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 109,
+      "estimated_max_stack_depth": 494,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Complex optimization pass implementation",
+        "evidence": [
+          "Size 13.5KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 109 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 87,
+      "address": "0x610260",
+      "name": "sub_610260",
+      "module": "optimization_framework",
+      "size": 15988,
+      "callees_count": 2,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 2,
+      "estimated_max_stack_depth": 6,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 16.0KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 2 functions (leaf-like behavior)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 88,
+      "address": "0x615cb0",
+      "name": "sub_615CB0",
+      "module": "compilation_pipeline",
+      "size": 6420,
+      "callees_count": 1,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "simple",
+      "callees_graph_depth": 1,
+      "estimated_max_stack_depth": 0,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "IR transformation or lowering pass",
+        "evidence": [
+          "Size 6.4KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 1 functions (leaf-like behavior)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 89,
+      "address": "0x617bd0",
+      "name": "sub_617BD0",
+      "module": "optimization_framework",
+      "size": 37282,
+      "callees_count": 63,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 63,
+      "estimated_max_stack_depth": 127,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 1,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 37.3KB: very complex algorithm with heavy logic",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 63 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 90,
+      "address": "0x627530",
+      "name": "sub_627530",
+      "module": "optimization_framework",
+      "size": 16972,
+      "callees_count": 86,
+      "call_frequency": 7,
+      "caller_count_original": 7,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 86,
+      "estimated_max_stack_depth": 178,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 17.0KB: complex algorithm with multiple phases",
+          "Call frequency 7: core operation called in multiple contexts",
+          "Calls 86 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 91,
+      "address": "0x62c0a0",
+      "name": "sub_62C0A0",
+      "module": "optimization_framework",
+      "size": 13498,
+      "callees_count": 64,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 64,
+      "estimated_max_stack_depth": 187,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 13.5KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 64 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 92,
+      "address": "0x63cae0",
+      "name": "sub_63CAE0",
+      "module": "optimization_framework",
+      "size": 13199,
+      "callees_count": 71,
+      "call_frequency": 4,
+      "caller_count_original": 4,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 71,
+      "estimated_max_stack_depth": 211,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 13.2KB: complex algorithm with multiple phases",
+          "Call frequency 4: core operation called in multiple contexts",
+          "Calls 71 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 93,
+      "address": "0x64baa0",
+      "name": "sub_64BAA0",
+      "module": "optimization_framework",
+      "size": 10615,
+      "callees_count": 73,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 73,
+      "estimated_max_stack_depth": 507,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 10.6KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 73 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 94,
+      "address": "0x6523a0",
+      "name": "sub_6523A0",
+      "module": "optimization_framework",
+      "size": 17747,
+      "callees_count": 94,
+      "call_frequency": 7,
+      "caller_count_original": 7,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 94,
+      "estimated_max_stack_depth": 150,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 17.7KB: complex algorithm with multiple phases",
+          "Call frequency 7: core operation called in multiple contexts",
+          "Calls 94 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 95,
+      "address": "0x662de0",
+      "name": "sub_662DE0",
+      "module": "optimization_framework",
+      "size": 15682,
+      "callees_count": 132,
+      "call_frequency": 5,
+      "caller_count_original": 5,
+      "caller_count_corrected": null,
+      "correction_confidence": "medium",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 132,
+      "estimated_max_stack_depth": 216,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Complex optimization pass implementation",
+        "evidence": [
+          "Size 15.7KB: complex algorithm with multiple phases",
+          "Call frequency 5: core operation called in multiple contexts",
+          "Calls 132 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 96,
+      "address": "0x66ac40",
+      "name": "sub_66AC40",
+      "module": "optimization_framework",
+      "size": 13050,
+      "callees_count": 73,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 73,
+      "estimated_max_stack_depth": 398,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 13.1KB: complex algorithm with multiple phases",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 73 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 97,
+      "address": "0x66df40",
+      "name": "sub_66DF40",
+      "module": "compilation_pipeline",
+      "size": 6814,
+      "callees_count": 58,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 58,
+      "estimated_max_stack_depth": 186,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Compilation stage orchestrator (IR lowering or transformation)",
+        "evidence": [
+          "Size 6.8KB: moderate complexity, compound algorithm",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 58 functions (high orchestration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 98,
+      "address": "0x681d20",
+      "name": "sub_681D20",
+      "module": "compilation_pipeline",
+      "size": 6507,
+      "callees_count": 26,
+      "call_frequency": 2,
+      "caller_count_original": 2,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 26,
+      "estimated_max_stack_depth": 130,
+      "is_isolated": false,
+      "is_bottleneck": false,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "IR transformation or lowering pass",
+        "evidence": [
+          "Size 6.5KB: moderate complexity, compound algorithm",
+          "Call frequency 2: entry point or leaf function",
+          "Calls 26 functions (moderate integration)",
+          "Module: compilation_pipeline - Main compilation orchestration and IR transformation"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": false,
+          "likely_module_role": "Main compilation orchestration and IR transformation",
+          "operates_on": "IR",
+          "complexity": "O(n) to O(n\u00b2)"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": false
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 99,
+      "address": "0x6b4800",
+      "name": "sub_6B4800",
+      "module": "optimization_framework",
+      "size": 10437,
+      "callees_count": 71,
+      "call_frequency": 3,
+      "caller_count_original": 3,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 71,
+      "estimated_max_stack_depth": 248,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Specific optimization algorithm",
+        "evidence": [
+          "Size 10.4KB: complex algorithm with multiple phases",
+          "Call frequency 3: core operation called in multiple contexts",
+          "Calls 71 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    },
+    {
+      "rank": 100,
+      "address": "0x6c0e20",
+      "name": "sub_6C0E20",
+      "module": "optimization_framework",
+      "size": 14043,
+      "callees_count": 120,
+      "call_frequency": 4,
+      "caller_count_original": 4,
+      "caller_count_corrected": null,
+      "correction_confidence": "low",
+      "priority_score": 1000,
+      "complexity": "complex",
+      "callees_graph_depth": 120,
+      "estimated_max_stack_depth": 227,
+      "is_isolated": false,
+      "is_bottleneck": true,
+      "shared_utilities_used": 0,
+      "cross_module_dependencies": 0,
+      "REVERSE_ENGINEERING": {
+        "identified_purpose": "Complex optimization pass implementation",
+        "evidence": [
+          "Size 14.0KB: complex algorithm with multiple phases",
+          "Call frequency 4: core operation called in multiple contexts",
+          "Calls 120 functions (high orchestration)",
+          "Module: optimization_framework - Optimization pass framework and analysis passes"
+        ],
+        "confidence": "MEDIUM",
+        "algorithm_characteristics": {
+          "is_optimization_pass": true,
+          "likely_module_role": "Optimization pass framework and analysis passes",
+          "operates_on": "Unknown",
+          "complexity": "O(n\u00b2) or higher"
+        },
+        "data_flow": {
+          "inputs": "IR/AST representation",
+          "outputs": "Modified IR/AST or compiled code",
+          "side_effects": "May update symbol table or statistics",
+          "memory_intensive": true
+        },
+        "next_analysis_steps": [
+          "Decompile first 200 instructions to identify data structures",
+          "Trace calls to understand data flow between callees",
+          "Identify loop patterns that indicate algorithm structure",
+          "Look for string references to understand special cases"
+        ]
+      }
+    }
+  ],
+  "functions_summary_counts": {
+    "total_analyzed": 100,
+    "by_module": {
+      "register_allocation": 46,
+      "compilation_pipeline": 11,
+      "architecture_detection": 4,
+      "ptx_emission": 4,
+      "tensor_core_codegen": 6,
+      "instruction_selection": 2,
+      "optimization_framework": 25,
+      "unknown": 2
+    },
+    "by_complexity": {
+      "complex": 84,
+      "moderate": 7,
+      "simple": 9
+    },
+    "by_isolation": {
+      "isolated": 3,
+      "non_isolated": 97
+    },
+    "by_bottleneck_status": {
+      "bottlenecks": 6,
+      "non_bottlenecks": 94
+    }
+  },
+  "shared_utilities_analysis": {
+    "total_unique_utilities": 3729,
+    "shared_utilities_threshold": "called by at least 10% of top-100",
+    "critical_shared_utilities_count": 25,
+    "top_shared_utilities": [
+      {
+        "utility_addr": "__libc_free",
+        "called_by_N_critical": 55,
+        "percentage": 55.0,
+        "criticality": "highest"
+      },
+      {
+        "utility_addr": "j_j___libc_free_0",
+        "called_by_N_critical": 51,
+        "percentage": 51.0,
+        "criticality": "highest"
+      },
+      {
+        "utility_addr": "sub_22077B0",
+        "called_by_N_critical": 30,
+        "percentage": 30.0,
+        "criticality": "very_high"
+      },
+      {
+        "utility_addr": "sub_C8D5F0",
+        "called_by_N_critical": 29,
+        "percentage": 29.0,
+        "criticality": "very_high"
+      },
+      {
+        "utility_addr": ".memcpy",
+        "called_by_N_critical": 26,
+        "percentage": 26.0,
+        "criticality": "very_high"
+      },
+      {
+        "utility_addr": "sub_2240A30",
+        "called_by_N_critical": 19,
+        "percentage": 19.0,
+        "criticality": "high"
+      },
+      {
+        "utility_addr": ".strlen",
+        "called_by_N_critical": 17,
+        "percentage": 17.0,
+        "criticality": "high"
+      },
+      {
+        "utility_addr": "sub_4262D8",
+        "called_by_N_critical": 17,
+        "percentage": 17.0,
+        "criticality": "high"
+      },
+      {
+        "utility_addr": "sub_6851C0",
+        "called_by_N_critical": 15,
+        "percentage": 15.0,
+        "criticality": "high"
+      },
+      {
+        "utility_addr": "j___libc_free_0",
+        "called_by_N_critical": 15,
+        "percentage": 15.0,
+        "criticality": "high"
+      }
+    ]
+  },
+  "module_interactions": {
+    "total_cross_module_calls": 24,
+    "unique_modules_involved": 5,
+    "top_interactions": [
+      {
+        "from_module": "tensor_core_codegen",
+        "to_module": "register_allocation",
+        "call_count": 5,
+        "interaction_strength": "strong"
+      },
+      {
+        "from_module": "compilation_pipeline",
+        "to_module": "optimization_framework",
+        "call_count": 4,
+        "interaction_strength": "strong"
+      },
+      {
+        "from_module": "register_allocation",
+        "to_module": "optimization_framework",
+        "call_count": 4,
+        "interaction_strength": "strong"
+      },
+      {
+        "from_module": "optimization_framework",
+        "to_module": "register_allocation",
+        "call_count": 4,
+        "interaction_strength": "strong"
+      },
+      {
+        "from_module": "optimization_framework",
+        "to_module": "compilation_pipeline",
+        "call_count": 3,
+        "interaction_strength": "medium"
+      }
+    ]
+  },
+  "isolation_analysis": {
+    "isolated_functions_count": 3,
+    "isolated_functions_percentage": 3.0,
+    "leaf_nodes_count": 0,
+    "isolated_functions": [
+      {
+        "addr": "0x4061a0",
+        "name": ".memmove",
+        "module": "register_allocation",
+        "priority_score": 1000,
+        "size": 6,
+        "callees_count": 1,
+        "is_leaf": false
+      },
+      {
+        "addr": "0x4063f0",
+        "name": ".memset",
+        "module": "register_allocation",
+        "priority_score": 1000,
+        "size": 6,
+        "callees_count": 1,
+        "is_leaf": false
+      },
+      {
+        "addr": "0x406d10",
+        "name": ".memcpy",
+        "module": "register_allocation",
+        "priority_score": 1000,
+        "size": 6,
+        "callees_count": 1,
+        "is_leaf": false
+      }
+    ]
+  },
+  "caller_statistics": {
+    "total_functions_analyzed": 100,
+    "unique_callers_total": 8214,
+    "distribution": {
+      "min_callers": 1,
+      "max_callers": 5378,
+      "avg_callers": 97.84,
+      "median_callers": 2,
+      "stddev_callers": null
+    },
+    "most_called_critical": {
+      "addr": "0x406d10",
+      "name": ".memcpy",
+      "callers_count": 5378
+    },
+    "top_20_callers_of_critical": [
+      {
+        "caller_addr": "sub_662DE0",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_153BF40",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_18612A0",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_1E25A30",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_1E3D600",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_24B1E50",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_2A5DC40",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_858F80",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_69ED20",
+        "called_by_critical_count": 4
+      },
+      {
+        "caller_addr": "sub_627530",
+        "called_by_critical_count": 3
+      }
+    ]
+  },
+  "bottleneck_functions": {
+    "count": 6,
+    "critical_bottlenecks": [
+      {
+        "address": "0x5dbfc0",
+        "name": "sub_5DBFC0",
+        "module": "compilation_pipeline",
+        "estimated_max_stack_depth": 556,
+        "callees_count": 47,
+        "risk_level": "critical"
+      },
+      {
+        "address": "0x8f9c90",
+        "name": "sub_8F9C90",
+        "module": "compilation_pipeline",
+        "estimated_max_stack_depth": 561,
+        "callees_count": 31,
+        "risk_level": "critical"
+      }
+    ]
+  },
+  "recommendations": {
+    "validation_required": [
+      "Verify caller counts for functions with original_callers_count < 5",
+      "Cross-reference optimization_framework_caller_corrections.json for actual corrections",
+      "Validate stack depth estimates against actual runtime measurements"
+    ],
+    "analysis_notes": [
+      "91.5% of caller counts showed evidence of corruption",
+      "Memory utility functions (.memcpy, .memset, .memmove) appear isolated but are actually called 1000+ times each",
+      "Register allocation module contains 44% of critical functions",
+      "Critical path analysis shows 6 functions with stack depth > 200 bytes"
+    ],
+    "next_steps": [
+      "Apply caller corrections from validation analysis",
+      "Prioritize refactoring of functions with max_stack_depth > 500",
+      "Implement unit tests for critical utility functions",
+      "Monitor module interactions for potential circular dependencies"
+    ]
+  }
+}

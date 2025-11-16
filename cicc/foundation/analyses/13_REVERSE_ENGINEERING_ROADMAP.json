@@ -1,0 +1,574 @@
+{
+  "metadata": {
+    "title": "CICC Reverse Engineering Roadmap",
+    "goal": "Systematic understanding of CICC compilation pipeline internals",
+    "timeline": "12-16 weeks",
+    "team_size": "2-3 reverse engineers",
+    "created": "2025-11-16",
+    "status": "READY_FOR_EXECUTION",
+    "expected_outcomes": {
+      "pipeline_documentation": "Complete understanding of compilation stages",
+      "algorithm_identification": "Document 5+ critical algorithms",
+      "data_structures_mapped": "All major IR formats and internal structures",
+      "symbol_recovery": "500+ critical functions named",
+      "knowledge_base": "Comprehensive RE knowledge database"
+    }
+  },
+
+  "phase_1_pipeline_understanding": {
+    "weeks": "1-4",
+    "effort_hours": 320,
+    "priority": "CRITICAL",
+    "objectives": [
+      "Map compilation pipeline stages end-to-end",
+      "Identify and document entry points",
+      "Trace one complete compilation from start to finish",
+      "Document module interactions and data flow"
+    ],
+    "tasks": [
+      {
+        "task_id": "1.1",
+        "task": "Identify main compilation entry point",
+        "method": "Binary analysis: trace from main(), analyze callgraph, identify initialization",
+        "tools": ["IDA Pro/Ghidra", "GDB breakpoints", "Custom trace scripts"],
+        "deliverable": "Entry_Point_Analysis.md (entry point address, call sequence, parameter passing)",
+        "hours": 16,
+        "success_criteria": "Can explain how compilation starts and what initial parameters are required"
+      },
+      {
+        "task_id": "1.2",
+        "task": "Map parsing and IR construction phase",
+        "method": "Follow control flow from entry point, analyze IR structure, identify parse functions",
+        "tools": ["Hex-Rays decompiler", "GDB data structure inspection", "Memory dumps"],
+        "deliverable": "Parser_IR_Construction.md (parse function list, IR format overview, data flow)",
+        "hours": 40,
+        "success_criteria": "Understand how source code is parsed and converted to internal representation"
+      },
+      {
+        "task_id": "1.3",
+        "task": "Trace IR through optimization framework",
+        "method": "Follow data flow, identify pass boundaries, document pass execution order",
+        "tools": ["Callgraph analysis", "Data flow graphing", "Control flow analysis"],
+        "deliverable": "Optimization_Pipeline.md (pass sequence, pass dependencies, IR transformations)",
+        "hours": 80,
+        "success_criteria": "Can describe 30+ optimization passes and how they interact"
+      },
+      {
+        "task_id": "1.4",
+        "task": "Map instruction selection phase",
+        "method": "Identify selection functions, analyze pattern matching, document cost model",
+        "tools": ["Binary search", "Pattern analysis tools", "Decompiler"],
+        "deliverable": "Instruction_Selection_Analysis.md (selection algorithm, pattern tables, cost model)",
+        "hours": 50,
+        "success_criteria": "Understand how IR is converted to target instructions"
+      },
+      {
+        "task_id": "1.5",
+        "task": "Map register allocation phase",
+        "method": "Identify allocation functions, analyze constraint solver, trace allocation decisions",
+        "tools": ["Static analysis", "Memory structure analysis", "Dynamic tracing"],
+        "deliverable": "Register_Allocation_Overview.md (algorithm overview, constraints, heuristics)",
+        "hours": 60,
+        "success_criteria": "Understand register allocation strategy and SM-version variations"
+      },
+      {
+        "task_id": "1.6",
+        "task": "Map code generation and PTX emission",
+        "method": "Trace PTX generation, analyze instruction scheduling, document emission phases",
+        "tools": ["Binary analysis", "PTX comparison tools", "Instruction analysis"],
+        "deliverable": "PTX_Emission.md (emission phases, scheduling strategy, optimization in emission)",
+        "hours": 50,
+        "success_criteria": "Understand how compiled code is emitted to PTX"
+      },
+      {
+        "task_id": "1.7",
+        "task": "Create pipeline end-to-end trace documentation",
+        "method": "Synthesize all phase analysis, create unified pipeline diagram",
+        "tools": ["Graphviz", "Documentation tools"],
+        "deliverable": "Pipeline_End_to_End.md (complete pipeline diagram, phase interaction, data flow)",
+        "hours": 24,
+        "success_criteria": "Can trace complete compilation with all modules identified"
+      }
+    ],
+    "success_criteria": [
+      "Can describe all compilation pipeline stages in order",
+      "Know which modules handle which phases",
+      "Have traced one complete compilation from entry to PTX output",
+      "Have identified all major data structures"
+    ]
+  },
+
+  "phase_2_algorithm_identification": {
+    "weeks": "5-8",
+    "effort_hours": 280,
+    "priority": "CRITICAL",
+    "objectives": [
+      "Determine register allocation algorithm type and implementation",
+      "Identify all major optimization passes",
+      "Understand instruction selection mechanism",
+      "Map PTX emission mechanics"
+    ],
+    "high_priority_algorithms": [
+      {
+        "algorithm": "Register allocation",
+        "current_hypothesis": "Graph coloring or linear scan with SM-specific constraints",
+        "analysis_method": "Decompile top register allocation functions, analyze data structures, trace constraint building",
+        "hours": 60,
+        "deliverable": "Register_Allocation_Algorithm.md (algorithm type, constraint system, heuristics documented)",
+        "validation": "Compare against LLVM LinearScan and GraphColoring implementations",
+        "success_criteria": "Confidently identify algorithm type and document key differences from standard implementations"
+      },
+      {
+        "algorithm": "Instruction selection",
+        "current_hypothesis": "Pattern matching with dynamic programming cost model",
+        "analysis_method": "Analyze pattern tables, trace selection logic, document cost calculations",
+        "hours": 40,
+        "deliverable": "Instruction_Selection_Algorithm.md (selection method, pattern tables, cost model documented)",
+        "validation": "Cross-reference with LLVM isel framework",
+        "success_criteria": "Understand how IR patterns are matched to target instructions"
+      },
+      {
+        "algorithm": "Loop optimization/unrolling",
+        "current_hypothesis": "Heuristic-based with SM capacity constraints",
+        "analysis_method": "Analyze loop transformation functions, understand unroll heuristics",
+        "hours": 35,
+        "deliverable": "Loop_Optimization_Algorithm.md (unroll heuristics, constraint factors)",
+        "validation": "Compare against standard compiler heuristics",
+        "success_criteria": "Understand how loops are optimized for GPU"
+      },
+      {
+        "algorithm": "Memory coalescing",
+        "current_hypothesis": "Access pattern analysis with thread synchronization",
+        "analysis_method": "Analyze memory access patterns, trace coalescing logic",
+        "hours": 40,
+        "deliverable": "Memory_Coalescing_Algorithm.md (coalescing strategy, pattern analysis)",
+        "validation": "Validate against GPU memory model",
+        "success_criteria": "Understand how memory accesses are optimized for coalescing"
+      },
+      {
+        "algorithm": "Tensor core code generation",
+        "current_hypothesis": "Pattern matching with precision handling",
+        "analysis_method": "Analyze WMMA instruction generation, trace precision conversions",
+        "hours": 30,
+        "deliverable": "Tensor_Core_Algorithm.md (WMMA generation, precision variants, optimization)",
+        "validation": "Cross-reference with NVIDIA tensor core documentation",
+        "success_criteria": "Understand how matrix operations are mapped to tensor cores"
+      }
+    ],
+    "tasks": [
+      {
+        "task_id": "2.1",
+        "task": "Deep-dive register allocation analysis",
+        "method": "Decompile 20+ register allocation functions, build constraint solver model",
+        "hours": 60,
+        "deliverable": "Complete register allocation algorithm documentation with pseudocode"
+      },
+      {
+        "task_id": "2.2",
+        "task": "Document all 30+ optimization passes",
+        "method": "Identify each pass, understand purpose, trace transformations, document ordering",
+        "hours": 50,
+        "deliverable": "Optimization_Pass_Catalog.md (pass registry with purpose and interaction rules)"
+      },
+      {
+        "task_id": "2.3",
+        "task": "Analyze SM-version-specific code paths",
+        "method": "Identify version selection logic, trace version-specific optimizations",
+        "hours": 40,
+        "deliverable": "SM_Variants_Analysis.md (version differences, feature detection, version-specific paths)"
+      },
+      {
+        "task_id": "2.4",
+        "task": "Create algorithm comparison study",
+        "method": "Compare identified algorithms with LLVM/GCC implementations",
+        "hours": 35,
+        "deliverable": "Algorithm_Comparison_Report.md (differences, innovations, unique aspects)"
+      },
+      {
+        "task_id": "2.5",
+        "task": "Analyze error handling in algorithms",
+        "method": "Identify error conditions, trace error propagation, document recovery mechanisms",
+        "hours": 30,
+        "deliverable": "Algorithm_Error_Handling.md (error conditions, recovery paths)"
+      },
+      {
+        "task_id": "2.6",
+        "task": "Performance bottleneck analysis",
+        "method": "Identify expensive operations, analyze complexity, document performance-critical sections",
+        "hours": 25,
+        "deliverable": "Algorithm_Performance_Analysis.md (bottlenecks, complexity analysis)"
+      }
+    ]
+  },
+
+  "phase_3_data_structure_analysis": {
+    "weeks": "9-12",
+    "effort_hours": 240,
+    "priority": "HIGH",
+    "objectives": [
+      "Document IR data structure layout and semantics",
+      "Map symbol table format and organization",
+      "Understand control flow graph representation",
+      "Extract and document all internal data formats"
+    ],
+    "tasks": [
+      {
+        "task_id": "3.1",
+        "task": "Analyze IR node structure",
+        "method": "Memory dump analysis, decompilation of IR construction, reverse-engineer struct layouts",
+        "hours": 50,
+        "deliverable": "IR_Structure_Layout.md (struct definitions, field purposes, alignment)",
+        "techniques": [
+          "Memory dump analysis with pattern matching",
+          "Decompilation of accessor functions",
+          "Allocation pattern analysis",
+          "Comparison to LLVM IR structure"
+        ]
+      },
+      {
+        "task_id": "3.2",
+        "task": "Document control flow graph representation",
+        "method": "Analyze CFG building code, understand node types, trace edge creation",
+        "hours": 40,
+        "deliverable": "CFG_Representation.md (node types, edge types, traversal semantics)",
+        "success_criteria": "Understand how control flow is represented internally"
+      },
+      {
+        "task_id": "3.3",
+        "task": "Map symbol table format",
+        "method": "Analyze symbol storage, trace lookup mechanisms, document symbol attributes",
+        "hours": 35,
+        "deliverable": "Symbol_Table_Format.md (symbol record layout, lookup algorithm, attributes)",
+        "success_criteria": "Understand symbol organization and lookup mechanisms"
+      },
+      {
+        "task_id": "3.4",
+        "task": "Analyze live value analysis and data flow structures",
+        "method": "Understand liveness information, trace data flow computation",
+        "hours": 30,
+        "deliverable": "Data_Flow_Structures.md (liveness representation, SSA form if used)",
+        "success_criteria": "Understand data flow representation"
+      },
+      {
+        "task_id": "3.5",
+        "task": "Document memory allocation patterns",
+        "method": "Trace allocation patterns, identify pooling/caching, understand lifetimes",
+        "hours": 25,
+        "deliverable": "Memory_Management.md (allocation patterns, lifetime analysis, pooling strategies)",
+        "success_criteria": "Understand memory organization and lifecycle"
+      },
+      {
+        "task_id": "3.6",
+        "task": "Create data structure diagrams and relationships",
+        "method": "Build ER-style diagrams of data structure relationships",
+        "hours": 30,
+        "deliverable": "Data_Structure_Relationships.md (diagrams, containment relationships, references)"
+      },
+      {
+        "task_id": "3.7",
+        "task": "Extract internal constants and enumerations",
+        "method": "String analysis, binary pattern matching, decompiler analysis",
+        "hours": 25,
+        "deliverable": "Constants_and_Enums.md (all identified constants, enum values, magic numbers)"
+      }
+    ]
+  },
+
+  "phase_4_symbol_recovery": {
+    "weeks": "13-16",
+    "effort_hours": 200,
+    "priority": "HIGH",
+    "objectives": [
+      "Recover meaningful names for top 500 critical functions",
+      "Build comprehensive function purpose database",
+      "Create searchable reverse engineering knowledge base",
+      "Document function roles and relationships"
+    ],
+    "tasks": [
+      {
+        "task_id": "4.1",
+        "task": "Systematic symbol recovery for critical functions",
+        "method": "String analysis, callgraph analysis, semantic analysis, pattern matching",
+        "hours": 70,
+        "deliverable": "Symbol_Recovery_Database.json (500+ functions with recovered names, confidence scores)",
+        "techniques": [
+          "String-based recovery (error messages, debug strings)",
+          "Semantic analysis (function behavior analysis)",
+          "Pattern matching against known algorithms",
+          "Cross-reference with academic papers",
+          "Manual verification for critical functions"
+        ],
+        "success_criteria": "500+ functions named with >0.75 confidence"
+      },
+      {
+        "task_id": "4.2",
+        "task": "Create function purpose and role database",
+        "method": "For each recovered function, document purpose, inputs, outputs, side effects",
+        "hours": 50,
+        "deliverable": "Function_Purpose_Database.json (purpose, preconditions, postconditions for each function)",
+        "success_criteria": "200+ critical functions documented with clear purpose"
+      },
+      {
+        "task_id": "4.3",
+        "task": "Build function relationship graph",
+        "method": "Analyze call patterns, identify functional relationships, group by purpose",
+        "hours": 40,
+        "deliverable": "Function_Relationship_Graph.json (caller/callee relationships, dependency analysis)",
+        "success_criteria": "Understand function organization and relationships"
+      },
+      {
+        "task_id": "4.4",
+        "task": "Create comprehensive RE knowledge base",
+        "method": "Synthesize all phase outputs into searchable database",
+        "hours": 40,
+        "deliverable": "CICC_RE_Knowledge_Base.md (indexed reference with algorithms, structures, functions)",
+        "contents": [
+          "Complete function directory",
+          "Algorithm explanations",
+          "Data structure layouts",
+          "Cross-references",
+          "Full-text searchable"
+        ]
+      }
+    ]
+  },
+
+  "tools_and_techniques": {
+    "required_tools": [
+      {
+        "tool": "IDA Pro or Ghidra",
+        "purpose": "Disassembly, binary analysis, decompilation",
+        "critical": true
+      },
+      {
+        "tool": "Hex-Rays Decompiler",
+        "purpose": "High-quality pseudocode generation",
+        "critical": true
+      },
+      {
+        "tool": "GDB/LLDB",
+        "purpose": "Dynamic analysis, breakpoints, memory inspection",
+        "critical": true
+      },
+      {
+        "tool": "Python analysis scripts",
+        "purpose": "Custom callgraph analysis, pattern matching",
+        "critical": true
+      },
+      {
+        "tool": "Graphviz",
+        "purpose": "Graph visualization (callgraph, dataflow)",
+        "critical": false
+      },
+      {
+        "tool": "Memory dump tools",
+        "purpose": "Runtime data structure analysis",
+        "critical": true
+      },
+      {
+        "tool": "Binary diff tools",
+        "purpose": "Version comparison analysis",
+        "critical": false
+      }
+    ],
+    "analysis_techniques": [
+      "Callgraph analysis and traversal",
+      "Data flow analysis and tracing",
+      "Control flow analysis",
+      "String-based function identification",
+      "Pattern matching against known algorithms",
+      "Memory structure reverse engineering",
+      "Dynamic tracing and instrumentation",
+      "Cross-binary comparison",
+      "Semantic code analysis"
+    ]
+  },
+
+  "deliverables_by_phase": {
+    "phase_1_week_4": [
+      "Entry_Point_Analysis.md",
+      "Parser_IR_Construction.md",
+      "Optimization_Pipeline.md",
+      "Instruction_Selection_Analysis.md",
+      "Register_Allocation_Overview.md",
+      "PTX_Emission.md",
+      "Pipeline_End_to_End.md"
+    ],
+    "phase_2_week_8": [
+      "Register_Allocation_Algorithm.md",
+      "Instruction_Selection_Algorithm.md",
+      "Loop_Optimization_Algorithm.md",
+      "Memory_Coalescing_Algorithm.md",
+      "Tensor_Core_Algorithm.md",
+      "Optimization_Pass_Catalog.md",
+      "SM_Variants_Analysis.md",
+      "Algorithm_Comparison_Report.md"
+    ],
+    "phase_3_week_12": [
+      "IR_Structure_Layout.md",
+      "CFG_Representation.md",
+      "Symbol_Table_Format.md",
+      "Data_Flow_Structures.md",
+      "Memory_Management.md",
+      "Data_Structure_Relationships.md",
+      "Constants_and_Enums.md"
+    ],
+    "phase_4_week_16": [
+      "Symbol_Recovery_Database.json",
+      "Function_Purpose_Database.json",
+      "Function_Relationship_Graph.json",
+      "CICC_RE_Knowledge_Base.md"
+    ]
+  },
+
+  "success_metrics": {
+    "pipeline_understanding": {
+      "metric": "Can trace complete compilation end-to-end",
+      "target": "100%",
+      "validation": "Trace 10+ different compilations with different options"
+    },
+    "algorithm_documentation": {
+      "metric": "Major algorithms documented with pseudocode",
+      "target": "5+ algorithms with >90% confidence",
+      "algorithms": [
+        "Register allocation",
+        "Instruction selection",
+        "Loop optimization",
+        "Memory coalescing",
+        "Tensor core generation"
+      ]
+    },
+    "data_structure_coverage": {
+      "metric": "All major IR structures documented",
+      "target": "100% of structures used in 90% of code paths",
+      "validation": "Memory structure analysis verification"
+    },
+    "symbol_recovery": {
+      "metric": "Critical functions named",
+      "target": "500+ functions with >0.75 confidence",
+      "validation": "Manual verification of 200+ critical functions"
+    },
+    "module_understanding": {
+      "metric": "Modules documented",
+      "target": "All 8+ modules documented with clear purpose",
+      "validation": "Cross-module interaction traces"
+    }
+  },
+
+  "risk_assessment": {
+    "high_risk_items": [
+      {
+        "risk": "Algorithm identification inaccuracy",
+        "probability": "MEDIUM",
+        "impact": "HIGH",
+        "mitigation": "Cross-validation with LLVM/GCC, academic papers, runtime analysis"
+      },
+      {
+        "risk": "Data structure layout misunderstanding",
+        "probability": "MEDIUM",
+        "impact": "MEDIUM",
+        "mitigation": "Memory dump validation, decompiler verification, dynamic tracing"
+      },
+      {
+        "risk": "Symbol recovery false positives",
+        "probability": "MEDIUM",
+        "impact": "LOW",
+        "mitigation": "Confidence thresholds, manual verification, cross-reference checking"
+      },
+      {
+        "risk": "Missing critical algorithms",
+        "probability": "LOW",
+        "impact": "MEDIUM",
+        "mitigation": "Comprehensive callgraph analysis, code coverage analysis"
+      },
+      {
+        "risk": "SM-version variations overlooked",
+        "probability": "MEDIUM",
+        "impact": "MEDIUM",
+        "mitigation": "Systematic version comparison, test on multiple SM versions"
+      }
+    ]
+  },
+
+  "timeline_summary": {
+    "week_1-4": "Phase 1: Pipeline Understanding (entry points, parsing, IR, optimization, code gen)",
+    "week_5-8": "Phase 2: Algorithm Identification (register allocation, instruction selection, optimizations)",
+    "week_9-12": "Phase 3: Data Structure Analysis (IR structures, CFG, symbol tables, memory management)",
+    "week_13-16": "Phase 4: Symbol Recovery (function naming, purpose database, knowledge base)"
+  },
+
+  "team_structure": {
+    "team_size": "2-3 reverse engineers",
+    "specialties_required": [
+      "Binary analysis and decompilation",
+      "Compiler architecture knowledge",
+      "GPU architecture understanding",
+      "Python scripting for analysis tools",
+      "Low-level debugging"
+    ],
+    "roles": [
+      {
+        "role": "Lead Reverse Engineer",
+        "responsibilities": "Overall analysis direction, architecture decisions, quality gates"
+      },
+      {
+        "role": "Algorithm Specialist",
+        "responsibilities": "Phase 2 algorithm analysis, comparison with standard implementations"
+      },
+      {
+        "role": "Tool Developer",
+        "responsibilities": "Custom analysis scripts, data structure extraction, symbol recovery automation"
+      }
+    ]
+  },
+
+  "knowledge_validation_plan": {
+    "validation_methods": [
+      "Cross-reference with LLVM compiler source code",
+      "Comparison with GCC compilation results",
+      "Validation against NVIDIA PTX specification",
+      "Runtime tracing on known test cases",
+      "Bit-identical output verification for trace recreations"
+    ],
+    "checkpoints": [
+      {
+        "checkpoint": "End of Phase 1",
+        "validation": "Can trace complete compilation with all pipeline stages identified"
+      },
+      {
+        "checkpoint": "End of Phase 2",
+        "validation": "Algorithms can be described in pseudocode with >90% confidence"
+      },
+      {
+        "checkpoint": "End of Phase 3",
+        "validation": "Data structures can be accessed correctly in custom code"
+      },
+      {
+        "checkpoint": "End of Phase 4",
+        "validation": "Knowledge base is complete and verified"
+      }
+    ]
+  },
+
+  "dependencies_and_constraints": {
+    "critical_dependencies": [
+      "Phase 1 must be complete before Phase 2 can meaningfully start",
+      "Symbol recovery (Phase 4) depends on findings from all previous phases",
+      "Algorithm documentation requires deep Phase 1 understanding"
+    ],
+    "resource_constraints": [
+      "Access to CICC binary and source materials",
+      "Sufficient hardware for dynamic analysis",
+      "Time for comprehensive callgraph analysis (weeks 1-4)"
+    ]
+  },
+
+  "document_metadata": {
+    "version": "1.0",
+    "created": "2025-11-16",
+    "created_by": "Claude Analysis Team",
+    "status": "READY_FOR_EXECUTION",
+    "next_phase_review": "End of Week 4 (Phase 1 completion)",
+    "last_updated": "2025-11-16"
+  }
+}

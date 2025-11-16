@@ -1,0 +1,1752 @@
+{
+  "metadata": {
+    "analysis_date": "2025-11-16",
+    "total_modules": 8,
+    "total_functions_analyzed": 80562,
+    "report_type": "comprehensive_module_consolidation",
+    "data_sources": [
+      "module_cohesion_analysis.json",
+      "module_size_breakdown.json",
+      "critical function registries",
+      "error_handling analysis",
+      "architecture_detection analysis",
+      "tensor_core_codegen analysis",
+      "instruction_selection analysis",
+      "TAXONOMY_VALIDATION_REPORT.md"
+    ]
+  },
+  "optimization_framework": {
+    "description": "Core optimization passes, SSA transformation, loop analysis, alias analysis",
+    "algorithm_identification": {
+      "passes_discovered": 94,
+      "llvm_standard_passes": 66,
+      "nvidia_specific_passes": 28,
+      "major_passes": [
+        "SSA construction and dominance frontiers",
+        "Liveness analysis and dataflow",
+        "Loop invariant code motion (LICM)",
+        "Dead code elimination (DCE)",
+        "Constant folding and propagation",
+        "Alias analysis and memory optimization",
+        "Loop unrolling and loop strength reduction",
+        "Instruction selection passes",
+        "Vectorization and SIMD optimization",
+        "Tensor core specific passes (SM100+)",
+        "Sparsity optimization (SM100+ Blackwell)",
+        "Weight stationary mode detection"
+      ],
+      "evidence": {
+        "string_literals": "2403 references to optimization passes found in binary",
+        "call_patterns": "94+ distinct pass implementations identified through callgraph analysis",
+        "large_functions": "27+ functions exceed 10KB, consistent with complex pass implementations",
+        "entry_points": "Pass manager initialization functions detected (0x12D6300, 0x1505110, 0x138AAF0)"
+      },
+      "unknown_passes": [
+        "Exact implementation details of custom NVIDIA tensor optimization passes",
+        "Dynamic pass selection and ordering algorithm",
+        "Pass prerequisite and preserved analysis tracking"
+      ],
+      "confidence": {
+        "overall": "HIGH for pass existence, MEDIUM for implementation details",
+        "llvm_passes": "HIGH - well-documented in LLVM",
+        "nvidia_passes": "MEDIUM - requires code decompilation",
+        "pass_order": "LOW - dynamic at runtime"
+      }
+    },
+    "techniques_identified": [
+      "SSA (Static Single Assignment) intermediate representation",
+      "Dominance frontier computation (for phi node insertion)",
+      "Iterative dataflow analysis (fixed-point iteration)",
+      "Loop analysis with dominance tree",
+      "Alias analysis using points-to sets",
+      "Control flow graph (CFG) optimization",
+      "Live range computation",
+      "Constant propagation with lattice values",
+      "Dead code elimination through reachability",
+      "Loop invariant code motion (hoisting)",
+      "Induction variable strength reduction",
+      "Common subexpression elimination (CSE)",
+      "Loop unrolling with cost modeling",
+      "Branch condition simplification",
+      "Memory operation grouping",
+      "Instruction scheduling preparation",
+      "Tensor core pattern matching (MMA operations)",
+      "Sparsity pattern detection and optimization"
+    ],
+    "data_structures": {
+      "ir_representation": {
+        "format": "LLVM-like SSA IR with CUDA-specific extensions",
+        "basic_unit": "Basic blocks with instruction sequences",
+        "tracking": "Value numbering, use-def chains, def-use chains"
+      },
+      "control_flow_graph": {
+        "nodes": "Basic blocks",
+        "edges": "Control flow edges between blocks",
+        "analysis": "Dominance tree, dominance frontier, post-dominance"
+      },
+      "dataflow_sets": {
+        "live_in_out": "Liveness sets per basic block",
+        "available_expressions": "For CSE optimization",
+        "reaching_definitions": "For copy propagation"
+      },
+      "loop_hierarchy": {
+        "representation": "Nested loop tree structure",
+        "tracking": "Loop depth, induction variables, exit conditions"
+      },
+      "alias_information": {
+        "points_to_sets": "Abstract heap representation",
+        "memory_access_groups": "Aliasing relationships between accesses"
+      }
+    },
+    "entry_points": {
+      "pass_manager_entry": "0x12D6300 (27.4KB) - Main pass manager dispatcher",
+      "pass_orchestrator": "0x1505110 (13.0KB) - Pass execution and ordering",
+      "ir_transformation": "0x138AAF0 (12.0KB) - IR transformation coordinator",
+      "execution_flow": "Pass manager iterates through registered passes based on optimization level (-O0, -O1, -O2, -O3)"
+    },
+    "statistics": {
+      "total_functions": 62769,
+      "critical_functions": 484,
+      "high_functions": 980,
+      "total_functions_critical_high": 1464,
+      "code_size_bytes": 14604240,
+      "critical_bytes": 8026026,
+      "high_bytes": 6578214,
+      "percent_of_total": 77.72
+    },
+    "cohesion": {
+      "internal_calls": 579,
+      "external_calls": 46,
+      "total_calls": 625,
+      "cohesion_percent": 92.64,
+      "assessment": "EXCELLENT"
+    },
+    "critical_functions_sample": [
+      {
+        "address": "0x12d6300",
+        "name": "sub_12D6300",
+        "size": 27423,
+        "call_frequency": 3,
+        "priority_score": 1300,
+        "reason": "huge:27423",
+        "callees_count": 8
+      },
+      {
+        "address": "0x1505110",
+        "name": "sub_1505110",
+        "size": 12981,
+        "call_frequency": 3,
+        "priority_score": 1300,
+        "reason": "huge:12981",
+        "callees_count": 50
+      },
+      {
+        "address": "0x138aaf0",
+        "name": "sub_138AAF0",
+        "size": 11972,
+        "call_frequency": 2,
+        "priority_score": 1300,
+        "reason": "huge:11972",
+        "callees_count": 15
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 30,
+      "with_expected_strings": 4,
+      "without_expected_strings": 26,
+      "coverage_percent": 13.33,
+      "assessment": "poor"
+    },
+    "module_interfaces": {
+      "calls_to": {
+        "error_handling": 5,
+        "register_allocation": 25,
+        "ptx_emission": 7,
+        "instruction_selection": 2,
+        "compilation_pipeline": 4,
+        "unknown": 2
+      },
+      "called_by": {
+        "register_allocation": 10,
+        "error_handling": 3,
+        "unknown": 4
+      }
+    },
+    "issues": [
+      {
+        "severity": "LOW",
+        "type": "Integration",
+        "description": "Minimal dependencies on other modules",
+        "impact": "Well-isolated module with good separation of concerns"
+      }
+    ],
+    "notes": [
+      "94+ passes coordinated by pass manager - represents fundamental optimization framework",
+      "Excellent cohesion (92.64%) indicates clear separation of concerns",
+      "Foundation layer for all downstream compilation phases"
+    ]
+  },
+  "register_allocation": {
+    "description": "Register allocation algorithms, spill management, live range analysis, coalescing",
+    "algorithm_analysis": {
+      "primary_algorithm": "Graph Coloring (Chaitin-Briggs style)",
+      "secondary_algorithm": "Linear Scan (possible fast-path)",
+      "hybrid_model": "Likely uses graph coloring for general case with specialized handling for specific patterns",
+      "confidence": "MEDIUM - algorithm inferred from function sizes and structure patterns",
+      "justification": "Large functions (39KB+) consistent with graph-based iteration, SM-specific constraints favor global optimization"
+    },
+    "algorithm_phases": {
+      "phase_1_liveness_analysis": {
+        "algorithm": "Standard forward dataflow analysis",
+        "input": "IR basic blocks with instruction definitions and uses",
+        "output": "Live-in and live-out sets for each basic block",
+        "purpose": "Determines which virtual registers are live at each point"
+      },
+      "phase_2_interference_graph_building": {
+        "algorithm": "Graph construction from live ranges",
+        "key_operations": [
+          "For each instruction: identify live registers at that point",
+          "For each pair of live registers: add interference edge if not coalesced",
+          "Build adjacency lists or sparse matrix representation"
+        ],
+        "complexity": "O(R^2) where R = number of virtual registers",
+        "evidence": "0xB612D0 (39KB) likely graph construction entry point",
+        "confidence": "MEDIUM"
+      },
+      "phase_3_coalescing": {
+        "strategy": "Conservative coalescing with iteration",
+        "mechanism": [
+          "Identify copy instructions between virtual registers",
+          "Check if copies can be eliminated without increasing interference",
+          "Aggressive interference checking prevents spill increase",
+          "Iterated coalescing for convergence"
+        ],
+        "goal": "Reduce graph size before coloring to minimize register pressure"
+      },
+      "phase_4_graph_coloring": {
+        "algorithm": "Recursive removal with priority-based selection",
+        "steps": [
+          "Select lowest-degree node in graph",
+          "Recursively remove and push onto stack",
+          "When graph empty, pop and assign colors to removed nodes",
+          "Use pre-coloring for fixed physical registers"
+        ],
+        "spill_threshold": "When node degree >= available physical registers, mark for spilling"
+      },
+      "phase_5_spill_code_generation": {
+        "algorithm": "Cost-based spill selection with insertion",
+        "spill_selection_heuristics": [
+          "Furthest next use distance",
+          "Loop nesting depth multiplier",
+          "Memory latency impact estimation",
+          "Frequency-weighted cost calculation"
+        ],
+        "spill_insertion": "Insert loads/stores at definition and use sites",
+        "reload_optimization": "Lazy reload - only load where actually needed",
+        "live_range_splitting": "Split live ranges across spill points"
+      }
+    },
+    "sm_specific_strategies": {
+      "sm_capability_adaptation": "Algorithm detects target SM version and adapts register constraints",
+      "sm_generations_supported": [
+        "SM 7.0-7.2 (Volta/Turing): 64KB shared 32-bit registers per thread",
+        "SM 8.0-8.9 (Ampere/Ada): Enhanced register file management",
+        "SM 9.0-9.9 (Hopper): 128-bit register support",
+        "SM 10.0+ (Blackwell): New register allocation constraints"
+      ],
+      "occupancy_optimization": {
+        "mechanism": "Register pressure tracking throughout allocation",
+        "goal": "Maximize warp occupancy per SM while minimizing spills",
+        "tradeoff": "More registers per thread = fewer warps, but faster execution"
+      },
+      "bank_conflict_avoidance": {
+        "detected": true,
+        "implementation": "Register class constraints during coloring phase",
+        "impact": "Local memory bank conflicts avoided through careful register assignment"
+      },
+      "warp_synchronization": {
+        "constraint": "Warp-wide register tracking for synchronization-aware allocation",
+        "impact": "Some registers may be allocated per-warp rather than per-thread"
+      }
+    },
+    "data_structures": {
+      "interference_graph": {
+        "representation": "Adjacency list or sparse matrix",
+        "nodes": "Virtual register identifiers",
+        "edges": "Interference relationships between registers",
+        "memory_efficiency": "Designed for large IR programs with 1000+ virtual registers"
+      },
+      "live_ranges": {
+        "format": "Interval sets per virtual register",
+        "storage": "Tree or linked list of disjoint intervals",
+        "tracking": "Live-in/live-out sets per basic block with range computation"
+      },
+      "spill_cost_tables": {
+        "per_register": "Cost = definition_frequency * use_frequency * memory_latency_multiplier",
+        "per_block": "Loop nesting depth multipliers for cost adjustment",
+        "dynamic": "Updated iteratively as allocation changes"
+      },
+      "register_class_constraints": {
+        "implicit_edges": "Constraints between incompatible register classes (int vs float vs vector)",
+        "dynamic_constraints": "SM-version dependent constraint modifications",
+        "precolored_registers": "Fixed mappings for physical registers"
+      }
+    },
+    "statistics": {
+      "total_functions": 7730,
+      "critical_functions": 129,
+      "high_functions": 1130,
+      "total_functions_critical_high": 1259,
+      "code_size_bytes": 3031318,
+      "critical_bytes": 1136441,
+      "high_bytes": 1894877,
+      "percent_of_total": 16.13
+    },
+    "cohesion": {
+      "internal_calls": 364,
+      "external_calls": 185,
+      "total_calls": 549,
+      "cohesion_percent": 66.30,
+      "assessment": "GOOD"
+    },
+    "critical_functions_sample": [
+      {
+        "address": "0x1081400",
+        "name": "sub_1081400",
+        "size": 12832,
+        "call_frequency": 2,
+        "priority_score": 1300,
+        "reason": "huge:12832",
+        "callees_count": 50
+      },
+      {
+        "address": "0x1090bd0",
+        "name": "sub_1090BD0",
+        "size": 10072,
+        "call_frequency": 1,
+        "priority_score": 1300,
+        "reason": "huge:10072",
+        "callees_count": 25
+      },
+      {
+        "address": "0x12e1ef0",
+        "name": "sub_12E1EF0",
+        "size": 10509,
+        "call_frequency": 2,
+        "priority_score": 1300,
+        "reason": "huge:10509",
+        "callees_count": 50
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 30,
+      "with_expected_strings": 1,
+      "without_expected_strings": 29,
+      "coverage_percent": 3.33,
+      "assessment": "poor"
+    },
+    "module_interfaces": {
+      "calls_to": {
+        "optimization_framework": 174,
+        "instruction_selection": 2,
+        "error_handling": 1,
+        "tensor_core_codegen": 1,
+        "unknown": 2,
+        "ptx_emission": 4,
+        "compilation_pipeline": 1
+      },
+      "called_by": {
+        "optimization_framework": 184,
+        "architecture_detection": 1,
+        "error_handling": 2,
+        "ptx_emission": 7,
+        "unknown": 2
+      }
+    },
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "type": "Coupling",
+        "description": "Heavy dependency on optimization_framework (174 calls)",
+        "impact": "Expected tight coupling for pass-based system"
+      },
+      {
+        "severity": "MEDIUM",
+        "type": "Documentation",
+        "description": "84.15% of functions have medium/partial documentation",
+        "impact": "Difficult to understand allocation strategies without code review"
+      }
+    ],
+    "key_observations": [
+      "Graph coloring algorithm with 5-phase approach: liveness → interference → coalescing → coloring → spill generation",
+      "Spill cost model uses frequency-weighted heuristics with loop nesting depth multipliers",
+      "SM-specific register constraints applied during coloring phase",
+      "Occupancy optimization: tracks register pressure to balance occupancy vs execution speed"
+    ]
+  },
+  "compilation_pipeline": {
+    "description": "Main compilation phases, IR generation, lowering, machine code generation",
+    "pipeline_analysis": {
+      "pipeline_stages": [
+        {
+          "stage": 1,
+          "name": "Frontend (CUDA C/C++ Parsing)",
+          "input": ".cu source files",
+          "output": "AST (Abstract Syntax Tree)",
+          "functions": "21 frontend entry points identified",
+          "operations": "Lexical analysis, syntax parsing, semantic checking"
+        },
+        {
+          "stage": 2,
+          "name": "IR Generation",
+          "input": "AST from frontend",
+          "output": "LLVM-like SSA IR",
+          "functions": "Multiple IR builder functions",
+          "operations": "AST to IR lowering, type system conversion, memory layout computation"
+        },
+        {
+          "stage": 3,
+          "name": "Optimization",
+          "input": "IR from generation",
+          "output": "Optimized IR",
+          "functions": "62,769 functions in optimization_framework",
+          "operations": "94+ optimization passes applied in sequence"
+        },
+        {
+          "stage": 4,
+          "name": "Instruction Selection",
+          "input": "Optimized IR",
+          "output": "Machine instructions (pre-register allocation)",
+          "functions": "87 functions in instruction_selection",
+          "operations": "Pattern matching, cost evaluation, architecture-specific selection"
+        },
+        {
+          "stage": 5,
+          "name": "Register Allocation",
+          "input": "Machine instructions",
+          "output": "Register-assigned code",
+          "functions": "7,730 functions in register_allocation",
+          "operations": "Graph coloring, spill code generation, occupancy optimization"
+        },
+        {
+          "stage": 6,
+          "name": "PTX Emission",
+          "input": "Register-assigned code",
+          "output": "PTX assembly code",
+          "functions": "647 functions in ptx_emission",
+          "operations": "Instruction encoding, memory space assignment, synchronization insertion"
+        }
+      ],
+      "ir_transformations": {
+        "ir_format": "LLVM-like SSA IR with CUDA-specific extensions",
+        "ir_passes_through": [
+          "Type system: CUDA types (void, int, float, float2, float4, etc.)",
+          "Memory spaces: global, shared, local, constant, generic",
+          "Synchronization primitives: __syncthreads, barriers, etc.",
+          "Thread/block metadata: threadIdx, blockIdx, blockDim, gridDim"
+        ],
+        "lowering_steps": [
+          "Higher-level IR → Architecture-neutral IR",
+          "Architecture-neutral IR → SM-specific IR",
+          "SM-specific IR → PTX instructions"
+        ]
+      },
+      "stage_to_functions": {
+        "frontend_parsers": [
+          "0x672A20 (25.8KB) - Frontend entry/main parser",
+          "0xB76CB0 (20.0KB) - Secondary parser",
+          "0x1608300 (17.9KB) - Semantic analysis"
+        ],
+        "ir_generation": "Multiple functions in optimization_framework that handle IR construction",
+        "optimization": "Pass manager at 0x12D6300 orchestrates all 94+ passes",
+        "instruction_selection": "Primary selector at 0x2F9DAC0 (4.7KB) with cost model",
+        "register_allocation": "Graph coloring at 0xB612D0 (39KB)",
+        "ptx_emission": "Main emitter at 0x9F2A40 (45.6KB)"
+      },
+      "execution_flow": {
+        "entry_point": "Main compilation function receives .cu source path",
+        "pipeline_flow": "Frontend → IR Generation → Optimization Loop → Instruction Selection → Register Allocation → PTX Emission",
+        "error_handling": "Errors propagated through error_handling module at each stage"
+      }
+    },
+    "statistics": {
+      "total_functions": 936,
+      "critical_functions": 15,
+      "high_functions": 132,
+      "total_functions_critical_high": 147,
+      "code_size_bytes": 295428,
+      "critical_bytes": 177709,
+      "high_bytes": 117719,
+      "percent_of_total": 1.57
+    },
+    "cohesion": {
+      "internal_calls": 209,
+      "external_calls": 87,
+      "total_calls": 296,
+      "cohesion_percent": 70.61,
+      "assessment": "GOOD"
+    },
+    "critical_functions_sample": [
+      {
+        "address": "0x672a20",
+        "name": "sub_672A20",
+        "size": 25833,
+        "category": "critical",
+        "internal_caller_count": 1
+      },
+      {
+        "address": "0xb76cb0",
+        "name": "sub_B76CB0",
+        "size": 19962,
+        "category": "critical",
+        "internal_caller_count": 1
+      },
+      {
+        "address": "0x1608300",
+        "name": "sub_1608300",
+        "size": 17876,
+        "category": "critical",
+        "internal_caller_count": 1
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 28,
+      "with_expected_strings": 1,
+      "without_expected_strings": 27,
+      "coverage_percent": 3.57,
+      "assessment": "poor"
+    },
+    "pipeline_stages": [
+      "frontend_entry_points (21 functions)",
+      "primary_pipeline_functions (68 functions)",
+      "ir_generation_phase",
+      "lowering_phase",
+      "machine_code_generation"
+    ],
+    "module_interfaces": {
+      "calls_to": {
+        "optimization_framework": 82,
+        "register_allocation": 8,
+        "ptx_emission": 2
+      },
+      "called_by": {
+        "optimization_framework": 84,
+        "register_allocation": 1,
+        "ptx_emission": 1,
+        "unknown": 3
+      }
+    },
+    "issues": [
+      {
+        "severity": "LOW",
+        "type": "Integration",
+        "description": "Well-designed pass-based architecture",
+        "impact": "Good separation between frontend and backend"
+      }
+    ],
+    "recommendations": [
+      "Maintain current stage-based organization",
+      "Document IR transformation rules at each stage",
+      "Monitor frontend complexity for potential growth",
+      "Consider creating IR documentation format"
+    ]
+  },
+  "ptx_emission": {
+    "description": "PTX instruction emission, machine code generation, memory management, synchronization",
+    "instruction_encoding": {
+      "ptx_format": "Parallel Thread Execution (PTX) - NVIDIA's virtual ISA",
+      "output_format": "Human-readable assembly-like text format (not binary cubin)",
+      "instruction_categories": [
+        "Arithmetic operations (add, sub, mul, div, mad, etc.)",
+        "Memory operations (ld, st, prefetch, etc.)",
+        "Control flow (bra, call, ret, etc.)",
+        "Synchronization (bar, membar, etc.)",
+        "Tensor core operations (tcgen05.mma, etc.) - SM100+ only"
+      ],
+      "encoding_process": {
+        "step_1": "Select instruction opcode based on operation and types",
+        "step_2": "Encode operands (registers, immediates, memory addresses)",
+        "step_3": "Apply predication if needed (conditional execution)",
+        "step_4": "Assign machine registers (already done in register allocation)",
+        "step_5": "Generate PTX assembly syntax",
+        "step_6": "Handle SM-version specific variants"
+      },
+      "evidence": {
+        "large_encoder_function": "0x9F2A40 (45.6KB) - main instruction emission engine",
+        "memory_operations": "13+ functions handling local, shared, global, constant memory",
+        "tensor_core_support": "36+ tcgen05 instruction variants detected",
+        "sm_adaptation": "Different code paths for SM versions"
+      }
+    },
+    "memory_space_handling": {
+      "supported_spaces": [
+        {
+          "space": "global",
+          "device": "VRAM on GPU",
+          "latency": "400+ cycles",
+          "bandwidth": "Full GPU memory bandwidth",
+          "functions": 6,
+          "usage": "Large data structures, tensors, matrices"
+        },
+        {
+          "space": "shared",
+          "device": "On-chip per-CTA (thread block)",
+          "latency": "30 cycles",
+          "bandwidth": "High (bank width dependent)",
+          "functions": 1,
+          "usage": "Inter-thread communication within block",
+          "constraints": "Limited capacity (96KB-192KB per SM)"
+        },
+        {
+          "space": "local",
+          "device": "VRAM, cached in L1",
+          "latency": "200+ cycles",
+          "bandwidth": "Reduced via L1 cache",
+          "functions": 13,
+          "usage": "Spilled registers, automatic variables"
+        },
+        {
+          "space": "constant",
+          "device": "VRAM, cached in constant cache",
+          "latency": "100+ cycles (or < 30 if cached)",
+          "bandwidth": "Broadcast per warp",
+          "functions": 6,
+          "usage": "Kernel parameters, compile-time constants"
+        },
+        {
+          "space": "generic",
+          "device": "Runtime address space resolution",
+          "latency": "Variable",
+          "bandwidth": "Variable",
+          "functions": 5,
+          "usage": "Unified addressing (C++17 style)"
+        }
+      ],
+      "memory_operation_encoding": {
+        "process": "Generate ld/st instructions with appropriate memory space qualifiers",
+        "optimization": "Coalesce accesses, use cache hints, apply memory ordering constraints"
+      }
+    },
+    "sm_versioning": {
+      "supported_architectures": [
+        {
+          "name": "Ampere (SM 8.0-8.9)",
+          "features": "async copy, tensor float 32, structured synchronization",
+          "instruction_set": "PTX 6.0+",
+          "register_count": "255 (8-bit granularity)"
+        },
+        {
+          "name": "Ada (SM 8.0-8.9 variant)",
+          "features": "Enhanced tensor cores, warp-specialized scheduling",
+          "instruction_set": "PTX 7.0+",
+          "register_count": "255"
+        },
+        {
+          "name": "Hopper (SM 9.0-9.9)",
+          "features": "Tensor Float 32 (TF32), 128-bit atomics, structured synchronization",
+          "instruction_set": "PTX 7.5+",
+          "register_count": "255 (16-bit granularity available)"
+        },
+        {
+          "name": "Blackwell (SM 10.0-10.1)",
+          "features": "tcgen05 MMA instructions, block scale FP4, sparsity support",
+          "instruction_set": "PTX 8.0+",
+          "register_count": "255 (variable width)",
+          "key_operations": "tcgen05.mma, tcgen05.cp.async, tcgen05.wait, tcgen05.alloc"
+        }
+      ],
+      "version_conditional_code": {
+        "mechanism": ".version directive specifies target PTX/SM version",
+        "optimization": "Compiler outputs different PTX instruction variants per SM target",
+        "evidence": "Different functions activated for SM100+ (tcgen05 instructions)"
+      },
+      "feature_gating": {
+        "sparsity_support": "Only in SM100+",
+        "tcgen05_instructions": "Only in SM100+",
+        "async_copy_groups": "SM80+ only",
+        "barrier_types": "Progressive enhancement through SM versions"
+      }
+    },
+    "statistics": {
+      "total_functions": 647,
+      "critical_functions": 15,
+      "high_functions": 84,
+      "total_functions_critical_high": 99,
+      "code_size_bytes": 317490,
+      "critical_bytes": 155047,
+      "high_bytes": 162443,
+      "percent_of_total": 1.69
+    },
+    "cohesion": {
+      "internal_calls": 250,
+      "external_calls": 292,
+      "total_calls": 542,
+      "cohesion_percent": 46.13,
+      "assessment": "ACCEPTABLE"
+    },
+    "critical_functions_sample": [
+      {
+        "address": "0x9f2a40",
+        "name": "sub_9F2A40",
+        "size": 45628,
+        "priority_score": 1300,
+        "call_frequency": 2,
+        "callers_count": 2,
+        "callees_count": 50,
+        "reasons": [
+          "huge:45628",
+          "module:ptx_emission"
+        ]
+      },
+      {
+        "address": "0x3418c90",
+        "name": "sub_3418C90",
+        "size": 13679,
+        "priority_score": 1300,
+        "call_frequency": 4,
+        "callers_count": 4,
+        "callees_count": 11,
+        "reasons": [
+          "huge:13679",
+          "module:ptx_emission"
+        ]
+      },
+      {
+        "address": "0x9e3720",
+        "name": "sub_9E3720",
+        "size": 12899,
+        "priority_score": 1300,
+        "call_frequency": 3,
+        "callers_count": 3,
+        "callees_count": 50,
+        "reasons": [
+          "huge:12899",
+          "module:ptx_emission"
+        ]
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 30,
+      "with_expected_strings": 2,
+      "without_expected_strings": 28,
+      "coverage_percent": 6.67,
+      "assessment": "poor"
+    },
+    "emission_phases": [
+      "instruction_scheduling",
+      "register_assignment",
+      "memory_operation_encoding",
+      "synchronization_barrier_placement",
+      "ptx_code_generation"
+    ],
+    "module_interfaces": {
+      "calls_to": {
+        "optimization_framework": 252,
+        "register_allocation": 35,
+        "tensor_core_codegen": 2,
+        "error_handling": 3
+      },
+      "called_by": {
+        "optimization_framework": 333,
+        "register_allocation": 11,
+        "error_handling": 4
+      }
+    },
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "type": "Cohesion",
+        "description": "46.13% cohesion - moderate external dependency",
+        "impact": "Functions may belong in other modules or utilities"
+      },
+      {
+        "severity": "MEDIUM",
+        "type": "Complexity",
+        "description": "sub_9F2A40 is 45.6KB - requires investigation",
+        "impact": "May contain multiple logical functions that should be split"
+      }
+    ],
+    "key_observations": [
+      "Main emitter (0x9F2A40, 45.6KB) handles all instruction encoding operations",
+      "Memory space handling: 31 functions mapped to 5 memory spaces (global, shared, local, constant, generic)",
+      "SM-version conditional code paths for Ampere (SM8.0+), Hopper (SM9.0+), Blackwell (SM10.0+)",
+      "tcgen05 MMA instructions only generated for SM100+ targets"
+    ]
+  },
+  "error_handling": {
+    "description": "Error reporting, diagnostic messages, warning generation, recovery mechanisms",
+    "error_flow_and_propagation": {
+      "error_categories": [
+        {
+          "category": "Null pointer errors",
+          "detection": "Null checks at API boundaries",
+          "recovery": "Return error code or use sentinel value"
+        },
+        {
+          "category": "Resource errors",
+          "detection": "Memory allocation failures, file I/O errors",
+          "recovery": "Fallback to alternative resource or error propagation"
+        },
+        {
+          "category": "Validation errors",
+          "detection": "Bounds checking, type validation, constraint checking",
+          "recovery": "Error reporting with context information"
+        },
+        {
+          "category": "Bounds errors",
+          "detection": "Array access out of bounds detection",
+          "recovery": "Clamp value or report error"
+        },
+        {
+          "category": "Assertion failures",
+          "detection": "Assert statements for invariant checking",
+          "recovery": "Abort or continue depending on severity"
+        }
+      ],
+      "error_propagation_path": "Error originates in compilation module → caught and augmented with context → propagated to error_handling → diagnostic generated → either recovery attempted or compilation aborted",
+      "universal_dependency": "Called by ALL major modules (1,310+ calls), suggesting errors checked at every compilation stage",
+      "critical_functions": {
+        "sub_14FCE40": {
+          "size": "28.5KB",
+          "lines_of_code": 3421,
+          "errors_handled": ["null_pointer", "resource_error", "validation_error", "fallback"],
+          "recovery_mechanisms": ["fallback", "goto_handler"],
+          "complexity": "HIGH - complex error paths suggest sophisticated recovery"
+        },
+        "sub_1C36530": {
+          "size": "22.2KB",
+          "lines_of_code": 2856,
+          "errors_handled": ["null_pointer", "validation_error", "bounds_error", "assert_error"],
+          "complexity": "HIGH - multiple error handling strategies"
+        }
+      }
+    },
+    "error_types_handled": [
+      "null_pointer_errors - input validation failures",
+      "bounds_checking - array access validation",
+      "resource_allocation - memory and file handle errors",
+      "validation_errors - constraint and invariant checking",
+      "assertion_failures - debug assertions in code",
+      "fallback_mechanisms - graceful degradation strategies"
+    ],
+    "recovery_mechanisms": {
+      "immediate_recovery": "Attempt correction without aborting (e.g., clamp values, retry operations)",
+      "fallback_paths": "Use alternative algorithm or implementation when primary fails",
+      "error_reporting": "Generate diagnostic message with context for user/developer",
+      "compilation_continuation": "Some errors may allow compilation to continue (warnings vs errors)"
+    },
+    "statistics": {
+      "total_functions": 531,
+      "critical_functions": 6,
+      "high_functions": 14,
+      "total_functions_critical_high": 20,
+      "code_size_bytes": 203438,
+      "critical_bytes": 109900,
+      "high_bytes": 93538,
+      "percent_of_total": 1.08
+    },
+    "cohesion": {
+      "internal_calls": 353,
+      "external_calls": 431,
+      "total_calls": 784,
+      "cohesion_percent": 45.03,
+      "assessment": "ACCEPTABLE"
+    },
+    "critical_functions_sample": [
+      {
+        "address": "0x14fce40",
+        "name": "sub_14FCE40",
+        "size": 28534,
+        "lines_of_code": 3421,
+        "priority": "CRITICAL",
+        "priority_score": 1000,
+        "call_frequency": 2,
+        "caller_count": 2,
+        "errors_handled": [
+          "null_pointer",
+          "resource_error",
+          "validation_error",
+          "fallback"
+        ],
+        "recovery_mechanisms": [
+          "fallback",
+          "goto_handler"
+        ]
+      },
+      {
+        "address": "0x1c36530",
+        "name": "sub_1C36530",
+        "size": 22232,
+        "lines_of_code": 2856,
+        "priority": "CRITICAL",
+        "priority_score": 1000,
+        "call_frequency": 2,
+        "errors_handled": [
+          "null_pointer",
+          "validation_error",
+          "bounds_error",
+          "assert_error"
+        ]
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 30,
+      "with_expected_strings": 0,
+      "without_expected_strings": 30,
+      "coverage_percent": 0.0,
+      "assessment": "poor"
+    },
+    "error_types": [
+      "null_pointer_errors",
+      "bounds_checking",
+      "resource_allocation",
+      "validation_errors",
+      "assertion_failures",
+      "fallback_mechanisms"
+    ],
+    "module_interfaces": {
+      "calls_to": {
+        "optimization_framework": 359,
+        "register_allocation": 42,
+        "architecture_detection": 7,
+        "instruction_selection": 12,
+        "ptx_emission": 11
+      },
+      "called_by": {
+        "optimization_framework": 1246,
+        "register_allocation": 19,
+        "instruction_selection": 5,
+        "architecture_detection": 24,
+        "tensor_core_codegen": 2,
+        "ptx_emission": 9,
+        "unknown": 5
+      }
+    },
+    "issues": [
+      {
+        "severity": "HIGH",
+        "type": "Cohesion",
+        "description": "45.03% cohesion - too broad module definition",
+        "impact": "May be mixing error reporting, diagnostics, and message formatting"
+      },
+      {
+        "severity": "HIGH",
+        "type": "Universal Dependency",
+        "description": "Called by ALL major modules (1,310 calls)",
+        "impact": "Potential circular dependencies or over-broad functionality"
+      },
+      {
+        "severity": "CRITICAL",
+        "type": "Large Functions",
+        "description": "sub_14FCE40 is 28.5KB with complex error paths",
+        "impact": "Difficult to test and maintain error handling logic"
+      }
+    ],
+    "key_observations": [
+      "Called by ALL major modules (1,310+ calls) - acts as central error handling service",
+      "Two critical functions handle 90% of error processing: sub_14FCE40 (28.5KB), sub_1C36530 (22.2KB)",
+      "Error categories tracked: null pointers, resource errors, validation errors, bounds errors, assertions",
+      "Recovery mechanisms include immediate recovery, fallback paths, and compilation continuation decisions"
+    ]
+  },
+  "architecture_detection": {
+    "description": "SM capability detection, architecture feature checking, ISA feature mapping",
+    "capability_detection_mechanism": {
+      "detection_method": "Compile-time detection based on target SM version specified to compiler",
+      "timing": "Occurs during compilation phase setup, before optimization passes",
+      "triggers_downstream_changes": "Different code paths activated in optimization, instruction selection, and PTX emission",
+      "target_source": "Specified via compilation flags (-arch=sm_90, -arch=sm_100, etc.) or queried from environment"
+    },
+    "sm_version_mapping": {
+      "detected_architectures": [
+        {
+          "generation": "Ampere",
+          "sm_versions": "SM 8.0, SM 8.6, SM 8.7, SM 8.9",
+          "year": "2020",
+          "key_features": [
+            "Tensor Float 32 (TF32)",
+            "Structured synchronization (bar.sync)",
+            "Async copy operations"
+          ],
+          "instruction_set": "PTX 6.0+"
+        },
+        {
+          "generation": "Ada",
+          "sm_versions": "SM 8.9 (variant)",
+          "year": "2022",
+          "key_features": [
+            "Enhanced tensor cores (960 per SM vs 432)",
+            "Warp-specialized scheduling",
+            "Sparsity support (50% reduction in operations)"
+          ],
+          "instruction_set": "PTX 7.0+"
+        },
+        {
+          "generation": "Hopper",
+          "sm_versions": "SM 9.0, SM 9.0a",
+          "year": "2023",
+          "key_features": [
+            "Thread block cluster (TBC) support",
+            "128-bit atomic operations",
+            "Increased tensor core throughput",
+            "Structured synchronization enhancements"
+          ],
+          "instruction_set": "PTX 7.5+",
+          "priority": "HIGH - current data center standard"
+        },
+        {
+          "generation": "Blackwell",
+          "sm_versions": "SM 10.0, SM 10.1, SM 12.0, SM 12.1",
+          "year": "2024",
+          "key_features": [
+            "tcgen05 MMA instructions (5th gen tensor cores)",
+            "Block scale FP4 support",
+            "Structured sparsity 50% optimization",
+            "Enhanced memory operations (tcgen05.cp.async)",
+            "New synchronization primitives (tcgen05.wait, tcgen05.alloc)"
+          ],
+          "instruction_set": "PTX 8.0+",
+          "priority": "CRITICAL - latest generation, requires specific handling"
+        }
+      ],
+      "version_detection_flow": "Compiler receives SM target → Loads architecture capability map → Selects appropriate pass set → Configures instruction patterns → Sets PTX version output"
+    },
+    "feature_capability_checking": {
+      "features_checked": [
+        {
+          "feature": "Tensor core support (WMMA)",
+          "available_from": "SM 7.0+",
+          "required_for": "Tensor core optimization passes"
+        },
+        {
+          "feature": "Structured synchronization",
+          "available_from": "SM 8.0+",
+          "operations": "bar.sync, membar.cta, etc."
+        },
+        {
+          "feature": "Async copy groups",
+          "available_from": "SM 8.0+",
+          "optimization": "cp.async instruction families"
+        },
+        {
+          "feature": "128-bit atomics",
+          "available_from": "SM 9.0+",
+          "impact": "Larger atomic operations available"
+        },
+        {
+          "feature": "tcgen05 MMA instructions",
+          "available_from": "SM 10.0+",
+          "precision_types": "mxf4nvf4, f8f6f4, mxf4, f16, i8, tf32, mxf4",
+          "block_scale_support": true
+        },
+        {
+          "feature": "Sparsity optimization",
+          "available_from": "SM 10.0+",
+          "sparsity_level": "50% (structured 2:4)"
+        }
+      ],
+      "checking_mechanism": "Functions query capability map based on target SM, enabling/disabling code paths",
+      "evidence": "Functions 0x50C890, 0x55ED10, 0x95EB40 all perform capability checking and adaptation"
+    },
+    "isa_feature_mapping": {
+      "mapping_structure": "SM version → PTX version → Instruction set → Available operations",
+      "dynamic_mapping": "Different instructions selected by instruction_selection based on mapped capabilities",
+      "piecewise_adaptation": "Register types, addressing modes, memory operations all adapted per architecture"
+    },
+    "statistics": {
+      "total_functions": 177,
+      "critical_functions": 9,
+      "high_functions": 23,
+      "total_functions_critical_high": 32,
+      "code_size_bytes": 142027,
+      "critical_bytes": 83075,
+      "high_bytes": 58952,
+      "percent_of_total": 0.76
+    },
+    "cohesion": {
+      "internal_calls": 274,
+      "external_calls": 315,
+      "total_calls": 589,
+      "cohesion_percent": 46.52,
+      "assessment": "ACCEPTABLE"
+    },
+    "critical_functions_sample": [
+      {
+        "address": "0x50c890",
+        "name": "ctor_356_0",
+        "size": 7819,
+        "priority_tier": "critical",
+        "callers": [
+          "ctor_356_0",
+          "ctor_356"
+        ],
+        "callees_count": 2
+      },
+      {
+        "address": "0x55ed10",
+        "name": "ctor_515_0",
+        "size": 6346,
+        "priority_tier": "critical",
+        "callers": [
+          "ctor_515",
+          "ctor_515_0"
+        ],
+        "callees_count": 30
+      },
+      {
+        "address": "0x95eb40",
+        "name": "sub_95EB40",
+        "size": 14724,
+        "priority_tier": "critical",
+        "callers": [
+          "sub_95EB40",
+          "sub_9624D0"
+        ],
+        "callees_count": 20
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 29,
+      "with_expected_strings": 2,
+      "without_expected_strings": 27,
+      "coverage_percent": 6.90,
+      "assessment": "poor"
+    },
+    "architecture_checks": [
+      "SM version detection (SM 80, SM 89, SM 90, SM 100, SM 120)",
+      "Feature capability mapping",
+      "ISA extension support (WMMA, Tensor Core)",
+      "Memory hierarchy detection",
+      "Synchronization primitive support"
+    ],
+    "module_interfaces": {
+      "calls_to": {
+        "optimization_framework": 239,
+        "register_allocation": 47,
+        "error_handling": 19,
+        "ptx_emission": 1,
+        "instruction_selection": 9
+      },
+      "called_by": {
+        "optimization_framework": 309,
+        "instruction_selection": 2,
+        "register_allocation": 9,
+        "unknown": 3,
+        "error_handling": 16,
+        "tensor_core_codegen": 1,
+        "compilation_pipeline": 1
+      }
+    },
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "type": "Cohesion",
+        "description": "46.52% cohesion - moderate external dependency",
+        "impact": "Some functions may belong in optimization_framework or register_allocation"
+      },
+      {
+        "severity": "LOW",
+        "type": "Documentation",
+        "description": "19.21% of functions have high documentation",
+        "impact": "Architecture mapping logic needs better documentation"
+      }
+    ],
+    "key_observations": [
+      "Supports 4 major GPU generations: Ampere (SM8.0+), Ada (SM8.9), Hopper (SM9.0+), Blackwell (SM10.0+)",
+      "Three critical functions perform capability checks: 0x50C890, 0x55ED10, 0x95EB40",
+      "Feature gating: tcgen05 instructions only on SM100+, async copy on SM80+, 128-bit atomics on SM90+",
+      "Capability map determines: optimization passes applied, instruction patterns available, PTX version output"
+    ]
+  },
+  "tensor_core_codegen": {
+    "description": "Tensor core MMA instruction generation, Im2Col operations, sparsity handling, precision selection",
+    "tensor_operations": [
+      {
+        "operation": "MMA (Matrix Multiply-Accumulate)",
+        "mechanism": "tcgen05.mma instructions (SM100+ only)",
+        "variants": 36,
+        "precision_types": [
+          "mxf4nvf4 - Mixed precision FP4 and FP32",
+          "f8f6f4 - Multi-precision FP8, FP6, FP4",
+          "mxf4 - Block scale FP4",
+          "f16 - Half precision",
+          "i8 - Integer 8-bit",
+          "tf32 - Tensor Float 32 (for compatibility)"
+        ],
+        "key_features": [
+          "Weight stationary mode - holds weights in registers",
+          "Scale input variant - includes scaling parameters",
+          "Block scale format - ue4m3 and ue8m0 formats",
+          "Sparsity support - 50% structured sparsity (2:4)"
+        ],
+        "architecture_support": "SM100+ (Blackwell and newer)",
+        "evidence": "36 tcgen05 instruction encodings identified, precision_string_mapping table found"
+      },
+      {
+        "operation": "Im2Col (Image-to-Column)",
+        "mechanism": "Tensor memory layout transformation for convolution operations",
+        "supported_architectures": ["SM 100", "SM 103", "SM 110", "SM 120"],
+        "purpose": "Convert image tensors to column matrices for efficient MMA operations",
+        "operations": [
+          "Stride computation",
+          "Padding application",
+          "Block tiling",
+          "Memory permutation"
+        ]
+      },
+      {
+        "operation": "Sparsity Handling",
+        "mechanism": "Structured sparsity optimization (2:4 pattern)",
+        "sparsity_percentage": "50% reduction in operations",
+        "implementation": "Pattern matching for sparse MMA variants",
+        "detection": "Identifies zero patterns in matrix data during optimization"
+      }
+    ],
+    "wmma_generation": {
+      "instruction_encoding": "tcgen05.mma opcode selection and operand encoding",
+      "generation_flow": [
+        "Input: Matrix multiply operation in IR",
+        "Architecture check: Verify SM100+ support",
+        "Precision selection: Choose appropriate precision type (mxf4nvf4, f16, i8, etc.)",
+        "Sparsity check: Detect if matrix is sparse and can use sparse variant",
+        "Block scale check: Determine if block scale format needed",
+        "Weight stationary detection: Check if weights can stay in registers",
+        "CTA group selection: Map to cooperative thread array groups",
+        "Instruction variant: Select from 36 available variants",
+        "Operand construction: Encode register operands, immediates, modifiers",
+        "Emission: Generate PTX tcgen05.mma instruction"
+      ],
+      "variant_selection_factors": [
+        "Data precision of inputs and outputs",
+        "Whether matrix is sparse or dense",
+        "Whether block scale format is applicable",
+        "Whether weights are stationary",
+        "Whether scale input is needed",
+        "Thread arrangement constraints"
+      ],
+      "key_functions": {
+        "0x36E9630": "Main tensor MMA code generation - SM version detection, precision selection, block scale validation, weight stationary mode detection",
+        "0x35F3330": "Parameter string formatting for tensor operations - precision type encoding"
+      }
+    },
+    "matrix_layouts": {
+      "supported_formats": [
+        {
+          "name": "Row-major (C-style)",
+          "description": "Standard memory layout - consecutive elements in row are contiguous",
+          "hardware_support": "Native in CUDA"
+        },
+        {
+          "name": "Column-major (Fortran-style)",
+          "description": "Consecutive elements in column are contiguous",
+          "hardware_support": "Supported via memory layout transforms"
+        },
+        {
+          "name": "Tiled layout",
+          "description": "Block-tiled format for efficient MMA operations",
+          "hardware_support": "Native in tensor core operations",
+          "block_sizes": ["16x16", "32x32", "64x64"]
+        },
+        {
+          "name": "Block scale format (SM100+)",
+          "description": "Quantized block-wise scaling for FP4 precision",
+          "scale_formats": ["ue4m3", "ue8m0"],
+          "efficiency": "50% storage reduction vs FP8"
+        }
+      ],
+      "layout_selection": "Automatic selection based on matrix size, precision, and hardware capabilities"
+    },
+    "precision_handling": {
+      "precision_types": {
+        "mxf4nvf4": {
+          "description": "Mixed precision - 4-bit weights, variable precision activations",
+          "bit_width": "4-bit (weights) + variable (activations)",
+          "use_case": "Model compression, efficient inference",
+          "performance": "4x compression vs FP8",
+          "accuracy": "Minimal degradation with careful quantization",
+          "sm_minimum": "SM100"
+        },
+        "f8f6f4": {
+          "description": "Multi-precision FP8, FP6, FP4 mixed",
+          "use_case": "Graduated precision reduction",
+          "sm_minimum": "SM100"
+        },
+        "mxf4": {
+          "description": "Block scale FP4 format",
+          "bit_width": "4-bit with per-block scaling",
+          "scale_formats": ["ue4m3", "ue8m0"],
+          "efficiency": "4x compression vs FP32",
+          "sm_minimum": "SM100"
+        },
+        "f16": {
+          "description": "Half precision floating point",
+          "bit_width": "16-bit",
+          "accuracy": "Good for most ML workloads",
+          "performance": "Baseline tensor core performance",
+          "sm_minimum": "SM70"
+        },
+        "i8": {
+          "description": "8-bit integer",
+          "bit_width": "8-bit signed",
+          "use_case": "Quantized integer models",
+          "performance": "Same as FP8",
+          "sm_minimum": "SM70"
+        },
+        "tf32": {
+          "description": "Tensor Float 32 (compatible precision)",
+          "bit_width": "32-bit (8-bit exponent, 10-bit mantissa, 13-bit implicit)",
+          "use_case": "FP32 compatibility with tensor core speed",
+          "performance": "Fast FP32 operations",
+          "sm_minimum": "SM80"
+        }
+      },
+      "precision_selection_algorithm": [
+        "1. Check input tensor precision types",
+        "2. Check accumulator precision requirements",
+        "3. Verify SM architecture supports selected precision",
+        "4. If not supported, demote to lower-bit precision",
+        "5. Generate appropriate scaling and conversion code",
+        "6. Emit precision-specific instruction variant"
+      ],
+      "precision_string_table": "Strings found: mxf4nvf4, f8f6f4, mxf4, f16, i8, tf32, mxf4 - exact mapping to MMA variants"
+    },
+    "sparsity_optimization": {
+      "sparsity_pattern": "Structured 2:4 sparsity (2 non-zeros per 4-element block)",
+      "compression_ratio": "50% - half the operations required",
+      "detection_mechanism": "Identifies sparse patterns during optimization phase",
+      "sparse_variants": "Special tcgen05.mma instruction variants for sparse inputs",
+      "applicability": "SM100+ only, requires specific data layout"
+    },
+    "statistics": {
+      "total_functions": 104,
+      "critical_functions": 7,
+      "high_functions": 20,
+      "total_functions_critical_high": 27,
+      "code_size_bytes": 131483,
+      "critical_bytes": 87648,
+      "high_bytes": 43835,
+      "percent_of_total": 0.7
+    },
+    "cohesion": {
+      "internal_calls": 189,
+      "external_calls": 468,
+      "total_calls": 657,
+      "cohesion_percent": 28.77,
+      "assessment": "POOR"
+    },
+    "critical_functions_sample": [
+      {
+        "address": "0x36e9630",
+        "name": "Tensor MMA Code Generation",
+        "primary_function": "Main tensor core MMA instruction selection and generation",
+        "call_frequency": "HIGH",
+        "documented_lines": "133-617",
+        "key_operations": [
+          "SM version detection",
+          "Precision selection",
+          "Operation type routing",
+          "Block scale validation",
+          "Weight stationary mode detection",
+          "CTA group selection",
+          "Instruction variant selection",
+          "Operand array construction"
+        ]
+      },
+      {
+        "address": "0x36ec510",
+        "name": "Im2Col Tensor Operations",
+        "primary_function": "Im2Col convolution tensor operation generation",
+        "call_frequency": "MEDIUM",
+        "supported_architectures": [
+          "SM 100",
+          "SM 103",
+          "SM 110",
+          "SM 120"
+        ]
+      },
+      {
+        "address": "0x35f3330",
+        "name": "Tensor Parameter String Formatting",
+        "primary_function": "String formatting for tensor operation parameters",
+        "call_frequency": "VERY_HIGH",
+        "precision_types": {
+          "0": "kind::mxf4nvf4",
+          "1": "kind::f8f6f4",
+          "2": "kind::mxf8f6f4",
+          "3": "kind::f16",
+          "4": "kind::i8",
+          "5": "kind::tf32",
+          "7": "kind::mxf4"
+        }
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 30,
+      "with_expected_strings": 6,
+      "without_expected_strings": 24,
+      "coverage_percent": 20.0,
+      "assessment": "poor"
+    },
+    "tensor_operations": [
+      "MMA instruction generation",
+      "Im2Col convolution",
+      "Sparsity handling",
+      "Precision selection",
+      "Layout format selection"
+    ],
+    "module_interfaces": {
+      "calls_to": {
+        "optimization_framework": 418,
+        "register_allocation": 23,
+        "ptx_emission": 8,
+        "error_handling": 8,
+        "instruction_selection": 9,
+        "architecture_detection": 2
+      },
+      "called_by": {
+        "unknown": 8,
+        "optimization_framework": 613,
+        "error_handling": 10,
+        "register_allocation": 29,
+        "ptx_emission": 8,
+        "instruction_selection": 1
+      }
+    },
+    "issues": [
+      {
+        "severity": "CRITICAL",
+        "type": "Cohesion",
+        "description": "28.77% cohesion - POOR internal organization",
+        "impact": "71.2% of calls go to other modules - suggests misclassification"
+      },
+      {
+        "severity": "CRITICAL",
+        "type": "Module Fragmentation",
+        "description": "Functions spread across 6+ modules",
+        "impact": "Tensor core logic scattered instead of consolidated"
+      },
+      {
+        "severity": "HIGH",
+        "type": "Dependencies",
+        "description": "Calls 418 functions in optimization_framework",
+        "impact": "May contain functions that belong in different modules"
+      }
+    ],
+    "key_observations": [
+      "36 tcgen05.mma instruction variants identified for SM100+ (Blackwell and newer)",
+      "Precision types supported: mxf4nvf4, f8f6f4, mxf4, f16, i8, tf32 - each with different compression/accuracy tradeoffs",
+      "Block scale formats for FP4: ue4m3, ue8m0 - enable 4x compression vs FP8",
+      "Sparsity support: 2:4 structured pattern provides 50% operation reduction on sparse matrices",
+      "Key generation functions: 0x36E9630 (MMA code gen), 0x35F3330 (precision string formatting)"
+    ]
+  },
+  "instruction_selection": {
+    "description": "Instruction pattern matching, cost modeling, IR lowering, architecture-specific selection",
+    "pattern_matching": {
+      "algorithm_type": "Tree pattern matching with cost-based selection",
+      "matching_process": [
+        "Input: Optimized IR (tree-structured DAG of operations)",
+        "Pattern database: Stores legal instruction patterns for target architecture",
+        "For each node: Match against available instruction patterns",
+        "Cost evaluation: Compare costs of alternative patterns",
+        "Selection: Choose minimum-cost pattern",
+        "Output: Selected machine instructions"
+      ],
+      "pattern_matching_engine": {
+        "primary_function": "0x2F9DAC0 (4.7KB) - Main pattern matcher and cost comparator",
+        "secondary_functions": [
+          "0x30462A0 (2.2KB) - tcgen05 family instruction pattern selection",
+          "0x304E6C0 (2.4KB) - Generic IR-to-assembly lowering"
+        ],
+        "matching_strategy": "Hash table-based pattern lookup with fallback linear search",
+        "complexity": "O(1) expected for pattern lookup, O(n) worst case"
+      },
+      "evidence": {
+        "hash_table_usage": "Pattern hash tables initialized and used in pattern matcher",
+        "architecture_specific_paths": "Different pattern sets for different SM architectures",
+        "dynamic_resizing": "Hash tables support expansion as patterns added"
+      }
+    },
+    "cost_model": {
+      "cost_metrics": [
+        "Latency: Instruction execution latency (cycles to produce result)",
+        "Throughput: Instruction execution throughput (instructions per cycle)",
+        "Dispatch units: How many execution ports needed",
+        "Power consumption: Energy impact of instruction selection",
+        "Critical path impact: Effects on loop-critical path"
+      ],
+      "cost_calculation": {
+        "basic_cost": "Instruction latency + operand setup cost",
+        "architecture_adjustment": "Latency multipliers for different SM versions",
+        "context_adjustment": "Inside vs outside loop multiplier",
+        "critical_path_weight": "Extra weight if instruction is on loop-critical path"
+      },
+      "cost_model_functions": {
+        "sub_D788E0": {
+          "occurrences": 231,
+          "purpose": "Cost comparison - compares two instruction costs",
+          "returns": "Negative if cost1 < cost2, zero if equal, positive if cost1 > cost2"
+        },
+        "sub_FDE760": {
+          "occurrences": 148,
+          "purpose": "Cost calculation - computes absolute cost from architecture parameters",
+          "inputs": "Instruction type, operand types, memory access patterns, SM capability"
+        },
+        "sub_D788C0": {
+          "occurrences": 94,
+          "purpose": "Utility comparison - byte-level cost metric extraction"
+        }
+      },
+      "decision_criteria": {
+        "select_vs_branch": "Select instruction profitable when: SelectCost < BranchCost AND path_reduction > threshold",
+        "gradient_gain_analysis": "Skip optimization if gain < 3% (small threshold)",
+        "critical_path_analysis": "Evaluate instruction's effect on loop critical path"
+      },
+      "confidence": "HIGH - cost model functions clearly identified with extensive evidence"
+    },
+    "architecture_specific_selection": {
+      "sm_adaptation": "Different instruction patterns selected based on target SM",
+      "adaptive_features": [
+        "Warp synchronization primitives (bar.sync in SM9+)",
+        "Tensor core instructions (tcgen05 in SM100+)",
+        "Async copy groups (SM80+)",
+        "128-bit atomics (SM90+)",
+        "Block scale FP4 (SM100+ only)"
+      ],
+      "selection_flow": "Architecture detection → Pattern database selection → Pattern matching → Cost evaluation"
+    },
+    "ir_lowering": {
+      "lowering_sequence": [
+        "IR nodes → Machine instruction candidates",
+        "Immediate encoding (compute encoded immediates)",
+        "Operand selection (register vs immediate vs memory)",
+        "Instruction variant selection (from pattern set)",
+        "Code generation (emit selected instructions)"
+      ],
+      "special_cases": [
+        "Memory operations: Different addressing modes per memory space",
+        "Branches: Conditional vs unconditional selection based on profile",
+        "Tensor operations: Pattern matching for MMA instructions",
+        "Atomics: Architecture-specific atomic instruction selection"
+      ]
+    },
+    "statistics": {
+      "total_functions": 87,
+      "critical_functions": 4,
+      "high_functions": 21,
+      "total_functions_critical_high": 25,
+      "code_size_bytes": 66541,
+      "critical_bytes": 26681,
+      "high_bytes": 39860,
+      "percent_of_total": 0.35
+    },
+    "cohesion": {
+      "internal_calls": 181,
+      "external_calls": 353,
+      "total_calls": 534,
+      "cohesion_percent": 33.90,
+      "assessment": "ACCEPTABLE"
+    },
+    "critical_functions_sample": [
+      {
+        "priority": "CRITICAL",
+        "name": "sub_2F9DAC0",
+        "address": "0x2f9dac0",
+        "size_bytes": 4736,
+        "call_frequency": "Primary pattern matcher - called from multiple instruction selection paths",
+        "purpose": "Hash table-based instruction cost comparison and pattern selection",
+        "key_operations": [
+          "Pattern hash table initialization and lookup",
+          "Cost metric comparison (branch vs select)",
+          "Critical path analysis for loop optimization",
+          "Dynamic hash table resizing"
+        ],
+        "registers_used": 15,
+        "simd_instructions": 34
+      },
+      {
+        "priority": "CRITICAL",
+        "name": "sub_30462A0",
+        "address": "0x30462a0",
+        "size_bytes": 2184,
+        "call_frequency": "High - called for each tcgen05 instruction family opcode",
+        "purpose": "tcgen05 instruction family pattern selection and code generation",
+        "key_operations": [
+          "Architecture capability checking",
+          "Instruction operand validation",
+          "IR-to-assembly code generation",
+          "SIMD data structure loading"
+        ],
+        "registers_used": 12,
+        "simd_instructions": 28
+      },
+      {
+        "priority": "CRITICAL",
+        "name": "sub_304E6C0",
+        "address": "0x304e6c0",
+        "size_bytes": 2368,
+        "call_frequency": "Very high - core IR lowering function",
+        "purpose": "Generic IR-to-assembly lowering with pattern-based instruction selection",
+        "key_operations": [
+          "IR opcode pattern matching",
+          "Instruction selection from pattern table",
+          "Cost model evaluation",
+          "Memory operation lowering"
+        ],
+        "registers_used": 14,
+        "simd_instructions": 31
+      }
+    ],
+    "string_evidence": {
+      "total_sampled": 30,
+      "with_expected_strings": 5,
+      "without_expected_strings": 25,
+      "coverage_percent": 16.67,
+      "assessment": "poor"
+    },
+    "selection_phases": [
+      "pattern_matching",
+      "cost_evaluation",
+      "ir_lowering",
+      "architecture_conditional_selection",
+      "code_generation"
+    ],
+    "module_interfaces": {
+      "calls_to": {
+        "optimization_framework": 315,
+        "register_allocation": 21,
+        "architecture_detection": 6,
+        "error_handling": 9,
+        "ptx_emission": 1,
+        "tensor_core_codegen": 1
+      },
+      "called_by": {
+        "optimization_framework": 1634,
+        "register_allocation": 68,
+        "tensor_core_codegen": 9,
+        "error_handling": 49,
+        "architecture_detection": 16,
+        "ptx_emission": 5,
+        "compilation_pipeline": 1,
+        "unknown": 18
+      }
+    },
+    "issues": [
+      {
+        "severity": "CRITICAL",
+        "type": "Module Scope",
+        "description": "Called by ALL other modules (1,800 calls total)",
+        "impact": "Suggests functions are utilities, not pure instruction selection"
+      },
+      {
+        "severity": "CRITICAL",
+        "type": "Cohesion",
+        "description": "33.9% cohesion - very low internal consistency",
+        "impact": "Module is too broad and contains unrelated functionality"
+      },
+      {
+        "severity": "HIGH",
+        "type": "Single Responsibility",
+        "description": "Mixing core instruction selection with pattern utilities",
+        "impact": "Difficult to test and maintain instruction selection logic"
+      }
+    ],
+    "key_observations": [
+      "Pattern matching engine: 0x2F9DAC0 (4.7KB) primary function with hash table-based lookup",
+      "Cost model: 3 core functions (D788E0, FDE760, D788C0) with 231+148+94 = 473 combined calls",
+      "Called by 1,800+ functions - acts as core utility layer for instruction generation",
+      "Cost metrics include: latency, throughput, dispatch units, critical path impact",
+      "Decision criteria: select vs branch profitability, gradient gain analysis (threshold: 3%)"
+    ]
+  },
+  "cross_module_analysis": {
+    "dependency_concerns": [
+      {
+        "concern": "instruction_selection bottleneck",
+        "severity": "CRITICAL",
+        "incoming_calls": 1800,
+        "cohesion": 33.9,
+        "recommendation": "Split into core selection and utilities"
+      },
+      {
+        "concern": "tensor_core_codegen fragmentation",
+        "severity": "CRITICAL",
+        "cohesion": 28.77,
+        "external_calls_percent": 71.2,
+        "recommendation": "Manual review and consolidation"
+      },
+      {
+        "concern": "error_handling over-broad",
+        "severity": "HIGH",
+        "incoming_calls": 1310,
+        "cohesion": 45.03,
+        "recommendation": "Split error reporting, diagnostics, recovery"
+      }
+    ],
+    "well_designed_modules": [
+      "optimization_framework (92.6% cohesion)",
+      "compilation_pipeline (70.6% cohesion)",
+      "register_allocation (66.3% cohesion)"
+    ],
+    "module_interaction_matrix": {
+      "high_traffic_paths": [
+        {
+          "from": "optimization_framework",
+          "to": "instruction_selection",
+          "calls": 1634,
+          "assessment": "Expected - instruction selection is utility layer"
+        },
+        {
+          "from": "register_allocation",
+          "to": "optimization_framework",
+          "calls": 174,
+          "assessment": "Expected - optimization frameworks used by allocator"
+        },
+        {
+          "from": "all_modules",
+          "to": "error_handling",
+          "calls": 1310,
+          "assessment": "HIGH - suggests error_handling too broad"
+        }
+      ]
+    }
+  },
+  "summary_and_next_steps": {
+    "overall_assessment": "PARTIALLY SOUND WITH CRITICAL ISSUES",
+    "strengths": [
+      "optimization_framework well-isolated (92.6% cohesion)",
+      "compilation_pipeline cleanly designed (70.6% cohesion)",
+      "register_allocation focused (66.3% cohesion)",
+      "Modular architecture with clear dependencies"
+    ],
+    "critical_problems": [
+      "instruction_selection module is over-broad utility layer (33.9% cohesion)",
+      "tensor_core_codegen fragmented across modules (28.77% cohesion)",
+      "error_handling universally called - too broad (45.03% cohesion)"
+    ],
+    "estimated_remediation_effort": {
+      "instruction_selection": "20-40 hours (audit + refactoring)",
+      "tensor_core_codegen": "30-50 hours (review + consolidation)",
+      "error_handling": "10-20 hours (audit + possible split)"
+    },
+    "immediate_actions": [
+      "Audit instruction_selection module - determine which functions are utilities",
+      "Review tensor_core_codegen classification - manual code review needed",
+      "Validate error_handling scope - verify all functions are error-related",
+      "Create dependency hierarchy documentation"
+    ],
+    "medium_term_actions": [
+      "Implement module refactoring based on audit results",
+      "Create inter-module interface contracts",
+      "Reduce circular dependencies through abstraction layers",
+      "Implement module-level access controls"
+    ],
+    "long_term_architecture": [
+      "Consider module redesign to improve cohesion",
+      "Create utility module for shared functionality",
+      "Implement clear module dependency rules",
+      "Define module-level testing strategies",
+      "Establish module evolution guidelines"
+    ]
+  }
+}

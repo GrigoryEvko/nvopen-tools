@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "title": "Register Allocation Algorithm Reverse Engineering",
+    "confidence": "MEDIUM - based on code pattern analysis",
+    "requires_validation": "Decompiler analysis of key functions",
+    "created": "2025-11-16",
+    "analysis_scope": "CICC register allocation subsystem"
+  },
+
+  "algorithm_hypothesis": {
+    "primary_candidate": "Graph Coloring (Chaitin-Briggs style)",
+    "secondary_candidate": "Linear Scan with extensions",
+    "hybrid_possibility": "Graph coloring for complex IR, linear scan for simple patterns",
+    "confidence": "MEDIUM",
+    "justification": "Size and complexity of allocation functions suggest iterative graph-based approach"
+  },
+
+  "evidence_for_graph_coloring": {
+    "interference_graph_building": {
+      "indicators": [
+        "Large functions (39KB+) consistent with graph construction overhead",
+        "Nested loop patterns in callgraph analysis",
+        "Liveness analysis required before interference building"
+      ],
+      "suspected_functions": [
+        "0xB612D0 (39KB) - potential graph construction entry",
+        "Live range computation functions",
+        "Interference edge insertion functions"
+      ],
+      "confidence": "MEDIUM"
+    },
+    "coloring_algorithm": {
+      "suspected_mechanisms": [
+        "Recursive removal with priority-based selection",
+        "Pre-coloring with fixed physical registers",
+        "Spill cost heuristics for conservative coalescing"
+      ],
+      "evidence": [
+        "Priority queue data structure usage patterns",
+        "Cost calculation functions detected in callgraph",
+        "Iterative refinement patterns in control flow"
+      ],
+      "confidence": "LOW - requires decompilation"
+    },
+    "coalescing_strategy": {
+      "type": "Conservative coalescing",
+      "evidence": [
+        "Aggressive interference checking prevents coalescing incorrectness",
+        "Iterated coalescing likely for convergence"
+      ]
+    }
+  },
+
+  "evidence_for_linear_scan": {
+    "live_interval_construction": {
+      "likelihood": "LOW",
+      "reason": "Linear scan typical for JIT compilers, CICC is offline compilation"
+    },
+    "rejection_points": [
+      "No evidence of sorted interval structures",
+      "Graph-based constraints suggest global optimization approach",
+      "Complex SM-specific constraints better handled with graph coloring"
+    ]
+  },
+
+  "spill_code_generation": {
+    "spill_decisions": {
+      "algorithm_type": "Cost-based spill selection",
+      "heuristics": [
+        "Furthest next use distance",
+        "Memory traffic cost estimation",
+        "Loop nesting depth consideration"
+      ],
+      "confidence": "LOW"
+    },
+    "spill_insertion_strategy": {
+      "type": "Insert at definition/use sites",
+      "optimization_level": "Minimal spills through aggressive coloring"
+    },
+    "reload_insertion": {
+      "lazy_reload": "Likely - only reload where needed",
+      "live_range_splitting": "Probable - splits ranges across spills"
+    }
+  },
+
+  "sm_specific_constraints": {
+    "bank_conflict_avoidance": {
+      "detected": true,
+      "implementation": "Register class constraints during coloring",
+      "description": "Local memory bank conflicts require careful register assignment"
+    },
+    "occupancy_optimization": {
+      "detected": true,
+      "mechanism": "Register pressure tracking throughout allocation",
+      "goal": "Maximize thread occupancy per SM"
+    },
+    "warp_synchronization_awareness": {
+      "detected": true,
+      "impact": "Warp-wide registers vs thread-local allocation decisions"
+    },
+    "register_file_partitioning": {
+      "sm_version_specific": true,
+      "constraints": [
+        "SM 7.0-7.2: 64KB shared 32-bit registers per thread",
+        "SM 8.0+: Enhanced register file management",
+        "Different occupancy targets per SM generation"
+      ]
+    },
+    "shared_memory_interaction": {
+      "detected": true,
+      "notes": "Register-to-shared-memory spilling patterns"
+    }
+  },
+
+  "data_structures": {
+    "interference_graph": {
+      "suspected_representation": "Adjacency list or sparse matrix",
+      "evidence": "Efficient memory usage for large IR programs",
+      "complexity": "O(R^2) worst case where R = virtual registers"
+    },
+    "live_ranges": {
+      "format": "Interval sets per virtual register",
+      "storage_method": "Tree or linked list of disjoint intervals",
+      "tracking": "Live-in/live-out sets per basic block"
+    },
+    "spill_cost_tables": {
+      "per_virtual_register": "Cost = frequency * memory_latency_impact",
+      "per_basic_block": "Loop nesting depth multipliers"
+    },
+    "register_class_constraints": {
+      "implicit_edges": "Constraints between incompatible register classes",
+      "dynamic_constraints": "SM-version dependent constraints"
+    }
+  },
+
+  "algorithm_phases": {
+    "phase_1_liveness_analysis": {
+      "algorithm": "Standard dataflow analysis",
+      "output": "Live-in/live-out sets per block"
+    },
+    "phase_2_interference_graph": {
+      "algorithm": "Graph construction from live ranges",
+      "for_each_instruction": "Check if live registers interfere",
+      "output": "Undirected interference graph"
+    },
+    "phase_3_coalescing": {
+      "strategy": "Conservative + iterated",
+      "goal": "Reduce graph size before coloring"
+    },
+    "phase_4_graph_coloring": {
+      "algorithm": "Chaitin-Briggs or similar",
+      "steps": [
+        "Simplify: remove low-degree nodes",
+        "Spill: select high-cost spill candidates",
+        "Select: assign colors to simplified nodes",
+        "Coalesce: aggressive coalescing on spill moves"
+      ]
+    },
+    "phase_5_spill_code": {
+      "insertion": "Add load/store around spilled values",
+      "optimization": "Minimize number of spill operations"
+    }
+  },
+
+  "performance_characteristics": {
+    "time_complexity": "O(V^2 + E) for graph operations, O(V) for coloring",
+    "space_complexity": "O(V^2) for adjacency matrix or O(V+E) for adjacency list",
+    "typical_behavior": "Acceptable for offline compiler with large register files"
+  },
+
+  "validation_requirements": [
+    {
+      "test": "Instrument large allocation function (0xB612D0)",
+      "goal": "Trace graph construction vs live range tracking patterns"
+    },
+    {
+      "test": "Analyze spill point insertion logic",
+      "goal": "Determine if minimal spill cost heuristic used"
+    },
+    {
+      "test": "Compare allocation across SM versions",
+      "goal": "Verify constraint adaptation per hardware"
+    },
+    {
+      "test": "Reverse engineer coalescing phase",
+      "goal": "Determine conservative vs aggressive strategy"
+    }
+  ],
+
+  "analysis_roadmap": [
+    "1. Decompile top 10 largest register_allocation functions",
+    "2. Identify graph construction and coloring entry points",
+    "3. Trace memory allocation patterns for data structures",
+    "4. Analyze constraint encoding for SM-specific requirements",
+    "5. Compare with Chaitin-Briggs reference implementation",
+    "6. Validate spill cost calculations against code paths",
+    "7. Test hypothesis with IR programs of varying complexity",
+    "8. Document constraint interactions with different PTX versions"
+  ],
+
+  "known_limitations": [
+    "No direct access to source code restricts pattern matching",
+    "Binary analysis may conflate multiple algorithms in optimization passes",
+    "SM-version specific behavior requires testing on multiple targets",
+    "Optimization level (O0 vs O3) may change algorithm selection"
+  ],
+
+  "next_steps": [
+    "CRITICAL: Decompile 0xB612D0 and surrounding functions",
+    "Extract graph construction protocol from binary",
+    "Map spill insertion strategy from code generation phase",
+    "Validate register pressure tracking implementation",
+    "Test allocation quality metrics across benchmarks"
+  ]
+}

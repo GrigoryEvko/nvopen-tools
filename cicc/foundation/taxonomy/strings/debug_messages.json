@@ -1,0 +1,8939 @@
+[
+  {
+    "addr": "0x39fd3b2",
+    "value": "no-multiline-debug",
+    "xrefs": [
+      {
+        "from": "0x610b6c",
+        "func": "sub_610260",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3a27c08",
+    "value": "error in debug option argument",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e938",
+    "value": "a debug option must be specified on the command-line for the db_opt pragma to be used",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3c23d77",
+    "value": "--device-debug",
+    "xrefs": [
+      {
+        "from": "0x8fef4c",
+        "func": "sub_8FE280",
+        "type": 1
+      },
+      {
+        "from": "0x125eb10",
+        "func": "sub_125DC90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3c24049",
+    "value": "--device-time-trace",
+    "xrefs": [
+      {
+        "from": "0x902ad7",
+        "func": "sub_900130",
+        "type": 1
+      },
+      {
+        "from": "0x1262629",
+        "func": "sub_125FB30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3c2405d",
+    "value": "--use-trace-pid",
+    "xrefs": [
+      {
+        "from": "0x902b2b",
+        "func": "sub_900130",
+        "type": 1
+      },
+      {
+        "from": "0x902c4d",
+        "func": "sub_900130",
+        "type": 1
+      },
+      {
+        "from": "0x126267d",
+        "func": "sub_125FB30",
+        "type": 1
+      },
+      {
+        "from": "0x126279f",
+        "func": "sub_125FB30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3c2406d",
+    "value": "--trace-env",
+    "xrefs": [
+      {
+        "from": "0x902ba0",
+        "func": "sub_900130",
+        "type": 1
+      },
+      {
+        "from": "0x902c1a",
+        "func": "sub_900130",
+        "type": 1
+      },
+      {
+        "from": "0x902c94",
+        "func": "sub_900130",
+        "type": 1
+      },
+      {
+        "from": "0x12626f2",
+        "func": "sub_125FB30",
+        "type": 1
+      },
+      {
+        "from": "0x126276c",
+        "func": "sub_125FB30",
+        "type": 1
+      },
+      {
+        "from": "0x12627e6",
+        "func": "sub_125FB30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3c8d108",
+    "value": "_Z15__nv_fp128_sqrtgllvm.nvvm.sqrt.f128_Z15__nv_fp128_sqrtDF128__Z14__nv_fp128_singllvm.nvvm.sin.f128_Z14__nv_fp128_sinDF128__Z14__nv_fp128_cosgllvm.nvvm.cos.f128_Z14__nv_fp128_cosDF128__Z14__nv_fp128_tangllvm.nvvm.tan.f128_Z14__nv_fp128_tanDF128__Z15__nv_fp128_asingllvm.nvvm.asin.f128_Z15__nv_fp128_asinDF128__Z15__nv_fp128_acosgllvm.nvvm.acos.f128_Z15__nv_fp128_acosDF128__Z15__nv_fp128_atangllvm.nvvm.atan.f128_Z15__nv_fp128_atanDF128__Z14__nv_fp128_expgllvm.nvvm.exp.f128_Z14__nv_fp128_expDF128__Z15__nv_fp128_exp2gllvm.nvvm.exp2.f128_Z15__nv_fp128_exp2DF128__Z16__nv_fp128_exp10gllvm.nvvm.exp10.f128_Z16__nv_fp128_exp10DF128__Z16__nv_fp128_expm1gllvm.nvvm.expm1.f128_Z16__nv_fp128_expm1DF128__Z14__nv_fp128_loggllvm.nvvm.log.f128_Z14__nv_fp128_logDF128__Z15__nv_fp128_log2gllvm.nvvm.log2.f128_Z15__nv_fp128_log2DF128__Z16__nv_fp128_log10gllvm.nvvm.log10.f128_Z16__nv_fp128_log10DF128__Z16__nv_fp128_log1pgllvm.nvvm.log1p.f128_Z16__nv_fp128_log1pDF128__Z14__nv_fp128_powggllvm.nvvm.pow.f128_Z14__nv_fp128_powDF128_DF128__Z15__nv_fp128_sinhgllvm.nvvm.sinh.f128_Z15__nv_fp128_sinhDF128__Z15__nv_fp128_coshgllvm.nvvm.cosh.f128_Z15__nv_fp128_coshDF128__Z15__nv_fp128_tanhgllvm.nvvm.tanh.f128_Z15__nv_fp128_tanhDF128__Z16__nv_fp128_asinhgllvm.nvvm.asinh.f128_Z16__nv_fp128_asinhDF128__Z16__nv_fp128_acoshgllvm.nvvm.acosh.f128_Z16__nv_fp128_acoshDF128__Z16__nv_fp128_atanhgllvm.nvvm.atanh.f128_Z16__nv_fp128_atanhDF128__Z16__nv_fp128_truncgllvm.nvvm.trunc.f128_Z16__nv_fp128_truncDF128__Z16__nv_fp128_floorgllvm.nvvm.floor.f128_Z16__nv_fp128_floorDF128__Z15__nv_fp128_ceilgllvm.nvvm.ceil.f128_Z15__nv_fp128_ceilDF128__Z16__nv_fp128_roundgllvm.nvvm.round.f128_Z16__nv_fp128_roundDF128__Z15__nv_fp128_rintgllvm.nvvm.rint.f128_Z15__nv_fp128_rintDF128__Z15__nv_fp128_fabsgllvm.nvvm.fabs.f128_Z15__nv_fp128_fabsDF128__Z19__nv_fp128_copysignggllvm.nvvm.copysign.f128_Z19__nv_fp128_copysignDF128_DF128__Z15__nv_fp128_fmaxggllvm.nvvm.fmax.f128_Z15__nv_fp128_fmaxDF128_DF128__Z15__nv_fp128_fminggllvm.nvvm.fmin.f128_Z15__nv_fp128_fminDF128_DF128__Z15__nv_fp128_fdimggllvm.nvvm.fdim.f128_Z15__nv_fp128_fdimDF128_DF128__Z15__nv_fp128_fmodggllvm.nvvm.fmod.f128_Z15__nv_fp128_fmodDF128_DF128__Z20__nv_fp128_remainderggllvm.nvvm.remainder.f128_Z20__nv_fp128_remainderDF128_DF128__Z16__nv_fp128_frexpgPillvm.nvvm.frexp.f128_Z16__nv_fp128_frexpDF128_Pi_Z15__nv_fp128_modfgPgllvm.nvvm.modf.f128_Z15__nv_fp128_modfDF128_PDF128__Z16__nv_fp128_hypotggllvm.nvvm.hypot.f128_Z16__nv_fp128_hypotDF128_DF128__Z14__nv_fp128_fmagggllvm.nvvm.fma.f128_Z14__nv_fp128_fmaDF128_DF128_DF128__Z16__nv_fp128_ldexpgillvm.nvvm.ldexp.f128_Z16__nv_fp128_ldexpDF128_i_Z16__nv_fp128_ilogbgllvm.nvvm.ilogb.f128_Z16__nv_fp128_ilogbDF128__Z14__nv_fp128_mulggllvm.nvvm.mul.f128_Z14__nv_fp128_mulDF128_DF128__Z14__nv_fp128_addggllvm.nvvm.add.f128_Z14__nv_fp128_addDF128_DF128__Z14__nv_fp128_subggllvm.nvvm.sub.f128_Z14__nv_fp128_subDF128_DF128__Z14__nv_fp128_divggllvm.nvvm.div.f128_Z14__nv_fp128_divDF128_DF128__Z16__nv_fp128_isnangllvm.nvvm.isnan.f128_Z16__nv_fp128_isnanDF128__Z22__nv_fp128_isunorderedggllvm.nvvm.isunordered.f128_Z22__nv_fp128_isunorderedDF128_DF128_20.0.0nvptx64-nvidia-gpulibsmoduleOutput",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3c91aa8",
+    "value": "_Z15__nv_fp128_sqrtgllvm.nvvm.sqrt.f128_Z15__nv_fp128_sqrtDF128__Z14__nv_fp128_singllvm.nvvm.sin.f128_Z14__nv_fp128_sinDF128__Z14__nv_fp128_cosgllvm.nvvm.cos.f128_Z14__nv_fp128_cosDF128__Z14__nv_fp128_tangllvm.nvvm.tan.f128_Z14__nv_fp128_tanDF128__Z15__nv_fp128_asingllvm.nvvm.asin.f128_Z15__nv_fp128_asinDF128__Z15__nv_fp128_acosgllvm.nvvm.acos.f128_Z15__nv_fp128_acosDF128__Z15__nv_fp128_atangllvm.nvvm.atan.f128_Z15__nv_fp128_atanDF128__Z14__nv_fp128_expgllvm.nvvm.exp.f128_Z14__nv_fp128_expDF128__Z15__nv_fp128_exp2gllvm.nvvm.exp2.f128_Z15__nv_fp128_exp2DF128__Z16__nv_fp128_exp10gllvm.nvvm.exp10.f128_Z16__nv_fp128_exp10DF128__Z16__nv_fp128_expm1gllvm.nvvm.expm1.f128_Z16__nv_fp128_expm1DF128__Z14__nv_fp128_loggllvm.nvvm.log.f128_Z14__nv_fp128_logDF128__Z15__nv_fp128_log2gllvm.nvvm.log2.f128_Z15__nv_fp128_log2DF128__Z16__nv_fp128_log10gllvm.nvvm.log10.f128_Z16__nv_fp128_log10DF128__Z16__nv_fp128_log1pgllvm.nvvm.log1p.f128_Z16__nv_fp128_log1pDF128__Z14__nv_fp128_powggllvm.nvvm.pow.f128_Z14__nv_fp128_powDF128_DF128__Z15__nv_fp128_sinhgllvm.nvvm.sinh.f128_Z15__nv_fp128_sinhDF128__Z15__nv_fp128_coshgllvm.nvvm.cosh.f128_Z15__nv_fp128_coshDF128__Z15__nv_fp128_tanhgllvm.nvvm.tanh.f128_Z15__nv_fp128_tanhDF128__Z16__nv_fp128_asinhgllvm.nvvm.asinh.f128_Z16__nv_fp128_asinhDF128__Z16__nv_fp128_acoshgllvm.nvvm.acosh.f128_Z16__nv_fp128_acoshDF128__Z16__nv_fp128_atanhgllvm.nvvm.atanh.f128_Z16__nv_fp128_atanhDF128__Z16__nv_fp128_truncgllvm.nvvm.trunc.f128_Z16__nv_fp128_truncDF128__Z16__nv_fp128_floorgllvm.nvvm.floor.f128_Z16__nv_fp128_floorDF128__Z15__nv_fp128_ceilgllvm.nvvm.ceil.f128_Z15__nv_fp128_ceilDF128__Z16__nv_fp128_roundgllvm.nvvm.round.f128_Z16__nv_fp128_roundDF128__Z15__nv_fp128_rintgllvm.nvvm.rint.f128_Z15__nv_fp128_rintDF128__Z15__nv_fp128_fabsgllvm.nvvm.fabs.f128_Z15__nv_fp128_fabsDF128__Z19__nv_fp128_copysignggllvm.nvvm.copysign.f128_Z19__nv_fp128_copysignDF128_DF128__Z15__nv_fp128_fmaxggllvm.nvvm.fmax.f128_Z15__nv_fp128_fmaxDF128_DF128__Z15__nv_fp128_fminggllvm.nvvm.fmin.f128_Z15__nv_fp128_fminDF128_DF128__Z15__nv_fp128_fdimggllvm.nvvm.fdim.f128_Z15__nv_fp128_fdimDF128_DF128__Z15__nv_fp128_fmodggllvm.nvvm.fmod.f128_Z15__nv_fp128_fmodDF128_DF128__Z20__nv_fp128_remainderggllvm.nvvm.remainder.f128_Z20__nv_fp128_remainderDF128_DF128__Z16__nv_fp128_frexpgPillvm.nvvm.frexp.f128_Z16__nv_fp128_frexpDF128_Pi_Z15__nv_fp128_modfgPgllvm.nvvm.modf.f128_Z15__nv_fp128_modfDF128_PDF128__Z16__nv_fp128_hypotggllvm.nvvm.hypot.f128_Z16__nv_fp128_hypotDF128_DF128__Z14__nv_fp128_fmagggllvm.nvvm.fma.f128_Z14__nv_fp128_fmaDF128_DF128_DF128__Z16__nv_fp128_ldexpgillvm.nvvm.ldexp.f128_Z16__nv_fp128_ldexpDF128_i_Z16__nv_fp128_ilogbgllvm.nvvm.ilogb.f128_Z16__nv_fp128_ilogbDF128__Z14__nv_fp128_mulggllvm.nvvm.mul.f128_Z14__nv_fp128_mulDF128_DF128__Z14__nv_fp128_addggllvm.nvvm.add.f128_Z14__nv_fp128_addDF128_DF128__Z14__nv_fp128_subggllvm.nvvm.sub.f128_Z14__nv_fp128_subDF128_DF128__Z14__nv_fp128_divggllvm.nvvm.div.f128_Z14__nv_fp128_divDF128_DF128__Z16__nv_fp128_isnangllvm.nvvm.isnan.f128_Z16__nv_fp128_isnanDF128__Z22__nv_fp128_isunorderedggllvm.nvvm.isunordered.f128_Z22__nv_fp128_isunorderedDF128_DF128_20.0.0nvptx64-nvidia-gpulibsmoduleOutput",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f0f9b3",
+    "value": "Debug Info Version",
+    "xrefs": [
+      {
+        "from": "0x91543c",
+        "func": "sub_915400",
+        "type": 1
+      },
+      {
+        "from": "0x1274f9c",
+        "func": "sub_1274F60",
+        "type": 1
+      },
+      {
+        "from": "0x15ac061",
+        "func": "sub_15AC060",
+        "type": 1
+      },
+      {
+        "from": "0x29c3739",
+        "func": "sub_29C2F90",
+        "type": 1
+      },
+      {
+        "from": "0x29c3a93",
+        "func": "sub_29C2F90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f11860",
+    "value": "unhandled basic type in debug info gen!",
+    "xrefs": [
+      {
+        "from": "0x941011",
+        "func": "sub_940FE0",
+        "type": 1
+      },
+      {
+        "from": "0x12a014d",
+        "func": "sub_12A0120",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f11960",
+    "value": "unhandled type in debug info gen!",
+    "xrefs": [
+      {
+        "from": "0x943195",
+        "func": "sub_9430C0",
+        "type": 1
+      },
+      {
+        "from": "0x12a2205",
+        "func": "sub_12A2130",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14906",
+    "value": "-debug-compile",
+    "xrefs": [
+      {
+        "from": "0x95c9e1",
+        "func": "sub_95C880",
+        "type": 1
+      },
+      {
+        "from": "0x95ec91",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x95ecfa",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x95edbf",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x95ee1c",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c6ff2",
+        "func": "sub_12C6E90",
+        "type": 1
+      },
+      {
+        "from": "0x12c8f21",
+        "func": "sub_12C8DD0",
+        "type": 1
+      },
+      {
+        "from": "0x12c8f8a",
+        "func": "sub_12C8DD0",
+        "type": 1
+      },
+      {
+        "from": "0x12c904f",
+        "func": "sub_12C8DD0",
+        "type": 1
+      },
+      {
+        "from": "0x12c90ac",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f1508a",
+    "value": "-asm-verbose",
+    "xrefs": [
+      {
+        "from": "0x96188a",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12cbb19",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f15097",
+    "value": "-enable-verbose-asm",
+    "xrefs": [
+      {
+        "from": "0x9618e7",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12cbb76",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f154e1",
+    "value": "--trace-lto",
+    "xrefs": [
+      {
+        "from": "0x96690a",
+        "func": "sub_9624D0",
+        "type": 1
+      },
+      {
+        "from": "0x12d156d",
+        "func": "sub_12CC750",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f154ed",
+    "value": "--trace",
+    "xrefs": [
+      {
+        "from": "0x966919",
+        "func": "sub_9624D0",
+        "type": 1
+      },
+      {
+        "from": "0x12d157c",
+        "func": "sub_12CC750",
+        "type": 1
+      },
+      {
+        "from": "0x12f6210",
+        "func": "sub_12F5F30",
+        "type": 1
+      },
+      {
+        "from": "0x309aa90",
+        "func": "sub_309A610",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f1873a",
+    "value": "llvm.log.f32",
+    "xrefs": [
+      {
+        "from": "0x439f9e",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x43d0b9",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x44031b",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x443b9f",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x445d18",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x4487de",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x44ccfc",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x450555",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x149f2ce",
+        "func": "sub_149E420",
+        "type": 1
+      },
+      {
+        "from": "0x149f5a6",
+        "func": "sub_149E420",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f18d7f",
+    "value": "llvm.log.f64",
+    "xrefs": [
+      {
+        "from": "0x43d073",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x43d5c8",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x4402ff",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x4422dd",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x445e3e",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x448904",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x44bde3",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x4505c8",
+        "func": "ctor_010_0",
+        "type": 1
+      },
+      {
+        "from": "0x149f1bd",
+        "func": "sub_149E420",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f21f98",
+    "value": "Mixed debug intrinsics and debug records in bitcode module!",
+    "xrefs": [
+      {
+        "from": "0x9fea39",
+        "func": "sub_9FDC80",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2203a",
+    "value": "print-summary-global-ids",
+    "xrefs": [
+      {
+        "from": "0x453a1d",
+        "func": "ctor_013",
+        "type": 1
+      },
+      {
+        "from": "0x4b3aab",
+        "func": "ctor_140",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f22070",
+    "value": "Print the global id for each value when reading the module summary",
+    "xrefs": [
+      {
+        "from": "0x453ad9",
+        "func": "ctor_013",
+        "type": 1
+      },
+      {
+        "from": "0x4b3bd9",
+        "func": "ctor_140",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f22138",
+    "value": "Load bitcode directly into the new debug info format (regardless of input format)",
+    "xrefs": [
+      {
+        "from": "0x453e3a",
+        "func": "ctor_013",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f24978",
+    "value": "print-inst-addrs",
+    "xrefs": [
+      {
+        "from": "0x4546de",
+        "func": "ctor_016",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f24989",
+    "value": "print-inst-debug-locs",
+    "xrefs": [
+      {
+        "from": "0x4548a9",
+        "func": "ctor_016",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2499f",
+    "value": "print-prof-data",
+    "xrefs": [
+      {
+        "from": "0x454a62",
+        "func": "ctor_016",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f249b0",
+    "value": "Print addresses of instructions when dumping",
+    "xrefs": [
+      {
+        "from": "0x454787",
+        "func": "ctor_016",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f249e0",
+    "value": "Pretty print debug locations of instructions when dumping",
+    "xrefs": [
+      {
+        "from": "0x454944",
+        "func": "ctor_016",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f24a20",
+    "value": "Pretty print perf data (branch weights, etc) when dumping",
+    "xrefs": [
+      {
+        "from": "0x454afd",
+        "func": "ctor_016",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f27d50",
+    "value": "Disable autoupgrade of debug info",
+    "xrefs": [
+      {
+        "from": "0x454b91",
+        "func": "ctor_017",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f27d78",
+    "value": "disable-auto-upgrade-debug-info",
+    "xrefs": [
+      {
+        "from": "0x454b98",
+        "func": "ctor_017",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f27f18",
+    "value": "When set to true, IR files will be processed and printed in their current debug info format, regardless of default behaviour or other flags passed. Has no effect if input IR does not contain debug records or intrinsics. Ignored in llvm-link, llvm-lto, and llvm-lto2.",
+    "xrefs": [
+      {
+        "from": "0x454f1b",
+        "func": "ctor_018",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f28fc0",
+    "value": "debug-info-assignment-tracking",
+    "xrefs": [
+      {
+        "from": "0xae5c53",
+        "func": "sub_AE5C20",
+        "type": 1
+      },
+      {
+        "from": "0xaea461",
+        "func": "sub_AEA460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f296b8",
+    "value": "ignoring debug info with an invalid version (",
+    "xrefs": [
+      {
+        "from": "0xb14712",
+        "func": "sub_B14700",
+        "type": 1
+      },
+      {
+        "from": "0x15c7be2",
+        "func": "sub_15C7BD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f296f0",
+    "value": "ignoring invalid debug info in ",
+    "xrefs": [
+      {
+        "from": "0xb14762",
+        "func": "sub_B14750",
+        "type": 1
+      },
+      {
+        "from": "0x15c7c32",
+        "func": "sub_15C7C20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2a03c",
+    "value": "Print Module IR",
+    "xrefs": [
+      {
+        "from": "0xb39d80",
+        "func": "sub_B39D80",
+        "type": 1
+      },
+      {
+        "from": "0x15e8e00",
+        "func": "sub_15E8E00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2a04c",
+    "value": "Print Function IR",
+    "xrefs": [
+      {
+        "from": "0xb39d90",
+        "func": "sub_B39D90",
+        "type": 1
+      },
+      {
+        "from": "0x15e8e10",
+        "func": "sub_15E8E10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2a05e",
+    "value": "Print module to stderr",
+    "xrefs": [
+      {
+        "from": "0xb39dc6",
+        "func": "sub_B39DA0",
+        "type": 1
+      },
+      {
+        "from": "0x15e9c67",
+        "func": "sub_15E9C30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2a075",
+    "value": "print-module",
+    "xrefs": [
+      {
+        "from": "0xb39dd1",
+        "func": "sub_B39DA0",
+        "type": 1
+      },
+      {
+        "from": "0x15e9c79",
+        "func": "sub_15E9C30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2a082",
+    "value": "Print function to stderr",
+    "xrefs": [
+      {
+        "from": "0xb39e56",
+        "func": "sub_B39E30",
+        "type": 1
+      },
+      {
+        "from": "0x15e9d57",
+        "func": "sub_15E9D20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2a09b",
+    "value": "print-function",
+    "xrefs": [
+      {
+        "from": "0xb39e61",
+        "func": "sub_B39E30",
+        "type": 1
+      },
+      {
+        "from": "0x15e9d69",
+        "func": "sub_15E9D20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2a0b8",
+    "value": "Write debug info in the new non-intrinsic format. Has no effect if --preserve-input-debuginfo-format=true.",
+    "xrefs": [
+      {
+        "from": "0x456078",
+        "func": "ctor_025",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f3fffb",
+    "value": "=,-V-V---V-V-V-V-V-V-V-V-V-V-V-V-V-V-,",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f54d8b",
+    "value": "disable debug output",
+    "xrefs": [
+      {
+        "from": "0x48919d",
+        "func": "ctor_028_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cc79a",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f54db5",
+    "value": "debug-pass",
+    "xrefs": [
+      {
+        "from": "0x489470",
+        "func": "ctor_028_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cc9a8",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f54de0",
+    "value": "print pass arguments to pass to 'opt'",
+    "xrefs": [
+      {
+        "from": "0x4891b9",
+        "func": "ctor_028_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cc7b6",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f54e08",
+    "value": "print pass structure before run()",
+    "xrefs": [
+      {
+        "from": "0x4891d5",
+        "func": "ctor_028_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cc7d2",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f54e30",
+    "value": "print pass name before it is executed",
+    "xrefs": [
+      {
+        "from": "0x4891f1",
+        "func": "ctor_028_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cc7ee",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f54e58",
+    "value": "print pass details when it is executed",
+    "xrefs": [
+      {
+        "from": "0x489207",
+        "func": "ctor_028_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cc804",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f54e80",
+    "value": "Print legacy PassManager debugging information",
+    "xrefs": [
+      {
+        "from": "0x48953d",
+        "func": "ctor_028_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f55f08",
+    "value": "Show verbose output when opt-bisect-limit is set",
+    "xrefs": [
+      {
+        "from": "0x48a6ce",
+        "func": "ctor_030",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f55f5a",
+    "value": "opt-bisect-verbose",
+    "xrefs": [
+      {
+        "from": "0x48a643",
+        "func": "ctor_030",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f55fa8",
+    "value": "Pass::print not implemented for pass: '",
+    "xrefs": [
+      {
+        "from": "0xbb90d8",
+        "func": "sub_BB8F80",
+        "type": 1
+      },
+      {
+        "from": "0x1636698",
+        "func": "sub_1636540",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f561d7",
+    "value": "print-before",
+    "xrefs": [
+      {
+        "from": "0x48b106",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f561e4",
+    "value": "print-after",
+    "xrefs": [
+      {
+        "from": "0x48b327",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f561f0",
+    "value": "print-before-all",
+    "xrefs": [
+      {
+        "from": "0x48b53c",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56201",
+    "value": "Print IR before each pass",
+    "xrefs": [
+      {
+        "from": "0x48b5c7",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f5621b",
+    "value": "Print IR after each pass",
+    "xrefs": [
+      {
+        "from": "0x48b7c0",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56234",
+    "value": "print register pressure",
+    "xrefs": [
+      {
+        "from": "0x48b832",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd0cf",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56253",
+    "value": "print function IR size",
+    "xrefs": [
+      {
+        "from": "0x48b857",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd0eb",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56272",
+    "value": "print module IR size",
+    "xrefs": [
+      {
+        "from": "0x48b86c",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd107",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56287",
+    "value": "(default) print everything",
+    "xrefs": [
+      {
+        "from": "0x48b8a7",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd120",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f562a2",
+    "value": "extra-print-after-all",
+    "xrefs": [
+      {
+        "from": "0x48b8c6",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd1b3",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f5630d",
+    "value": "Print changed IRs",
+    "xrefs": [
+      {
+        "from": "0x48bc70",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f5631f",
+    "value": "print-changed",
+    "xrefs": [
+      {
+        "from": "0x48bc39",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f5632d",
+    "value": "print-changed-diff-path",
+    "xrefs": [
+      {
+        "from": "0x48bdb3",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56345",
+    "value": "print-module-scope",
+    "xrefs": [
+      {
+        "from": "0x48c01a",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd44d",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56358",
+    "value": "print-loop-func-scope",
+    "xrefs": [
+      {
+        "from": "0x48c1f9",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd5db",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56387",
+    "value": "filter-print-funcs",
+    "xrefs": [
+      {
+        "from": "0x48c61a",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f563a0",
+    "value": "Print IR before specified passes",
+    "xrefs": [
+      {
+        "from": "0x48b1d3",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f563c8",
+    "value": "Print IR after specified passes",
+    "xrefs": [
+      {
+        "from": "0x48b3f4",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f563e8",
+    "value": "Print extra information after each pass",
+    "xrefs": [
+      {
+        "from": "0x48b849",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd2f1",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56528",
+    "value": "When printing IR for print-[before|after]{-all} always print a module IR",
+    "xrefs": [
+      {
+        "from": "0x48c0a5",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd554",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56578",
+    "value": "When printing IR for print-[before|after]{-all} for a loop pass, always print function IR",
+    "xrefs": [
+      {
+        "from": "0x48c284",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd6b4",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f565d8",
+    "value": "Only consider IR changes for passes whose names match the specified value. No-op without -print-changed",
+    "xrefs": [
+      {
+        "from": "0x48c4cb",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56640",
+    "value": "Only print IR for functions whose name match this for all print-[before|after][-all] options",
+    "xrefs": [
+      {
+        "from": "0x48c703",
+        "func": "ctor_033_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f575d0",
+    "value": "BB debug format should match parent function",
+    "xrefs": [
+      {
+        "from": "0xbdeb60",
+        "func": "sub_BDE380",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f57a90",
+    "value": "conflicting debug info for argument",
+    "xrefs": [
+      {
+        "from": "0xbe002d",
+        "func": "sub_BDFB60",
+        "type": 1
+      },
+      {
+        "from": "0xbe7375",
+        "func": "sub_BE60A0",
+        "type": 1
+      },
+      {
+        "from": "0x165373d",
+        "func": "sub_1653200",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f5ada0",
+    "value": "Function debug format should match parent module",
+    "xrefs": [
+      {
+        "from": "0xbf0de6",
+        "func": "sub_BF0CF0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f625b0",
+    "value": "inlinable function call in a function with debug info must have a !dbg location",
+    "xrefs": [
+      {
+        "from": "0xbfdf8a",
+        "func": "sub_BFC6A0",
+        "type": 1
+      },
+      {
+        "from": "0x1668d67",
+        "func": "sub_1668250",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f64990",
+    "value": "Samples collected in the functioNo samples collected in the funcd in inlined cal: inlined calleeNo inlined callsites in this fun======== Dump profile symbol lisUnknown buffer",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f65e40",
+    "value": "= *cannot print option value*\n",
+    "xrefs": [
+      {
+        "from": "0xc573fd",
+        "func": "sub_C573A0",
+        "type": 1
+      },
+      {
+        "from": "0x16b4b0d",
+        "func": "sub_16B4AB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f65ed5",
+    "value": "print-options",
+    "xrefs": [
+      {
+        "from": "0x4cf0b7",
+        "func": "ctor_156_0",
+        "type": 1
+      },
+      {
+        "from": "0xc585b3",
+        "func": "sub_C579F0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f65ee3",
+    "value": "print-all-options",
+    "xrefs": [
+      {
+        "from": "0x4cf26c",
+        "func": "ctor_156_0",
+        "type": 1
+      },
+      {
+        "from": "0xc5877c",
+        "func": "sub_C579F0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f65fd8",
+    "value": "Print non-default options after command line parsing",
+    "xrefs": [
+      {
+        "from": "0x4cf1a7",
+        "func": "ctor_156_0",
+        "type": 1
+      },
+      {
+        "from": "0xc58607",
+        "func": "sub_C579F0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f66010",
+    "value": "Print all option values after command line parsing",
+    "xrefs": [
+      {
+        "from": "0x4cf367",
+        "func": "ctor_156_0",
+        "type": 1
+      },
+      {
+        "from": "0xc58801",
+        "func": "sub_C579F0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f665b8",
+    "value": "print-debug-counter",
+    "xrefs": [
+      {
+        "from": "0xc60f2a",
+        "func": "sub_C60B10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f665cc",
+    "value": "debug-counter-break-on-last",
+    "xrefs": [
+      {
+        "from": "0xc61124",
+        "func": "sub_C60B10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f665e8",
+    "value": "Comma separated list of debug counter skip and count",
+    "xrefs": [
+      {
+        "from": "0x4cf77e",
+        "func": "ctor_157",
+        "type": 1
+      },
+      {
+        "from": "0xc60dd8",
+        "func": "sub_C60B10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f66620",
+    "value": "Print out debug counter info after all counters accumulated",
+    "xrefs": [
+      {
+        "from": "0xc61009",
+        "func": "sub_C60B10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f677b5",
+    "value": ".time-trace",
+    "xrefs": [
+      {
+        "from": "0xc9c872",
+        "func": "sub_C9C600",
+        "type": 1
+      },
+      {
+        "from": "0x16ddb0a",
+        "func": "sub_16DD960",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f6ee60",
+    "value": "Extra Print Function Pass (For internal use)",
+    "xrefs": [
+      {
+        "from": "0xce11d0",
+        "func": "unknown",
+        "type": 1
+      },
+      {
+        "from": "0x1c28430",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f6ee90",
+    "value": "Extra Print Loop Pass (For internal use)",
+    "xrefs": [
+      {
+        "from": "0xce11e0",
+        "func": "unknown",
+        "type": 1
+      },
+      {
+        "from": "0x1c28440",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f6eeb9",
+    "value": "Extra Print Function Pass",
+    "xrefs": [
+      {
+        "from": "0xce121b",
+        "func": "sub_CE11F0",
+        "type": 1
+      },
+      {
+        "from": "0x1c2914f",
+        "func": "sub_1C29110",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f6eeea",
+    "value": "Extra Print Loop Pass",
+    "xrefs": [
+      {
+        "from": "0xce1473",
+        "func": "sub_CE1440",
+        "type": 1
+      },
+      {
+        "from": "0x1c29367",
+        "func": "sub_1C29320",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f71a62",
+    "value": "Print Loop IR",
+    "xrefs": [
+      {
+        "from": "0xd57080",
+        "func": "sub_D57080",
+        "type": 1
+      },
+      {
+        "from": "0x14035b0",
+        "func": "sub_14035B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f72c71",
+    "value": "stack-safety-print",
+    "xrefs": [
+      {
+        "from": "0x49340a",
+        "func": "ctor_058",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8111e",
+    "value": ".debug$S",
+    "xrefs": [
+      {
+        "from": "0xe88118",
+        "func": "sub_E88000",
+        "type": 1
+      },
+      {
+        "from": "0x38d2947",
+        "func": "sub_38D2820",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f81127",
+    "value": ".debug$T",
+    "xrefs": [
+      {
+        "from": "0xe8813c",
+        "func": "sub_E88000",
+        "type": 1
+      },
+      {
+        "from": "0x38d2971",
+        "func": "sub_38D2820",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f81130",
+    "value": ".debug$H",
+    "xrefs": [
+      {
+        "from": "0xe88160",
+        "func": "sub_E88000",
+        "type": 1
+      },
+      {
+        "from": "0x38d299b",
+        "func": "sub_38D2820",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f83275",
+    "value": ".print",
+    "xrefs": [
+      {
+        "from": "0xea63f3",
+        "func": "sub_EA4C30",
+        "type": 1
+      },
+      {
+        "from": "0x38e6f03",
+        "func": "sub_38E5A40",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f83d18",
+    "value": "expected double quoted string after .print",
+    "xrefs": [
+      {
+        "from": "0xeb0d31",
+        "func": "sub_EB0CE0",
+        "type": 1
+      },
+      {
+        "from": "0x38fb9e9",
+        "func": "sub_38F9390",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f859f1",
+    "value": ".dump",
+    "xrefs": [
+      {
+        "from": "0xec9460",
+        "func": "sub_EC93A0",
+        "type": 1
+      },
+      {
+        "from": "0x3905730",
+        "func": "sub_3905670",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f859f8",
+    "value": "expected string in '.dump' or '.load' directive",
+    "xrefs": [
+      {
+        "from": "0xec5f14",
+        "func": "sub_EC5E20",
+        "type": 1
+      },
+      {
+        "from": "0x3902c94",
+        "func": "sub_3902BB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f85a28",
+    "value": "unexpected token in '.dump' or '.load' directive",
+    "xrefs": [
+      {
+        "from": "0xec5ee4",
+        "func": "sub_EC5E20",
+        "type": 1
+      },
+      {
+        "from": "0x3902c5c",
+        "func": "sub_3902BB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f85a60",
+    "value": "ignoring directive .dump for now",
+    "xrefs": [
+      {
+        "from": "0xec5e9b",
+        "func": "sub_EC5E20",
+        "type": 1
+      },
+      {
+        "from": "0x3902c18",
+        "func": "sub_3902BB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f86053",
+    "value": "can't open secure log file: ",
+    "xrefs": [
+      {
+        "from": "0xec8207",
+        "func": "sub_EC7E60",
+        "type": 1
+      },
+      {
+        "from": "0x390512e",
+        "func": "sub_3904DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f86e48",
+    "value": "debug info/binary for correlation is required",
+    "xrefs": [
+      {
+        "from": "0xed0f30",
+        "func": "sub_ED0C50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f86e78",
+    "value": "debug info/binary for correlation is not necessary",
+    "xrefs": [
+      {
+        "from": "0xed0f18",
+        "func": "sub_ED0C50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f88365",
+    "value": "Argument with debug location",
+    "xrefs": [
+      {
+        "from": "0x497b330",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f88391",
+    "value": "Remark debug location",
+    "xrefs": [
+      {
+        "from": "0x497b350",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8a661",
+    "value": "phicse-debug-hash",
+    "xrefs": [
+      {
+        "from": "0x499066",
+        "func": "ctor_071",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8c572",
+    "value": "print-bfi",
+    "xrefs": [
+      {
+        "from": "0x49bde6",
+        "func": "ctor_076_0",
+        "type": 1
+      },
+      {
+        "from": "0x4abf18",
+        "func": "ctor_115_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8c57c",
+    "value": "print-bfi-func-name",
+    "xrefs": [
+      {
+        "from": "0x49bfb2",
+        "func": "ctor_076_0",
+        "type": 1
+      },
+      {
+        "from": "0x4ac0a0",
+        "func": "ctor_115_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8c9c8",
+    "value": "Print the block frequency info.",
+    "xrefs": [
+      {
+        "from": "0x49bea9",
+        "func": "ctor_076_0",
+        "type": 1
+      },
+      {
+        "from": "0x4ac057",
+        "func": "ctor_115_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8ce8f",
+    "value": "print-bpi",
+    "xrefs": [
+      {
+        "from": "0x49c9e9",
+        "func": "ctor_078_0",
+        "type": 1
+      },
+      {
+        "from": "0x4ac26c",
+        "func": "ctor_116",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8ce99",
+    "value": "print-bpi-func-name",
+    "xrefs": [
+      {
+        "from": "0x49cbc7",
+        "func": "ctor_078_0",
+        "type": 1
+      },
+      {
+        "from": "0x4ac3db",
+        "func": "ctor_116",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8cec8",
+    "value": "Print the branch probability info.",
+    "xrefs": [
+      {
+        "from": "0x49caac",
+        "func": "ctor_078_0",
+        "type": 1
+      },
+      {
+        "from": "0x4ac39a",
+        "func": "ctor_116",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f9645c",
+    "value": "expected debug info flag",
+    "xrefs": [
+      {
+        "from": "0x120bf7d",
+        "func": "sub_120BE50",
+        "type": 1
+      },
+      {
+        "from": "0x1228a4f",
+        "func": "sub_1227E90",
+        "type": 1
+      },
+      {
+        "from": "0x388bce4",
+        "func": "sub_388BBA0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f96475",
+    "value": "invalid debug info flag '",
+    "xrefs": [
+      {
+        "from": "0x120bfb8",
+        "func": "sub_120BE50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f9654b",
+    "value": "unknown RISC-V ABI VLEN",
+    "xrefs": [
+      {
+        "from": "0x120ccc5",
+        "func": "sub_120C5E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f999a8",
+    "value": "invalid subprogram debug info flag '",
+    "xrefs": [
+      {
+        "from": "0x122894d",
+        "func": "sub_1227E90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f99ca8",
+    "value": "expected debug record type here",
+    "xrefs": [
+      {
+        "from": "0x122e97f",
+        "func": "sub_122E950",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f9adc8",
+    "value": "llvm.dbg intrinsic should not appear in a module using non-intrinsic debug info",
+    "xrefs": [
+      {
+        "from": "0x1237942",
+        "func": "sub_1236B50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f9c580",
+    "value": "debug record should not appear in a module containing debug info intrinsics",
+    "xrefs": [
+      {
+        "from": "0x1248acb",
+        "func": "sub_1248770",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4281d00",
+    "value": "asm-verbose=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x428293e",
+    "value": "dump-memory-space-warnings=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x428295a",
+    "value": "dump-memory-space-warnings",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282975",
+    "value": "dump-nvvmir=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282982",
+    "value": "dump-nvvmir",
+    "xrefs": []
+  },
+  {
+    "addr": "0x428298e",
+    "value": "Dump NVVM IR",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282bd3",
+    "value": "split-compile-debug=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282be8",
+    "value": "split-compile-debug",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282cac",
+    "value": "strip-debug=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282cb9",
+    "value": "trace-ocg=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282cc4",
+    "value": "trace-ocg",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4282cce",
+    "value": "Trace OCG IR",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4283bf8",
+    "value": "Print module after each transformation",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4283c80",
+    "value": "Enable split compilation debug prints",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4284dd0",
+    "value": "Tune debug info for a particular debugger",
+    "xrefs": [
+      {
+        "from": "0x4a992f",
+        "func": "ctor_107_0",
+        "type": 1
+      },
+      {
+        "from": "0x2d99f91",
+        "func": "sub_2D97F20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4285dd9",
+    "value": "config.debug",
+    "xrefs": [
+      {
+        "from": "0x411580",
+        "func": "sub_411419",
+        "type": 1
+      },
+      {
+        "from": "0x41159c",
+        "func": "sub_411419",
+        "type": 1
+      },
+      {
+        "from": "0x4115c2",
+        "func": "sub_411419",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288644",
+    "value": "print-all-alias-modref-info",
+    "xrefs": [
+      {
+        "from": "0x4aa7cb",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58a500",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288660",
+    "value": "print-no-aliases",
+    "xrefs": [
+      {
+        "from": "0x4aa90d",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58a6b4",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288671",
+    "value": "print-may-aliases",
+    "xrefs": [
+      {
+        "from": "0x4aa961",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58a853",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288683",
+    "value": "print-partial-aliases",
+    "xrefs": [
+      {
+        "from": "0x4aaaa2",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58a9f0",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288699",
+    "value": "print-must-aliases",
+    "xrefs": [
+      {
+        "from": "0x4aabf4",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58ab8d",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42886ac",
+    "value": "print-no-modref",
+    "xrefs": [
+      {
+        "from": "0x4aad20",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58ad2a",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42886bc",
+    "value": "print-ref",
+    "xrefs": [
+      {
+        "from": "0x4aae3c",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58add9",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42886c6",
+    "value": "print-mod",
+    "xrefs": [
+      {
+        "from": "0x4aae6f",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58ae14",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42886d0",
+    "value": "print-modref",
+    "xrefs": [
+      {
+        "from": "0x4aaec4",
+        "func": "ctor_112",
+        "type": 1
+      },
+      {
+        "from": "0x58af39",
+        "func": "ctor_617",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42886dd",
+    "value": "print-must",
+    "xrefs": [
+      {
+        "from": "0x4ab04c",
+        "func": "ctor_112",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42886e8",
+    "value": "print-mustref",
+    "xrefs": [
+      {
+        "from": "0x4ab124",
+        "func": "ctor_112",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42886f6",
+    "value": "print-mustmod",
+    "xrefs": [
+      {
+        "from": "0x4ab157",
+        "func": "ctor_112",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288704",
+    "value": "print-mustmodref",
+    "xrefs": [
+      {
+        "from": "0x4ab18a",
+        "func": "ctor_112",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42889d1",
+    "value": "print-alias-sets",
+    "xrefs": [
+      {
+        "from": "0x135a551",
+        "func": "sub_135A500",
+        "type": 1
+      },
+      {
+        "from": "0x233d965",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2340f3d",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23472f2",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a719",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378e25",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b170",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288e20",
+    "value": "Print CFG of function to 'dot' file",
+    "xrefs": [
+      {
+        "from": "0x137f217",
+        "func": "sub_137F1E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4288e48",
+    "value": "Print CFG of function to 'dot' file (with no function bodies)",
+    "xrefs": [
+      {
+        "from": "0x137f3e7",
+        "func": "sub_137F3B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42892dc",
+    "value": "Print a call graph",
+    "xrefs": [
+      {
+        "from": "0x139897f",
+        "func": "sub_1398940",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42892ef",
+    "value": "print-callgraph",
+    "xrefs": [
+      {
+        "from": "0x1398991",
+        "func": "sub_1398940",
+        "type": 1
+      },
+      {
+        "from": "0x2338b52",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c94f",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343db4",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x2384364",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4289320",
+    "value": "Print call graph to 'dot' file",
+    "xrefs": [
+      {
+        "from": "0x1399ba7",
+        "func": "sub_1399B70",
+        "type": 1
+      },
+      {
+        "from": "0x2285976",
+        "func": "sub_2285950",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4289ac0",
+    "value": "Print dominance tree of function to 'dot' file",
+    "xrefs": [
+      {
+        "from": "0x13b70d7",
+        "func": "sub_13B70A0",
+        "type": 1
+      },
+      {
+        "from": "0x229a8c6",
+        "func": "sub_229A8A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4289af8",
+    "value": "Print dominance tree of function to 'dot' file (with no function bodies)",
+    "xrefs": [
+      {
+        "from": "0x13b72d7",
+        "func": "sub_13B72A0",
+        "type": 1
+      },
+      {
+        "from": "0x229a946",
+        "func": "sub_229A920",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4289b50",
+    "value": "Print postdominance tree of function to 'dot' file",
+    "xrefs": [
+      {
+        "from": "0x13b74d7",
+        "func": "sub_13B74A0",
+        "type": 1
+      },
+      {
+        "from": "0x229a9c6",
+        "func": "sub_229A9A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4289b90",
+    "value": "Print postdominance tree of function to 'dot' file (with no function bodies)",
+    "xrefs": [
+      {
+        "from": "0x13b76d7",
+        "func": "sub_13B76A0",
+        "type": 1
+      },
+      {
+        "from": "0x229aa46",
+        "func": "sub_229AA20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4289bf0",
+    "value": "DomTree dump not available, buil",
+    "xrefs": []
+  },
+  {
+    "addr": "0x428a328",
+    "value": "print-lazy-value-info",
+    "xrefs": [
+      {
+        "from": "0x13ebcf1",
+        "func": "sub_13EBCA0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428b0f3",
+    "value": "Print MemDeps of function",
+    "xrefs": [
+      {
+        "from": "0x1409cff",
+        "func": "sub_1409CC0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428b10d",
+    "value": "print-memdeps",
+    "xrefs": [
+      {
+        "from": "0x1409d11",
+        "func": "sub_1409CC0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428b1a8",
+    "value": "print-memderefs",
+    "xrefs": [
+      {
+        "from": "0x140a659",
+        "func": "sub_140A610",
+        "type": 1
+      },
+      {
+        "from": "0x233d98d",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2340f7b",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x234737a",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a757",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378e63",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b1ae",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428c02f",
+    "value": "print-memoryssa",
+    "xrefs": [
+      {
+        "from": "0x1420e31",
+        "func": "sub_1420DE0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428c298",
+    "value": "Decodes module-level debug info",
+    "xrefs": [
+      {
+        "from": "0x142af87",
+        "func": "sub_142AF50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428c359",
+    "value": "print-mustexecute",
+    "xrefs": [
+      {
+        "from": "0x1437499",
+        "func": "sub_1437440",
+        "type": 1
+      },
+      {
+        "from": "0x233d9a1",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2340f9a",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23473be",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a776",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378e82",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b1cd",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428cab3",
+    "value": "print no details",
+    "xrefs": [
+      {
+        "from": "0x4aee42",
+        "func": "ctor_129_0",
+        "type": 1
+      },
+      {
+        "from": "0x51af96",
+        "func": "ctor_384_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428cade",
+    "value": "print-region-style",
+    "xrefs": [
+      {
+        "from": "0x4aef30",
+        "func": "ctor_129_0",
+        "type": 1
+      },
+      {
+        "from": "0x51b171",
+        "func": "ctor_384_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428cb20",
+    "value": "print regions in detail with block_iterator",
+    "xrefs": [
+      {
+        "from": "0x4aee5e",
+        "func": "ctor_129_0",
+        "type": 1
+      },
+      {
+        "from": "0x51afb2",
+        "func": "ctor_384_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428cb50",
+    "value": "print regions in detail with element_iterator",
+    "xrefs": [
+      {
+        "from": "0x4aee77",
+        "func": "ctor_129_0",
+        "type": 1
+      },
+      {
+        "from": "0x51afc8",
+        "func": "ctor_384_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428cc04",
+    "value": "Print Region IR",
+    "xrefs": [
+      {
+        "from": "0x144a780",
+        "func": "sub_144A780",
+        "type": 1
+      },
+      {
+        "from": "0x22e2ad0",
+        "func": "sub_22E2AD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428cc50",
+    "value": "Print regions of function to 'dot' file",
+    "xrefs": [
+      {
+        "from": "0x144cef7",
+        "func": "sub_144CEC0",
+        "type": 1
+      },
+      {
+        "from": "0x22e4876",
+        "func": "sub_22E4850",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x428cc88",
+    "value": "Print regions of function to 'dot' file (with no function bodies)",
+    "xrefs": [
+      {
+        "from": "0x144d107",
+        "func": "sub_144D0D0",
+        "type": 1
+      },
+      {
+        "from": "0x22e4906",
+        "func": "sub_22E48E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42aaac0",
+    "value": "Print BasicBlock IR",
+    "xrefs": [
+      {
+        "from": "0x15e8e20",
+        "func": "sub_15E8E20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42aaad4",
+    "value": "Print BB to stderr",
+    "xrefs": [
+      {
+        "from": "0x15e9e47",
+        "func": "sub_15E9E10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42aaae7",
+    "value": "print-bb",
+    "xrefs": [
+      {
+        "from": "0x15e9e59",
+        "func": "sub_15E9E10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ab710",
+    "value": "Print PassManager debugging information",
+    "xrefs": [
+      {
+        "from": "0x4ccae5",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42abd40",
+    "value": "safepoint-ir-verifier-print-only",
+    "xrefs": [
+      {
+        "from": "0x4cdf1b",
+        "func": "ctor_150",
+        "type": 1
+      },
+      {
+        "from": "0x51b561",
+        "func": "ctor_386",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b45a8",
+    "value": "Dump IR after transformation happens",
+    "xrefs": [
+      {
+        "from": "0x4d269d",
+        "func": "ctor_171",
+        "type": 1
+      },
+      {
+        "from": "0x524309",
+        "func": "ctor_398_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b4f9a",
+    "value": "msan-dump-strict-instructions",
+    "xrefs": [
+      {
+        "from": "0x4d4065",
+        "func": "ctor_173_0",
+        "type": 1
+      },
+      {
+        "from": "0x5275c0",
+        "func": "ctor_402_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b5268",
+    "value": "print out instructions with default strict semantics",
+    "xrefs": [
+      {
+        "from": "0x4d40a1",
+        "func": "ctor_173_0",
+        "type": 1
+      },
+      {
+        "from": "0x527625",
+        "func": "ctor_402_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b67d4",
+    "value": "Dump Function ",
+    "xrefs": [
+      {
+        "from": "0x17f1e80",
+        "func": "sub_17EEF60",
+        "type": 1
+      },
+      {
+        "from": "0x24b9fac",
+        "func": "sub_24B8750",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b6acb",
+    "value": "sanitizer-coverage-trace-pc",
+    "xrefs": [
+      {
+        "from": "0x4d5e8e",
+        "func": "ctor_176_0",
+        "type": 1
+      },
+      {
+        "from": "0x52dd2a",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b6b50",
+    "value": "sanitizer-coverage-trace-divs",
+    "xrefs": [
+      {
+        "from": "0x4d617b",
+        "func": "ctor_176_0",
+        "type": 1
+      },
+      {
+        "from": "0x52e1e9",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b6b8a",
+    "value": "sanitizer-coverage-trace-geps",
+    "xrefs": [
+      {
+        "from": "0x4d61cf",
+        "func": "ctor_176_0",
+        "type": 1
+      },
+      {
+        "from": "0x52e2c4",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b6c20",
+    "value": "sanitizer-coverage-trace-pc-guard",
+    "xrefs": [
+      {
+        "from": "0x4d5ee9",
+        "func": "ctor_176_0",
+        "type": 1
+      },
+      {
+        "from": "0x52dd7a",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b6cc0",
+    "value": "sanitizer-coverage-trace-compares",
+    "xrefs": [
+      {
+        "from": "0x4d6135",
+        "func": "ctor_176_0",
+        "type": 1
+      },
+      {
+        "from": "0x52e1a0",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b788b",
+    "value": "asan-debug",
+    "xrefs": [
+      {
+        "from": "0x4d8051",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x52059b",
+        "func": "ctor_392_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b7896",
+    "value": "asan-debug-stack",
+    "xrefs": [
+      {
+        "from": "0x4d811c",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x5206ab",
+        "func": "ctor_392_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b78a7",
+    "value": "debug stack",
+    "xrefs": [
+      {
+        "from": "0x4d8167",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x5206fe",
+        "func": "ctor_392_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b78b3",
+    "value": "asan-debug-func",
+    "xrefs": [
+      {
+        "from": "0x4d8212",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x520782",
+        "func": "ctor_392_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b78c3",
+    "value": "Debug func",
+    "xrefs": [
+      {
+        "from": "0x4d82a8",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x52084e",
+        "func": "ctor_392_0",
+        "type": 1
+      },
+      {
+        "from": "0x528e41",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b78ce",
+    "value": "Debug min inst",
+    "xrefs": [
+      {
+        "from": "0x4d82da",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x52088b",
+        "func": "ctor_392_0",
+        "type": 1
+      },
+      {
+        "from": "0x528e78",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b78dd",
+    "value": "asan-debug-min",
+    "xrefs": [
+      {
+        "from": "0x4d82e1",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x520892",
+        "func": "ctor_392_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b78ec",
+    "value": "Debug max inst",
+    "xrefs": [
+      {
+        "from": "0x4d8335",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x5208f5",
+        "func": "ctor_392_0",
+        "type": 1
+      },
+      {
+        "from": "0x528ed0",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b78fb",
+    "value": "asan-debug-max",
+    "xrefs": [
+      {
+        "from": "0x4d833c",
+        "func": "ctor_178_0",
+        "type": 1
+      },
+      {
+        "from": "0x5208fc",
+        "func": "ctor_392_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b86aa",
+    "value": "dfsan-debug-nonzero-labels",
+    "xrefs": [
+      {
+        "from": "0x4d8b31",
+        "func": "ctor_179",
+        "type": 1
+      },
+      {
+        "from": "0x52177d",
+        "func": "ctor_395_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b9dc1",
+    "value": "print-imports",
+    "xrefs": [
+      {
+        "from": "0x4db46a",
+        "func": "ctor_184_0",
+        "type": 1
+      },
+      {
+        "from": "0x53289b",
+        "func": "ctor_420_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b9dcf",
+    "value": "Print imported functions",
+    "xrefs": [
+      {
+        "from": "0x4db598",
+        "func": "ctor_184_0",
+        "type": 1
+      },
+      {
+        "from": "0x532920",
+        "func": "ctor_420_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bbc29",
+    "value": "mergefunc-preserve-debug-info",
+    "xrefs": [
+      {
+        "from": "0x4ddafb",
+        "func": "ctor_189",
+        "type": 1
+      },
+      {
+        "from": "0x536a23",
+        "func": "ctor_428",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bbc48",
+    "value": "How many functions in module could be used for MergeFunctions pass sanity check. '0' disables this check. Works only with '-debug' key.",
+    "xrefs": [
+      {
+        "from": "0x4dda7e",
+        "func": "ctor_189",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bbcd0",
+    "value": "Preserve debug info in thunk when mergefunc transformations are made.",
+    "xrefs": [
+      {
+        "from": "0x4ddc29",
+        "func": "ctor_189",
+        "type": 1
+      },
+      {
+        "from": "0x536adf",
+        "func": "ctor_428",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bc068",
+    "value": "A debug option to add additional penalty to the computed one.",
+    "xrefs": [
+      {
+        "from": "0x4dec86",
+        "func": "ctor_190_0",
+        "type": 1
+      },
+      {
+        "from": "0x5391d0",
+        "func": "ctor_431_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bc490",
+    "value": "No debug information found in function ",
+    "xrefs": [
+      {
+        "from": "0x18a585b",
+        "func": "sub_18A57D0",
+        "type": 1
+      },
+      {
+        "from": "0x26bdb44",
+        "func": "sub_26BDAB0",
+        "type": 1
+      },
+      {
+        "from": "0x359026b",
+        "func": "sub_358FF90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bc7b8",
+    "value": "Use this option to turn off/on warnings about function with samples but without debug information to use those samples. ",
+    "xrefs": [
+      {
+        "from": "0x4df2a8",
+        "func": "ctor_191",
+        "type": 1
+      },
+      {
+        "from": "0x55cdc2",
+        "func": "ctor_509",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bc8fe",
+    "value": "strip-debug-declare",
+    "xrefs": [
+      {
+        "from": "0x18b3459",
+        "func": "sub_18B3410",
+        "type": 1
+      },
+      {
+        "from": "0x2338ed5",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233cb93",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2344545",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23846e7",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bc918",
+    "value": "Strip debug info for unused symbols",
+    "xrefs": [
+      {
+        "from": "0x18b3607",
+        "func": "sub_18B35D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bc93c",
+    "value": "strip-dead-debug-info",
+    "xrefs": [
+      {
+        "from": "0x18b3619",
+        "func": "sub_18B35D0",
+        "type": 1
+      },
+      {
+        "from": "0x2338e97",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233cb6b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23444bd",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23846a9",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42be010",
+    "value": "dump-phi-remove",
+    "xrefs": [
+      {
+        "from": "0x4e0f6f",
+        "func": "ctor_201",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42beac0",
+    "value": "irce-print-changed-loops",
+    "xrefs": [
+      {
+        "from": "0x4e26e7",
+        "func": "ctor_204",
+        "type": 1
+      },
+      {
+        "from": "0x54299a",
+        "func": "ctor_453",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bead9",
+    "value": "irce-print-range-checks",
+    "xrefs": [
+      {
+        "from": "0x4e289c",
+        "func": "ctor_204",
+        "type": 1
+      },
+      {
+        "from": "0x542b5f",
+        "func": "ctor_453",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bed00",
+    "value": "print-lvi-after-jump-threading",
+    "xrefs": [
+      {
+        "from": "0x4e3253",
+        "func": "ctor_205",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42bed20",
+    "value": "Print the LazyValueInfo cache after JumpThreading",
+    "xrefs": [
+      {
+        "from": "0x4e3332",
+        "func": "ctor_205",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c5155",
+    "value": "spp-print-liveset",
+    "xrefs": [
+      {
+        "from": "0x4eb719",
+        "func": "ctor_233",
+        "type": 1
+      },
+      {
+        "from": "0x54fc9f",
+        "func": "ctor_481",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c5167",
+    "value": "spp-print-liveset-size",
+    "xrefs": [
+      {
+        "from": "0x4eb7c6",
+        "func": "ctor_233",
+        "type": 1
+      },
+      {
+        "from": "0x54fd7d",
+        "func": "ctor_481",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c517e",
+    "value": "spp-print-base-pointers",
+    "xrefs": [
+      {
+        "from": "0x4eb861",
+        "func": "ctor_233",
+        "type": 1
+      },
+      {
+        "from": "0x54fe25",
+        "func": "ctor_481",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c76a4",
+    "value": "print-predicateinfo",
+    "xrefs": [
+      {
+        "from": "0x1b2af89",
+        "func": "sub_1B2AF30",
+        "type": 1
+      },
+      {
+        "from": "0x233d9b5",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2340fb9",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347402",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a795",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378ea1",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b1ec",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c87e8",
+    "value": "Strip all debug info except linetables",
+    "xrefs": [
+      {
+        "from": "0x1b7c4e7",
+        "func": "sub_1B7C4B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb658",
+    "value": "Dump the function under Convergency Analysis",
+    "xrefs": [
+      {
+        "from": "0x4f04e1",
+        "func": "ctor_252",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb688",
+    "value": "Dump text format of the convergency analysis",
+    "xrefs": [
+      {
+        "from": "0x4f0565",
+        "func": "ctor_252",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb6b8",
+    "value": "Dump dot format of the convergency analysis",
+    "xrefs": [
+      {
+        "from": "0x4f070e",
+        "func": "ctor_252",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb6e4",
+    "value": "dump-conv-func",
+    "xrefs": [
+      {
+        "from": "0x4f04e8",
+        "func": "ctor_252",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb6f3",
+    "value": "dump-conv-text",
+    "xrefs": [
+      {
+        "from": "0x4f056c",
+        "func": "ctor_252",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb702",
+    "value": "dump-conv-dot",
+    "xrefs": [
+      {
+        "from": "0x4f05e1",
+        "func": "ctor_252",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb861",
+    "value": "dump-va",
+    "xrefs": [
+      {
+        "from": "0x4f078b",
+        "func": "ctor_253",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cb890",
+    "value": "Dump result from variance inquiry",
+    "xrefs": [
+      {
+        "from": "0x4f08ce",
+        "func": "ctor_253",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d107e",
+    "value": "dump-branch-dist",
+    "xrefs": [
+      {
+        "from": "0x4f2872",
+        "func": "ctor_262_0",
+        "type": 1
+      },
+      {
+        "from": "0x56383e",
+        "func": "ctor_525_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d1170",
+    "value": "Dump information from Branch Distribution",
+    "xrefs": [
+      {
+        "from": "0x4f29bb",
+        "func": "ctor_262_0",
+        "type": 1
+      },
+      {
+        "from": "0x563902",
+        "func": "ctor_525_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d1436",
+    "value": "dump-scev-cgp",
+    "xrefs": [
+      {
+        "from": "0x4f3c06",
+        "func": "ctor_263_0",
+        "type": 1
+      },
+      {
+        "from": "0x5650e1",
+        "func": "ctor_526_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d1504",
+    "value": "print-after-scev-cgp",
+    "xrefs": [
+      {
+        "from": "0x4f414e",
+        "func": "ctor_263_0",
+        "type": 1
+      },
+      {
+        "from": "0x5656af",
+        "func": "ctor_526_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d1690",
+    "value": "dump-base-address-strength-reduce",
+    "xrefs": [
+      {
+        "from": "0x4f393c",
+        "func": "ctor_263_0",
+        "type": 1
+      },
+      {
+        "from": "0x564dfb",
+        "func": "ctor_526_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d16b8",
+    "value": "Dump intermediate results from base address strength reduce",
+    "xrefs": [
+      {
+        "from": "0x4f39ad",
+        "func": "ctor_263_0",
+        "type": 1
+      },
+      {
+        "from": "0x564e52",
+        "func": "ctor_526_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d17d0",
+    "value": "Dump intermediate results from scalar-evolution-based CGP",
+    "xrefs": [
+      {
+        "from": "0x4f3bff",
+        "func": "ctor_263_0",
+        "type": 1
+      },
+      {
+        "from": "0x5650da",
+        "func": "ctor_526_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d1980",
+    "value": "Print function after scev-cgp phase",
+    "xrefs": [
+      {
+        "from": "0x4f419e",
+        "func": "ctor_263_0",
+        "type": 1
+      },
+      {
+        "from": "0x5656fa",
+        "func": "ctor_526_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d1ee6",
+    "value": "dump-ip-msp",
+    "xrefs": [
+      {
+        "from": "0x4f45ef",
+        "func": "ctor_264",
+        "type": 1
+      },
+      {
+        "from": "0x56690e",
+        "func": "ctor_528",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42d1f08",
+    "value": "Dump information from Inter-Procedural Memory Space Propagation",
+    "xrefs": [
+      {
+        "from": "0x4f4734",
+        "func": "ctor_264",
+        "type": 1
+      },
+      {
+        "from": "0x5669d2",
+        "func": "ctor_528",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42df618",
+    "value": "Dump traces from __builtin_assume(...) processing",
+    "xrefs": [
+      {
+        "from": "0x4f5871",
+        "func": "ctor_267_0",
+        "type": 1
+      },
+      {
+        "from": "0x568087",
+        "func": "ctor_531_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42df6d0",
+    "value": "dump-ir-before-memory-space-opt",
+    "xrefs": [
+      {
+        "from": "0x4f5bdb",
+        "func": "ctor_267_0",
+        "type": 1
+      },
+      {
+        "from": "0x5685b9",
+        "func": "ctor_531_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42df6f0",
+    "value": "Dump LLVM IR before Memory Space Opt",
+    "xrefs": [
+      {
+        "from": "0x4f5ce3",
+        "func": "ctor_267_0",
+        "type": 1
+      },
+      {
+        "from": "0x56864f",
+        "func": "ctor_531_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42df718",
+    "value": "dump-ir-after-memory-space-opt",
+    "xrefs": [
+      {
+        "from": "0x4f5d6d",
+        "func": "ctor_267_0",
+        "type": 1
+      },
+      {
+        "from": "0x568790",
+        "func": "ctor_531_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42df738",
+    "value": "Dump LLVM IR after Memory Space Opt",
+    "xrefs": [
+      {
+        "from": "0x4f5e30",
+        "func": "ctor_267_0",
+        "type": 1
+      },
+      {
+        "from": "0x568825",
+        "func": "ctor_531_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42df834",
+    "value": "dump-process-builtin-assume",
+    "xrefs": [
+      {
+        "from": "0x4f5762",
+        "func": "ctor_267_0",
+        "type": 1
+      },
+      {
+        "from": "0x567fe9",
+        "func": "ctor_531_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42dfdc2",
+    "value": "dump-normalize-gep",
+    "xrefs": [
+      {
+        "from": "0x4f648b",
+        "func": "ctor_268",
+        "type": 1
+      },
+      {
+        "from": "0x569229",
+        "func": "ctor_532",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42dfdf8",
+    "value": "Dump Debug Message during Normalize 64-bit GEP subscripts",
+    "xrefs": [
+      {
+        "from": "0x4f65b9",
+        "func": "ctor_268",
+        "type": 1
+      },
+      {
+        "from": "0x5692ec",
+        "func": "ctor_532",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e003e",
+    "value": "dump-process-restrict",
+    "xrefs": [
+      {
+        "from": "0x4f6c14",
+        "func": "ctor_270",
+        "type": 1
+      },
+      {
+        "from": "0x569bef",
+        "func": "ctor_534",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e00b0",
+    "value": "Dump debug messages during DebugProcessRestrict.",
+    "xrefs": [
+      {
+        "from": "0x4f6d28",
+        "func": "ctor_270",
+        "type": 1
+      },
+      {
+        "from": "0x569c9d",
+        "func": "ctor_534",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e0656",
+    "value": "dump-sink2",
+    "xrefs": [
+      {
+        "from": "0x4f7a55",
+        "func": "ctor_275",
+        "type": 1
+      },
+      {
+        "from": "0x56bbf5",
+        "func": "ctor_540",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e13da",
+    "value": "dump-remat",
+    "xrefs": [
+      {
+        "from": "0x4f7f4e",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e13e5",
+    "value": "dump-remat-iv",
+    "xrefs": [
+      {
+        "from": "0x4f7fb4",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e14ab",
+    "value": "dump-remat-load",
+    "xrefs": [
+      {
+        "from": "0x4f84d9",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e14bb",
+    "value": "dump-remat-add",
+    "xrefs": [
+      {
+        "from": "0x4f853f",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e14df",
+    "value": "dump-simplify-live-out",
+    "xrefs": [
+      {
+        "from": "0x4f86d9",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e1550",
+    "value": "Dump information from rematerialization",
+    "xrefs": [
+      {
+        "from": "0x4f7f47",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e1578",
+    "value": "Dump information from IV-rematerialization",
+    "xrefs": [
+      {
+        "from": "0x4f7f9e",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e1740",
+    "value": "Dump information from load-rematerialization",
+    "xrefs": [
+      {
+        "from": "0x4f84d2",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e1770",
+    "value": "Dump information from add-rematerialization",
+    "xrefs": [
+      {
+        "from": "0x4f8529",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e1810",
+    "value": "dump debug message from normalizing live out",
+    "xrefs": [
+      {
+        "from": "0x4f8746",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e1fbd",
+    "value": "dump-before-cssa",
+    "xrefs": [
+      {
+        "from": "0x4f8ca9",
+        "func": "ctor_280",
+        "type": 1
+      },
+      {
+        "from": "0x5bd867",
+        "func": "ctor_705",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e92a0",
+    "value": "Print Garbage Collector Information",
+    "xrefs": [
+      {
+        "from": "0x1d8e060",
+        "func": "sub_1D8E060",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e98e5",
+    "value": "Debug Variable Analysis",
+    "xrefs": [
+      {
+        "from": "0x1da9447",
+        "func": "sub_1DA9400",
+        "type": 1
+      },
+      {
+        "from": "0x2df4703",
+        "func": "sub_2DF46D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e990b",
+    "value": "live-debug-variables",
+    "xrefs": [
+      {
+        "from": "0x4fcb7b",
+        "func": "ctor_294",
+        "type": 1
+      },
+      {
+        "from": "0x57105d",
+        "func": "ctor_557",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e9920",
+    "value": "Enable the live debug variables pass",
+    "xrefs": [
+      {
+        "from": "0x4fcc75",
+        "func": "ctor_294",
+        "type": 1
+      },
+      {
+        "from": "0x571102",
+        "func": "ctor_557",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e9ba8",
+    "value": "Can't print out MachineBasicBlock because parent MachineFunction",
+    "xrefs": [
+      {
+        "from": "0x1dd8b16",
+        "func": "sub_1DD77E0",
+        "type": 1
+      },
+      {
+        "from": "0x2e39383",
+        "func": "sub_2E38390",
+        "type": 1
+      },
+      {
+        "from": "0x2e394e8",
+        "func": "sub_2E393D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e9ce1",
+    "value": "print-machine-bfi",
+    "xrefs": [
+      {
+        "from": "0x4fd619",
+        "func": "ctor_297_0",
+        "type": 1
+      },
+      {
+        "from": "0x571f86",
+        "func": "ctor_561_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e9df8",
+    "value": "Print the machine block frequency info.",
+    "xrefs": [
+      {
+        "from": "0x4fd758",
+        "func": "ctor_297_0",
+        "type": 1
+      },
+      {
+        "from": "0x572049",
+        "func": "ctor_561_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ea790",
+    "value": "machine-combiner-dump-subst-intrs",
+    "xrefs": [
+      {
+        "from": "0x4fe800",
+        "func": "ctor_300",
+        "type": 1
+      },
+      {
+        "from": "0x5a1ee3",
+        "func": "ctor_673",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ea825",
+    "value": "Dump all substituted intrs",
+    "xrefs": [
+      {
+        "from": "0x4fe939",
+        "func": "ctor_300",
+        "type": 1
+      },
+      {
+        "from": "0x5a1f9f",
+        "func": "ctor_673",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ea958",
+    "value": "print-verify",
+    "xrefs": [
+      {
+        "from": "0x4ff2a8",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x5730ce",
+        "func": "ctor_564_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ea965",
+    "value": "print-func-reg-mcse",
+    "xrefs": [
+      {
+        "from": "0x4ff3ff",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x5731a6",
+        "func": "ctor_564_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eaa78",
+    "value": "[DebugOnly] Print problematic register pressure info if verification failed",
+    "xrefs": [
+      {
+        "from": "0x4ff3be",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x56ac56",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x573161",
+        "func": "ctor_564_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c4709",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eaac8",
+    "value": "[DebugOnly] Print register pressure info for the machine function",
+    "xrefs": [
+      {
+        "from": "0x4ff5d2",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x5732b8",
+        "func": "ctor_564_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eaff0",
+    "value": ":viewCFGOnly is only available in debug builds o",
+    "xrefs": []
+  },
+  {
+    "addr": "0x42eb242",
+    "value": " debug-location ",
+    "xrefs": [
+      {
+        "from": "0x1e18feb",
+        "func": "sub_1E181D0",
+        "type": 1
+      },
+      {
+        "from": "0x2e8c3d0",
+        "func": "sub_2E8BCA0",
+        "type": 1
+      },
+      {
+        "from": "0x2f11c49",
+        "func": "sub_2F116B0",
+        "type": 1
+      },
+      {
+        "from": "0x39d3f75",
+        "func": "sub_39D3D30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eb692",
+    "value": "debug-use ",
+    "xrefs": [
+      {
+        "from": "0x1e33b2c",
+        "func": "sub_1E32250",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eb8fc",
+    "value": "print-regmask-num-regs",
+    "xrefs": [
+      {
+        "from": "0x5000ab",
+        "func": "ctor_306",
+        "type": 1
+      },
+      {
+        "from": "0x57427d",
+        "func": "ctor_570",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ebe70",
+    "value": "ScheduleDAGMI::viewGraph is only available in debug builds on ",
+    "xrefs": [
+      {
+        "from": "0x1e6d875",
+        "func": "sub_1E6D7C0",
+        "type": 1
+      },
+      {
+        "from": "0x1e6e155",
+        "func": "sub_1E6DF50",
+        "type": 1
+      },
+      {
+        "from": "0x2ec2a95",
+        "func": "sub_2EC29E0",
+        "type": 1
+      },
+      {
+        "from": "0x2ec3045",
+        "func": "sub_2EC2E20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ec120",
+    "value": "Print critical path length to stdout",
+    "xrefs": [
+      {
+        "from": "0x500e43",
+        "func": "ctor_310_0",
+        "type": 1
+      },
+      {
+        "from": "0x574ac0",
+        "func": "ctor_572_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ec530",
+    "value": "Machine Trace Metrics",
+    "xrefs": [
+      {
+        "from": "0x1e7fa67",
+        "func": "sub_1E7FA20",
+        "type": 1
+      },
+      {
+        "from": "0x2ee73eb",
+        "func": "sub_2EE73C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ec546",
+    "value": "machine-trace-metrics",
+    "xrefs": [
+      {
+        "from": "0x1e7fa79",
+        "func": "sub_1E7FA20",
+        "type": 1
+      },
+      {
+        "from": "0x233ef52",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2349872",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x2ee73f6",
+        "func": "sub_2EE73C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ecda0",
+    "value": "Debug instruction has a slot index",
+    "xrefs": [
+      {
+        "from": "0x1e88133",
+        "func": "sub_1E87320",
+        "type": 1
+      },
+      {
+        "from": "0x2ef8170",
+        "func": "sub_2EF7830",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef820",
+    "value": "Debug control MBBs that are scheduled",
+    "xrefs": [
+      {
+        "from": "0x5031fa",
+        "func": "ctor_316",
+        "type": 1
+      },
+      {
+        "from": "0x503258",
+        "func": "ctor_316",
+        "type": 1
+      },
+      {
+        "from": "0x57821b",
+        "func": "ctor_579",
+        "type": 1
+      },
+      {
+        "from": "0x578279",
+        "func": "ctor_579",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f11a8",
+    "value": "ScheduleDAG::viewGraph is only available in debug builds on ",
+    "xrefs": [
+      {
+        "from": "0x1f0bda5",
+        "func": "sub_1F0BD00",
+        "type": 1
+      },
+      {
+        "from": "0x2f9a3c5",
+        "func": "sub_2F9A320",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f34a0",
+    "value": "Print LLVM IR produced by the loop-reduce pass",
+    "xrefs": [
+      {
+        "from": "0x5087cf",
+        "func": "ctor_335_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3aaf",
+    "value": "print-lsr-output",
+    "xrefs": [
+      {
+        "from": "0x5087ea",
+        "func": "ctor_335_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3ac0",
+    "value": "print-gc",
+    "xrefs": [
+      {
+        "from": "0x50886f",
+        "func": "ctor_335_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3ac9",
+    "value": "Dump garbage collector data",
+    "xrefs": [
+      {
+        "from": "0x50894b",
+        "func": "ctor_335_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3b5a",
+    "value": "print-machineinstrs",
+    "xrefs": [
+      {
+        "from": "0x5090c4",
+        "func": "ctor_335_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3b6e",
+    "value": "Print machine instrs",
+    "xrefs": [
+      {
+        "from": "0x50925e",
+        "func": "ctor_335_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43087fc",
+    "value": "dag-dump-verbose",
+    "xrefs": [
+      {
+        "from": "0x50b2db",
+        "func": "ctor_344",
+        "type": 1
+      },
+      {
+        "from": "0x59be4d",
+        "func": "ctor_657",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430a2e0",
+    "value": "Debug control for aggressive anti-dep breaker",
+    "xrefs": [
+      {
+        "from": "0x50b444",
+        "func": "ctor_345",
+        "type": 1
+      },
+      {
+        "from": "0x59d5e4",
+        "func": "ctor_661",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b30a",
+    "value": "print-regusage",
+    "xrefs": [
+      {
+        "from": "0x50c3db",
+        "func": "ctor_353",
+        "type": 1
+      },
+      {
+        "from": "0x57b29d",
+        "func": "ctor_587",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b320",
+    "value": "print register usage details collected for analysis.",
+    "xrefs": [
+      {
+        "from": "0x50c509",
+        "func": "ctor_353",
+        "type": 1
+      },
+      {
+        "from": "0x57b360",
+        "func": "ctor_587",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43266eb",
+    "value": ", debug",
+    "xrefs": [
+      {
+        "from": "0x214fa60",
+        "func": "sub_214F370",
+        "type": 1
+      },
+      {
+        "from": "0x3024075",
+        "func": "sub_3023CE0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4326ef7",
+    "value": "NVPTX DWARF Debug Writer",
+    "xrefs": [
+      {
+        "from": "0x215b38b",
+        "func": "sub_215ACD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4326f10",
+    "value": "NVPTX Debug Info Emission",
+    "xrefs": [
+      {
+        "from": "0x215b399",
+        "func": "sub_215ACD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4328670",
+    "value": "Print LLVM IR input to isel pass",
+    "xrefs": [
+      {
+        "from": "0x51053e",
+        "func": "ctor_358_0",
+        "type": 1
+      },
+      {
+        "from": "0x5879b9",
+        "func": "ctor_609_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4328846",
+    "value": "print-isel-input",
+    "xrefs": [
+      {
+        "from": "0x510437",
+        "func": "ctor_358_0",
+        "type": 1
+      },
+      {
+        "from": "0x587917",
+        "func": "ctor_609_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4328fe8",
+    "value": "Function too large, generated debug information may not be accurate.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x432c190",
+    "value": "Dump Debug Information from Remat Machine Block",
+    "xrefs": [
+      {
+        "from": "0x511185",
+        "func": "ctor_361_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x432c350",
+    "value": "nv-dump-remat-block",
+    "xrefs": [
+      {
+        "from": "0x511135",
+        "func": "ctor_361_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4363cf3",
+    "value": "Record time trace",
+    "xrefs": [
+      {
+        "from": "0x514916",
+        "func": "ctor_376_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4363d05",
+    "value": "time-trace-granularity",
+    "xrefs": [
+      {
+        "from": "0x514a4f",
+        "func": "ctor_376_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4363d1c",
+    "value": "time-trace-file",
+    "xrefs": [
+      {
+        "from": "0x514c3b",
+        "func": "ctor_376_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4363f68",
+    "value": "Start the pipeline with collecting and end it with checking of debug info preservation.",
+    "xrefs": [
+      {
+        "from": "0x5141cc",
+        "func": "ctor_376_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43640f8",
+    "value": "Specify time trace file destination",
+    "xrefs": [
+      {
+        "from": "0x514cf4",
+        "func": "ctor_376_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43644b8",
+    "value": "-debug-pass does not work with the new PM, either use -debug-pass-manager, or use the legacy PM\n",
+    "xrefs": [
+      {
+        "from": "0x226dfe0",
+        "func": "sub_226C400",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4364ab5",
+    "value": "debug-pass-manager",
+    "xrefs": [
+      {
+        "from": "0x5169e0",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4364ca8",
+    "value": "debug-info-for-profiling",
+    "xrefs": [
+      {
+        "from": "0x518b93",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4364d78",
+    "value": "Start each pass with collecting and end it with checking of debug info preservation.",
+    "xrefs": [
+      {
+        "from": "0x51666e",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4364dd0",
+    "value": "Export debug info preservation failures into specified (JSON) file (should be abs path as we use append mode to insert new JSON objects)",
+    "xrefs": [
+      {
+        "from": "0x516818",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4364e60",
+    "value": "Print extra information about adaptors and pass managers",
+    "xrefs": [
+      {
+        "from": "0x5168c5",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4364ec8",
+    "value": "Print pass management debugging information",
+    "xrefs": [
+      {
+        "from": "0x5169f5",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43656b0",
+    "value": "Only has an effect when specified with -print-pipeline-passes. Disables verifying that the textual pipeline generated by -print-pipeline-passes can be used to create a pipeline.",
+    "xrefs": [
+      {
+        "from": "0x517f8b",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43659e8",
+    "value": "Emit special debug info to enable PGO profile generation.",
+    "xrefs": [
+      {
+        "from": "0x518c56",
+        "func": "ctor_377_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a7bd",
+    "value": "print<ctx-prof-analysis>",
+    "xrefs": [
+      {
+        "from": "0x233880d",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c73b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23436ab",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x238311b",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a8a4",
+    "value": "print-callgraph-sccs",
+    "xrefs": [
+      {
+        "from": "0x2338b71",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c963",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343df8",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x2384383",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a8b9",
+    "value": "print-ir-similarity",
+    "xrefs": [
+      {
+        "from": "0x2338b90",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c977",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343e3c",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23843a2",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a8cd",
+    "value": "print-lcg",
+    "xrefs": [
+      {
+        "from": "0x2338baf",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c98b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343e80",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23843c1",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a8d7",
+    "value": "print-lcg-dot",
+    "xrefs": [
+      {
+        "from": "0x2338bce",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c99f",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343ec4",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23843e0",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a8e5",
+    "value": "print-profile-summary",
+    "xrefs": [
+      {
+        "from": "0x2338c0c",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c9c7",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343f4c",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x238441e",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a8fb",
+    "value": "print-stack-safety",
+    "xrefs": [
+      {
+        "from": "0x2338c2b",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c9db",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343f90",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x238443d",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a90e",
+    "value": "print<dxil-metadata>",
+    "xrefs": [
+      {
+        "from": "0x2338c4a",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c9ef",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343fd4",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x238445c",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a923",
+    "value": "print<dxil-resource-binding>",
+    "xrefs": [
+      {
+        "from": "0x2338c69",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233ca03",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2344018",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x238447b",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a940",
+    "value": "print<inline-advisor>",
+    "xrefs": [
+      {
+        "from": "0x2338c88",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233ca17",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234405c",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x238449a",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a956",
+    "value": "print<module-debuginfo>",
+    "xrefs": [
+      {
+        "from": "0x2338ca7",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233ca2b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23440a0",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23844b9",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437a96e",
+    "value": "print<reg-usage>",
+    "xrefs": [
+      {
+        "from": "0x2338cc6",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233ca3f",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23440e4",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23844d8",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437aa86",
+    "value": "print<structural-hash>",
+    "xrefs": [
+      {
+        "from": "0x2339296",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233ce94",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2344b53",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x2389ba4",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x2389bc0",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ab98",
+    "value": "print-must-be-executed-contexts",
+    "xrefs": [
+      {
+        "from": "0x2338bed",
+        "func": "sub_2337E30",
+        "type": 1
+      },
+      {
+        "from": "0x233c9b3",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2343f08",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23843ff",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b2cb",
+    "value": "print-cfg-sccs",
+    "xrefs": [
+      {
+        "from": "0x233d979",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2340f5c",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347336",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a738",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378e44",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b18f",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b2da",
+    "value": "print<access-info>",
+    "xrefs": [
+      {
+        "from": "0x233d9c9",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2340fd8",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347446",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a7b4",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378ec0",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b20b",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b2ed",
+    "value": "print<assumptions>",
+    "xrefs": [
+      {
+        "from": "0x233d9dd",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2340ff7",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x234748a",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a7d3",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378edf",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b22a",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b300",
+    "value": "print<block-freq>",
+    "xrefs": [
+      {
+        "from": "0x233d9f1",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341016",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23474ce",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a7f2",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378efe",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b249",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b312",
+    "value": "print<branch-prob>",
+    "xrefs": [
+      {
+        "from": "0x233da05",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341035",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347512",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a811",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378f1d",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b268",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b325",
+    "value": "print<cost-model>",
+    "xrefs": [
+      {
+        "from": "0x233da19",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341054",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347556",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a830",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378f3c",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b287",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b337",
+    "value": "print<cycles>",
+    "xrefs": [
+      {
+        "from": "0x233da2d",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341073",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x234759a",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a84f",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378f5b",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b2a6",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b345",
+    "value": "print<da>",
+    "xrefs": [
+      {
+        "from": "0x233d1d6",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341092",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2341abe",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23475de",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x23489f0",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a86e",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2374bc2",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2374be5",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378f7a",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x237fa07",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x237fa25",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b2c5",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x2391ec3",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x2391ee2",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b34f",
+    "value": "print<debug-ata>",
+    "xrefs": [
+      {
+        "from": "0x233da51",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23410b1",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347622",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a88d",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378f99",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b2e4",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b360",
+    "value": "print<delinearization>",
+    "xrefs": [
+      {
+        "from": "0x233da65",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23410d0",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347666",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a8ac",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378fb8",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b303",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b377",
+    "value": "print<demanded-bits>",
+    "xrefs": [
+      {
+        "from": "0x233da79",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23410ef",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23476aa",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a8cb",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378fd7",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b322",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b38c",
+    "value": "print<domfrontier>",
+    "xrefs": [
+      {
+        "from": "0x233da8d",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234110e",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23476ee",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a8ea",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2378ff6",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b341",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b39f",
+    "value": "print<domtree>",
+    "xrefs": [
+      {
+        "from": "0x233daa1",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234112d",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347732",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a909",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2379015",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b360",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b3ae",
+    "value": "print<func-properties>",
+    "xrefs": [
+      {
+        "from": "0x233dab5",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234114c",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347776",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a928",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2379034",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b37f",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b3c5",
+    "value": "print<inline-cost>",
+    "xrefs": [
+      {
+        "from": "0x233dac9",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234116b",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23477ba",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a947",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2379053",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b39e",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b3d8",
+    "value": "print<inliner-size-estimator>",
+    "xrefs": [
+      {
+        "from": "0x233dadd",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234118a",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23477fe",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a966",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2379072",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b3bd",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b3f6",
+    "value": "print<lazy-value-info>",
+    "xrefs": [
+      {
+        "from": "0x233daf1",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23411a9",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347842",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a985",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2379091",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b3dc",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b40d",
+    "value": "print<loops>",
+    "xrefs": [
+      {
+        "from": "0x233db05",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23411c8",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347886",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a9a4",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x23790b0",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b3fb",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b41a",
+    "value": "print<memoryssa-walker>",
+    "xrefs": [
+      {
+        "from": "0x233db19",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23411e7",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23478ca",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a9c3",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x23790cf",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b41a",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b432",
+    "value": "print<phi-values>",
+    "xrefs": [
+      {
+        "from": "0x233db2d",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341206",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x234790e",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236a9e2",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x23790ee",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b439",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b444",
+    "value": "print<postdomtree>",
+    "xrefs": [
+      {
+        "from": "0x233db41",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341225",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347952",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236aa01",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x237910d",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b458",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b457",
+    "value": "print<regions>",
+    "xrefs": [
+      {
+        "from": "0x233db55",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341244",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347996",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236aa20",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x237912c",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b477",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b466",
+    "value": "print<scalar-evolution>",
+    "xrefs": [
+      {
+        "from": "0x233db69",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341263",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23479da",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236aa3f",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x237914b",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b496",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b47e",
+    "value": "print<stack-safety-local>",
+    "xrefs": [
+      {
+        "from": "0x233db7d",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341282",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347a1e",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236aa5e",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x237916a",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b4b5",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b498",
+    "value": "print<uniformity>",
+    "xrefs": [
+      {
+        "from": "0x233db91",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23412a1",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2347a62",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236aa7d",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2379189",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238b4d4",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b5ff",
+    "value": "print<merge-sets>",
+    "xrefs": [
+      {
+        "from": "0x233df31",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341833",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x234862c",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236b00f",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x237971b",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238ba66",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b611",
+    "value": "print<rpa>",
+    "xrefs": [
+      {
+        "from": "0x233df59",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341871",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23486b4",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x236b04d",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2379759",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x238baa4",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b6d7",
+    "value": "print<memoryssa>",
+    "xrefs": [
+      {
+        "from": "0x233e19b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341add",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2348a12",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x2374d39",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2374d58",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x237fa8d",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x237faaf",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x2391f4b",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x2391f6e",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b6f1",
+    "value": "print<stack-lifetime>",
+    "xrefs": [
+      {
+        "from": "0x233e1bb",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2341afc",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x2348a34",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x2374dd0",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2374df3",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x237fc16",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x237fc34",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x23920cc",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x23920eb",
+        "func": "sub_2382460",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b8b4",
+    "value": "print<ddg>",
+    "xrefs": [
+      {
+        "from": "0x233e91f",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2349322",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235bd55",
+        "func": "sub_235B6A0",
+        "type": 1
+      },
+      {
+        "from": "0x2375eda",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2380be2",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x23930f7",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x2395185",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b8bf",
+    "value": "print<iv-users>",
+    "xrefs": [
+      {
+        "from": "0x233e933",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x2349366",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235bd74",
+        "func": "sub_235B6A0",
+        "type": 1
+      },
+      {
+        "from": "0x2375ef9",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2380c01",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x2393116",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x23951a8",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b8cf",
+    "value": "print<loop-cache-cost>",
+    "xrefs": [
+      {
+        "from": "0x233e947",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23493aa",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235bd93",
+        "func": "sub_235B6A0",
+        "type": 1
+      },
+      {
+        "from": "0x2375f18",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2380c20",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x2393135",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x23951cb",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b8e6",
+    "value": "print<loopnest>",
+    "xrefs": [
+      {
+        "from": "0x233e95b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x23493ee",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235bdb2",
+        "func": "sub_235B6A0",
+        "type": 1
+      },
+      {
+        "from": "0x2375f37",
+        "func": "sub_2368220",
+        "type": 1
+      },
+      {
+        "from": "0x2380c3f",
+        "func": "sub_2377300",
+        "type": 1
+      },
+      {
+        "from": "0x2393154",
+        "func": "sub_2382460",
+        "type": 1
+      },
+      {
+        "from": "0x23951ee",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b9ab",
+    "value": "print<livedebugvars>",
+    "xrefs": [
+      {
+        "from": "0x233ec4f",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a003",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235e97e",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395b93",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b9c0",
+    "value": "print<live-intervals>",
+    "xrefs": [
+      {
+        "from": "0x233ec63",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a047",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235e99d",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395bb6",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b9d6",
+    "value": "print<live-stacks>",
+    "xrefs": [
+      {
+        "from": "0x233ec77",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a08b",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235e9bc",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395bd9",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b9e9",
+    "value": "print<live-vars>",
+    "xrefs": [
+      {
+        "from": "0x233ec8b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a0cf",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235e9db",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395bfc",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437b9fa",
+    "value": "print<machine-block-freq>",
+    "xrefs": [
+      {
+        "from": "0x233ec9f",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a113",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235e9fa",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395c1f",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ba14",
+    "value": "print<machine-branch-prob>",
+    "xrefs": [
+      {
+        "from": "0x233ecb3",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a157",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235ea19",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395c42",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ba2f",
+    "value": "print<machine-cycles>",
+    "xrefs": [
+      {
+        "from": "0x233ecc7",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a19b",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235ea38",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395c65",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ba45",
+    "value": "print<machine-dom-tree>",
+    "xrefs": [
+      {
+        "from": "0x233ecdb",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a1df",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235ea57",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395c88",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ba5d",
+    "value": "print<machine-loops>",
+    "xrefs": [
+      {
+        "from": "0x233ecef",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a223",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235ea76",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395cab",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ba72",
+    "value": "print<machine-post-dom-tree>",
+    "xrefs": [
+      {
+        "from": "0x233ed03",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a267",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235ea95",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395cce",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ba8f",
+    "value": "print<slot-indexes>",
+    "xrefs": [
+      {
+        "from": "0x233ed17",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a2ab",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235eab4",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395cf1",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437baa3",
+    "value": "print<virtregmap>",
+    "xrefs": [
+      {
+        "from": "0x233ed2b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a2ef",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235ead3",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395d14",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437badc",
+    "value": "remove-redundant-debug-values",
+    "xrefs": [
+      {
+        "from": "0x233ed8f",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a443",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235eb6e",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395dc3",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437bb12",
+    "value": "verify<machine-trace-metrics>",
+    "xrefs": [
+      {
+        "from": "0x233ee2b",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a61f",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235ec66",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395edb",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437c367",
+    "value": "require<debug-ata>",
+    "xrefs": [
+      {
+        "from": "0x233fb23",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x23692ff",
+        "func": "sub_2368220",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437c37a",
+    "value": "invalidate<debug-ata>",
+    "xrefs": [
+      {
+        "from": "0x233fb42",
+        "func": "sub_233F860",
+        "type": 1
+      },
+      {
+        "from": "0x236931e",
+        "func": "sub_2368220",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437d288",
+    "value": "require<machine-trace-metrics>",
+    "xrefs": [
+      {
+        "from": "0x235e522",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x23956a7",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437d2a8",
+    "value": "invalidate<machine-trace-metrics>",
+    "xrefs": [
+      {
+        "from": "0x235e541",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x23956ca",
+        "func": "sub_2394710",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437d5c0",
+    "value": "Print a '-passes' compatible string describing the pipeline (best-effort only).",
+    "xrefs": [
+      {
+        "from": "0x51b6c6",
+        "func": "ctor_387",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437d628",
+    "value": "print-pipeline-passes",
+    "xrefs": [
+      {
+        "from": "0x51b6cd",
+        "func": "ctor_387",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e100",
+    "value": "*** IR Dump After {0} on {1} omitted because no change ***\n",
+    "xrefs": [
+      {
+        "from": "0x23ae401",
+        "func": "sub_23AE400",
+        "type": 1
+      },
+      {
+        "from": "0x23ae501",
+        "func": "sub_23AE500",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e2d0",
+    "value": "*** IR Dump After {0} on {1} filtered out ***\n",
+    "xrefs": [
+      {
+        "from": "0x23afb31",
+        "func": "sub_23AFB30",
+        "type": 1
+      },
+      {
+        "from": "0x23afcb1",
+        "func": "sub_23AFCB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e405",
+    "value": "*** IR Dump Before ",
+    "xrefs": [
+      {
+        "from": "0x23b20cc",
+        "func": "sub_23B1FA0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e42f",
+    "value": "*** IR Dump After ",
+    "xrefs": [
+      {
+        "from": "0x23b1fdd",
+        "func": "sub_23B1FA0",
+        "type": 1
+      },
+      {
+        "from": "0x2e839dc",
+        "func": "sub_2E830A0",
+        "type": 1
+      },
+      {
+        "from": "0x2e8418d",
+        "func": "sub_2E830A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e477",
+    "value": "print-before-changed",
+    "xrefs": [
+      {
+        "from": "0x51ce2e",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e48c",
+    "value": "print-changed-dot-path",
+    "xrefs": [
+      {
+        "from": "0x51cf26",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e502",
+    "value": "print-on-crash-path",
+    "xrefs": [
+      {
+        "from": "0x51d545",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e516",
+    "value": "print-on-crash",
+    "xrefs": [
+      {
+        "from": "0x51d626",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e525",
+    "value": "opt-bisect-print-ir-path",
+    "xrefs": [
+      {
+        "from": "0x51d714",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e53e",
+    "value": "print-pass-numbers",
+    "xrefs": [
+      {
+        "from": "0x51d7f7",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e551",
+    "value": "print-before-pass-number",
+    "xrefs": [
+      {
+        "from": "0x51d8eb",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e56a",
+    "value": "print-after-pass-number",
+    "xrefs": [
+      {
+        "from": "0x51d9f2",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e582",
+    "value": "ir-dump-directory",
+    "xrefs": [
+      {
+        "from": "0x51db05",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e5c0",
+    "value": "Print before passes that change them",
+    "xrefs": [
+      {
+        "from": "0x51ce74",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e6c8",
+    "value": "Print the last form of the IR before crash to a file",
+    "xrefs": [
+      {
+        "from": "0x51d591",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e700",
+    "value": "Print the last form of the IR before crash (use -print-on-crash-path to dump to a file)",
+    "xrefs": [
+      {
+        "from": "0x51d655",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e758",
+    "value": "Print IR to path when opt-bisect-limit is reached",
+    "xrefs": [
+      {
+        "from": "0x51d760",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e790",
+    "value": "Print pass names and their ordinals",
+    "xrefs": [
+      {
+        "from": "0x51d85a",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e7b8",
+    "value": "Print IR before the pass with this number as reported by print-pass-numbers",
+    "xrefs": [
+      {
+        "from": "0x51d940",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e808",
+    "value": "Print IR after the pass with this number as reported by print-pass-numbers",
+    "xrefs": [
+      {
+        "from": "0x51da64",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e858",
+    "value": "If specified, IR printed using the -print-[before|after]{-all} options will be dumped into files in this directory rather than written to stderr",
+    "xrefs": [
+      {
+        "from": "0x51db51",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437e8f0",
+    "value": "Dump dropped debug variables stats",
+    "xrefs": [
+      {
+        "from": "0x51dc68",
+        "func": "ctor_389_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437eb60",
+    "value": "*** Dump of IR Before Last Pass Unknown ***",
+    "xrefs": []
+  },
+  {
+    "addr": "0x437ee78",
+    "value": "*** IR Dump At Start ***\n",
+    "xrefs": [
+      {
+        "from": "0x23b6ac5",
+        "func": "sub_23B69D0",
+        "type": 1
+      },
+      {
+        "from": "0x23b6c05",
+        "func": "sub_23B6B10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437ef40",
+    "value": "*** IR Dump After {0} on {1} ***\n",
+    "xrefs": [
+      {
+        "from": "0x23be2d1",
+        "func": "sub_23BE2D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4381f78",
+    "value": "Dump functions and their MD5 hash to deobfuscate profile data",
+    "xrefs": [
+      {
+        "from": "0x524a31",
+        "func": "ctor_399",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43822e8",
+    "value": "Use debug info to correlate profiles. (Deprecated, use -profile-correlate=debug-info)",
+    "xrefs": [
+      {
+        "from": "0x524aa1",
+        "func": "ctor_400_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4382340",
+    "value": "Use debug info or binary file to correlate profiles.",
+    "xrefs": [
+      {
+        "from": "0x524ba6",
+        "func": "ctor_400_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43827f3",
+    "value": "debug-info-correlate",
+    "xrefs": [
+      {
+        "from": "0x524aa8",
+        "func": "ctor_400_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438281f",
+    "value": "Use debug info to correlate",
+    "xrefs": [
+      {
+        "from": "0x524b71",
+        "func": "ctor_400_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4382c50",
+    "value": "Print name of local stack variable",
+    "xrefs": [
+      {
+        "from": "0x52713a",
+        "func": "ctor_402_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4382d38",
+    "value": "Prints 'unknown' intrinsics that were handled heuristically. Use -msan-dump-strict-instructions to print intrinsics that could not be handled exactly nor heuristically.",
+    "xrefs": [
+      {
+        "from": "0x527687",
+        "func": "ctor_402_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4382e68",
+    "value": "Define threshold for number of checks per debug location to force origin update.",
+    "xrefs": [
+      {
+        "from": "0x527cbb",
+        "func": "ctor_402_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4382ee7",
+    "value": "msan-print-stack-names",
+    "xrefs": [
+      {
+        "from": "0x527141",
+        "func": "ctor_402_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4382f10",
+    "value": "msan-dump-strict-intrinsics",
+    "xrefs": [
+      {
+        "from": "0x52768e",
+        "func": "ctor_402_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4385010",
+    "value": "Print matching stats for each allocation context in this module's profiles",
+    "xrefs": [
+      {
+        "from": "0x529183",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43851e9",
+    "value": "memprof-debug",
+    "xrefs": [
+      {
+        "from": "0x528b74",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43851f7",
+    "value": "memprof-debug-func",
+    "xrefs": [
+      {
+        "from": "0x528d63",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438520a",
+    "value": "memprof-debug-min",
+    "xrefs": [
+      {
+        "from": "0x528e7f",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438521c",
+    "value": "memprof-debug-max",
+    "xrefs": [
+      {
+        "from": "0x528ed7",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438525b",
+    "value": "memprof-print-match-info",
+    "xrefs": [
+      {
+        "from": "0x52916d",
+        "func": "ctor_403_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4385cf0",
+    "value": "llvm.log.f80",
+    "xrefs": []
+  },
+  {
+    "addr": "0x43865d4",
+    "value": "pgo-trace-func-hash",
+    "xrefs": [
+      {
+        "from": "0x52c110",
+        "func": "ctor_406_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4386958",
+    "value": "Print out the non-match BFI count if a hot raw profile count becomes non-hot, or a cold raw profile count becomes hot. The print is enabled under -Rpass-analysis=pgo, or internal option -pass-remarks-analysis=pgo.",
+    "xrefs": [
+      {
+        "from": "0x52bdca",
+        "func": "ctor_406_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4386a30",
+    "value": "Print out mismatched BFI counts after setting profile metadata The print is enabled under -Rpass-analysis=pgo, or internal option -pass-remarks-analysis=pgo.",
+    "xrefs": [
+      {
+        "from": "0x52bea9",
+        "func": "ctor_406_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4386ad0",
+    "value": "Set the threshold for pgo-verify-bfi:  only print out mismatched BFI if the difference percentage is greater than this value (in percentage).",
+    "xrefs": [
+      {
+        "from": "0x52bfb3",
+        "func": "ctor_406_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4386bc0",
+    "value": "Trace the hash of the function with this name.",
+    "xrefs": [
+      {
+        "from": "0x52c18d",
+        "func": "ctor_406_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4387540",
+    "value": "sanitizer-coverage-trace-loads",
+    "xrefs": [
+      {
+        "from": "0x52e232",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4387560",
+    "value": "sanitizer-coverage-trace-stores",
+    "xrefs": [
+      {
+        "from": "0x52e27b",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43875c8",
+    "value": "sanitizer-coverage-gated-trace-callbacks",
+    "xrefs": [
+      {
+        "from": "0x52e657",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43875f8",
+    "value": "Gate the invocation of the tracing callbacks on a global variable. Currently only supported for trace-pc-guard and trace-cmp.",
+    "xrefs": [
+      {
+        "from": "0x52e6db",
+        "func": "ctor_409_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43876a0",
+    "value": "' is only supported with trace-pc-guard or trace-cmp",
+    "xrefs": [
+      {
+        "from": "0x24cc18e",
+        "func": "sub_24CA1B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43896f8",
+    "value": "Dump the dependency graph to dot files.",
+    "xrefs": [
+      {
+        "from": "0x52fb9b",
+        "func": "ctor_412_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43897b0",
+    "value": "Print Attributor's internal call graph",
+    "xrefs": [
+      {
+        "from": "0x52ff34",
+        "func": "ctor_412_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4389880",
+    "value": "attributor-dump-dep-graph",
+    "xrefs": [
+      {
+        "from": "0x52fbb0",
+        "func": "ctor_412_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43898cf",
+    "value": "attributor-print-dep",
+    "xrefs": [
+      {
+        "from": "0x52fda4",
+        "func": "ctor_412_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43898e4",
+    "value": "Print attribute dependencies",
+    "xrefs": [
+      {
+        "from": "0x52fe05",
+        "func": "ctor_412_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4389901",
+    "value": "attributor-print-call-graph",
+    "xrefs": [
+      {
+        "from": "0x52ff1b",
+        "func": "ctor_412_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4389b54",
+    "value": "Dependency graph dump to ",
+    "xrefs": [
+      {
+        "from": "0x2531c9a",
+        "func": "sub_2531A30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438b259",
+    "value": "print-import-failures",
+    "xrefs": [
+      {
+        "from": "0x532968",
+        "func": "ctor_420_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438b2c8",
+    "value": "Print information for functions rejected for importing",
+    "xrefs": [
+      {
+        "from": "0x5329eb",
+        "func": "ctor_420_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438bec0",
+    "value": "Debug option to outline greedily, without restriction that calculated benefit outweighs cost",
+    "xrefs": [
+      {
+        "from": "0x53457d",
+        "func": "ctor_424",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438ce92",
+    "value": "memprof-dump-ccg",
+    "xrefs": [
+      {
+        "from": "0x535e94",
+        "func": "ctor_427_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438d090",
+    "value": "Dump CallingContextGraph to stdout after each stage.",
+    "xrefs": [
+      {
+        "from": "0x535edb",
+        "func": "ctor_427_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438d5b8",
+    "value": "How many functions in a module could be used for MergeFunctions to pass a basic correctness check. '0' disables this check. Works only with '-debug' key.",
+    "xrefs": [
+      {
+        "from": "0x5368c1",
+        "func": "ctor_428",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e110",
+    "value": "Print the current module after OpenMP optimizations.",
+    "xrefs": [
+      {
+        "from": "0x5377ad",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e148",
+    "value": "Print the current module before OpenMP optimizations.",
+    "xrefs": [
+      {
+        "from": "0x53781c",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e180",
+    "value": "openmp-opt-print-module-before",
+    "xrefs": [
+      {
+        "from": "0x537835",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e26e",
+    "value": "openmp-print-icv-values",
+    "xrefs": [
+      {
+        "from": "0x537294",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e286",
+    "value": "openmp-print-gpu-kernels",
+    "xrefs": [
+      {
+        "from": "0x53731e",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e2ba",
+    "value": "openmp-opt-print-module-after",
+    "xrefs": [
+      {
+        "from": "0x537770",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e2f1",
+    "value": "Enables more verbose remarks.",
+    "xrefs": [
+      {
+        "from": "0x537960",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e30f",
+    "value": "openmp-opt-verbose-remarks",
+    "xrefs": [
+      {
+        "from": "0x537967",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4391c18",
+    "value": "Removes debug compile units which reference to non-existing global constants",
+    "xrefs": [
+      {
+        "from": "0x53c1a0",
+        "func": "ctor_436",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4391de8",
+    "value": "wholeprogramdevirt-print-index-based",
+    "xrefs": [
+      {
+        "from": "0x53ca68",
+        "func": "ctor_437_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4391e10",
+    "value": "Print index-based devirtualization messages",
+    "xrefs": [
+      {
+        "from": "0x53cb11",
+        "func": "ctor_437_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43927c8",
+    "value": "constraint-elimination-dump-reproducers",
+    "xrefs": [
+      {
+        "from": "0x53e91d",
+        "func": "ctor_442",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43927f0",
+    "value": "Dump IR to reproduce successful transformations.",
+    "xrefs": [
+      {
+        "from": "0x53e9e0",
+        "func": "ctor_442",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4393501",
+    "value": "earlycse-debug-hash",
+    "xrefs": [
+      {
+        "from": "0x54029d",
+        "func": "ctor_447",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4394010",
+    "value": "irce-print-scaled-boundary-range-checks",
+    "xrefs": [
+      {
+        "from": "0x5435fe",
+        "func": "ctor_453",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4397698",
+    "value": "matrix-print-after-transpose-opt",
+    "xrefs": [
+      {
+        "from": "0x54e57e",
+        "func": "ctor_475_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4397878",
+    "value": "Dump after matrix transpose optimization:\n",
+    "xrefs": [
+      {
+        "from": "0x28a855f",
+        "func": "sub_28A58D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a5c7",
+    "value": "Kind of debug info to add",
+    "xrefs": [
+      {
+        "from": "0x556f42",
+        "func": "ctor_493_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a600",
+    "value": "Suppress verbose debugify output",
+    "xrefs": [
+      {
+        "from": "0x556af6",
+        "func": "ctor_493_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a658",
+    "value": "Attach debug info to everything",
+    "xrefs": [
+      {
+        "from": "0x5570a3",
+        "func": "ctor_493_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a678",
+    "value": "Check debug info from -debugify",
+    "xrefs": [
+      {
+        "from": "0x557110",
+        "func": "ctor_493_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a698",
+    "value": "Attach debug info to a function",
+    "xrefs": [
+      {
+        "from": "0x55717d",
+        "func": "ctor_493_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a6b8",
+    "value": "Check debug info from -debugify-function",
+    "xrefs": [
+      {
+        "from": "0x5571ea",
+        "func": "ctor_493_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a708",
+    "value": "Skipping module with debug info\n",
+    "xrefs": [
+      {
+        "from": "0x29c3078",
+        "func": "sub_29C2F90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439a898",
+    "value": ": Skipping module without debug info\n",
+    "xrefs": [
+      {
+        "from": "0x29c7aba",
+        "func": "sub_29C70F0",
+        "type": 1
+      },
+      {
+        "from": "0x29ca8c7",
+        "func": "sub_29C8000",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439aa8d",
+    "value": "# of missing debug values",
+    "xrefs": [
+      {
+        "from": "0x29cbb4d",
+        "func": "sub_29CB580",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43a0014",
+    "value": "sbvec-print-pass-pipeline",
+    "xrefs": [
+      {
+        "from": "0x5621e6",
+        "func": "ctor_518",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43a0193",
+    "value": "vplan-print-in-dot-format",
+    "xrefs": [
+      {
+        "from": "0x56288d",
+        "func": "ctor_519",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444b9e7",
+    "value": "print-verify-remat",
+    "xrefs": [
+      {
+        "from": "0x56abd8",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c46aa",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444b9fa",
+    "value": "print-func-reg-remat",
+    "xrefs": [
+      {
+        "from": "0x56ac97",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c47d0",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444ba0f",
+    "value": "print-reg-target",
+    "xrefs": [
+      {
+        "from": "0x56ad0f",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c4876",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bc68",
+    "value": "[DebugOnly] Print register pressure info for the function",
+    "xrefs": [
+      {
+        "from": "0x56ac90",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c473a",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bca8",
+    "value": "[DebugOnly] Print the register target",
+    "xrefs": [
+      {
+        "from": "0x56ada4",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c48ea",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bf14",
+    "value": "debug-ata-max-blocks",
+    "xrefs": [
+      {
+        "from": "0x56be57",
+        "func": "ctor_543",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bf3b",
+    "value": "print-debug-ata",
+    "xrefs": [
+      {
+        "from": "0x56c024",
+        "func": "ctor_543",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bf4b",
+    "value": "debug-ata-coalesce-frags",
+    "xrefs": [
+      {
+        "from": "0x56c0d8",
+        "func": "ctor_543",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bf68",
+    "value": "Maximum num basic blocks before debug info dropped",
+    "xrefs": [
+      {
+        "from": "0x56bec4",
+        "func": "ctor_543",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444e129",
+    "value": "debug-entry-values",
+    "xrefs": [
+      {
+        "from": "0x2d9981b",
+        "func": "sub_2D97F20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444e6c0",
+    "value": "Emit call site debug information, if debug information is enabled.",
+    "xrefs": [
+      {
+        "from": "0x2d99a94",
+        "func": "sub_2D97F20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444e708",
+    "value": "Enable debug info for the debug entry values.",
+    "xrefs": [
+      {
+        "from": "0x2d99894",
+        "func": "sub_2D97F20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444e7e0",
+    "value": "Always emit a debug frame section.",
+    "xrefs": [
+      {
+        "from": "0x2d9938b",
+        "func": "sub_2D97F20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444fca0",
+    "value": "********** DEBUG VARIABLES **********\n",
+    "xrefs": [
+      {
+        "from": "0x2df98b4",
+        "func": "sub_2DF9070",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444fcc8",
+    "value": "********** DEBUG LABELS **********\n",
+    "xrefs": [
+      {
+        "from": "0x2df98d1",
+        "func": "sub_2DF9070",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444fe58",
+    "value": "print-slotindexes",
+    "xrefs": [
+      {
+        "from": "0x57148d",
+        "func": "ctor_560",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44501a8",
+    "value": "Print Machine Cycle Info Analysis",
+    "xrefs": [
+      {
+        "from": "0x2e5ee1b",
+        "func": "sub_2E5EDF0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44501ca",
+    "value": "print-machine-cycles",
+    "xrefs": [
+      {
+        "from": "0x2e5ee26",
+        "func": "sub_2E5EDF0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4450718",
+    "value": "Dump dropped debug variables stats for MIR passes",
+    "xrefs": [
+      {
+        "from": "0x573834",
+        "func": "ctor_567",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4450884",
+    "value": " debug-instr-number ",
+    "xrefs": [
+      {
+        "from": "0x2e8c394",
+        "func": "sub_2E8BCA0",
+        "type": 1
+      },
+      {
+        "from": "0x2f11bff",
+        "func": "sub_2F116B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44508bc",
+    "value": "print-mi-addrs",
+    "xrefs": [
+      {
+        "from": "0x57398d",
+        "func": "ctor_568",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44508d0",
+    "value": "Print addresses of MachineInstrs when dumping",
+    "xrefs": [
+      {
+        "from": "0x573a3d",
+        "func": "ctor_568",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453508",
+    "value": "Missing DebugLoc for debug instruction",
+    "xrefs": [
+      {
+        "from": "0x2ef7fde",
+        "func": "sub_2EF7830",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453c08",
+    "value": "Register operand must be marked debug",
+    "xrefs": [
+      {
+        "from": "0x2f04754",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453c30",
+    "value": "Register operand must not be marked debug",
+    "xrefs": [
+      {
+        "from": "0x2f03a5c",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453fd2",
+    "value": "debug-info-variable",
+    "xrefs": [
+      {
+        "from": "0x2f0f057",
+        "func": "sub_2F0EDE0",
+        "type": 1
+      },
+      {
+        "from": "0x2f0f715",
+        "func": "sub_2F0F4A0",
+        "type": 1
+      },
+      {
+        "from": "0x2f1d8ee",
+        "func": "sub_2F1D7D0",
+        "type": 1
+      },
+      {
+        "from": "0x39d1ee8",
+        "func": "sub_39D1C00",
+        "type": 1
+      },
+      {
+        "from": "0x39d24e8",
+        "func": "sub_39D22A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453fe6",
+    "value": "debug-info-expression",
+    "xrefs": [
+      {
+        "from": "0x2f0f0a1",
+        "func": "sub_2F0EDE0",
+        "type": 1
+      },
+      {
+        "from": "0x2f0f75f",
+        "func": "sub_2F0F4A0",
+        "type": 1
+      },
+      {
+        "from": "0x2f1d913",
+        "func": "sub_2F1D7D0",
+        "type": 1
+      },
+      {
+        "from": "0x39d1f31",
+        "func": "sub_39D1C00",
+        "type": 1
+      },
+      {
+        "from": "0x39d2577",
+        "func": "sub_39D22A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453ffc",
+    "value": "debug-info-location",
+    "xrefs": [
+      {
+        "from": "0x2f0f0eb",
+        "func": "sub_2F0EDE0",
+        "type": 1
+      },
+      {
+        "from": "0x2f0f7a9",
+        "func": "sub_2F0F4A0",
+        "type": 1
+      },
+      {
+        "from": "0x2f1d938",
+        "func": "sub_2F1D7D0",
+        "type": 1
+      },
+      {
+        "from": "0x39d1f7b",
+        "func": "sub_39D1C00",
+        "type": 1
+      },
+      {
+        "from": "0x39d25f8",
+        "func": "sub_39D22A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4454490",
+    "value": "mir-debug-loc",
+    "xrefs": [
+      {
+        "from": "0x576d55",
+        "func": "ctor_575",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x445449e",
+    "value": "Print MIR debug-locations",
+    "xrefs": [
+      {
+        "from": "0x576e0a",
+        "func": "ctor_575",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4455068",
+    "value": "prioritize low virtual register numbers for test and debug",
+    "xrefs": [
+      {
+        "from": "0x579fcd",
+        "func": "ctor_584_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44568aa",
+    "value": "print-after-isel",
+    "xrefs": [
+      {
+        "from": "0x581b77",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4456a08",
+    "value": "Debugify MIR before and Strip debug after each pass except those known to be unsafe when debug info is present",
+    "xrefs": [
+      {
+        "from": "0x580f82",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4456aa0",
+    "value": "Debugify MIR before, by checking and stripping the debug info after, each pass except those known to be unsafe when debug info is present",
+    "xrefs": [
+      {
+        "from": "0x581152",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4456b70",
+    "value": "Print machine instrs after ISel",
+    "xrefs": [
+      {
+        "from": "0x581c3a",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c2968",
+    "value": " is too large, generated debug information may be inaccurate.",
+    "xrefs": [
+      {
+        "from": "0x3023c26",
+        "func": "sub_3023AD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44cad70",
+    "value": "Don't use a uniquing type map for debug info",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cae90",
+    "value": "Print available passes that can be specified in -passes=foo and exit",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44caf49",
+    "value": "-asm-verbose=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44caf57",
+    "value": "-asm-verbose",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44caf79",
+    "value": "-disable-debug-info-type-map=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44caf97",
+    "value": "-disable-debug-info-type-map",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb0f9",
+    "value": "-dump-nvvmir=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb107",
+    "value": "-dump-nvvmir",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb2ab",
+    "value": "-print-passes=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb2ba",
+    "value": "-print-passes",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb309",
+    "value": "-split-compile-debug=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb31f",
+    "value": "-split-compile-debug",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb3d6",
+    "value": "-strip-debug=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb3e4",
+    "value": "-strip-debug",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb41e",
+    "value": "-trace-ocg=",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb42a",
+    "value": "-trace-ocg",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44cb4b7",
+    "value": "Print CallGraph IR",
+    "xrefs": [
+      {
+        "from": "0x30a3bf0",
+        "func": "sub_30A3BF0",
+        "type": 1
+      },
+      {
+        "from": "0x384ca00",
+        "func": "sub_384CA00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44cb6c0",
+    "value": "print everything - most verbose",
+    "xrefs": [
+      {
+        "from": "0x58b58d",
+        "func": "ctor_619_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44cb822",
+    "value": "Print all cost kinds",
+    "xrefs": [
+      {
+        "from": "0x58b77f",
+        "func": "ctor_620_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44cc660",
+    "value": "Unimplemented InlineAdvisor print\n",
+    "xrefs": [
+      {
+        "from": "0x30ca895",
+        "func": "sub_30CA850",
+        "type": 1
+      },
+      {
+        "from": "0x30cc8f5",
+        "func": "sub_30CC760",
+        "type": 1
+      },
+      {
+        "from": "0x30ccc3d",
+        "func": "sub_30CC980",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44cce66",
+    "value": "print-instruction-comments",
+    "xrefs": [
+      {
+        "from": "0x58e326",
+        "func": "ctor_625_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44cdf87",
+    "value": "without debug info ",
+    "xrefs": [
+      {
+        "from": "0x30eeeb0",
+        "func": "sub_30EDB30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d050b",
+    "value": "as-secure-log-file",
+    "xrefs": [
+      {
+        "from": "0x314986a",
+        "func": "sub_3149320",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d051e",
+    "value": "As secure log file name",
+    "xrefs": [
+      {
+        "from": "0x3149923",
+        "func": "sub_3149320",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d3fe8",
+    "value": "Print instruction latencies as verbose asm comments",
+    "xrefs": [
+      {
+        "from": "0x596ff8",
+        "func": "ctor_645_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d40d1",
+    "value": "asm-print-latency",
+    "xrefs": [
+      {
+        "from": "0x596f82",
+        "func": "ctor_645_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d46fa",
+    "value": "Debug section magic",
+    "xrefs": [
+      {
+        "from": "0x31f7b12",
+        "func": "sub_31F7AE0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d4ac8",
+    "value": "cannot debug circular reference to unnamed type",
+    "xrefs": [
+      {
+        "from": "0x3205cfc",
+        "func": "sub_3205AE0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d5878",
+    "value": "Offset Into Debug Info Section",
+    "xrefs": [
+      {
+        "from": "0x322f532",
+        "func": "sub_322E990",
+        "type": 1
+      },
+      {
+        "from": "0x39987ae",
+        "func": "sub_3997B50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d59f0",
+    "value": "Make an absence of debug location information explicit.",
+    "xrefs": [
+      {
+        "from": "0x5977c6",
+        "func": "ctor_648_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c5313",
+        "func": "ctor_729_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d5e35",
+    "value": "use-gnu-debug-macro",
+    "xrefs": [
+      {
+        "from": "0x597d8a",
+        "func": "ctor_648_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d61e0",
+    "value": "The generated debug information is too large for the 32-bit DWARF format.",
+    "xrefs": [
+      {
+        "from": "0x3245003",
+        "func": "sub_3244F70",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e1290",
+    "value": "SelectionDAG::viewGraph is only available in debSelectionDAG::setSubgraphColor is only available in debug builds on systems with Graphviz or gv!",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44e2200",
+    "value": "experimental-debug-variable-locations",
+    "xrefs": [
+      {
+        "from": "0x59d0c4",
+        "func": "ctor_660",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e22e8",
+    "value": "Maximum input DBG_VALUE insts supported by debug range extension",
+    "xrefs": [
+      {
+        "from": "0x59d4e2",
+        "func": "ctor_660",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e4bb8",
+    "value": "Print only the CFG without blocks body",
+    "xrefs": [
+      {
+        "from": "0x5a1b4a",
+        "func": "ctor_672",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e4c30",
+    "value": "Machine Check Debug Module",
+    "xrefs": [
+      {
+        "from": "0x3527856",
+        "func": "sub_3527830",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e4c5e",
+    "value": "Machine IR debug info check: ",
+    "xrefs": [
+      {
+        "from": "0x35283a4",
+        "func": "sub_3527920",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e59b0",
+    "value": "Machine Strip Debug Module",
+    "xrefs": [
+      {
+        "from": "0x3573526",
+        "func": "sub_3573500",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e59cb",
+    "value": "mir-strip-debug",
+    "xrefs": [
+      {
+        "from": "0x3573531",
+        "func": "sub_3573500",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e59e0",
+    "value": "Should mir-strip-debug only strip debug info from debugified modules by default",
+    "xrefs": [
+      {
+        "from": "0x5a44da",
+        "func": "ctor_677",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5a70",
+    "value": "Print Machine Uniformity Info Analysis",
+    "xrefs": [
+      {
+        "from": "0x35750eb",
+        "func": "sub_35750C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5a97",
+    "value": "print-machine-uniformity",
+    "xrefs": [
+      {
+        "from": "0x35750f6",
+        "func": "sub_35750C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5c87",
+    "value": "fs-profile-debug-bw-threshold",
+    "xrefs": [
+      {
+        "from": "0x5a4e0e",
+        "func": "ctor_680",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5d00",
+    "value": "Print setting flow sensitive branch probabilities",
+    "xrefs": [
+      {
+        "from": "0x5a4b0d",
+        "func": "ctor_680",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5d38",
+    "value": "fs-profile-debug-prob-diff-threshold",
+    "xrefs": [
+      {
+        "from": "0x5a4c34",
+        "func": "ctor_680",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5d60",
+    "value": "Only show debug message if the branch probability is greater than this value (in percentage).",
+    "xrefs": [
+      {
+        "from": "0x5a4cbf",
+        "func": "ctor_680",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5dc0",
+    "value": "Only show debug message if the source branch weight is greater  than this value.",
+    "xrefs": [
+      {
+        "from": "0x5a4e99",
+        "func": "ctor_680",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4523ed0",
+    "value": "emit-func-debug-line-table-offsets",
+    "xrefs": [
+      {
+        "from": "0x5bdcee",
+        "func": "ctor_706",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4523ef8",
+    "value": "Include line table offset in function's debug info and emit end sequence after each function's line data.",
+    "xrefs": [
+      {
+        "from": "0x5bdda5",
+        "func": "ctor_706",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x45277c0",
+    "value": "print-all-reaching-defs",
+    "xrefs": [
+      {
+        "from": "0x5befad",
+        "func": "ctor_712",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x452bc60",
+    "value": "invalid debug info flag flag '",
+    "xrefs": [
+      {
+        "from": "0x388bc76",
+        "func": "sub_388BBA0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x452dee3",
+    "value": "as-secure-log-file-name",
+    "xrefs": [
+      {
+        "from": "0x5c0da7",
+        "func": "ctor_720",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x452df00",
+    "value": "As secure log file name (initialized from AS_SECURE_LOG_FILE env variable)",
+    "xrefs": [
+      {
+        "from": "0x5c0ed2",
+        "func": "ctor_720",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4532694",
+    "value": "print-schedule",
+    "xrefs": [
+      {
+        "from": "0x5c4a4b",
+        "func": "ctor_728",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x45326a8",
+    "value": "Print 'sched: [latency:throughput]' in .s output",
+    "xrefs": [
+      {
+        "from": "0x5c4b79",
+        "func": "ctor_728",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4532e5a",
+    "value": "disable-debug-info-print",
+    "xrefs": [
+      {
+        "from": "0x5c4bff",
+        "func": "ctor_729_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4532e73",
+    "value": "Disable debug info printing",
+    "xrefs": [
+      {
+        "from": "0x5c4d13",
+        "func": "ctor_729_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4bca8bf",
+    "value": "S65+g*\"3-v=*\u001bJ",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4bfae00",
+    "value": "q-v{ik{vyo{E$KF[]",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4c3b800",
+    "value": "s-v{ilwdm5nI\nVH_0li[IV.1!%",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4c45d00",
+    "value": "h-v{ce<wquzMATY",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4c9e4e0",
+    "value": "31(o=9<p-v,",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4cbc03c",
+    "value": "bawBSVU]s_m\u0007\\dHu-v|",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4cc789e",
+    "value": "IM!15,b;7-v=;",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4cd74a0",
+    "value": "v-v{ik2",
+    "xrefs": []
+  }
+]

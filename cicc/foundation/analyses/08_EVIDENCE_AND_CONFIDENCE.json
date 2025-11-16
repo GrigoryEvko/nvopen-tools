@@ -1,0 +1,4293 @@
+{
+  "metadata": {
+    "title": "08_EVIDENCE_AND_CONFIDENCE - Classification Confidence Analysis",
+    "created": "2025-11-16",
+    "source_files": [
+      "improved_confidence_scores.json",
+      "classification_confidence_scores.json",
+      "evidence_weight_refinement.json",
+      "evidence_type_distribution.json",
+      "module_classification_confidence.json",
+      "low_confidence_functions.json"
+    ],
+    "format": "Consolidated evidence and confidence metrics without full function list",
+    "last_updated": "2025-11-16",
+    "added_sections": [
+      "reverse_engineering_confidence_levels",
+      "re_evidence_types",
+      "re_validated_findings",
+      "re_confidence_improvement_roadmap"
+    ]
+  },
+  "summary": {
+    "total_functions": 80562,
+    "average_confidence": 0.618,
+    "median_confidence": 0.6763,
+    "min_confidence": 0.05,
+    "max_confidence": 0.8272,
+    "confidence_range": "0.05 - 0.8272",
+    "improvement_vs_original": {
+      "average_before": "15.01%",
+      "average_after": "61.80%",
+      "improvement_percentage": "+46.79%"
+    }
+  },
+  "confidence_tiers": {
+    "platinum_90_100": {
+      "count": 0,
+      "percentage": 0.0,
+      "description": "Very high confidence (90-100%)"
+    },
+    "gold_80_90": {
+      "count": 14,
+      "percentage": 0.02,
+      "description": "High confidence (80-90%)",
+      "sample_functions": [
+        {
+          "addr": "0x4397f0",
+          "name": "ctor_010_0",
+          "module": "optimization_framework",
+          "confidence_score": 0.827248,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.4,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.205,
+          "confidence_tier": "GOLD (80-90%)"
+        },
+        {
+          "addr": "0x4a64d0",
+          "name": "ctor_107_0",
+          "module": "optimization_framework",
+          "confidence_score": 0.827248,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.4,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.205,
+          "confidence_tier": "GOLD (80-90%)"
+        },
+        {
+          "addr": "0x4b0180",
+          "name": "ctor_133_0",
+          "module": "optimization_framework",
+          "confidence_score": 0.827248,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.4,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.205,
+          "confidence_tier": "GOLD (80-90%)"
+        },
+        {
+          "addr": "0x507310",
+          "name": "ctor_335_0",
+          "module": "register_allocation",
+          "confidence_score": 0.827248,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.4,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.205,
+          "confidence_tier": "GOLD (80-90%)"
+        },
+        {
+          "addr": "0x512df0",
+          "name": "ctor_376_0",
+          "module": "optimization_framework",
+          "confidence_score": 0.827248,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.4,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.205,
+          "confidence_tier": "GOLD (80-90%)"
+        }
+      ]
+    },
+    "silver_50_80": {
+      "count": 72967,
+      "percentage": 90.57,
+      "description": "Medium-high confidence (50-80%)",
+      "top_samples": [
+        {
+          "addr": "0x1038920",
+          "name": "nullsub_385",
+          "module": "optimization_framework",
+          "confidence_score": 0.787504,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.185,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x103d1b0",
+          "name": "nullsub_390",
+          "module": "optimization_framework",
+          "confidence_score": 0.787504,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.185,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x104dd02",
+          "name": "nullsub_2039",
+          "module": "optimization_framework",
+          "confidence_score": 0.787504,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.185,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x1060d10",
+          "name": "nullsub_392",
+          "module": "optimization_framework",
+          "confidence_score": 0.787504,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.185,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x106e280",
+          "name": "nullsub_395",
+          "module": "optimization_framework",
+          "confidence_score": 0.787504,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.3,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.185,
+          "confidence_tier": "SILVER (50-80%)"
+        }
+      ],
+      "bottom_samples": [
+        {
+          "addr": "0x1027a60",
+          "name": "sub_1027A60",
+          "module": "ptx_emission",
+          "confidence_score": 0.6011200000000001,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.1,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.165,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x1038140",
+          "name": "sub_1038140",
+          "module": "error_handling",
+          "confidence_score": 0.6011200000000001,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.1,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.165,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x1041420",
+          "name": "sub_1041420",
+          "module": "error_handling",
+          "confidence_score": 0.6011200000000001,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.1,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.165,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x1047d40",
+          "name": "sub_1047D40",
+          "module": "error_handling",
+          "confidence_score": 0.6011200000000001,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.1,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.165,
+          "confidence_tier": "SILVER (50-80%)"
+        },
+        {
+          "addr": "0x1048ac0",
+          "name": "sub_1048AC0",
+          "module": "ptx_emission",
+          "confidence_score": 0.6011200000000001,
+          "confidence_factors": {
+            "string_evidence": 0.1,
+            "string_count": 0,
+            "call_proximity": 0.3,
+            "naming_pattern": 0.1,
+            "size_frequency_alignment": 0.2,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.165,
+          "confidence_tier": "SILVER (50-80%)"
+        }
+      ]
+    },
+    "bronze_20_50": {
+      "count": 0,
+      "percentage": 0.0,
+      "description": "Medium confidence (20-50%)"
+    },
+    "low_0_20": {
+      "count": 7581,
+      "percentage": 9.41,
+      "description": "Low confidence (0-20%)",
+      "high_score_samples": [
+        {
+          "addr": "0x1027510",
+          "name": "sub_1027510",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x1027710",
+          "name": "sub_1027710",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x1027750",
+          "name": "sub_1027750",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x1027b90",
+          "name": "sub_1027B90",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x10294b0",
+          "name": "sub_10294B0",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        }
+      ],
+      "zero_score_samples": [
+        {
+          "addr": "0x1027510",
+          "name": "sub_1027510",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x1027710",
+          "name": "sub_1027710",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x1027750",
+          "name": "sub_1027750",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x1027b90",
+          "name": "sub_1027B90",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        },
+        {
+          "addr": "0x10294b0",
+          "name": "sub_10294B0",
+          "module": "unknown",
+          "confidence_score": 0.05,
+          "confidence_factors": {
+            "string_evidence": 0.0,
+            "string_count": 0,
+            "call_proximity": 0.0,
+            "naming_pattern": 0.0,
+            "size_frequency_alignment": 0.0,
+            "cluster_density": 0.0
+          },
+          "old_confidence_score": 0.0,
+          "confidence_tier": "LOW (<20%)"
+        }
+      ]
+    }
+  },
+  "evidence_types": {
+    "distribution": {
+      "metadata": {
+        "function_count": 80562,
+        "total_instances": 80562,
+        "avg_per_function": 1.0
+      },
+      "call_graph_callers": {
+        "function_count": 66369,
+        "total_instances": 66369,
+        "avg_per_function": 0.824
+      },
+      "call_graph_callees": {
+        "function_count": 62600,
+        "total_instances": 62600,
+        "avg_per_function": 0.777
+      },
+      "name_pattern": {
+        "function_count": 3503,
+        "total_instances": 3503,
+        "avg_per_function": 0.043
+      },
+      "size_analysis": {
+        "function_count": 57622,
+        "total_instances": 57622,
+        "avg_per_function": 0.715
+      },
+      "string_evidence": {
+        "function_count": 197,
+        "total_instances": 197,
+        "avg_per_function": 0.002
+      }
+    },
+    "weights": {
+      "string_evidence": {
+        "weight": 0.10000000000012357,
+        "reliability_score": "100.0%",
+        "usage_count": 72981,
+        "usage_rate": "90.59%",
+        "avg_contribution": "0.100",
+        "top_functions": [
+          {
+            "addr": "0x1000030",
+            "name": "sub_1000030",
+            "value": 0.1
+          },
+          {
+            "addr": "0x10003f0",
+            "name": "sub_10003F0",
+            "value": 0.1
+          },
+          {
+            "addr": "0x1000660",
+            "name": "sub_1000660",
+            "value": 0.1
+          },
+          {
+            "addr": "0x10008c0",
+            "name": "sub_10008C0",
+            "value": 0.1
+          },
+          {
+            "addr": "0x1000ba0",
+            "name": "sub_1000BA0",
+            "value": 0.1
+          }
+        ]
+      },
+      "call_proximity": {
+        "weight": 0.2999999999995927,
+        "reliability_score": "100.0%",
+        "usage_count": 72981,
+        "usage_rate": "90.59%",
+        "avg_contribution": "0.300",
+        "top_functions": [
+          {
+            "addr": "0x1000030",
+            "name": "sub_1000030",
+            "value": 0.3
+          },
+          {
+            "addr": "0x10003f0",
+            "name": "sub_10003F0",
+            "value": 0.3
+          },
+          {
+            "addr": "0x1000660",
+            "name": "sub_1000660",
+            "value": 0.3
+          },
+          {
+            "addr": "0x10008c0",
+            "name": "sub_10008C0",
+            "value": 0.3
+          },
+          {
+            "addr": "0x1000ba0",
+            "name": "sub_1000BA0",
+            "value": 0.3
+          }
+        ]
+      },
+      "naming_pattern": {
+        "weight": 0.10477110480822395,
+        "reliability_score": "100.0%",
+        "usage_count": 72981,
+        "usage_rate": "90.59%",
+        "avg_contribution": "0.105",
+        "top_functions": [
+          {
+            "addr": "0x1000030",
+            "name": "sub_1000030",
+            "value": 0.1
+          },
+          {
+            "addr": "0x10003f0",
+            "name": "sub_10003F0",
+            "value": 0.1
+          },
+          {
+            "addr": "0x1000660",
+            "name": "sub_1000660",
+            "value": 0.1
+          },
+          {
+            "addr": "0x10008c0",
+            "name": "sub_10008C0",
+            "value": 0.1
+          },
+          {
+            "addr": "0x1000ba0",
+            "name": "sub_1000BA0",
+            "value": 0.1
+          }
+        ]
+      },
+      "size_frequency_alignment": {
+        "weight": 0.20187994135484796,
+        "reliability_score": "100.0%",
+        "usage_count": 72981,
+        "usage_rate": "90.59%",
+        "avg_contribution": "0.202",
+        "top_functions": [
+          {
+            "addr": "0x1000030",
+            "name": "sub_1000030",
+            "value": 0.2
+          },
+          {
+            "addr": "0x10003f0",
+            "name": "sub_10003F0",
+            "value": 0.2
+          },
+          {
+            "addr": "0x1000660",
+            "name": "sub_1000660",
+            "value": 0.2
+          },
+          {
+            "addr": "0x10008c0",
+            "name": "sub_10008C0",
+            "value": 0.2
+          },
+          {
+            "addr": "0x1000ba0",
+            "name": "sub_1000BA0",
+            "value": 0.2
+          }
+        ]
+      }
+    }
+  },
+  "module_confidence": {
+    "optimization_framework": {
+      "function_count": 62769,
+      "avg_confidence": 0.166,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.003,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 62769,
+      "high_conf_percentage": 0.0
+    },
+    "register_allocation": {
+      "function_count": 7730,
+      "avg_confidence": 0.166,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.004,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 7730,
+      "high_conf_percentage": 0.0
+    },
+    "unknown": {
+      "function_count": 7581,
+      "avg_confidence": 0.0,
+      "median_confidence": 0.0,
+      "stdev_confidence": 0.0,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 7581,
+      "high_conf_percentage": 0.0
+    },
+    "compilation_pipeline": {
+      "function_count": 936,
+      "avg_confidence": 0.167,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.006,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 936,
+      "high_conf_percentage": 0.0
+    },
+    "ptx_emission": {
+      "function_count": 647,
+      "avg_confidence": 0.166,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.005,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 647,
+      "high_conf_percentage": 0.0
+    },
+    "error_handling": {
+      "function_count": 531,
+      "avg_confidence": 0.165,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.003,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 531,
+      "high_conf_percentage": 0.0
+    },
+    "architecture_detection": {
+      "function_count": 177,
+      "avg_confidence": 0.167,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.007,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 177,
+      "high_conf_percentage": 0.0
+    },
+    "tensor_core_codegen": {
+      "function_count": 104,
+      "avg_confidence": 0.168,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.007,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 104,
+      "high_conf_percentage": 0.0
+    },
+    "instruction_selection": {
+      "function_count": 87,
+      "avg_confidence": 0.168,
+      "median_confidence": 0.165,
+      "stdev_confidence": 0.008,
+      "functions_high_conf": 0,
+      "functions_medium_conf": 0,
+      "functions_low_conf": 87,
+      "high_conf_percentage": 0.0
+    }
+  },
+  "high_confidence_functions": {
+    "gold_tier_all_14": [
+      {
+        "addr": "0x4397f0",
+        "name": "ctor_010_0",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x4a64d0",
+        "name": "ctor_107_0",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x4b0180",
+        "name": "ctor_133_0",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x507310",
+        "name": "ctor_335_0",
+        "module": "register_allocation",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x512df0",
+        "name": "ctor_376_0",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x516190",
+        "name": "ctor_377_0",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x524aa0",
+        "name": "ctor_400_0",
+        "module": "register_allocation",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x578b50",
+        "name": "ctor_583_0",
+        "module": "register_allocation",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x57f210",
+        "name": "ctor_600_0",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x585d30",
+        "name": "ctor_609_0",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x5a8850",
+        "name": "ctor_701",
+        "module": "optimization_framework",
+        "confidence_score": 0.827248,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.4,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.205,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x3402ea0",
+        "name": "sub_3402EA0",
+        "module": "optimization_framework",
+        "confidence_score": 0.8073760000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.8,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.225,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x69ed20",
+        "name": "sub_69ED20",
+        "module": "optimization_framework",
+        "confidence_score": 0.8073760000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.8,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.225,
+        "confidence_tier": "GOLD (80-90%)"
+      },
+      {
+        "addr": "0x7b8b50",
+        "name": "sub_7B8B50",
+        "module": "optimization_framework",
+        "confidence_score": 0.8073760000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.8,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.225,
+        "confidence_tier": "GOLD (80-90%)"
+      }
+    ],
+    "silver_tier_sample_100": [
+      {
+        "addr": "0x1038920",
+        "name": "nullsub_385",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x103d1b0",
+        "name": "nullsub_390",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x104dd02",
+        "name": "nullsub_2039",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1060d10",
+        "name": "nullsub_392",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x106e280",
+        "name": "nullsub_395",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x106f6a0",
+        "name": "nullsub_397",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x11d2750",
+        "name": "nullsub_401",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x11d2760",
+        "name": "nullsub_402",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x11d2770",
+        "name": "nullsub_403",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x11d2780",
+        "name": "nullsub_404",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x11d9920",
+        "name": "nullsub_407",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12f5180",
+        "name": "nullsub_501",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1303240",
+        "name": "__libc_memalign",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13037c0",
+        "name": "realloc",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1305140",
+        "name": "malloc",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1305210",
+        "name": "posix_memalign",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1305840",
+        "name": "__libc_calloc",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1306b80",
+        "name": "__libc_free",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1306c40",
+        "name": "__libc_valloc",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1307120",
+        "name": "pvalloc",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1308a20",
+        "name": "malloc_usable_size",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x130d280",
+        "name": "nullsub_502",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x130d310",
+        "name": "nullsub_503",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x130d320",
+        "name": "nullsub_504",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x130d330",
+        "name": "nullsub_505",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x130d340",
+        "name": "nullsub_506",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1313c40",
+        "name": "destr_function",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13140f0",
+        "name": "nullsub_507",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1314100",
+        "name": "nullsub_508",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1314110",
+        "name": "nullsub_509",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1314120",
+        "name": "nullsub_510",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x131d450",
+        "name": "nullsub_511",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x131d460",
+        "name": "nullsub_512",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x131d470",
+        "name": "nullsub_513",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1376a50",
+        "name": "nullsub_516",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x139c2b0",
+        "name": "nullsub_518",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13c9030",
+        "name": "nullsub_520",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13c9040",
+        "name": "nullsub_521",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13c9050",
+        "name": "nullsub_522",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13e7450",
+        "name": "nullsub_524",
+        "module": "register_allocation",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13e7460",
+        "name": "nullsub_525",
+        "module": "register_allocation",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13e7470",
+        "name": "nullsub_526",
+        "module": "register_allocation",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x13fa7a0",
+        "name": "nullsub_529",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1422820",
+        "name": "nullsub_533",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1422830",
+        "name": "nullsub_534",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1422840",
+        "name": "nullsub_535",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x14368f0",
+        "name": "nullsub_536",
+        "module": "register_allocation",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1436900",
+        "name": "nullsub_537",
+        "module": "register_allocation",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x14a0830",
+        "name": "nullsub_541",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x14d1300",
+        "name": "j_atan2",
+        "module": "optimization_framework",
+        "confidence_score": 0.787504,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.3,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.185,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1027a60",
+        "name": "sub_1027A60",
+        "module": "ptx_emission",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1038140",
+        "name": "sub_1038140",
+        "module": "error_handling",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1041420",
+        "name": "sub_1041420",
+        "module": "error_handling",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1047d40",
+        "name": "sub_1047D40",
+        "module": "error_handling",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1048ac0",
+        "name": "sub_1048AC0",
+        "module": "ptx_emission",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1049b00",
+        "name": "sub_1049B00",
+        "module": "ptx_emission",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x106ebf0",
+        "name": "sub_106EBF0",
+        "module": "ptx_emission",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x10e0110",
+        "name": "sub_10E0110",
+        "module": "ptx_emission",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x11fd130",
+        "name": "sub_11FD130",
+        "module": "ptx_emission",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x121a490",
+        "name": "sub_121A490",
+        "module": "error_handling",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x121e800",
+        "name": "sub_121E800",
+        "module": "ptx_emission",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x122fe20",
+        "name": "sub_122FE20",
+        "module": "architecture_detection",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12308c0",
+        "name": "sub_12308C0",
+        "module": "instruction_selection",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1230940",
+        "name": "sub_1230940",
+        "module": "instruction_selection",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1230c60",
+        "name": "sub_1230C60",
+        "module": "instruction_selection",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12324e0",
+        "name": "sub_12324E0",
+        "module": "architecture_detection",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1234740",
+        "name": "sub_1234740",
+        "module": "instruction_selection",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1237990",
+        "name": "sub_1237990",
+        "module": "instruction_selection",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x125c330",
+        "name": "sub_125C330",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x125c350",
+        "name": "sub_125C350",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x125d200",
+        "name": "sub_125D200",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1262860",
+        "name": "sub_1262860",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12631a0",
+        "name": "sub_12631A0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12631b0",
+        "name": "sub_12631B0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12631c0",
+        "name": "sub_12631C0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1263280",
+        "name": "sub_1263280",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12636e0",
+        "name": "sub_12636E0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1263bc0",
+        "name": "sub_1263BC0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1264230",
+        "name": "sub_1264230",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12642a0",
+        "name": "sub_12642A0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1265320",
+        "name": "sub_1265320",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1265340",
+        "name": "sub_1265340",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12658e0",
+        "name": "sub_12658E0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1267cc0",
+        "name": "sub_1267CC0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1268040",
+        "name": "sub_1268040",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12681d0",
+        "name": "sub_12681D0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1268200",
+        "name": "sub_1268200",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x1268270",
+        "name": "sub_1268270",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12aa070",
+        "name": "sub_12AA070",
+        "module": "error_handling",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12b9980",
+        "name": "sub_12B9980",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12b9a40",
+        "name": "sub_12B9A40",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12b9a50",
+        "name": "sub_12B9A50",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12b9ab0",
+        "name": "sub_12B9AB0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12b9c00",
+        "name": "sub_12B9C00",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12bc0e0",
+        "name": "sub_12BC0E0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12bc0f0",
+        "name": "sub_12BC0F0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12bc5e0",
+        "name": "sub_12BC5E0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12bc650",
+        "name": "sub_12BC650",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12bc8b0",
+        "name": "sub_12BC8B0",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      },
+      {
+        "addr": "0x12bcb00",
+        "name": "sub_12BCB00",
+        "module": "compilation_pipeline",
+        "confidence_score": 0.6011200000000001,
+        "confidence_factors": {
+          "string_evidence": 0.1,
+          "string_count": 0,
+          "call_proximity": 0.3,
+          "naming_pattern": 0.1,
+          "size_frequency_alignment": 0.2,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.165,
+        "confidence_tier": "SILVER (50-80%)"
+      }
+    ],
+    "description": "Sample of high confidence functions across modules"
+  },
+  "low_confidence_functions": {
+    "low_tier_sample_100": [
+      {
+        "addr": "0x1027510",
+        "name": "sub_1027510",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1027710",
+        "name": "sub_1027710",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1027750",
+        "name": "sub_1027750",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1027b90",
+        "name": "sub_1027B90",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10294b0",
+        "name": "sub_10294B0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1038970",
+        "name": "nullsub_386",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1038a20",
+        "name": "sub_1038A20",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103a990",
+        "name": "nullsub_387",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103a9a0",
+        "name": "nullsub_388",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103a9b0",
+        "name": "nullsub_389",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103aa70",
+        "name": "sub_103AA70",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103aad0",
+        "name": "sub_103AAD0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1045fb0",
+        "name": "sub_1045FB0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1046080",
+        "name": "sub_1046080",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10460a0",
+        "name": "sub_10460A0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1046840",
+        "name": "sub_1046840",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1046870",
+        "name": "sub_1046870",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1048a80",
+        "name": "sub_1048A80",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x104bf40",
+        "name": "nullsub_391",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x104bfe0",
+        "name": "sub_104BFE0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x104c440",
+        "name": "sub_104C440",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1055d50",
+        "name": "sub_1055D50",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10569d0",
+        "name": "sub_10569D0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060890",
+        "name": "sub_1060890",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10608b0",
+        "name": "sub_10608B0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060900",
+        "name": "sub_1060900",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060950",
+        "name": "sub_1060950",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10609a0",
+        "name": "sub_10609A0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10609f0",
+        "name": "sub_10609F0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060a40",
+        "name": "sub_1060A40",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060bd0",
+        "name": "sub_1060BD0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060c20",
+        "name": "sub_1060C20",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060c70",
+        "name": "sub_1060C70",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060cc0",
+        "name": "sub_1060CC0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1061290",
+        "name": "nullsub_393",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1067ea0",
+        "name": "sub_1067EA0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1067eb0",
+        "name": "sub_1067EB0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e220",
+        "name": "nullsub_394",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2a0",
+        "name": "sub_106E2A0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2c0",
+        "name": "sub_106E2C0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2e0",
+        "name": "sub_106E2E0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2f0",
+        "name": "sub_106E2F0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e310",
+        "name": "sub_106E310",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e330",
+        "name": "sub_106E330",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e3b0",
+        "name": "sub_106E3B0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e420",
+        "name": "sub_106E420",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e440",
+        "name": "sub_106E440",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e600",
+        "name": "sub_106E600",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106f690",
+        "name": "nullsub_396",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106fde0",
+        "name": "sub_106FDE0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1027510",
+        "name": "sub_1027510",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1027710",
+        "name": "sub_1027710",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1027750",
+        "name": "sub_1027750",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1027b90",
+        "name": "sub_1027B90",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10294b0",
+        "name": "sub_10294B0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1038970",
+        "name": "nullsub_386",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1038a20",
+        "name": "sub_1038A20",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103a990",
+        "name": "nullsub_387",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103a9a0",
+        "name": "nullsub_388",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103a9b0",
+        "name": "nullsub_389",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103aa70",
+        "name": "sub_103AA70",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x103aad0",
+        "name": "sub_103AAD0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1045fb0",
+        "name": "sub_1045FB0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1046080",
+        "name": "sub_1046080",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10460a0",
+        "name": "sub_10460A0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1046840",
+        "name": "sub_1046840",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1046870",
+        "name": "sub_1046870",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1048a80",
+        "name": "sub_1048A80",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x104bf40",
+        "name": "nullsub_391",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x104bfe0",
+        "name": "sub_104BFE0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x104c440",
+        "name": "sub_104C440",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1055d50",
+        "name": "sub_1055D50",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10569d0",
+        "name": "sub_10569D0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060890",
+        "name": "sub_1060890",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10608b0",
+        "name": "sub_10608B0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060900",
+        "name": "sub_1060900",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060950",
+        "name": "sub_1060950",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10609a0",
+        "name": "sub_10609A0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x10609f0",
+        "name": "sub_10609F0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060a40",
+        "name": "sub_1060A40",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060bd0",
+        "name": "sub_1060BD0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060c20",
+        "name": "sub_1060C20",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060c70",
+        "name": "sub_1060C70",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1060cc0",
+        "name": "sub_1060CC0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1061290",
+        "name": "nullsub_393",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1067ea0",
+        "name": "sub_1067EA0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x1067eb0",
+        "name": "sub_1067EB0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e220",
+        "name": "nullsub_394",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2a0",
+        "name": "sub_106E2A0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2c0",
+        "name": "sub_106E2C0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2e0",
+        "name": "sub_106E2E0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e2f0",
+        "name": "sub_106E2F0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e310",
+        "name": "sub_106E310",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e330",
+        "name": "sub_106E330",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e3b0",
+        "name": "sub_106E3B0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e420",
+        "name": "sub_106E420",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e440",
+        "name": "sub_106E440",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106e600",
+        "name": "sub_106E600",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106f690",
+        "name": "nullsub_396",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      },
+      {
+        "addr": "0x106fde0",
+        "name": "sub_106FDE0",
+        "module": "unknown",
+        "confidence_score": 0.05,
+        "confidence_factors": {
+          "string_evidence": 0.0,
+          "string_count": 0,
+          "call_proximity": 0.0,
+          "naming_pattern": 0.0,
+          "size_frequency_alignment": 0.0,
+          "cluster_density": 0.0
+        },
+        "old_confidence_score": 0.0,
+        "confidence_tier": "LOW (<20%)"
+      }
+    ],
+    "unclassified_module_count": 7581,
+    "description": "Sample of low confidence functions primarily in unknown module"
+  },
+  "reverse_engineering_confidence_levels": {
+    "CONFIRMED": {
+      "definition": "Validated through multiple independent methods",
+      "examples": [
+        "stdlib function signatures (compared to known APIs)",
+        "String-based function identification with validation",
+        "Caller count corrections (validated against callgraph)"
+      ],
+      "count": 150,
+      "percentage": "0.19%"
+    },
+    "HIGH": {
+      "definition": "Strong evidence from 2+ sources",
+      "examples": [
+        "Functions with unique identifying strings + correct call patterns",
+        "Modules with high cohesion + clear boundaries",
+        "Algorithms with characteristic patterns (graph coloring signs)"
+      ],
+      "count": 2500,
+      "percentage": "3.1%"
+    },
+    "MEDIUM": {
+      "definition": "Single strong evidence source or multiple weak sources",
+      "examples": [
+        "Functions clustered by call patterns",
+        "String-based classification",
+        "Size-based algorithm inference"
+      ],
+      "count": 15000,
+      "percentage": "18.6%"
+    },
+    "LOW": {
+      "definition": "Weak evidence or speculation",
+      "examples": [
+        "Functions classified only by module proximity",
+        "Algorithm guesses based on size alone",
+        "Hypothetical data structure layouts"
+      ],
+      "count": 25000,
+      "percentage": "31.0%"
+    },
+    "UNKNOWN": {
+      "definition": "No evidence, pure speculation",
+      "count": 37912,
+      "percentage": "47.1%"
+    }
+  },
+  "re_evidence_types": {
+    "string_references": {
+      "strength": "HIGH when unique, MEDIUM when common",
+      "limitations": "Only 3-4% of functions have useful strings",
+      "validation": "Cross-check with call patterns"
+    },
+    "call_patterns": {
+      "strength": "MEDIUM to HIGH",
+      "limitations": "Can be ambiguous",
+      "validation": "Verify with decompilation"
+    },
+    "code_size": {
+      "strength": "LOW",
+      "limitations": "Very indirect indicator",
+      "validation": "Must combine with other evidence"
+    },
+    "decompilation": {
+      "strength": "VERY HIGH",
+      "limitations": "Time-intensive, only done for critical functions",
+      "validation": "Multiple decompiler cross-check"
+    },
+    "dynamic_analysis": {
+      "strength": "CONFIRMED when successful",
+      "limitations": "Requires execution environment setup",
+      "validation": "Trace multiple executions"
+    }
+  },
+  "re_validated_findings": {
+    "module_taxonomy": {
+      "confidence": "HIGH",
+      "evidence": [
+        "Cohesion analysis",
+        "String references",
+        "Call patterns"
+      ],
+      "validation": "91% wiki agreement on analyzed functions",
+      "limitations": "9.4% still unknown"
+    },
+    "caller_counts": {
+      "confidence": "CONFIRMED",
+      "evidence": [
+        "Ground truth callgraph with 749K edges"
+      ],
+      "validation": "100% accuracy after correction",
+      "limitations": "None"
+    },
+    "register_allocation_hypothesis": {
+      "confidence": "MEDIUM",
+      "evidence": [
+        "Graph operation patterns",
+        "Large function sizes"
+      ],
+      "validation": "Not yet validated",
+      "next_step": "Decompile top 5 functions"
+    }
+  },
+  "re_confidence_improvement_roadmap": {
+    "short_term": {
+      "action": "Decompile top 100 critical functions",
+      "expected_gain": "150 functions CONFIRMED \u2192 HIGH",
+      "effort": "80 hours"
+    },
+    "medium_term": {
+      "action": "Dynamic tracing of compilation pipeline",
+      "expected_gain": "Pipeline understanding: MEDIUM \u2192 CONFIRMED",
+      "effort": "120 hours"
+    },
+    "long_term": {
+      "action": "Systematic decompilation of all modules",
+      "expected_gain": "Overall confidence: 38% \u2192 75%",
+      "effort": "800+ hours"
+    }
+  }
+}

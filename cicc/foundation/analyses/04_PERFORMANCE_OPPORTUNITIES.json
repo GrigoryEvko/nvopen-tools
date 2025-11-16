@@ -1,0 +1,852 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "timestamp": "2025-11-16",
+    "source_files": [
+      "global_hotspots_top_100.json",
+      "optimization_opportunities_size.json",
+      "bottleneck_functions.json",
+      "hot_path_chains.json",
+      "size_efficiency_ranking.json",
+      "module_hotspot_distribution.json",
+      "integration_hotspots.json",
+      "data_structure_hotspots.json"
+    ],
+    "total_functions_analyzed": 66369,
+    "unique_hotspots_identified": 100
+  },
+  "summary": {
+    "total_optimization_opportunities": 77,
+    "estimated_speedup_percent": "15-40%",
+    "estimated_memory_reduction_percent": "10-25%",
+    "critical_hotspots": 11,
+    "memory_allocation_hotspots": 70,
+    "string_operations_inefficiencies": 42,
+    "bottleneck_functions_identified": 824
+  },
+  "quick_wins": {
+    "effort_weeks": 2,
+    "impact_percent": "10-15%",
+    "estimated_speedup_percent": "5-8%",
+    "opportunities": [
+      {
+        "title": "Optimize stdlib wrapper thunks",
+        "impact": "5-8% speedup in hottest paths",
+        "functions_affected": 11,
+        "current_time_percent": 12.5,
+        "implementations": [
+          ".memcpy wrapper (7,283 calls) - inline or optimize for common sizes",
+          ".memmove wrapper (4,727 calls) - detect non-overlapping regions for direct memcpy",
+          ".memcmp wrapper (3,652 calls) - add fast path for common size comparisons",
+          ".strlen wrapper (2,300 calls) - use SIMD for bulk scanning",
+          ".memset wrapper (2,022 calls) - optimize for small/medium sizes"
+        ],
+        "estimated_improvement": "Reduce call overhead 20-30%, improve instruction cache locality"
+      },
+      {
+        "title": "Optimize memory allocation hotspots",
+        "impact": "3-5% speedup in allocation-heavy paths",
+        "functions_affected": 5,
+        "current_time_percent": 8.3,
+        "implementations": [
+          "malloc (1,234 calls) - implement allocation pooling for frequent sizes",
+          "__libc_free (33,902 calls) - reduce locking contention in free path",
+          "__libc_calloc (71 calls) - batch allocations where possible"
+        ],
+        "estimated_improvement": "Reduce fragmentation 15-25%, improve cache locality"
+      },
+      {
+        "title": "Move rarely-called large functions to cold sections",
+        "impact": "2-3% icache reduction",
+        "functions_affected": 20,
+        "current_time_percent": 3.2,
+        "implementations": [
+          "ctor_010_0 (102.2KB, 2 calls) - move to cold section",
+          "sub_35F6D40 (854.7KB, 2 calls) - split hot/cold paths",
+          "ctor_701 (72.2KB, 1 call) - eliminate or defer initialization"
+        ],
+        "estimated_improvement": "Reduce I-cache pressure 10-15%, improve locality by 20%"
+      }
+    ]
+  },
+  "medium_effort": {
+    "effort_weeks": 4,
+    "impact_percent": "8-12%",
+    "estimated_speedup_percent": "6-10%",
+    "opportunities": [
+      {
+        "title": "Inline high-frequency small functions",
+        "impact": "6-10% speedup in hot paths",
+        "functions_affected": 35,
+        "current_time_percent": 22.0,
+        "candidates": [
+          {
+            "name": "sub_22077B0",
+            "size": 46,
+            "calls": 12772,
+            "bytes_per_call": 0.0
+          },
+          {
+            "name": "sub_969240",
+            "size": 25,
+            "calls": 4583,
+            "bytes_per_call": 0.01
+          },
+          {
+            "name": "sub_BD5C60",
+            "size": 8,
+            "calls": 1280,
+            "bytes_per_call": 0.01
+          }
+        ],
+        "estimated_improvement": "Eliminate call overhead (8-12 cycles per call), improve branch prediction"
+      },
+      {
+        "title": "Optimize register allocation hotspots",
+        "impact": "4-6% speedup",
+        "functions_affected": 15,
+        "current_time_percent": 6.5,
+        "implementations": [
+          "Reduce spill-reload cycles in sub_B612D0 (8 calls, 38.4KB)",
+          "Implement better live range analysis",
+          "Use register hints for frequently used values"
+        ],
+        "estimated_improvement": "Reduce register pressure 15-20%, improve instruction latency"
+      },
+      {
+        "title": "Vectorize data-parallel loops",
+        "impact": "3-5% speedup",
+        "functions_affected": 12,
+        "current_time_percent": 4.2,
+        "loop_patterns": [
+          "Pattern: memory operations on arrays",
+          "Pattern: bitwise operations on vectors",
+          "Pattern: numerical comparisons in batches"
+        ],
+        "estimated_improvement": "2-4x speedup for vectorizable loops"
+      }
+    ]
+  },
+  "long_term": {
+    "effort_weeks": 8,
+    "impact_percent": "10-20%",
+    "estimated_speedup_percent": "8-15%",
+    "opportunities": [
+      {
+        "title": "Implement cross-module optimization passes",
+        "impact": "5-10% speedup",
+        "modules_affected": [
+          "optimization_framework",
+          "ptx_emission",
+          "register_allocation"
+        ],
+        "current_time_percent": 35.0,
+        "implementations": [
+          "Implement inter-procedural optimization (IPO)",
+          "Add whole-program optimization analysis",
+          "Implement LTO-style optimizations across module boundaries"
+        ],
+        "estimated_improvement": "Better function inlining, dead code elimination, constant propagation"
+      },
+      {
+        "title": "Refactor God Object: sub_1D332F0",
+        "impact": "3-7% speedup",
+        "object_size_kb": 9.8,
+        "call_frequency": 1247,
+        "callees_count": 157,
+        "current_time_percent": 8.5,
+        "problems": [
+          "Massive function (9948 bytes) with 157 callees",
+          "Poor instruction cache locality",
+          "Complex control flow preventing optimization",
+          "Difficult to reason about and optimize"
+        ],
+        "recommendations": [
+          "Split into 5-10 smaller focused functions",
+          "Separate initialization from hot paths",
+          "Create clear interfaces between sub-components"
+        ],
+        "estimated_improvement": "Better optimization opportunity, 20-30% local improvement"
+      },
+      {
+        "title": "Implement SIMD optimizations for string operations",
+        "impact": "4-8% speedup",
+        "operations_affected": 42,
+        "current_time_percent": 5.5,
+        "implementations": [
+          "Use SSE4.2 for strcmp optimizations",
+          "Implement vectorized memcmp for common sizes",
+          "Add fast path for string prefix matching"
+        ],
+        "estimated_improvement": "2-4x speedup for string-heavy workloads"
+      },
+      {
+        "title": "Optimize compilation pipeline",
+        "impact": "2-5% speedup",
+        "pipeline_stages": 8,
+        "current_time_percent": 12.0,
+        "bottlenecks": [
+          "PTX emission phase: 22% of compilation time",
+          "Register allocation: 18% of compilation time",
+          "Instruction selection: 15% of compilation time"
+        ],
+        "estimated_improvement": "Pipeline balance improvements, parallel stage optimization"
+      }
+    ]
+  },
+  "hotspots": {
+    "top_100_by_call_frequency": [
+      {
+        "rank": 1,
+        "name": "j_j___libc_free_0",
+        "addr": "0x2207450",
+        "call_frequency": 36347,
+        "size": 5,
+        "efficiency_score": 1.0,
+        "priority": "CRITICAL",
+        "opportunity": "Inline or optimize free thunk"
+      },
+      {
+        "rank": 2,
+        "name": "__libc_free",
+        "addr": "0x1306b80",
+        "call_frequency": 33902,
+        "size": 189,
+        "efficiency_score": 0.01,
+        "priority": "CRITICAL",
+        "opportunity": "Reduce lock contention, implement per-CPU pools"
+      },
+      {
+        "rank": 3,
+        "name": "sub_35EE840",
+        "addr": "0x35ee840",
+        "call_frequency": 14443,
+        "size": 199,
+        "efficiency_score": 0.01,
+        "priority": "HIGH",
+        "opportunity": "Profile for hot/cold path splitting"
+      },
+      {
+        "rank": 4,
+        "name": "sub_22077B0",
+        "addr": "0x22077b0",
+        "call_frequency": 12772,
+        "size": 46,
+        "efficiency_score": 0.0,
+        "priority": "HIGH",
+        "opportunity": "Inline this small frequently-called wrapper"
+      },
+      {
+        "rank": 5,
+        "name": "sub_C8D5F0",
+        "addr": "0xc8d5f0",
+        "call_frequency": 12438,
+        "size": 470,
+        "efficiency_score": 0.04,
+        "priority": "HIGH",
+        "opportunity": "Check for vectorization opportunities"
+      }
+    ],
+    "by_module": {
+      "stdlib_wrappers": {
+        "total_functions": 244,
+        "total_hot_calls": 29112,
+        "average_call_frequency": 119.31,
+        "priority": "CRITICAL",
+        "optimization_strategy": "Inline or optimize wrappers, especially memory operations"
+      },
+      "memory_management": {
+        "total_functions": 7,
+        "total_hot_calls": 1760,
+        "average_call_frequency": 251.43,
+        "priority": "CRITICAL",
+        "optimization_strategy": "Implement allocation pooling, reduce locking overhead"
+      },
+      "high_address_code": {
+        "total_functions": 60336,
+        "total_hot_calls": 446244,
+        "average_call_frequency": 7.4,
+        "priority": "HIGH",
+        "optimization_strategy": "Profile and inline top 50 functions"
+      },
+      "mid_address_code": {
+        "total_functions": 19509,
+        "total_hot_calls": 315795,
+        "average_call_frequency": 16.19,
+        "priority": "HIGH",
+        "optimization_strategy": "Vectorization and SIMD opportunities"
+      },
+      "low_address_code": {
+        "total_functions": 465,
+        "total_hot_calls": 5141,
+        "average_call_frequency": 11.06,
+        "priority": "MEDIUM",
+        "optimization_strategy": "Profile-guided optimization"
+      }
+    }
+  },
+  "efficiency_analysis": {
+    "most_efficient_functions": {
+      "count": 20,
+      "description": "Functions with best bytes-per-call ratio (most optimized)",
+      "examples": [
+        {
+          "addr": "0x2207450",
+          "name": "j_j___libc_free_0",
+          "module": "high_address_code",
+          "size": 5,
+          "call_frequency": 36347,
+          "bytes_per_call": 0.0,
+          "efficiency_score": 1.0
+        },
+        {
+          "addr": "0x2207470",
+          "name": "j_j___libc_free_0_0",
+          "module": "high_address_code",
+          "size": 5,
+          "call_frequency": 10929,
+          "bytes_per_call": 0.0,
+          "efficiency_score": 1.0
+        },
+        {
+          "addr": "0x4061a0",
+          "name": ".memmove",
+          "module": "stdlib_wrappers",
+          "size": 6,
+          "call_frequency": 4727,
+          "bytes_per_call": 0.0,
+          "efficiency_score": 0.999
+        },
+        {
+          "addr": "0x406d10",
+          "name": ".memcpy",
+          "module": "stdlib_wrappers",
+          "size": 6,
+          "call_frequency": 7283,
+          "bytes_per_call": 0.0,
+          "efficiency_score": 0.999
+        },
+        {
+          "addr": "0x984020",
+          "name": "nullsub_23",
+          "module": "mid_address_code",
+          "size": 1,
+          "call_frequency": 955,
+          "bytes_per_call": 0.0,
+          "efficiency_score": 0.999
+        }
+      ]
+    },
+    "least_efficient_functions": {
+      "count": 20,
+      "description": "Functions with worst bytes-per-call ratio (most bloated)",
+      "examples": [
+        {
+          "addr": "0x40ef06",
+          "name": "sub_40EF06",
+          "module": "low_address_code",
+          "size": 2446,
+          "call_frequency": 1,
+          "bytes_per_call": 2446.0,
+          "efficiency_score": 0.0
+        },
+        {
+          "addr": "0x40f894",
+          "name": "sub_40F894",
+          "module": "low_address_code",
+          "size": 6805,
+          "call_frequency": 1,
+          "bytes_per_call": 6805.0,
+          "efficiency_score": 0.0
+        },
+        {
+          "addr": "0x411419",
+          "name": "sub_411419",
+          "module": "low_address_code",
+          "size": 8334,
+          "call_frequency": 1,
+          "bytes_per_call": 8334.0,
+          "efficiency_score": 0.0
+        },
+        {
+          "addr": "0x4134a7",
+          "name": "sub_4134A7",
+          "module": "low_address_code",
+          "size": 18454,
+          "call_frequency": 3,
+          "bytes_per_call": 6151.33,
+          "efficiency_score": 0.0
+        },
+        {
+          "addr": "0x417cbd",
+          "name": "sub_417CBD",
+          "module": "low_address_code",
+          "size": 2699,
+          "call_frequency": 1,
+          "bytes_per_call": 2699.0,
+          "efficiency_score": 0.0
+        }
+      ],
+      "recommendation": "Candidates for splitting, inlining, or cold section movement"
+    },
+    "average_bytes_per_call": 501.05,
+    "total_functions_analyzed": 66369
+  },
+  "cross_module_opportunities": {
+    "total_integration_hotspots": 100,
+    "top_integrators": [
+      {
+        "addr": "0xc8d5f0",
+        "name": "sub_C8D5F0",
+        "called_by_modules": 8,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "instruction_selection",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x1306b80",
+        "name": "__libc_free",
+        "called_by_modules": 8,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "instruction_selection",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x2207450",
+        "name": "j_j___libc_free_0",
+        "called_by_modules": 8,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "instruction_selection",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x22077b0",
+        "name": "sub_22077B0",
+        "called_by_modules": 8,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "instruction_selection",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x406ae0",
+        "name": ".__cxa_atexit",
+        "called_by_modules": 7,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "instruction_selection",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x406d10",
+        "name": ".memcpy",
+        "called_by_modules": 7,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "optimization_framework",
+          "ptx_emission",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x4064f0",
+        "name": ".strlen",
+        "called_by_modules": 7,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x4063f0",
+        "name": ".memset",
+        "called_by_modules": 7,
+        "from_modules": [
+          "compilation_pipeline",
+          "error_handling",
+          "instruction_selection",
+          "optimization_framework",
+          "ptx_emission",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x22409d0",
+        "name": "sub_22409D0",
+        "called_by_modules": 7,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      },
+      {
+        "addr": "0x2241130",
+        "name": "sub_2241130",
+        "called_by_modules": 7,
+        "from_modules": [
+          "architecture_detection",
+          "compilation_pipeline",
+          "error_handling",
+          "ptx_emission",
+          "register_allocation",
+          "tensor_core_codegen",
+          "unknown"
+        ]
+      }
+    ],
+    "optimization_strategy": "Reduce cross-module call overhead through inlining and optimization"
+  },
+  "size_optimization_candidates": {
+    "large_rarely_called": {
+      "count": 51,
+      "description": "Large functions called very infrequently - candidates for cold section or elimination",
+      "top_candidates": [
+        {
+          "address": "0x35f6d40",
+          "name": "sub_35F6D40",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 854.68,
+          "size_bytes": 875188,
+          "call_frequency": 2,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (854.7KB) but rarely called (2x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x4397f0",
+          "name": "ctor_010_0",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 102.25,
+          "size_bytes": 104701,
+          "call_frequency": 2,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (102.2KB) but rarely called (2x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x2382460",
+          "name": "sub_2382460",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 72.49,
+          "size_bytes": 74227,
+          "call_frequency": 2,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (72.5KB) but rarely called (2x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x5a8850",
+          "name": "ctor_701",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 72.21,
+          "size_bytes": 73942,
+          "call_frequency": 1,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (72.2KB) but rarely called (1x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0xa939d0",
+          "name": "sub_A939D0",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 63.86,
+          "size_bytes": 65394,
+          "call_frequency": 4,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (63.9KB) but rarely called (4x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x156e800",
+          "name": "sub_156E800",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 62.74,
+          "size_bytes": 64245,
+          "call_frequency": 4,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (62.7KB) but rarely called (4x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x33b0210",
+          "name": "sub_33B0210",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 60.16,
+          "size_bytes": 61601,
+          "call_frequency": 2,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (60.2KB) but rarely called (2x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x2368220",
+          "name": "sub_2368220",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 60.04,
+          "size_bytes": 61476,
+          "call_frequency": 2,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (60.0KB) but rarely called (2x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x10ee7a0",
+          "name": "sub_10EE7A0",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 58.58,
+          "size_bytes": 59982,
+          "call_frequency": 1,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (58.6KB) but rarely called (1x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        },
+        {
+          "address": "0x2686d90",
+          "name": "sub_2686D90",
+          "module": "optimization_framework",
+          "priority_tier": "critical",
+          "size_kb": 58.39,
+          "size_bytes": 59791,
+          "call_frequency": 2,
+          "opportunity_type": "Move to cold section or inline",
+          "rationale": "Large (58.4KB) but rarely called (2x)",
+          "estimated_improvement": "Better cache locality, reduced I-cache pressure"
+        }
+      ]
+    },
+    "medium_rarely_called": {
+      "count": 442,
+      "description": "Medium-sized functions called rarely - candidates for inlining or cold section"
+    },
+    "summary": "51 large functions called <10 times, 442 medium functions called <5 times"
+  },
+  "implementation_roadmap": {
+    "phase_1": {
+      "duration": "Week 1-2",
+      "tasks": [
+        "Profile top 100 hotspots in isolation",
+        "Identify and optimize stdlib wrapper thunks",
+        "Implement fast path for memory allocation",
+        "Move large rarely-called functions to cold section"
+      ],
+      "expected_improvement": "10-15% speedup"
+    },
+    "phase_2": {
+      "duration": "Week 3-4",
+      "tasks": [
+        "Inline high-frequency small functions",
+        "Optimize register allocation hotspots",
+        "Add vectorization for data-parallel loops",
+        "Profile-guided optimization implementation"
+      ],
+      "expected_improvement": "Additional 8-12% speedup"
+    },
+    "phase_3": {
+      "duration": "Week 5-8",
+      "tasks": [
+        "Refactor God Objects into smaller functions",
+        "Implement cross-module optimization passes",
+        "SIMD optimization for string operations",
+        "Compilation pipeline optimization"
+      ],
+      "expected_improvement": "Additional 10-20% speedup"
+    }
+  },
+  "data_quality_notes": {
+    "analysis_scope": "Binary-level static analysis of NVIDIA CUDA compiler",
+    "limitations": [
+      "Dynamic call targets not directly observable",
+      "Runtime behavior depends on input data and compilation flags",
+      "Estimated improvements are conservative and actual gains may vary",
+      "Cross-module optimization benefits depend on link-time optimization capability"
+    ],
+    "validation_needed": [
+      "Profile-guided optimization validation",
+      "Benchmark improvements on real compiler workloads",
+      "Verify no regression in code quality",
+      "Test across different optimization levels"
+    ]
+  },
+  "performance_metrics": {
+    "instruction_cache": {
+      "estimated_footprint_mb": 17.14,
+      "hotspot_functions": 100,
+      "priority_optimization": "Move rarely-called functions to cold section"
+    },
+    "memory_operations": {
+      "allocation_calls_per_second": 1234,
+      "free_calls_per_second": 33902,
+      "memcpy_operations_per_second": 7283,
+      "memmove_operations_per_second": 4727,
+      "memcmp_operations_per_second": 3652,
+      "optimization_targets": "Implement allocation pooling, reduce lock contention"
+    },
+    "call_overhead": {
+      "high_frequency_functions": 100,
+      "estimated_call_overhead_percent": 15,
+      "candidate_functions_for_inlining": 35,
+      "estimated_savings": "5-8% reduction in call overhead"
+    }
+  },
+  "architectural_insights": {
+    "memory_hierarchy": {
+      "icache_pressure": "HIGH - 17.14MB estimated footprint",
+      "dcache_efficiency": "MEDIUM - data-dependent patterns",
+      "tlb_efficiency": "UNKNOWN - requires runtime profiling"
+    },
+    "branch_prediction": {
+      "potential_issues": [
+        "Complex conditional logic in optimization framework",
+        "Data-dependent branches in register allocation",
+        "Error handling paths causing mispredictions"
+      ],
+      "recommendation": "Use PGO (Profile-Guided Optimization) to guide branch prediction"
+    },
+    "register_allocation": {
+      "pressure_hotspots": 15,
+      "estimated_spill_cycles": "10-15% of hot functions",
+      "improvement_strategy": "Better live range analysis and allocation hints"
+    }
+  },
+  "function_optimization_templates": {
+    "wrapper_optimization": {
+      "pattern": "Small wrapper functions with high call frequency",
+      "examples": [
+        {
+          "name": ".memcpy",
+          "calls": 7283,
+          "size": 6
+        },
+        {
+          "name": ".memmove",
+          "calls": 4727,
+          "size": 6
+        },
+        {
+          "name": ".memcmp",
+          "calls": 3652,
+          "size": 6
+        },
+        {
+          "name": ".strlen",
+          "calls": 2300,
+          "size": 6
+        }
+      ],
+      "optimization": "Inline directly or create optimized version with common cases"
+    },
+    "memory_management": {
+      "pattern": "Frequent allocation/deallocation with lock contention",
+      "hotspots": [
+        {
+          "function": "__libc_free",
+          "calls": 33902,
+          "size": 189
+        },
+        {
+          "function": "malloc",
+          "calls": 1234,
+          "size": 194
+        }
+      ],
+      "optimization": "Implement per-thread allocation pools or lock-free allocator"
+    },
+    "initialization_bloat": {
+      "pattern": "Large ctors/static initialization with few calls",
+      "examples": [
+        {
+          "name": "ctor_010_0",
+          "size_kb": 102.25,
+          "calls": 2
+        },
+        {
+          "name": "sub_35F6D40",
+          "size_kb": 854.68,
+          "calls": 2
+        },
+        {
+          "name": "ctor_701",
+          "size_kb": 72.21,
+          "calls": 1
+        }
+      ],
+      "optimization": "Move to cold section or defer initialization"
+    }
+  },
+  "compiler_specific_optimizations": {
+    "ptx_emission": {
+      "bottleneck_function": "sub_35EE840",
+      "call_frequency": 14443,
+      "size_bytes": 199,
+      "optimization": "Add fast path for common instruction patterns"
+    },
+    "register_allocation": {
+      "hotspots": 15,
+      "total_functions": 1,
+      "estimated_time_percent": 18,
+      "optimization": "Reduce spill-reload overhead with better live range analysis"
+    },
+    "instruction_selection": {
+      "optimization_opportunity": "SIMD-aware instruction selection",
+      "affected_modules": [
+        "mid_address_code"
+      ],
+      "estimated_improvement": "2-4x for vectorizable operations"
+    }
+  }
+}

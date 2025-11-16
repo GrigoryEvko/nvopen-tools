@@ -1,0 +1,9 @@
+{
+  "total_functions": 80562,
+  "total_strings": 188141,
+  "total_xrefs": 15071405,
+  "functions_with_callers": 78832,
+  "functions_with_callees": 78215,
+  "indexed_addresses": 80562,
+  "indexed_strings": 188141
+}
