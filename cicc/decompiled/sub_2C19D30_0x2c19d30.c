@@ -1,8 +1,0 @@
-// Function: sub_2C19D30
-// Address: 0x2c19d30
-//
-void __fastcall sub_2C19D30(__int64 a1)
-{
-  sub_2C17120(a1 - 40);
-  j_j___libc_free_0(a1 - 40);
-}
