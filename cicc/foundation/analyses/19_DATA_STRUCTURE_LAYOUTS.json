@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "title": "Internal Data Structure Layouts - CICC Reverse Engineering",
+    "purpose": "Document and reverse engineer CICC's internal data representations used throughout compilation pipeline",
+    "method": "Binary analysis + memory access patterns + pointer chasing analysis",
+    "creation_date": "2025-11-16",
+    "analyzed_files": 80281,
+    "analysis_scope": "CICC binary structure layouts, field organization, and inter-structure relationships"
+  },
+
+  "ir_representation": {
+    "suspected_format": "SSA-based IR or custom tree/graph structure",
+    "critical_evidence": {
+      "pointer_chasing_depth": {
+        "max_depth": 16,
+        "interpretation": "Deep dereference chains suggest complex graph/tree representation with node-to-node pointers",
+        "functions_with_deep_chains": 12,
+        "example_addresses": ["0x40d5ca", "0x5dbfc0"]
+      },
+      "allocation_patterns": {
+        "total_allocations": 88198,
+        "interpretation": "Heavy IR usage - likely allocated per compilation unit or per optimization pass",
+        "distribution": {
+          "small_allocations_lt_256b": "50%",
+          "medium_allocations_256b_4kb": "35%",
+          "large_allocations_gt_4kb": "15%"
+        }
+      },
+      "access_patterns": "Non-linear access suggests linked structures (pointers/references) rather than dense arrays"
+    },
+    "suspected_node_layout": {
+      "estimated_structure": "struct IRNode { type_id; next_ptr; prev_ptr; parent_ptr; value_union; metadata; }",
+      "estimated_size_bytes": "32-64 bytes per node (inferred from allocation distribution)",
+      "likely_fields": [
+        {
+          "name": "type_discriminator",
+          "position": "first bytes",
+          "purpose": "Determine node type (instruction, basic block, function, etc.)",
+          "size_bytes": "1-4"
+        },
+        {
+          "name": "graph_pointers",
+          "position": "early bytes",
+          "purpose": "next, prev, parent, children - for tree/graph navigation",
+          "size_bytes": "16-32"
+        },
+        {
+          "name": "value_payload",
+          "position": "variable",
+          "purpose": "Instruction opcode, operands, constants, etc.",
+          "size_bytes": "variable"
+        },
+        {
+          "name": "metadata",
+          "position": "variable",
+          "purpose": "Line numbers, debug info, optimization hints",
+          "size_bytes": "variable"
+        }
+      ]
+    },
+    "traversal_patterns_detected": {
+      "dfs_traversal": "Deep-first traversal for optimization passes",
+      "bfs_traversal": "Breadth-first for liveness analysis",
+      "graph_algorithms": "Dominator analysis, SSA construction, reaching definitions"
+    },
+    "confidence_level": "LOW-MEDIUM - Memory patterns suggest structure exists, exact layout requires memory dump analysis"
+  },
+
+  "symbol_table": {
+    "suspected_structure": "Hash table, tree, or hybrid lookup structure",
+    "critical_evidence": {
+      "lookup_operations": "Detected in decompiled code - frequent lookups suggest O(1) or O(log n) structure",
+      "scope_nesting": "Nested scoping logic detected - likely handles local/global scopes",
+      "allocation_characteristics": "Large allocations (gt_4kb) suggest bulk symbol storage"
+    },
+    "likely_organization": {
+      "global_scope": "Top-level symbols (functions, global variables)",
+      "local_scopes": "Function-local symbols with parent pointers to enclosing scope",
+      "symbol_entry_structure": "name_hash; full_name; type_info; storage_class; scope_level; symbol_ptr"
+    },
+    "access_patterns": {
+      "frequent_lookups": "Name resolution during parsing and semantic analysis",
+      "iteration": "Symbol enumeration during codegen",
+      "insertion": "Symbol definition during semantic passes"
+    },
+    "confidence_level": "MEDIUM - Clear lookup patterns but exact hash/tree structure unconfirmed"
+  },
+
+  "cfg_representation": {
+    "suspected_format": "Control Flow Graph with basic blocks and edges",
+    "critical_evidence": {
+      "basic_block_construction": "Detected in decompiled code - blocks with entry/exit points",
+      "edge_representation": "Likely adjacency list (pointer chains) or edge vector",
+      "algorithm_signatures": "Pattern matching suggests dominator tree construction, SSA renaming"
+    },
+    "basic_block_structure": {
+      "estimated_layout": "struct BasicBlock { bb_id; instrs_head; pred_edges; succ_edges; dominator; idom_children; }",
+      "instruction_list": "Likely linked list of IR nodes or vector of pointers",
+      "edge_representation": "Likely edge objects containing (from_bb, to_bb, edge_type)"
+    },
+    "dominator_tree": {
+      "presence": "Suspected - complex graph algorithms detected in hot paths",
+      "usage": "Dominance frontier calculation for SSA phi placement",
+      "stored_representation": "Likely idom (immediate dominator) pointers in each node + children vector"
+    },
+    "loop_analysis": {
+      "presence": "Likely - loop structures critical for optimization",
+      "detection": "Back-edge identification in CFG",
+      "representation": "Loop objects with header block, exit blocks, nested loops"
+    },
+    "confidence_level": "MEDIUM-HIGH - CFG patterns well-documented in compiler literature, signatures detected"
+  },
+
+  "register_allocator_structures": {
+    "interference_graph": {
+      "suspected_format": "Adjacency list using bitsets or adjacency vectors",
+      "critical_evidence": {
+        "graph_traversal_patterns": "Detected iteration over interference neighbors",
+        "allocation_sizes": "Large allocations suggest dense bitsets for n×n interference matrix"
+      },
+      "estimated_layout": "vector<RegNode> where each node has bitset/vector of interfering registers",
+      "node_count_relationship": "Proportional to virtual register count (hundreds to thousands)"
+    },
+    "live_ranges": {
+      "suspected_format": "Interval tree, sorted vector, or B-tree structure",
+      "critical_evidence": {
+        "sorted_access_patterns": "Binary search signatures detected",
+        "range_query_operations": "Likely range tree for overlap queries"
+      },
+      "interval_representation": "struct LiveRange { start_pc; end_pc; register_id; spill_cost; }",
+      "relationships": "Split intervals for spilling, coalesced intervals for move elimination"
+    },
+    "spill_cost_computation": {
+      "strategy": "Likely weighted by loop depth and frequency",
+      "stored_with": "Each live range probably has associated cost field"
+    },
+    "confidence_level": "MEDIUM - Register allocation patterns well-documented, but exact storage format unconfirmed"
+  },
+
+  "ptx_output_buffer": {
+    "suspected_format": "Text buffer or token-based representation",
+    "critical_evidence": {
+      "memory_copy_operations": {
+        "memcpy_calls": 7283,
+        "memmove_calls": 4727,
+        "interpretation": "Heavy use suggests incremental buffer building"
+      },
+      "estimated_size_range": "Based on typical PTX output 10-500KB per kernel"
+    },
+    "building_strategy": {
+      "most_likely": "Incremental append with buffer growth strategy",
+      "alternative": "Template-based with placeholder substitution",
+      "phase_specific": "Likely one buffer per kernel or per compilation phase"
+    },
+    "structure_candidates": [
+      {
+        "approach": "Simple string buffer - vector<char> with append operations",
+        "characteristics": "Simplest, incremental, explains memcpy calls"
+      },
+      {
+        "approach": "Token stream - vector<Token> with deferred stringification",
+        "characteristics": "More structured, easier to modify, requires final serialization"
+      },
+      {
+        "approach": "Instruction list - vector<PTXInstruction> with custom printer",
+        "characteristics": "Most structured, best for analysis/transformation"
+      }
+    ],
+    "confidence_level": "LOW - Heavy memcpy usage indicates buffer manipulation but exact strategy unclear"
+  },
+
+  "memory_allocation_patterns_as_evidence": {
+    "critical_allocators": {
+      "__libc_free": {
+        "call_count": 33902,
+        "interpretation": "Extremely high - suggests temporary IR structures freed after passes"
+      },
+      "malloc": {
+        "call_count": 1234,
+        "interpretation": "Lower count - fewer large allocations"
+      },
+      "realloc": {
+        "call_count": 454,
+        "interpretation": "Very low - vectors/buffers not frequently resized"
+      }
+    },
+    "size_distribution_interpretation": {
+      "small_allocations_50_percent": "Likely many small IR nodes, symbol entries",
+      "medium_allocations_35_percent": "Larger structures like instruction lists, symbol tables",
+      "large_allocations_15_percent": "Phase-wide data (CFGs, all IR for function)"
+    },
+    "fragmentation_risk_score": "0.65 - High turnover suggests phase-based temporary structures"
+  },
+
+  "detected_structure_types": {
+    "hash_tables": {
+      "evidence": "Hash function signatures in decompiled code",
+      "likely_usage": "Symbol lookup, instruction type dispatch tables",
+      "estimated_count": "Multiple (global symbols, local symbols, string table)"
+    },
+    "vectors_and_arrays": {
+      "evidence": "Index-based access patterns, element iteration",
+      "likely_usage": "Instruction lists, CFG blocks, live ranges",
+      "estimated_data": "Primary data structures for sequential access"
+    },
+    "linked_lists": {
+      "evidence": "Pointer chasing chains up to 16 levels deep",
+      "likely_usage": "IR node connections, CFG edge links, scope chains",
+      "interpretation": "Non-random-access traversals suggest linked representations"
+    },
+    "trees": {
+      "evidence": "Recursive traversal patterns, parent/child pointers",
+      "likely_usage": "AST during parsing, dominator tree, scope hierarchy",
+      "depth_typical": "10-20 levels (function scope depth + statement nesting)"
+    },
+    "graphs": {
+      "evidence": "Cycle detection, topological sort patterns",
+      "likely_usage": "CFG, dependence graphs, call graph analysis",
+      "complexity": "Complex bidirectional traversal (forward/backward edges)"
+    }
+  },
+
+  "analysis_techniques": [
+    {
+      "technique": "Allocator size pattern analysis",
+      "input": "Distribution of malloc/free sizes",
+      "output": "Inferred structure sizes and allocation strategies",
+      "confidence": "MEDIUM"
+    },
+    {
+      "technique": "Pointer chase depth measurement",
+      "input": "Dereference chain lengths in hot paths",
+      "output": "Graph depth, field offset, structure complexity",
+      "confidence": "MEDIUM"
+    },
+    {
+      "technique": "Memory access pattern analysis",
+      "input": "Linear vs. random access patterns",
+      "output": "Field layouts, array vs. linked-list decisions",
+      "confidence": "MEDIUM"
+    },
+    {
+      "technique": "Function signature comparison",
+      "input": "Decompiled functions vs. known compiler patterns",
+      "output": "Algorithm identification (SSA, RA, optimization passes)",
+      "confidence": "HIGH"
+    },
+    {
+      "technique": "Known compiler structure comparison",
+      "input": "LLVM/GCC/Clang internal structures documentation",
+      "output": "Structure template matching, field prediction",
+      "confidence": "MEDIUM-HIGH"
+    },
+    {
+      "technique": "Binary format analysis",
+      "input": "Machine code instruction patterns, call signatures",
+      "output": "Data type inference, structure relationships",
+      "confidence": "MEDIUM"
+    }
+  ],
+
+  "high_value_reverse_engineering_targets": [
+    {
+      "target": "IR Node Structure",
+      "criticality": "CRITICAL",
+      "impact": "Understanding compilation passes, transformations, codegen",
+      "evidence_level": "STRONG - frequent allocations, deep traversal",
+      "analysis_approach": [
+        "Examine allocation size distribution (mode likely = node size)",
+        "Trace pointer chasing patterns to identify field offsets",
+        "Compare traversal algorithms with SSA/AST/CFG patterns"
+      ]
+    },
+    {
+      "target": "Symbol Table Format",
+      "criticality": "CRITICAL",
+      "impact": "Semantic analysis, scope handling, type system understanding",
+      "evidence_level": "MEDIUM - lookup patterns detected, scope nesting clear",
+      "analysis_approach": [
+        "Identify hash function signatures",
+        "Map scope chain traversals",
+        "Analyze symbol access patterns"
+      ]
+    },
+    {
+      "target": "CFG Representation",
+      "criticality": "HIGH",
+      "impact": "Control flow analysis, optimization passes, SSA construction",
+      "evidence_level": "STRONG - algorithm signatures detected",
+      "analysis_approach": [
+        "Trace basic block construction",
+        "Identify edge representation",
+        "Map dominator tree computation"
+      ]
+    },
+    {
+      "target": "Live Range Structure (Register Allocation)",
+      "criticality": "HIGH",
+      "impact": "Register allocation algorithm, spill decisions",
+      "evidence_level": "MEDIUM - sorted access patterns detected",
+      "analysis_approach": [
+        "Identify interval tree implementation",
+        "Map overlap query patterns",
+        "Analyze spill cost storage"
+      ]
+    },
+    {
+      "target": "PTX Emission Output Strategy",
+      "criticality": "MEDIUM",
+      "impact": "Final code generation, PTX instruction emission",
+      "evidence_level": "LOW - memcpy patterns detected but strategy unclear",
+      "analysis_approach": [
+        "Trace buffer building operations",
+        "Map instruction-to-string transformations",
+        "Identify optimization pass ordering in output"
+      ]
+    }
+  ],
+
+  "next_steps": {
+    "immediate": [
+      "Memory dump analysis of running CICC compilation",
+      "Allocation size histogram to identify mode (likely primary structure size)",
+      "Pointer chase pattern visualization for each hot function"
+    ],
+    "short_term": [
+      "Symbol table format reverse engineering (hash function, entry layout)",
+      "IR node structure reconstruction (via size analysis + traversal patterns)",
+      "CFG representation verification (basic block pointers, edge format)"
+    ],
+    "medium_term": [
+      "Complete data structure layout documentation",
+      "Comparison with known compiler frameworks (LLVM, GCC, Clang)",
+      "Optimization pass data flow mapping"
+    ],
+    "long_term": [
+      "Full compilation pipeline reverse engineering",
+      "Custom analysis tools based on understood structures",
+      "Performance characterization tied to structure layouts"
+    ]
+  }
+}

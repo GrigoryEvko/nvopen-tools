@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "title": "CICC Reverse Engineering Knowledge Gaps",
+    "subtitle": "Systematic catalog of critical unknowns blocking analysis progress",
+    "purpose": "Document what we DON'T know yet about CICC compilation, focus analysis efforts on high-value gaps",
+    "analysis_date": "2025-11-16",
+    "status": "ACTIVE - Analysis ongoing",
+    "total_functions_in_binary": 62769,
+    "functions_understood": 147,
+    "functions_unknown": 62622,
+    "unknown_percentage": "99.77%"
+  },
+
+  "critical_unknowns": {
+    "compilation_pipeline": {
+      "gap": "Exact entry point and execution flow for compilation",
+      "why_critical": "Cannot trace execution or understand control flow without knowing where compilation begins",
+      "current_status": "UNKNOWN",
+      "evidence": "Binary contains ~100+ potential entry points, no clear demarcation",
+      "priority": "CRITICAL-1",
+      "analysis_needed": [
+        "Identify main() or equivalent entry point",
+        "Trace command-line argument parsing",
+        "Map argument routing to compilation phases",
+        "Understand phase ordering and dependencies"
+      ],
+      "estimated_effort_hours": 16,
+      "blocker_for": [
+        "Understanding compilation phases",
+        "Tracing execution flow",
+        "Identifying optimization passes",
+        "Mapping data structures to phases"
+      ]
+    },
+
+    "ir_format": {
+      "gap": "Internal intermediate representation structure and layout",
+      "why_critical": "Central data structure - all 62,769 functions manipulate it in some way",
+      "current_status": "HYPOTHESIS ONLY",
+      "current_hypothesis": "SSA-based directed acyclic graph (DAG) with node types for operations, values, and control flow",
+      "confidence": "LOW (30%)",
+      "evidence": [
+        "SSA mentions in string analysis",
+        "Control flow graph patterns observed",
+        "Phi function references in code"
+      ],
+      "priority": "CRITICAL-2",
+      "analysis_needed": [
+        "Memory allocation pattern analysis (find IR node allocations)",
+        "Decompile top 20 IR construction/manipulation functions",
+        "Analyze IR walking/traversal patterns",
+        "Reverse engineer node type constants",
+        "Map IR representation to actual memory layout"
+      ],
+      "estimated_effort_hours": 60,
+      "alternative_hypotheses": [
+        "Three-address code (TAC) format",
+        "Register transfer language (RTL) based",
+        "LLVM-compatible format"
+      ],
+      "blocker_for": [
+        "Understanding optimization passes",
+        "Data flow analysis",
+        "Control flow understanding",
+        "All other compilation phases"
+      ]
+    },
+
+    "register_allocation_algorithm": {
+      "gap": "Which algorithm? Graph coloring? Linear scan? Other?",
+      "why_critical": "Fundamental to code quality and performance characteristics",
+      "current_status": "HYPOTHESIS",
+      "current_hypothesis": "Chaitin-Briggs style graph coloring with spill cost heuristics",
+      "confidence": "MEDIUM (45%)",
+      "evidence": [
+        "Large functions with graph-like patterns",
+        "Spill code generation observed",
+        "Pressure-based heuristics in strings",
+        "SM-specific register constraints"
+      ],
+      "priority": "CRITICAL-3",
+      "analysis_needed": [
+        "Identify register allocation entry point",
+        "Decompile graph construction phase",
+        "Analyze coloring algorithm implementation",
+        "Reverse engineer spill code generation",
+        "Map SM-specific constraints (register counts, bank conflicts)"
+      ],
+      "estimated_effort_hours": 80,
+      "alternative_hypotheses": [
+        "Linear scan allocator",
+        "Greedy register allocation",
+        "SM-specific custom algorithm"
+      ],
+      "blocker_for": [
+        "Understanding code quality",
+        "SM optimization strategies",
+        "Performance prediction",
+        "Instruction scheduling interaction"
+      ]
+    },
+
+    "instruction_scheduling": {
+      "gap": "If instruction scheduling exists, what algorithm is used?",
+      "why_critical": "Major performance factor on GPU hardware with deep pipelines",
+      "current_status": "SUSPECTED BUT UNCONFIRMED",
+      "evidence": [
+        "Large functions with scheduling-like patterns",
+        "Dependency graph traversal observed",
+        "Latency-aware heuristics in strings"
+      ],
+      "priority": "HIGH-1",
+      "analysis_needed": [
+        "Search for scheduling algorithm signatures",
+        "Decompile suspected scheduling functions",
+        "Analyze dependency analysis phase",
+        "Reverse engineer heuristic functions"
+      ],
+      "estimated_effort_hours": 40,
+      "alternative_hypotheses": [
+        "No explicit scheduling (relies on hardware scheduler)",
+        "Implicit scheduling via register allocation decisions",
+        "PTX-level scheduling"
+      ],
+      "blocker_for": [
+        "Understanding performance characteristics",
+        "Code optimization analysis"
+      ]
+    }
+  },
+
+  "module_understanding_gaps": {
+    "optimization_framework": {
+      "total_functions": 62769,
+      "understood": 12,
+      "unknown": 62757,
+      "gap_percentage": "99.98%",
+      "total_passes": 94,
+      "passes_identified": 6,
+      "passes_unknown": 88,
+      "priority": "CRITICAL - This module touches everything",
+      "critical_gaps": [
+        {
+          "gap": "Which functions implement which of 94 optimization passes?",
+          "why_important": "Cannot understand optimization strategy without knowing what optimizations exist",
+          "analysis_approach": "String pattern clustering + pass manager function tracing",
+          "estimated_hours": 80
+        },
+        {
+          "gap": "How are passes ordered and selected?",
+          "why_important": "Pass ordering affects correctness and performance",
+          "analysis_approach": "Trace pass manager dispatch logic, reverse engineer pass ordering heuristics",
+          "estimated_hours": 40
+        },
+        {
+          "gap": "What data structures track analysis/invalidation state?",
+          "why_important": "Critical for understanding when passes can run in parallel",
+          "analysis_approach": "Decompile pass dependency tracking code",
+          "estimated_hours": 30
+        }
+      ]
+    },
+
+    "register_allocation": {
+      "total_functions": 8000,
+      "understood": 50,
+      "unknown": 7950,
+      "gap_percentage": "99.38%",
+      "critical_unknowns": [
+        {
+          "gap": "Core coloring/allocation algorithm implementation",
+          "estimated_hours": 60
+        },
+        {
+          "gap": "SM-specific constraints and heuristics",
+          "estimated_hours": 40
+        },
+        {
+          "gap": "Spill code generation strategy",
+          "estimated_hours": 30
+        },
+        {
+          "gap": "Bank conflict avoidance mechanisms",
+          "estimated_hours": 35
+        },
+        {
+          "gap": "Interaction with instruction scheduler",
+          "estimated_hours": 25
+        }
+      ]
+    },
+
+    "instruction_selection": {
+      "total_functions": 4200,
+      "understood": 15,
+      "unknown": 4185,
+      "gap_percentage": "99.64%",
+      "critical_unknowns": [
+        {
+          "gap": "Pattern matching engine for IR-to-PTX mapping",
+          "estimated_hours": 50
+        },
+        {
+          "gap": "Cost model for instruction selection",
+          "estimated_hours": 40
+        },
+        {
+          "gap": "SIMD/warp-level instruction generation",
+          "estimated_hours": 35
+        }
+      ]
+    },
+
+    "ptx_emission": {
+      "total_functions": 3100,
+      "understood": 25,
+      "unknown": 3075,
+      "gap_percentage": "99.19%",
+      "critical_unknowns": [
+        {
+          "gap": "PTX binary format structure",
+          "estimated_hours": 45
+        },
+        {
+          "gap": "Section layout and encoding",
+          "estimated_hours": 35
+        },
+        {
+          "gap": "String table management",
+          "estimated_hours": 20
+        }
+      ]
+    },
+
+    "target_support": {
+      "supported_sms": 28,
+      "sms_identified": 5,
+      "sms_unknown": 23,
+      "gap_percentage": "82%",
+      "critical_unknowns": [
+        {
+          "gap": "How are SM-specific features selected?",
+          "estimated_hours": 30
+        },
+        {
+          "gap": "Which features are available in each SM generation?",
+          "estimated_hours": 40
+        },
+        {
+          "gap": "SM-specific instruction set mappings",
+          "estimated_hours": 35
+        }
+      ]
+    },
+
+    "api_interface": {
+      "unknown_percentage": "87%",
+      "critical_unknowns": [
+        {
+          "gap": "Function signatures for public API entry points",
+          "estimated_hours": 25
+        },
+        {
+          "gap": "Data structure contracts between modules",
+          "estimated_hours": 40
+        },
+        {
+          "gap": "Error handling and return code semantics",
+          "estimated_hours": 20
+        }
+      ]
+    }
+  },
+
+  "algorithm_mysteries": [
+    {
+      "algorithm": "Loop vectorization/unrolling",
+      "status": "UNKNOWN IF IMPLEMENTED",
+      "evidence": "Vectorization strings found; unclear if transformation or analysis only",
+      "priority": "HIGH - Critical for GPU performance",
+      "analysis_needed": "String analysis + decompilation of suspected vectorizer functions",
+      "estimated_hours": 40
+    },
+    {
+      "algorithm": "Instruction scheduling",
+      "status": "SUSPECTED BUT UNCONFIRMED",
+      "evidence": "Large functions with scheduling-like patterns",
+      "priority": "HIGH - Major performance factor",
+      "analysis_needed": "Decompile suspected scheduling functions",
+      "estimated_hours": 50
+    },
+    {
+      "algorithm": "Dead code elimination",
+      "status": "LIKELY IMPLEMENTED - Exact details unknown",
+      "evidence": "Dead code removal strings; CFG analysis patterns",
+      "priority": "MEDIUM",
+      "analysis_needed": "Decompile DCE pass implementation",
+      "estimated_hours": 30
+    },
+    {
+      "algorithm": "Common subexpression elimination",
+      "status": "LIKELY IMPLEMENTED - Exact details unknown",
+      "evidence": "CSE strings found in analysis",
+      "priority": "MEDIUM",
+      "analysis_needed": "Decompile CSE implementation",
+      "estimated_hours": 35
+    },
+    {
+      "algorithm": "LICM (Loop Invariant Code Motion)",
+      "status": "POSSIBLY IMPLEMENTED",
+      "evidence": "Loop analysis patterns observed",
+      "priority": "MEDIUM",
+      "analysis_needed": "Search for loop invariant motion logic",
+      "estimated_hours": 30
+    },
+    {
+      "algorithm": "Strength reduction",
+      "status": "POSSIBLY IMPLEMENTED",
+      "evidence": "Multiplication-to-shift patterns observed",
+      "priority": "LOW-MEDIUM",
+      "analysis_needed": "Decompile arithmetic optimization functions",
+      "estimated_hours": 25
+    },
+    {
+      "algorithm": "Tensor core code generation",
+      "status": "IMPLEMENTED - Details unknown",
+      "evidence": "WMMA operation strings, tensor patterns",
+      "priority": "CRITICAL - New feature area",
+      "analysis_needed": "Decompile tensor core codegen phase",
+      "estimated_hours": 80
+    },
+    {
+      "algorithm": "Warp-level optimization",
+      "status": "UNKNOWN IF EXPLICIT",
+      "evidence": "Warp-related patterns in strings",
+      "priority": "HIGH - GPU-specific",
+      "analysis_needed": "Search for warp-level transformation logic",
+      "estimated_hours": 45
+    },
+    {
+      "algorithm": "Memory coalescing optimization",
+      "status": "LIKELY IMPLEMENTED - Details unknown",
+      "evidence": "Memory access pattern analysis strings",
+      "priority": "HIGH - Critical for GPU",
+      "analysis_needed": "Decompile memory access optimization",
+      "estimated_hours": 40
+    },
+    {
+      "algorithm": "Bank conflict resolution",
+      "status": "LIKELY IMPLEMENTED - Details unknown",
+      "evidence": "Shared memory bank strings, conflict patterns",
+      "priority": "HIGH - GPU-specific",
+      "analysis_needed": "Decompile bank conflict avoidance logic",
+      "estimated_hours": 35
+    }
+  ],
+
+  "data_structure_mysteries": {
+    "ir_node_format": {
+      "gap": "Exact memory layout of IR nodes",
+      "why_critical": "All optimization passes work with this structure",
+      "analysis_needed": "Memory dump analysis + struct layout recovery",
+      "estimated_hours": 40
+    },
+    "symbol_table_format": {
+      "gap": "How symbols are stored and looked up",
+      "why_critical": "Needed for understanding scope and resolution",
+      "analysis_needed": "Decompile symbol table management code",
+      "estimated_hours": 30
+    },
+    "cfg_representation": {
+      "gap": "Control flow graph edge/node encoding",
+      "why_critical": "Central to all flow analysis",
+      "analysis_needed": "Decompile CFG construction and traversal",
+      "estimated_hours": 35
+    },
+    "ptx_output_buffer_format": {
+      "gap": "How PTX code is accumulated and written",
+      "why_critical": "Understand final output generation",
+      "analysis_needed": "Decompile PTX emission phase",
+      "estimated_hours": 25
+    },
+    "register_class_representation": {
+      "gap": "How register classes and constraints are encoded",
+      "why_critical": "Needed for register allocation understanding",
+      "analysis_needed": "Decompile register class definition code",
+      "estimated_hours": 20
+    },
+    "type_system": {
+      "gap": "How types are represented internally",
+      "why_critical": "Affects instruction selection and optimization",
+      "analysis_needed": "Decompile type system code",
+      "estimated_hours": 35
+    },
+    "call_graph_representation": {
+      "gap": "How functions/calls are tracked",
+      "why_critical": "Needed for interprocedural analysis",
+      "analysis_needed": "Decompile call graph construction",
+      "estimated_hours": 25
+    },
+    "pass_result_storage": {
+      "gap": "How analysis results are stored and cached",
+      "why_critical": "Key to understanding pass dependencies",
+      "analysis_needed": "Decompile analysis result caching",
+      "estimated_hours": 30
+    }
+  },
+
+  "analysis_blockers": {
+    "stripped_symbols": {
+      "status": "CONFIRMED",
+      "impact": "SEVERE - 99.77% of functions have auto-generated names",
+      "affected_functions": 62622,
+      "mitigation_approach": [
+        "Symbol recovery via signature matching",
+        "String cross-referencing",
+        "Call graph pattern analysis",
+        "Decompilation-assisted naming"
+      ],
+      "mitigation_effort_hours": 200
+    },
+    "binary_size": {
+      "size_mb": 250,
+      "impact": "MEDIUM - Tools timeout, analysis slow",
+      "current_approach": "Sampling and critical function focusing",
+      "mitigation": "Divide-and-conquer analysis by module"
+    },
+    "complex_optimization": {
+      "status": "DETECTED",
+      "impact": "MEDIUM - Decompiled code hard to understand",
+      "affected": "Large optimization functions",
+      "mitigation": "Use multiple decompilers, compare results"
+    },
+    "indirect_function_calls": {
+      "status": "DETECTED",
+      "impact": "HIGH - Difficult to trace data flow",
+      "estimated_indirect_calls": 3000,
+      "mitigation": "Virtual function table recovery, type analysis"
+    },
+    "dynamic_allocation_patterns": {
+      "status": "COMPLEX",
+      "impact": "HIGH - Hard to track data structures",
+      "affected": "All modules",
+      "mitigation": "Memory allocation pattern clustering"
+    }
+  },
+
+  "highest_priority_analysis_targets": [
+    {
+      "rank": 1,
+      "target": "Compilation pipeline entry point",
+      "why_critical": "Cannot understand anything without knowing where it starts",
+      "blocks_resolution_of": [
+        "Execution flow tracing",
+        "Phase ordering understanding",
+        "Data structure mapping to phases"
+      ],
+      "estimated_effort_hours": 16,
+      "approach": "Identify main() or equivalent, trace argument handling"
+    },
+    {
+      "rank": 2,
+      "target": "IR data structure layout",
+      "why_critical": "Central data structure - everything uses it",
+      "blocks_resolution_of": [
+        "Optimization pass understanding",
+        "Data flow analysis",
+        "All subsequent compilation phases"
+      ],
+      "estimated_effort_hours": 60,
+      "approach": "Memory allocation analysis + struct layout recovery"
+    },
+    {
+      "rank": 3,
+      "target": "Pass manager and pass ordering",
+      "why_critical": "Controls which optimizations run and in what order",
+      "blocks_resolution_of": [
+        "Understanding optimization strategy",
+        "Module interactions",
+        "Performance characteristics"
+      ],
+      "estimated_effort_hours": 40,
+      "approach": "Decompile pass manager dispatch logic"
+    },
+    {
+      "rank": 4,
+      "target": "Register allocation algorithm",
+      "why_critical": "Core to code quality and performance",
+      "blocks_resolution_of": [
+        "Understanding instruction-level decisions",
+        "SM optimization strategies",
+        "Performance prediction"
+      ],
+      "estimated_effort_hours": 80,
+      "approach": "Decompile register allocation entry point and core functions"
+    },
+    {
+      "rank": 5,
+      "target": "PTX emission pipeline",
+      "why_critical": "Final output generation - shows what code gets produced",
+      "blocks_resolution_of": [
+        "Understanding final code generation",
+        "PTX format understanding"
+      ],
+      "estimated_effort_hours": 50,
+      "approach": "Decompile PTX emission phase"
+    },
+    {
+      "rank": 6,
+      "target": "Tensor core code generation",
+      "why_critical": "New feature area - critical for modern NVIDIA hardware",
+      "blocks_resolution_of": [
+        "Understanding modern optimization strategies",
+        "WMMA instruction generation"
+      ],
+      "estimated_effort_hours": 80,
+      "approach": "Decompile tensor core codegen functions"
+    },
+    {
+      "rank": 7,
+      "target": "Symbol recovery methodology",
+      "why_critical": "99.77% of functions unnamed - blocks all understanding",
+      "blocks_resolution_of": [
+        "All other analysis (need names to understand what functions do)"
+      ],
+      "estimated_effort_hours": 200,
+      "approach": "Develop systematic symbol recovery combining multiple techniques"
+    }
+  ],
+
+  "analysis_gaps_by_severity": {
+    "blocker_gaps": [
+      {
+        "gap": "Entry point identification",
+        "blocks": "Everything",
+        "effort_to_resolve": "16 hours",
+        "priority": "DO THIS FIRST"
+      },
+      {
+        "gap": "IR data structure understanding",
+        "blocks": "Optimization pass understanding, data flow analysis",
+        "effort_to_resolve": "60 hours",
+        "priority": "DO THIS SECOND"
+      },
+      {
+        "gap": "Symbol recovery for 62,622 unnamed functions",
+        "blocks": "Semantic understanding of all functions",
+        "effort_to_resolve": "200 hours",
+        "priority": "Parallel with above"
+      }
+    ],
+    "critical_gaps": [
+      {
+        "gap": "Register allocation algorithm details",
+        "impact": "Cannot understand code quality decisions",
+        "effort_to_resolve": "80 hours"
+      },
+      {
+        "gap": "Pass ordering and selection logic",
+        "impact": "Cannot understand optimization strategy",
+        "effort_to_resolve": "40 hours"
+      },
+      {
+        "gap": "Instruction scheduling (if exists)",
+        "impact": "Cannot understand performance characteristics",
+        "effort_to_resolve": "50 hours"
+      }
+    ],
+    "important_gaps": [
+      {
+        "gap": "Tensor core code generation",
+        "impact": "Missing understanding of modern GPU optimization",
+        "effort_to_resolve": "80 hours"
+      },
+      {
+        "gap": "SM-specific optimization strategies",
+        "impact": "Cannot predict behavior on different GPU architectures",
+        "effort_to_resolve": "75 hours"
+      }
+    ]
+  },
+
+  "knowledge_base_status": {
+    "functions_documented": 147,
+    "functions_with_signatures": 89,
+    "functions_with_behavior_notes": 58,
+    "functions_with_decompilation": 23,
+    "modules_partially_understood": 8,
+    "modules_well_understood": 0,
+    "critical_algorithms_identified": 6,
+    "critical_algorithms_understood": 2,
+    "data_structures_reverse_engineered": 4,
+    "data_structures_identified_but_not_understood": 12
+  },
+
+  "recommended_next_steps": [
+    {
+      "step": 1,
+      "action": "Identify compilation entry point",
+      "effort": "16 hours",
+      "dependencies": "None - do this first",
+      "outcome": "Know where compilation starts, unblock everything else"
+    },
+    {
+      "step": 2,
+      "action": "Reverse engineer IR data structure",
+      "effort": "60 hours",
+      "dependencies": "Step 1 complete",
+      "outcome": "Understand central data structure, enable optimization analysis"
+    },
+    {
+      "step": 3,
+      "action": "Develop symbol recovery methodology",
+      "effort": "200 hours",
+      "dependencies": "Can be done in parallel with steps 1-2",
+      "outcome": "Recover names for 62,622 functions, enable semantic understanding"
+    },
+    {
+      "step": 4,
+      "action": "Decompile and understand pass manager",
+      "effort": "40 hours",
+      "dependencies": "Steps 1-2 complete",
+      "outcome": "Know which optimizations run and in what order"
+    },
+    {
+      "step": 5,
+      "action": "Decompile register allocation algorithm",
+      "effort": "80 hours",
+      "dependencies": "Steps 1-2 complete",
+      "outcome": "Understand code quality decisions"
+    },
+    {
+      "step": 6,
+      "action": "Decompile PTX emission pipeline",
+      "effort": "50 hours",
+      "dependencies": "Steps 1-2 complete",
+      "outcome": "Understand final code generation"
+    }
+  ],
+
+  "estimated_total_effort": {
+    "blocker_gaps": 276,
+    "critical_gaps": 170,
+    "important_gaps": 155,
+    "comprehensive_understanding": 601,
+    "total_hours": 601,
+    "total_weeks": 15.025,
+    "total_months": 3.5
+  },
+
+  "success_metrics": [
+    {
+      "metric": "Compilation entry point identified",
+      "current_status": "UNKNOWN",
+      "target_status": "DOCUMENTED",
+      "evidence": "Trace document with annotated assembly"
+    },
+    {
+      "metric": "IR data structure fully reverse engineered",
+      "current_status": "HYPOTHESIS ONLY",
+      "target_status": "DOCUMENTED WITH MEMORY LAYOUT",
+      "evidence": "Detailed struct definition with field offsets"
+    },
+    {
+      "metric": "Symbol recovery methodology established",
+      "current_status": "NONE",
+      "target_status": "SYSTEMATIC APPROACH DOCUMENTED",
+      "evidence": "Recovery guide with examples"
+    },
+    {
+      "metric": "Functions with accurate names",
+      "current_status": 147,
+      "target_status": 5000,
+      "evidence": "Symbol recovery index"
+    },
+    {
+      "metric": "Register allocation algorithm understood",
+      "current_status": "HYPOTHESIS",
+      "target_status": "FULLY DOCUMENTED",
+      "evidence": "Algorithm description with code references"
+    },
+    {
+      "metric": "Compilation pipeline phases mapped",
+      "current_status": "PARTIALLY",
+      "target_status": "COMPLETELY MAPPED",
+      "evidence": "Pipeline diagram with function mapping"
+    }
+  ]
+}

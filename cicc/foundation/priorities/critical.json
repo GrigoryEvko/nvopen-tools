@@ -1,0 +1,8251 @@
+[
+  {
+    "addr": "0x507310",
+    "name": "ctor_335_0",
+    "module": "register_allocation",
+    "size": 10614,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10614",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x5dbfc0",
+    "name": "sub_5DBFC0",
+    "module": "compilation_pipeline",
+    "size": 11165,
+    "call_frequency": 8,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11165",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x672a20",
+    "name": "sub_672A20",
+    "module": "compilation_pipeline",
+    "size": 25833,
+    "call_frequency": 14,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:25833",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x706250",
+    "name": "sub_706250",
+    "module": "compilation_pipeline",
+    "size": 10742,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10742",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x760bd0",
+    "name": "sub_760BD0",
+    "module": "compilation_pipeline",
+    "size": 21077,
+    "call_frequency": 5,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:21077",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x8f9c90",
+    "name": "sub_8F9C90",
+    "module": "compilation_pipeline",
+    "size": 10066,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10066",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x95eb40",
+    "name": "sub_95EB40",
+    "module": "architecture_detection",
+    "size": 14724,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14724",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x9e3720",
+    "name": "sub_9E3720",
+    "module": "ptx_emission",
+    "size": 12899,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12899",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x9e7b10",
+    "name": "sub_9E7B10",
+    "module": "ptx_emission",
+    "size": 11845,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11845",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x9ebd80",
+    "name": "sub_9EBD80",
+    "module": "register_allocation",
+    "size": 14327,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14327",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x9f2a40",
+    "name": "sub_9F2A40",
+    "module": "ptx_emission",
+    "size": 45628,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:45628",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0xa2d2b0",
+    "name": "sub_A2D2B0",
+    "module": "register_allocation",
+    "size": 11760,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11760",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa38520",
+    "name": "sub_A38520",
+    "module": "register_allocation",
+    "size": 10173,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10173",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa8a170",
+    "name": "sub_A8A170",
+    "module": "tensor_core_codegen",
+    "size": 16607,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16607",
+      "module:tensor_core_codegen"
+    ]
+  },
+  {
+    "addr": "0xa8e250",
+    "name": "sub_A8E250",
+    "module": "tensor_core_codegen",
+    "size": 11871,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11871",
+      "module:tensor_core_codegen"
+    ]
+  },
+  {
+    "addr": "0xb612d0",
+    "name": "sub_B612D0",
+    "module": "register_allocation",
+    "size": 39329,
+    "call_frequency": 8,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:39329",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xb76cb0",
+    "name": "sub_B76CB0",
+    "module": "compilation_pipeline",
+    "size": 19962,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:19962",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0xbb0d30",
+    "name": "sub_BB0D30",
+    "module": "register_allocation",
+    "size": 17306,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:17306",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1081400",
+    "name": "sub_1081400",
+    "module": "register_allocation",
+    "size": 12832,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12832",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1090bd0",
+    "name": "sub_1090BD0",
+    "module": "register_allocation",
+    "size": 10072,
+    "call_frequency": 1,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10072",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1221570",
+    "name": "sub_1221570",
+    "module": "tensor_core_codegen",
+    "size": 12799,
+    "call_frequency": 8,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12799",
+      "module:tensor_core_codegen"
+    ]
+  },
+  {
+    "addr": "0x1257fe0",
+    "name": "sub_1257FE0",
+    "module": "tensor_core_codegen",
+    "size": 14896,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14896",
+      "module:tensor_core_codegen"
+    ]
+  },
+  {
+    "addr": "0x12c8dd0",
+    "name": "sub_12C8DD0",
+    "module": "tensor_core_codegen",
+    "size": 14708,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14708",
+      "module:tensor_core_codegen"
+    ]
+  },
+  {
+    "addr": "0x12d6300",
+    "name": "sub_12D6300",
+    "module": "register_allocation",
+    "size": 27423,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:27423",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x12e1ef0",
+    "name": "sub_12E1EF0",
+    "module": "register_allocation",
+    "size": 10509,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10509",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x138aaf0",
+    "name": "sub_138AAF0",
+    "module": "register_allocation",
+    "size": 11972,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11972",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1505110",
+    "name": "sub_1505110",
+    "module": "register_allocation",
+    "size": 12981,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12981",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x150b5f0",
+    "name": "sub_150B5F0",
+    "module": "register_allocation",
+    "size": 11443,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11443",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1538ec0",
+    "name": "sub_1538EC0",
+    "module": "register_allocation",
+    "size": 12415,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12415",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1608300",
+    "name": "sub_1608300",
+    "module": "compilation_pipeline",
+    "size": 17876,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:17876",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x18612a0",
+    "name": "sub_18612A0",
+    "module": "register_allocation",
+    "size": 11698,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11698",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x188c730",
+    "name": "sub_188C730",
+    "module": "register_allocation",
+    "size": 12666,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12666",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1c67780",
+    "name": "sub_1C67780",
+    "module": "register_allocation",
+    "size": 12087,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12087",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1ce3af0",
+    "name": "sub_1CE3AF0",
+    "module": "register_allocation",
+    "size": 11483,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11483",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1d07bb0",
+    "name": "sub_1D07BB0",
+    "module": "register_allocation",
+    "size": 11067,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11067",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1d830e0",
+    "name": "sub_1D830E0",
+    "module": "register_allocation",
+    "size": 11356,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11356",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1d97fa0",
+    "name": "sub_1D97FA0",
+    "module": "register_allocation",
+    "size": 14966,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14966",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e25a30",
+    "name": "sub_1E25A30",
+    "module": "register_allocation",
+    "size": 11342,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11342",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e3d600",
+    "name": "sub_1E3D600",
+    "module": "register_allocation",
+    "size": 11585,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11585",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e8f660",
+    "name": "sub_1E8F660",
+    "module": "register_allocation",
+    "size": 11584,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11584",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e968b0",
+    "name": "sub_1E968B0",
+    "module": "register_allocation",
+    "size": 10249,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10249",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1ec7760",
+    "name": "sub_1EC7760",
+    "module": "register_allocation",
+    "size": 13463,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13463",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2079c70",
+    "name": "sub_2079C70",
+    "module": "register_allocation",
+    "size": 16559,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16559",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x235e150",
+    "name": "sub_235E150",
+    "module": "register_allocation",
+    "size": 14508,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14508",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x23c2890",
+    "name": "sub_23C2890",
+    "module": "register_allocation",
+    "size": 14656,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14656",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x244ab10",
+    "name": "sub_244AB10",
+    "module": "register_allocation",
+    "size": 13855,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13855",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x24b1e50",
+    "name": "sub_24B1E50",
+    "module": "register_allocation",
+    "size": 11629,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11629",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2a5dc40",
+    "name": "sub_2A5DC40",
+    "module": "register_allocation",
+    "size": 12319,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12319",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2a963a0",
+    "name": "sub_2A963A0",
+    "module": "register_allocation",
+    "size": 10556,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10556",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2d97f20",
+    "name": "sub_2D97F20",
+    "module": "register_allocation",
+    "size": 29692,
+    "call_frequency": 3,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:29692",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2ef30a0",
+    "name": "sub_2EF30A0",
+    "module": "register_allocation",
+    "size": 18305,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18305",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2effe00",
+    "name": "sub_2EFFE00",
+    "module": "register_allocation",
+    "size": 11277,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11277",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2f02a10",
+    "name": "sub_2F02A10",
+    "module": "register_allocation",
+    "size": 11061,
+    "call_frequency": 6,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11061",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2f1fbf0",
+    "name": "sub_2F1FBF0",
+    "module": "register_allocation",
+    "size": 11745,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11745",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2f9dac0",
+    "name": "sub_2F9DAC0",
+    "module": "instruction_selection",
+    "size": 10721,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10721",
+      "module:instruction_selection"
+    ]
+  },
+  {
+    "addr": "0x3048c30",
+    "name": "sub_3048C30",
+    "module": "architecture_detection",
+    "size": 14804,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14804",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x33583e0",
+    "name": "sub_33583E0",
+    "module": "register_allocation",
+    "size": 11075,
+    "call_frequency": 2,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11075",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x338ba40",
+    "name": "sub_338BA40",
+    "module": "register_allocation",
+    "size": 14995,
+    "call_frequency": 4,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14995",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x3418c90",
+    "name": "sub_3418C90",
+    "module": "ptx_emission",
+    "size": 13679,
+    "call_frequency": 4,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13679",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x389c540",
+    "name": "sub_389C540",
+    "module": "tensor_core_codegen",
+    "size": 10656,
+    "call_frequency": 8,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10656",
+      "module:tensor_core_codegen"
+    ]
+  },
+  {
+    "addr": "0x3921ce0",
+    "name": "sub_3921CE0",
+    "module": "register_allocation",
+    "size": 12634,
+    "call_frequency": 1,
+    "priority_score": 1300,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12634",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x7b8b50",
+    "name": "sub_7B8B50",
+    "module": "optimization_framework",
+    "size": 12828,
+    "call_frequency": 275,
+    "priority_score": 1150,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12828",
+      "warm:275"
+    ]
+  },
+  {
+    "addr": "0x69ed20",
+    "name": "sub_69ED20",
+    "module": "optimization_framework",
+    "size": 15965,
+    "call_frequency": 77,
+    "priority_score": 1075,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15965",
+      "called:77"
+    ]
+  },
+  {
+    "addr": "0x3402ea0",
+    "name": "sub_3402EA0",
+    "module": "optimization_framework",
+    "size": 11746,
+    "call_frequency": 61,
+    "priority_score": 1075,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11746",
+      "called:61"
+    ]
+  },
+  {
+    "addr": "0x4061a0",
+    "name": ".memmove",
+    "module": "register_allocation",
+    "size": 6,
+    "call_frequency": 2624,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_hot:2624",
+      "named",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x4063f0",
+    "name": ".memset",
+    "module": "register_allocation",
+    "size": 6,
+    "call_frequency": 1106,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_hot:1106",
+      "named",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x406d10",
+    "name": ".memcpy",
+    "module": "register_allocation",
+    "size": 6,
+    "call_frequency": 5378,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_hot:5378",
+      "named",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x4134a7",
+    "name": "sub_4134A7",
+    "module": "optimization_framework",
+    "size": 18454,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18454"
+    ]
+  },
+  {
+    "addr": "0x4397f0",
+    "name": "ctor_010_0",
+    "module": "optimization_framework",
+    "size": 104701,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:104701"
+    ]
+  },
+  {
+    "addr": "0x456120",
+    "name": "ctor_027",
+    "module": "unknown",
+    "size": 208947,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:208947"
+    ]
+  },
+  {
+    "addr": "0x490b90",
+    "name": "ctor_053_0",
+    "module": "instruction_selection",
+    "size": 5396,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5396",
+      "module:instruction_selection"
+    ]
+  },
+  {
+    "addr": "0x4a64d0",
+    "name": "ctor_107_0",
+    "module": "optimization_framework",
+    "size": 16204,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16204"
+    ]
+  },
+  {
+    "addr": "0x4b0180",
+    "name": "ctor_133_0",
+    "module": "optimization_framework",
+    "size": 11204,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11204"
+    ]
+  },
+  {
+    "addr": "0x4b4360",
+    "name": "ctor_145",
+    "module": "unknown",
+    "size": 98907,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:98907"
+    ]
+  },
+  {
+    "addr": "0x50c890",
+    "name": "ctor_356_0",
+    "module": "architecture_detection",
+    "size": 7819,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7819",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x512df0",
+    "name": "ctor_376_0",
+    "module": "optimization_framework",
+    "size": 13200,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13200"
+    ]
+  },
+  {
+    "addr": "0x516190",
+    "name": "ctor_377_0",
+    "module": "optimization_framework",
+    "size": 12285,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12285"
+    ]
+  },
+  {
+    "addr": "0x524aa0",
+    "name": "ctor_400_0",
+    "module": "register_allocation",
+    "size": 7829,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7829",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x55ed10",
+    "name": "ctor_515_0",
+    "module": "architecture_detection",
+    "size": 6346,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6346",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x578b50",
+    "name": "ctor_583_0",
+    "module": "register_allocation",
+    "size": 5118,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5118",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x57f210",
+    "name": "ctor_600_0",
+    "module": "optimization_framework",
+    "size": 18160,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18160"
+    ]
+  },
+  {
+    "addr": "0x585d30",
+    "name": "ctor_609_0",
+    "module": "optimization_framework",
+    "size": 11089,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11089"
+    ]
+  },
+  {
+    "addr": "0x5a8850",
+    "name": "ctor_701",
+    "module": "optimization_framework",
+    "size": 73942,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:73942"
+    ]
+  },
+  {
+    "addr": "0x5e13c0",
+    "name": "sub_5E13C0",
+    "module": "compilation_pipeline",
+    "size": 8888,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8888",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x6040f0",
+    "name": "sub_6040F0",
+    "module": "optimization_framework",
+    "size": 14960,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14960"
+    ]
+  },
+  {
+    "addr": "0x609f00",
+    "name": "sub_609F00",
+    "module": "optimization_framework",
+    "size": 13471,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13471"
+    ]
+  },
+  {
+    "addr": "0x610260",
+    "name": "sub_610260",
+    "module": "optimization_framework",
+    "size": 15988,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15988"
+    ]
+  },
+  {
+    "addr": "0x615cb0",
+    "name": "sub_615CB0",
+    "module": "compilation_pipeline",
+    "size": 6420,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6420",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x617bd0",
+    "name": "sub_617BD0",
+    "module": "optimization_framework",
+    "size": 37282,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:37282"
+    ]
+  },
+  {
+    "addr": "0x627530",
+    "name": "sub_627530",
+    "module": "optimization_framework",
+    "size": 16972,
+    "call_frequency": 7,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16972"
+    ]
+  },
+  {
+    "addr": "0x62c0a0",
+    "name": "sub_62C0A0",
+    "module": "optimization_framework",
+    "size": 13498,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13498"
+    ]
+  },
+  {
+    "addr": "0x63cae0",
+    "name": "sub_63CAE0",
+    "module": "optimization_framework",
+    "size": 13199,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13199"
+    ]
+  },
+  {
+    "addr": "0x64baa0",
+    "name": "sub_64BAA0",
+    "module": "optimization_framework",
+    "size": 10615,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10615"
+    ]
+  },
+  {
+    "addr": "0x6523a0",
+    "name": "sub_6523A0",
+    "module": "optimization_framework",
+    "size": 17747,
+    "call_frequency": 7,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:17747"
+    ]
+  },
+  {
+    "addr": "0x662de0",
+    "name": "sub_662DE0",
+    "module": "optimization_framework",
+    "size": 15682,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15682"
+    ]
+  },
+  {
+    "addr": "0x66ac40",
+    "name": "sub_66AC40",
+    "module": "optimization_framework",
+    "size": 13050,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13050"
+    ]
+  },
+  {
+    "addr": "0x66df40",
+    "name": "sub_66DF40",
+    "module": "compilation_pipeline",
+    "size": 6814,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6814",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x681d20",
+    "name": "sub_681D20",
+    "module": "compilation_pipeline",
+    "size": 6507,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6507",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x6b4800",
+    "name": "sub_6B4800",
+    "module": "optimization_framework",
+    "size": 10437,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10437"
+    ]
+  },
+  {
+    "addr": "0x6c0e20",
+    "name": "sub_6C0E20",
+    "module": "optimization_framework",
+    "size": 14043,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14043"
+    ]
+  },
+  {
+    "addr": "0x6c6830",
+    "name": "sub_6C6830",
+    "module": "optimization_framework",
+    "size": 13978,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13978"
+    ]
+  },
+  {
+    "addr": "0x6d7fc0",
+    "name": "sub_6D7FC0",
+    "module": "optimization_framework",
+    "size": 14881,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14881"
+    ]
+  },
+  {
+    "addr": "0x713ed0",
+    "name": "sub_713ED0",
+    "module": "compilation_pipeline",
+    "size": 8780,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8780",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x74a390",
+    "name": "sub_74A390",
+    "module": "compilation_pipeline",
+    "size": 5533,
+    "call_frequency": 19,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5533",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x7506e0",
+    "name": "sub_7506E0",
+    "module": "optimization_framework",
+    "size": 37986,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:37986"
+    ]
+  },
+  {
+    "addr": "0x75c0c0",
+    "name": "sub_75C0C0",
+    "module": "optimization_framework",
+    "size": 17058,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:17058"
+    ]
+  },
+  {
+    "addr": "0x766570",
+    "name": "sub_766570",
+    "module": "optimization_framework",
+    "size": 24406,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:24406"
+    ]
+  },
+  {
+    "addr": "0x77fcb0",
+    "name": "sub_77FCB0",
+    "module": "optimization_framework",
+    "size": 25937,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:25937"
+    ]
+  },
+  {
+    "addr": "0x786210",
+    "name": "sub_786210",
+    "module": "optimization_framework",
+    "size": 59812,
+    "call_frequency": 15,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:59812"
+    ]
+  },
+  {
+    "addr": "0x795660",
+    "name": "sub_795660",
+    "module": "optimization_framework",
+    "size": 12659,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12659"
+    ]
+  },
+  {
+    "addr": "0x79ccd0",
+    "name": "sub_79CCD0",
+    "module": "optimization_framework",
+    "size": 11043,
+    "call_frequency": 9,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11043"
+    ]
+  },
+  {
+    "addr": "0x7b40d0",
+    "name": "sub_7B40D0",
+    "module": "optimization_framework",
+    "size": 10793,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10793"
+    ]
+  },
+  {
+    "addr": "0x7c0f00",
+    "name": "sub_7C0F00",
+    "module": "optimization_framework",
+    "size": 20793,
+    "call_frequency": 45,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:20793"
+    ]
+  },
+  {
+    "addr": "0x7fec50",
+    "name": "sub_7FEC50",
+    "module": "optimization_framework",
+    "size": 10955,
+    "call_frequency": 16,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10955"
+    ]
+  },
+  {
+    "addr": "0x81b8f0",
+    "name": "sub_81B8F0",
+    "module": "optimization_framework",
+    "size": 18112,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18112"
+    ]
+  },
+  {
+    "addr": "0x839d30",
+    "name": "sub_839D30",
+    "module": "optimization_framework",
+    "size": 12415,
+    "call_frequency": 17,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12415"
+    ]
+  },
+  {
+    "addr": "0x84ec30",
+    "name": "sub_84EC30",
+    "module": "optimization_framework",
+    "size": 12254,
+    "call_frequency": 26,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12254"
+    ]
+  },
+  {
+    "addr": "0x8708d0",
+    "name": "sub_8708D0",
+    "module": "optimization_framework",
+    "size": 15611,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15611"
+    ]
+  },
+  {
+    "addr": "0x8a6cc0",
+    "name": "sub_8A6CC0",
+    "module": "optimization_framework",
+    "size": 11101,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11101"
+    ]
+  },
+  {
+    "addr": "0x8ba620",
+    "name": "sub_8BA620",
+    "module": "optimization_framework",
+    "size": 15154,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15154"
+    ]
+  },
+  {
+    "addr": "0x900130",
+    "name": "sub_900130",
+    "module": "optimization_framework",
+    "size": 11219,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11219"
+    ]
+  },
+  {
+    "addr": "0x905ee0",
+    "name": "sub_905EE0",
+    "module": "compilation_pipeline",
+    "size": 9009,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9009",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x90aee0",
+    "name": "sub_90AEE0",
+    "module": "optimization_framework",
+    "size": 34151,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:34151"
+    ]
+  },
+  {
+    "addr": "0x92cbf0",
+    "name": "sub_92CBF0",
+    "module": "optimization_framework",
+    "size": 10268,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10268"
+    ]
+  },
+  {
+    "addr": "0x932270",
+    "name": "sub_932270",
+    "module": "optimization_framework",
+    "size": 12741,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12741"
+    ]
+  },
+  {
+    "addr": "0x9502d0",
+    "name": "sub_9502D0",
+    "module": "optimization_framework",
+    "size": 14116,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14116"
+    ]
+  },
+  {
+    "addr": "0x955a70",
+    "name": "sub_955A70",
+    "module": "optimization_framework",
+    "size": 24426,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:24426"
+    ]
+  },
+  {
+    "addr": "0x9624d0",
+    "name": "sub_9624D0",
+    "module": "optimization_framework",
+    "size": 19228,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:19228"
+    ]
+  },
+  {
+    "addr": "0x96af60",
+    "name": "sub_96AF60",
+    "module": "optimization_framework",
+    "size": 11858,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11858"
+    ]
+  },
+  {
+    "addr": "0x975d30",
+    "name": "sub_975D30",
+    "module": "optimization_framework",
+    "size": 12852,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12852"
+    ]
+  },
+  {
+    "addr": "0x99d930",
+    "name": "sub_99D930",
+    "module": "optimization_framework",
+    "size": 11536,
+    "call_frequency": 10,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11536"
+    ]
+  },
+  {
+    "addr": "0x9a7810",
+    "name": "sub_9A7810",
+    "module": "optimization_framework",
+    "size": 16579,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16579"
+    ]
+  },
+  {
+    "addr": "0x9b0780",
+    "name": "sub_9B0780",
+    "module": "optimization_framework",
+    "size": 13752,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13752"
+    ]
+  },
+  {
+    "addr": "0x9bc330",
+    "name": "sub_9BC330",
+    "module": "architecture_detection",
+    "size": 9176,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9176",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x9bf710",
+    "name": "sub_9BF710",
+    "module": "register_allocation",
+    "size": 5405,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5405",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x9d5a00",
+    "name": "sub_9D5A00",
+    "module": "ptx_emission",
+    "size": 5483,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5483",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x9ef580",
+    "name": "sub_9EF580",
+    "module": "ptx_emission",
+    "size": 6431,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6431",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x9ff220",
+    "name": "sub_9FF220",
+    "module": "register_allocation",
+    "size": 7527,
+    "call_frequency": 6,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7527",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa09f80",
+    "name": "sub_A09F80",
+    "module": "optimization_framework",
+    "size": 24594,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:24594"
+    ]
+  },
+  {
+    "addr": "0xa10370",
+    "name": "sub_A10370",
+    "module": "register_allocation",
+    "size": 5154,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5154",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa21bf0",
+    "name": "sub_A21BF0",
+    "module": "register_allocation",
+    "size": 6444,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6444",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa28df0",
+    "name": "sub_A28DF0",
+    "module": "register_allocation",
+    "size": 8664,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8664",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa323f0",
+    "name": "sub_A323F0",
+    "module": "register_allocation",
+    "size": 6215,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6215",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa33c40",
+    "name": "sub_A33C40",
+    "module": "register_allocation",
+    "size": 8905,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8905",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa360e0",
+    "name": "sub_A360E0",
+    "module": "register_allocation",
+    "size": 9277,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9277",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa47960",
+    "name": "sub_A47960",
+    "module": "register_allocation",
+    "size": 7576,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7576",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xa4b600",
+    "name": "sub_A4B600",
+    "module": "ptx_emission",
+    "size": 5340,
+    "call_frequency": 25,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5340",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0xa6af10",
+    "name": "sub_A6AF10",
+    "module": "optimization_framework",
+    "size": 12120,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12120"
+    ]
+  },
+  {
+    "addr": "0xa939d0",
+    "name": "sub_A939D0",
+    "module": "optimization_framework",
+    "size": 65394,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:65394"
+    ]
+  },
+  {
+    "addr": "0xb5ba00",
+    "name": "sub_B5BA00",
+    "module": "optimization_framework",
+    "size": 10300,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10300"
+    ]
+  },
+  {
+    "addr": "0xb6b200",
+    "name": "sub_B6B200",
+    "module": "optimization_framework",
+    "size": 10416,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10416"
+    ]
+  },
+  {
+    "addr": "0xbe3890",
+    "name": "sub_BE3890",
+    "module": "optimization_framework",
+    "size": 10246,
+    "call_frequency": 6,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10246"
+    ]
+  },
+  {
+    "addr": "0xbeb370",
+    "name": "sub_BEB370",
+    "module": "ptx_emission",
+    "size": 6039,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6039",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0xbf6fe0",
+    "name": "sub_BF6FE0",
+    "module": "ptx_emission",
+    "size": 8434,
+    "call_frequency": 25,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8434",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0xbfc6a0",
+    "name": "sub_BFC6A0",
+    "module": "optimization_framework",
+    "size": 34426,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:34426"
+    ]
+  },
+  {
+    "addr": "0xc05fa0",
+    "name": "sub_C05FA0",
+    "module": "optimization_framework",
+    "size": 10486,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10486"
+    ]
+  },
+  {
+    "addr": "0xc0f6d0",
+    "name": "sub_C0F6D0",
+    "module": "register_allocation",
+    "size": 9347,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9347",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xc29e70",
+    "name": "sub_C29E70",
+    "module": "register_allocation",
+    "size": 7183,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7183",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xcdd2d0",
+    "name": "sub_CDD2D0",
+    "module": "optimization_framework",
+    "size": 11453,
+    "call_frequency": 6,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11453"
+    ]
+  },
+  {
+    "addr": "0xd06280",
+    "name": "sub_D06280",
+    "module": "optimization_framework",
+    "size": 12098,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12098"
+    ]
+  },
+  {
+    "addr": "0xd41000",
+    "name": "sub_D41000",
+    "module": "optimization_framework",
+    "size": 11173,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11173"
+    ]
+  },
+  {
+    "addr": "0xd555f0",
+    "name": "sub_D555F0",
+    "module": "register_allocation",
+    "size": 5632,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5632",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xd7d4e0",
+    "name": "sub_D7D4E0",
+    "module": "optimization_framework",
+    "size": 14996,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14996"
+    ]
+  },
+  {
+    "addr": "0xd81040",
+    "name": "sub_D81040",
+    "module": "optimization_framework",
+    "size": 11159,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11159"
+    ]
+  },
+  {
+    "addr": "0xde2750",
+    "name": "sub_DE2750",
+    "module": "optimization_framework",
+    "size": 10051,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10051"
+    ]
+  },
+  {
+    "addr": "0xde5fa0",
+    "name": "sub_DE5FA0",
+    "module": "optimization_framework",
+    "size": 10230,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10230"
+    ]
+  },
+  {
+    "addr": "0xe49e40",
+    "name": "sub_E49E40",
+    "module": "optimization_framework",
+    "size": 10452,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10452"
+    ]
+  },
+  {
+    "addr": "0xe5ccc0",
+    "name": "sub_E5CCC0",
+    "module": "register_allocation",
+    "size": 5614,
+    "call_frequency": 9,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5614",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xe68a10",
+    "name": "sub_E68A10",
+    "module": "ptx_emission",
+    "size": 6131,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6131",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0xe74590",
+    "name": "sub_E74590",
+    "module": "register_allocation",
+    "size": 6083,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6083",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xeb11f0",
+    "name": "sub_EB11F0",
+    "module": "optimization_framework",
+    "size": 11801,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11801"
+    ]
+  },
+  {
+    "addr": "0xebf510",
+    "name": "sub_EBF510",
+    "module": "optimization_framework",
+    "size": 13871,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13871"
+    ]
+  },
+  {
+    "addr": "0xeea9f0",
+    "name": "sub_EEA9F0",
+    "module": "optimization_framework",
+    "size": 10196,
+    "call_frequency": 13,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10196"
+    ]
+  },
+  {
+    "addr": "0xefa6b0",
+    "name": "sub_EFA6B0",
+    "module": "register_allocation",
+    "size": 5654,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5654",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0xf20c20",
+    "name": "sub_F20C20",
+    "module": "optimization_framework",
+    "size": 11224,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11224"
+    ]
+  },
+  {
+    "addr": "0xf681e0",
+    "name": "sub_F681E0",
+    "module": "optimization_framework",
+    "size": 10785,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10785"
+    ]
+  },
+  {
+    "addr": "0xfb22f0",
+    "name": "sub_FB22F0",
+    "module": "optimization_framework",
+    "size": 12210,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12210"
+    ]
+  },
+  {
+    "addr": "0xfc0ee0",
+    "name": "sub_FC0EE0",
+    "module": "optimization_framework",
+    "size": 11548,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11548"
+    ]
+  },
+  {
+    "addr": "0xfc3c00",
+    "name": "sub_FC3C00",
+    "module": "optimization_framework",
+    "size": 12821,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12821"
+    ]
+  },
+  {
+    "addr": "0x1012fb0",
+    "name": "sub_1012FB0",
+    "module": "optimization_framework",
+    "size": 10153,
+    "call_frequency": 9,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10153"
+    ]
+  },
+  {
+    "addr": "0x106ab30",
+    "name": "sub_106AB30",
+    "module": "optimization_framework",
+    "size": 12354,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12354"
+    ]
+  },
+  {
+    "addr": "0x1093330",
+    "name": "sub_1093330",
+    "module": "register_allocation",
+    "size": 8270,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8270",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x10aca40",
+    "name": "sub_10ACA40",
+    "module": "optimization_framework",
+    "size": 16276,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16276"
+    ]
+  },
+  {
+    "addr": "0x10b23f0",
+    "name": "sub_10B23F0",
+    "module": "optimization_framework",
+    "size": 14073,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14073"
+    ]
+  },
+  {
+    "addr": "0x10cc690",
+    "name": "sub_10CC690",
+    "module": "optimization_framework",
+    "size": 12705,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12705"
+    ]
+  },
+  {
+    "addr": "0x10d48a0",
+    "name": "sub_10D48A0",
+    "module": "optimization_framework",
+    "size": 10708,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10708"
+    ]
+  },
+  {
+    "addr": "0x10d8bb0",
+    "name": "sub_10D8BB0",
+    "module": "optimization_framework",
+    "size": 14420,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14420"
+    ]
+  },
+  {
+    "addr": "0x10dc830",
+    "name": "sub_10DC830",
+    "module": "optimization_framework",
+    "size": 10740,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10740"
+    ]
+  },
+  {
+    "addr": "0x10ee7a0",
+    "name": "sub_10EE7A0",
+    "module": "optimization_framework",
+    "size": 59982,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:59982"
+    ]
+  },
+  {
+    "addr": "0x110ca10",
+    "name": "sub_110CA10",
+    "module": "optimization_framework",
+    "size": 12482,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12482"
+    ]
+  },
+  {
+    "addr": "0x1136650",
+    "name": "sub_1136650",
+    "module": "optimization_framework",
+    "size": 22928,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:22928"
+    ]
+  },
+  {
+    "addr": "0x113dac0",
+    "name": "sub_113DAC0",
+    "module": "optimization_framework",
+    "size": 10009,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10009"
+    ]
+  },
+  {
+    "addr": "0x1147470",
+    "name": "sub_1147470",
+    "module": "optimization_framework",
+    "size": 10378,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10378"
+    ]
+  },
+  {
+    "addr": "0x114d150",
+    "name": "sub_114D150",
+    "module": "optimization_framework",
+    "size": 11118,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11118"
+    ]
+  },
+  {
+    "addr": "0x1169c30",
+    "name": "sub_1169C30",
+    "module": "optimization_framework",
+    "size": 11516,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11516"
+    ]
+  },
+  {
+    "addr": "0x118a780",
+    "name": "sub_118A780",
+    "module": "optimization_framework",
+    "size": 12354,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12354"
+    ]
+  },
+  {
+    "addr": "0x1190310",
+    "name": "sub_1190310",
+    "module": "optimization_framework",
+    "size": 16292,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16292"
+    ]
+  },
+  {
+    "addr": "0x119dd20",
+    "name": "sub_119DD20",
+    "module": "optimization_framework",
+    "size": 10381,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10381"
+    ]
+  },
+  {
+    "addr": "0x11a3f30",
+    "name": "sub_11A3F30",
+    "module": "optimization_framework",
+    "size": 10630,
+    "call_frequency": 10,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10630"
+    ]
+  },
+  {
+    "addr": "0x11a7600",
+    "name": "sub_11A7600",
+    "module": "optimization_framework",
+    "size": 28119,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:28119"
+    ]
+  },
+  {
+    "addr": "0x11b8020",
+    "name": "sub_11B8020",
+    "module": "optimization_framework",
+    "size": 11153,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11153"
+    ]
+  },
+  {
+    "addr": "0x11babc0",
+    "name": "sub_11BABC0",
+    "module": "optimization_framework",
+    "size": 12301,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12301"
+    ]
+  },
+  {
+    "addr": "0x11c5620",
+    "name": "sub_11C5620",
+    "module": "optimization_framework",
+    "size": 16087,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16087"
+    ]
+  },
+  {
+    "addr": "0x11ff4e0",
+    "name": "sub_11FF4E0",
+    "module": "optimization_framework",
+    "size": 23829,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:23829"
+    ]
+  },
+  {
+    "addr": "0x124f410",
+    "name": "sub_124F410",
+    "module": "optimization_framework",
+    "size": 11369,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11369"
+    ]
+  },
+  {
+    "addr": "0x1255d80",
+    "name": "sub_1255D80",
+    "module": "register_allocation",
+    "size": 5035,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5035",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x125fb30",
+    "name": "sub_125FB30",
+    "module": "optimization_framework",
+    "size": 11557,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11557"
+    ]
+  },
+  {
+    "addr": "0x1265970",
+    "name": "sub_1265970",
+    "module": "compilation_pipeline",
+    "size": 9037,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9037",
+      "module:compilation_pipeline"
+    ]
+  },
+  {
+    "addr": "0x126a910",
+    "name": "sub_126A910",
+    "module": "optimization_framework",
+    "size": 35021,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:35021"
+    ]
+  },
+  {
+    "addr": "0x1292420",
+    "name": "sub_1292420",
+    "module": "optimization_framework",
+    "size": 12182,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12182"
+    ]
+  },
+  {
+    "addr": "0x12ae930",
+    "name": "sub_12AE930",
+    "module": "optimization_framework",
+    "size": 11059,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11059"
+    ]
+  },
+  {
+    "addr": "0x12b3fd0",
+    "name": "sub_12B3FD0",
+    "module": "optimization_framework",
+    "size": 22934,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:22934"
+    ]
+  },
+  {
+    "addr": "0x12c06e0",
+    "name": "sub_12C06E0",
+    "module": "optimization_framework",
+    "size": 12007,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12007"
+    ]
+  },
+  {
+    "addr": "0x12cc750",
+    "name": "sub_12CC750",
+    "module": "optimization_framework",
+    "size": 22087,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:22087"
+    ]
+  },
+  {
+    "addr": "0x12fcdb0",
+    "name": "sub_12FCDB0",
+    "module": "optimization_framework",
+    "size": 15790,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15790"
+    ]
+  },
+  {
+    "addr": "0x13549c0",
+    "name": "sub_13549C0",
+    "module": "optimization_framework",
+    "size": 11038,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11038"
+    ]
+  },
+  {
+    "addr": "0x13c7380",
+    "name": "sub_13C7380",
+    "module": "register_allocation",
+    "size": 5900,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5900",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1400540",
+    "name": "sub_1400540",
+    "module": "register_allocation",
+    "size": 5279,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5279",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1401b00",
+    "name": "sub_1401B00",
+    "module": "register_allocation",
+    "size": 5351,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5351",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x141ce30",
+    "name": "sub_141CE30",
+    "module": "register_allocation",
+    "size": 5699,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5699",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1432e70",
+    "name": "sub_1432E70",
+    "module": "optimization_framework",
+    "size": 13215,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13215"
+    ]
+  },
+  {
+    "addr": "0x149e420",
+    "name": "sub_149E420",
+    "module": "register_allocation",
+    "size": 5694,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5694",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x14b5970",
+    "name": "sub_14B5970",
+    "module": "optimization_framework",
+    "size": 11555,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11555"
+    ]
+  },
+  {
+    "addr": "0x14b86a0",
+    "name": "sub_14B86A0",
+    "module": "optimization_framework",
+    "size": 10728,
+    "call_frequency": 12,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10728"
+    ]
+  },
+  {
+    "addr": "0x14d1bc0",
+    "name": "sub_14D1BC0",
+    "module": "optimization_framework",
+    "size": 10492,
+    "call_frequency": 8,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10492"
+    ]
+  },
+  {
+    "addr": "0x14e4230",
+    "name": "sub_14E4230",
+    "module": "optimization_framework",
+    "size": 11500,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11500"
+    ]
+  },
+  {
+    "addr": "0x14fce40",
+    "name": "sub_14FCE40",
+    "module": "error_handling",
+    "size": 28534,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:28534"
+    ]
+  },
+  {
+    "addr": "0x151b070",
+    "name": "sub_151B070",
+    "module": "optimization_framework",
+    "size": 20804,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:20804"
+    ]
+  },
+  {
+    "addr": "0x1520420",
+    "name": "sub_1520420",
+    "module": "register_allocation",
+    "size": 5023,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5023",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1528720",
+    "name": "sub_1528720",
+    "module": "register_allocation",
+    "size": 6958,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6958",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1531f90",
+    "name": "sub_1531F90",
+    "module": "register_allocation",
+    "size": 5433,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5433",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1535340",
+    "name": "sub_1535340",
+    "module": "register_allocation",
+    "size": 5599,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5599",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x15467b0",
+    "name": "sub_15467B0",
+    "module": "register_allocation",
+    "size": 5577,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5577",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x15572a0",
+    "name": "sub_15572A0",
+    "module": "register_allocation",
+    "size": 7296,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7296",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x155a0b0",
+    "name": "sub_155A0B0",
+    "module": "register_allocation",
+    "size": 6745,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6745",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x15644b0",
+    "name": "sub_15644B0",
+    "module": "optimization_framework",
+    "size": 18586,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18586"
+    ]
+  },
+  {
+    "addr": "0x156e800",
+    "name": "sub_156E800",
+    "module": "optimization_framework",
+    "size": 64245,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:64245"
+    ]
+  },
+  {
+    "addr": "0x1584e20",
+    "name": "sub_1584E20",
+    "module": "optimization_framework",
+    "size": 11359,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11359"
+    ]
+  },
+  {
+    "addr": "0x163d530",
+    "name": "sub_163D530",
+    "module": "optimization_framework",
+    "size": 10455,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10455"
+    ]
+  },
+  {
+    "addr": "0x1663f80",
+    "name": "sub_1663F80",
+    "module": "ptx_emission",
+    "size": 6154,
+    "call_frequency": 24,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6154",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x166a310",
+    "name": "sub_166A310",
+    "module": "optimization_framework",
+    "size": 10407,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10407"
+    ]
+  },
+  {
+    "addr": "0x16786a0",
+    "name": "sub_16786A0",
+    "module": "optimization_framework",
+    "size": 13177,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13177"
+    ]
+  },
+  {
+    "addr": "0x1692010",
+    "name": "sub_1692010",
+    "module": "register_allocation",
+    "size": 5074,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5074",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x170f8e0",
+    "name": "sub_170F8E0",
+    "module": "optimization_framework",
+    "size": 12011,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12011"
+    ]
+  },
+  {
+    "addr": "0x173aab0",
+    "name": "sub_173AAB0",
+    "module": "optimization_framework",
+    "size": 10772,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10772"
+    ]
+  },
+  {
+    "addr": "0x1743da0",
+    "name": "sub_1743DA0",
+    "module": "optimization_framework",
+    "size": 23690,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:23690"
+    ]
+  },
+  {
+    "addr": "0x176b030",
+    "name": "sub_176B030",
+    "module": "optimization_framework",
+    "size": 11828,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11828"
+    ]
+  },
+  {
+    "addr": "0x176fef0",
+    "name": "sub_176FEF0",
+    "module": "optimization_framework",
+    "size": 10967,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10967"
+    ]
+  },
+  {
+    "addr": "0x1796730",
+    "name": "sub_1796730",
+    "module": "optimization_framework",
+    "size": 13567,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13567"
+    ]
+  },
+  {
+    "addr": "0x1799c30",
+    "name": "sub_1799C30",
+    "module": "optimization_framework",
+    "size": 13306,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13306"
+    ]
+  },
+  {
+    "addr": "0x17a4d70",
+    "name": "sub_17A4D70",
+    "module": "optimization_framework",
+    "size": 13965,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13965"
+    ]
+  },
+  {
+    "addr": "0x17a9010",
+    "name": "sub_17A9010",
+    "module": "optimization_framework",
+    "size": 18560,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18560"
+    ]
+  },
+  {
+    "addr": "0x17ba1a0",
+    "name": "sub_17BA1A0",
+    "module": "optimization_framework",
+    "size": 11775,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11775"
+    ]
+  },
+  {
+    "addr": "0x17c2db0",
+    "name": "sub_17C2DB0",
+    "module": "register_allocation",
+    "size": 7281,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7281",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x17ddce0",
+    "name": "sub_17DDCE0",
+    "module": "optimization_framework",
+    "size": 10729,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10729"
+    ]
+  },
+  {
+    "addr": "0x17eef60",
+    "name": "sub_17EEF60",
+    "module": "optimization_framework",
+    "size": 12820,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12820"
+    ]
+  },
+  {
+    "addr": "0x18098d0",
+    "name": "sub_18098D0",
+    "module": "optimization_framework",
+    "size": 12134,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12134"
+    ]
+  },
+  {
+    "addr": "0x180e760",
+    "name": "sub_180E760",
+    "module": "optimization_framework",
+    "size": 11846,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11846"
+    ]
+  },
+  {
+    "addr": "0x18115b0",
+    "name": "sub_18115B0",
+    "module": "optimization_framework",
+    "size": 12424,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12424"
+    ]
+  },
+  {
+    "addr": "0x181d610",
+    "name": "sub_181D610",
+    "module": "optimization_framework",
+    "size": 10767,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10767"
+    ]
+  },
+  {
+    "addr": "0x1820020",
+    "name": "sub_1820020",
+    "module": "register_allocation",
+    "size": 6733,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6733",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1821a70",
+    "name": "sub_1821A70",
+    "module": "optimization_framework",
+    "size": 12515,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12515"
+    ]
+  },
+  {
+    "addr": "0x1825f40",
+    "name": "sub_1825F40",
+    "module": "optimization_framework",
+    "size": 12707,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12707"
+    ]
+  },
+  {
+    "addr": "0x18290f0",
+    "name": "sub_18290F0",
+    "module": "optimization_framework",
+    "size": 10691,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10691"
+    ]
+  },
+  {
+    "addr": "0x182ed20",
+    "name": "sub_182ED20",
+    "module": "optimization_framework",
+    "size": 12404,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12404"
+    ]
+  },
+  {
+    "addr": "0x1834e90",
+    "name": "sub_1834E90",
+    "module": "optimization_framework",
+    "size": 14003,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14003"
+    ]
+  },
+  {
+    "addr": "0x1858b90",
+    "name": "sub_1858B90",
+    "module": "register_allocation",
+    "size": 5541,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5541",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1864060",
+    "name": "sub_1864060",
+    "module": "optimization_framework",
+    "size": 10197,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10197"
+    ]
+  },
+  {
+    "addr": "0x18895e0",
+    "name": "sub_18895E0",
+    "module": "optimization_framework",
+    "size": 12609,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12609"
+    ]
+  },
+  {
+    "addr": "0x189a480",
+    "name": "sub_189A480",
+    "module": "optimization_framework",
+    "size": 13869,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13869"
+    ]
+  },
+  {
+    "addr": "0x189e6f0",
+    "name": "sub_189E6F0",
+    "module": "optimization_framework",
+    "size": 13382,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13382"
+    ]
+  },
+  {
+    "addr": "0x18ae880",
+    "name": "sub_18AE880",
+    "module": "optimization_framework",
+    "size": 12622,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12622"
+    ]
+  },
+  {
+    "addr": "0x18c04b0",
+    "name": "sub_18C04B0",
+    "module": "optimization_framework",
+    "size": 13679,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13679"
+    ]
+  },
+  {
+    "addr": "0x18d3d80",
+    "name": "sub_18D3D80",
+    "module": "optimization_framework",
+    "size": 13514,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13514"
+    ]
+  },
+  {
+    "addr": "0x18eed30",
+    "name": "sub_18EED30",
+    "module": "optimization_framework",
+    "size": 10509,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10509"
+    ]
+  },
+  {
+    "addr": "0x18f6d00",
+    "name": "sub_18F6D00",
+    "module": "optimization_framework",
+    "size": 11587,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11587"
+    ]
+  },
+  {
+    "addr": "0x1900bb0",
+    "name": "sub_1900BB0",
+    "module": "optimization_framework",
+    "size": 11744,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11744"
+    ]
+  },
+  {
+    "addr": "0x1945a50",
+    "name": "sub_1945A50",
+    "module": "optimization_framework",
+    "size": 12117,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12117"
+    ]
+  },
+  {
+    "addr": "0x194d450",
+    "name": "sub_194D450",
+    "module": "optimization_framework",
+    "size": 13878,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13878"
+    ]
+  },
+  {
+    "addr": "0x1975210",
+    "name": "sub_1975210",
+    "module": "optimization_framework",
+    "size": 10984,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10984"
+    ]
+  },
+  {
+    "addr": "0x1979a90",
+    "name": "sub_1979A90",
+    "module": "optimization_framework",
+    "size": 13431,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13431"
+    ]
+  },
+  {
+    "addr": "0x197ea40",
+    "name": "sub_197EA40",
+    "module": "optimization_framework",
+    "size": 10991,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10991"
+    ]
+  },
+  {
+    "addr": "0x19879e0",
+    "name": "sub_19879E0",
+    "module": "optimization_framework",
+    "size": 11727,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11727"
+    ]
+  },
+  {
+    "addr": "0x198a7b0",
+    "name": "sub_198A7B0",
+    "module": "optimization_framework",
+    "size": 12902,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12902"
+    ]
+  },
+  {
+    "addr": "0x19a87a0",
+    "name": "sub_19A87A0",
+    "module": "optimization_framework",
+    "size": 15203,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15203"
+    ]
+  },
+  {
+    "addr": "0x19b15b0",
+    "name": "sub_19B15B0",
+    "module": "optimization_framework",
+    "size": 12995,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12995"
+    ]
+  },
+  {
+    "addr": "0x19bb5c0",
+    "name": "sub_19BB5C0",
+    "module": "optimization_framework",
+    "size": 11668,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11668"
+    ]
+  },
+  {
+    "addr": "0x19c4800",
+    "name": "sub_19C4800",
+    "module": "optimization_framework",
+    "size": 10278,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10278"
+    ]
+  },
+  {
+    "addr": "0x19c97b0",
+    "name": "sub_19C97B0",
+    "module": "optimization_framework",
+    "size": 10507,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10507"
+    ]
+  },
+  {
+    "addr": "0x19f7210",
+    "name": "sub_19F7210",
+    "module": "optimization_framework",
+    "size": 10126,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10126"
+    ]
+  },
+  {
+    "addr": "0x19f99a0",
+    "name": "sub_19F99A0",
+    "module": "optimization_framework",
+    "size": 12604,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12604"
+    ]
+  },
+  {
+    "addr": "0x1a33e80",
+    "name": "sub_1A33E80",
+    "module": "optimization_framework",
+    "size": 12292,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12292"
+    ]
+  },
+  {
+    "addr": "0x1a3b290",
+    "name": "sub_1A3B290",
+    "module": "optimization_framework",
+    "size": 10810,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10810"
+    ]
+  },
+  {
+    "addr": "0x1a45930",
+    "name": "sub_1A45930",
+    "module": "optimization_framework",
+    "size": 12578,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12578"
+    ]
+  },
+  {
+    "addr": "0x1a5b3d0",
+    "name": "sub_1A5B3D0",
+    "module": "optimization_framework",
+    "size": 12150,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12150"
+    ]
+  },
+  {
+    "addr": "0x1a6a260",
+    "name": "sub_1A6A260",
+    "module": "optimization_framework",
+    "size": 10344,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10344"
+    ]
+  },
+  {
+    "addr": "0x1a775e0",
+    "name": "sub_1A775E0",
+    "module": "optimization_framework",
+    "size": 10928,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10928"
+    ]
+  },
+  {
+    "addr": "0x1a834a0",
+    "name": "sub_1A834A0",
+    "module": "optimization_framework",
+    "size": 10092,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10092"
+    ]
+  },
+  {
+    "addr": "0x1a8cd80",
+    "name": "sub_1A8CD80",
+    "module": "optimization_framework",
+    "size": 11655,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11655"
+    ]
+  },
+  {
+    "addr": "0x1aa0070",
+    "name": "sub_1AA0070",
+    "module": "optimization_framework",
+    "size": 11928,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11928"
+    ]
+  },
+  {
+    "addr": "0x1aae740",
+    "name": "sub_1AAE740",
+    "module": "optimization_framework",
+    "size": 12273,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12273"
+    ]
+  },
+  {
+    "addr": "0x1adc640",
+    "name": "sub_1ADC640",
+    "module": "optimization_framework",
+    "size": 19477,
+    "call_frequency": 6,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:19477"
+    ]
+  },
+  {
+    "addr": "0x1b01a40",
+    "name": "sub_1B01A40",
+    "module": "optimization_framework",
+    "size": 12046,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12046"
+    ]
+  },
+  {
+    "addr": "0x1b07290",
+    "name": "sub_1B07290",
+    "module": "optimization_framework",
+    "size": 12466,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12466"
+    ]
+  },
+  {
+    "addr": "0x1b12b90",
+    "name": "sub_1B12B90",
+    "module": "optimization_framework",
+    "size": 10964,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10964"
+    ]
+  },
+  {
+    "addr": "0x1b24cf0",
+    "name": "sub_1B24CF0",
+    "module": "register_allocation",
+    "size": 5066,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5066",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1b368e0",
+    "name": "sub_1B368E0",
+    "module": "register_allocation",
+    "size": 6599,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6599",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1b382b0",
+    "name": "sub_1B382B0",
+    "module": "optimization_framework",
+    "size": 12574,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12574"
+    ]
+  },
+  {
+    "addr": "0x1b60700",
+    "name": "sub_1B60700",
+    "module": "optimization_framework",
+    "size": 13307,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13307"
+    ]
+  },
+  {
+    "addr": "0x1b649e0",
+    "name": "sub_1B649E0",
+    "module": "optimization_framework",
+    "size": 11160,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11160"
+    ]
+  },
+  {
+    "addr": "0x1bb4e00",
+    "name": "sub_1BB4E00",
+    "module": "register_allocation",
+    "size": 6460,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6460",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1bd0660",
+    "name": "sub_1BD0660",
+    "module": "optimization_framework",
+    "size": 10204,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10204"
+    ]
+  },
+  {
+    "addr": "0x1bd5480",
+    "name": "sub_1BD5480",
+    "module": "optimization_framework",
+    "size": 10266,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10266"
+    ]
+  },
+  {
+    "addr": "0x1bee1b0",
+    "name": "sub_1BEE1B0",
+    "module": "register_allocation",
+    "size": 6484,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6484",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1c23b90",
+    "name": "sub_1C23B90",
+    "module": "optimization_framework",
+    "size": 11373,
+    "call_frequency": 6,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11373"
+    ]
+  },
+  {
+    "addr": "0x1c32740",
+    "name": "sub_1C32740",
+    "module": "architecture_detection",
+    "size": 6943,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6943",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x1c36530",
+    "name": "sub_1C36530",
+    "module": "error_handling",
+    "size": 22232,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:22232"
+    ]
+  },
+  {
+    "addr": "0x1c4d210",
+    "name": "sub_1C4D210",
+    "module": "optimization_framework",
+    "size": 11594,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11594"
+    ]
+  },
+  {
+    "addr": "0x1c585c0",
+    "name": "sub_1C585C0",
+    "module": "register_allocation",
+    "size": 5728,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5728",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1c6a6c0",
+    "name": "sub_1C6A6C0",
+    "module": "optimization_framework",
+    "size": 10742,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10742"
+    ]
+  },
+  {
+    "addr": "0x1c70910",
+    "name": "sub_1C70910",
+    "module": "optimization_framework",
+    "size": 11440,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11440"
+    ]
+  },
+  {
+    "addr": "0x1c77080",
+    "name": "sub_1C77080",
+    "module": "optimization_framework",
+    "size": 10016,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10016"
+    ]
+  },
+  {
+    "addr": "0x1c7b2c0",
+    "name": "sub_1C7B2C0",
+    "module": "optimization_framework",
+    "size": 10781,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10781"
+    ]
+  },
+  {
+    "addr": "0x1c86ca0",
+    "name": "sub_1C86CA0",
+    "module": "optimization_framework",
+    "size": 13798,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13798"
+    ]
+  },
+  {
+    "addr": "0x1c8f750",
+    "name": "sub_1C8F750",
+    "module": "optimization_framework",
+    "size": 10349,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10349"
+    ]
+  },
+  {
+    "addr": "0x1c92200",
+    "name": "sub_1C92200",
+    "module": "optimization_framework",
+    "size": 11466,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11466"
+    ]
+  },
+  {
+    "addr": "0x1cbfa40",
+    "name": "sub_1CBFA40",
+    "module": "optimization_framework",
+    "size": 14249,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14249"
+    ]
+  },
+  {
+    "addr": "0x1cd74b0",
+    "name": "sub_1CD74B0",
+    "module": "optimization_framework",
+    "size": 12212,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12212"
+    ]
+  },
+  {
+    "addr": "0x1cde4d0",
+    "name": "sub_1CDE4D0",
+    "module": "optimization_framework",
+    "size": 10791,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10791"
+    ]
+  },
+  {
+    "addr": "0x1ce7dd0",
+    "name": "sub_1CE7DD0",
+    "module": "optimization_framework",
+    "size": 12998,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12998"
+    ]
+  },
+  {
+    "addr": "0x1cfdd60",
+    "name": "sub_1CFDD60",
+    "module": "register_allocation",
+    "size": 8802,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8802",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1d1b0d0",
+    "name": "sub_1D1B0D0",
+    "module": "optimization_framework",
+    "size": 18244,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18244"
+    ]
+  },
+  {
+    "addr": "0x1d4bb00",
+    "name": "sub_1D4BB00",
+    "module": "optimization_framework",
+    "size": 16251,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16251"
+    ]
+  },
+  {
+    "addr": "0x1d54c20",
+    "name": "sub_1D54C20",
+    "module": "optimization_framework",
+    "size": 12729,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12729"
+    ]
+  },
+  {
+    "addr": "0x1d706f0",
+    "name": "sub_1D706F0",
+    "module": "optimization_framework",
+    "size": 11314,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11314"
+    ]
+  },
+  {
+    "addr": "0x1d73760",
+    "name": "sub_1D73760",
+    "module": "optimization_framework",
+    "size": 11875,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11875"
+    ]
+  },
+  {
+    "addr": "0x1d779d0",
+    "name": "sub_1D779D0",
+    "module": "optimization_framework",
+    "size": 12369,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12369"
+    ]
+  },
+  {
+    "addr": "0x1d7aa30",
+    "name": "sub_1D7AA30",
+    "module": "optimization_framework",
+    "size": 12061,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12061"
+    ]
+  },
+  {
+    "addr": "0x1d7f9d0",
+    "name": "sub_1D7F9D0",
+    "module": "register_allocation",
+    "size": 5271,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5271",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1da4f80",
+    "name": "sub_1DA4F80",
+    "module": "optimization_framework",
+    "size": 11946,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11946"
+    ]
+  },
+  {
+    "addr": "0x1dd77e0",
+    "name": "sub_1DD77E0",
+    "module": "register_allocation",
+    "size": 5019,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5019",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1dd9fb0",
+    "name": "sub_1DD9FB0",
+    "module": "register_allocation",
+    "size": 7334,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7334",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e00370",
+    "name": "sub_1E00370",
+    "module": "optimization_framework",
+    "size": 12052,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12052"
+    ]
+  },
+  {
+    "addr": "0x1e231b0",
+    "name": "sub_1E231B0",
+    "module": "optimization_framework",
+    "size": 10362,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10362"
+    ]
+  },
+  {
+    "addr": "0x1e2b150",
+    "name": "sub_1E2B150",
+    "module": "register_allocation",
+    "size": 5141,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5141",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e32250",
+    "name": "sub_1E32250",
+    "module": "register_allocation",
+    "size": 7536,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7536",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e4df60",
+    "name": "sub_1E4DF60",
+    "module": "optimization_framework",
+    "size": 12692,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12692"
+    ]
+  },
+  {
+    "addr": "0x1e579c0",
+    "name": "sub_1E579C0",
+    "module": "register_allocation",
+    "size": 7673,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7673",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e5b110",
+    "name": "sub_1E5B110",
+    "module": "optimization_framework",
+    "size": 10722,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10722"
+    ]
+  },
+  {
+    "addr": "0x1e8c0a0",
+    "name": "sub_1E8C0A0",
+    "module": "register_allocation",
+    "size": 5350,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5350",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1e8d750",
+    "name": "sub_1E8D750",
+    "module": "register_allocation",
+    "size": 7942,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7942",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1ea01f0",
+    "name": "sub_1EA01F0",
+    "module": "optimization_framework",
+    "size": 12068,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12068"
+    ]
+  },
+  {
+    "addr": "0x1ea4550",
+    "name": "sub_1EA4550",
+    "module": "optimization_framework",
+    "size": 11007,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11007"
+    ]
+  },
+  {
+    "addr": "0x1eb1020",
+    "name": "sub_1EB1020",
+    "module": "register_allocation",
+    "size": 9101,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9101",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1eb8ca0",
+    "name": "sub_1EB8CA0",
+    "module": "register_allocation",
+    "size": 8885,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8885",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1ec3170",
+    "name": "sub_1EC3170",
+    "module": "register_allocation",
+    "size": 6087,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6087",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1ed3cc0",
+    "name": "sub_1ED3CC0",
+    "module": "register_allocation",
+    "size": 9243,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9243",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1ee1050",
+    "name": "sub_1EE1050",
+    "module": "optimization_framework",
+    "size": 10852,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10852"
+    ]
+  },
+  {
+    "addr": "0x1ee3b80",
+    "name": "sub_1EE3B80",
+    "module": "register_allocation",
+    "size": 5230,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5230",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1ef5620",
+    "name": "sub_1EF5620",
+    "module": "optimization_framework",
+    "size": 10617,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10617"
+    ]
+  },
+  {
+    "addr": "0x1f27020",
+    "name": "sub_1F27020",
+    "module": "optimization_framework",
+    "size": 13028,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13028"
+    ]
+  },
+  {
+    "addr": "0x1f50270",
+    "name": "sub_1F50270",
+    "module": "optimization_framework",
+    "size": 11695,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11695"
+    ]
+  },
+  {
+    "addr": "0x1f53550",
+    "name": "sub_1F53550",
+    "module": "optimization_framework",
+    "size": 12216,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12216"
+    ]
+  },
+  {
+    "addr": "0x1f5c060",
+    "name": "sub_1F5C060",
+    "module": "register_allocation",
+    "size": 6472,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6472",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x1f87cb0",
+    "name": "sub_1F87CB0",
+    "module": "optimization_framework",
+    "size": 10057,
+    "call_frequency": 6,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10057"
+    ]
+  },
+  {
+    "addr": "0x1f912f0",
+    "name": "sub_1F912F0",
+    "module": "optimization_framework",
+    "size": 12381,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12381"
+    ]
+  },
+  {
+    "addr": "0x1fa4ac0",
+    "name": "sub_1FA4AC0",
+    "module": "optimization_framework",
+    "size": 10404,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10404"
+    ]
+  },
+  {
+    "addr": "0x1fbdc00",
+    "name": "sub_1FBDC00",
+    "module": "optimization_framework",
+    "size": 11502,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11502"
+    ]
+  },
+  {
+    "addr": "0x1fc2c30",
+    "name": "sub_1FC2C30",
+    "module": "optimization_framework",
+    "size": 11872,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11872"
+    ]
+  },
+  {
+    "addr": "0x1fc66b0",
+    "name": "sub_1FC66B0",
+    "module": "optimization_framework",
+    "size": 11957,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11957"
+    ]
+  },
+  {
+    "addr": "0x1fc9570",
+    "name": "sub_1FC9570",
+    "module": "optimization_framework",
+    "size": 10832,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10832"
+    ]
+  },
+  {
+    "addr": "0x1fe1bd0",
+    "name": "sub_1FE1BD0",
+    "module": "optimization_framework",
+    "size": 12008,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12008"
+    ]
+  },
+  {
+    "addr": "0x1ff6f70",
+    "name": "sub_1FF6F70",
+    "module": "optimization_framework",
+    "size": 10256,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10256"
+    ]
+  },
+  {
+    "addr": "0x1ffb890",
+    "name": "sub_1FFB890",
+    "module": "optimization_framework",
+    "size": 17808,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:17808"
+    ]
+  },
+  {
+    "addr": "0x20019c0",
+    "name": "sub_20019C0",
+    "module": "optimization_framework",
+    "size": 46388,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:46388"
+    ]
+  },
+  {
+    "addr": "0x201bb90",
+    "name": "sub_201BB90",
+    "module": "optimization_framework",
+    "size": 10833,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10833"
+    ]
+  },
+  {
+    "addr": "0x201e5f0",
+    "name": "sub_201E5F0",
+    "module": "optimization_framework",
+    "size": 11186,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11186"
+    ]
+  },
+  {
+    "addr": "0x2056920",
+    "name": "sub_2056920",
+    "module": "optimization_framework",
+    "size": 14790,
+    "call_frequency": 17,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14790"
+    ]
+  },
+  {
+    "addr": "0x205d140",
+    "name": "sub_205D140",
+    "module": "register_allocation",
+    "size": 5866,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5866",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2081f00",
+    "name": "sub_2081F00",
+    "module": "optimization_framework",
+    "size": 40885,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:40885"
+    ]
+  },
+  {
+    "addr": "0x208cf60",
+    "name": "sub_208CF60",
+    "module": "optimization_framework",
+    "size": 13562,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13562"
+    ]
+  },
+  {
+    "addr": "0x2095b00",
+    "name": "sub_2095B00",
+    "module": "ptx_emission",
+    "size": 8520,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8520",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x209c180",
+    "name": "sub_209C180",
+    "module": "optimization_framework",
+    "size": 10865,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10865"
+    ]
+  },
+  {
+    "addr": "0x20a2af0",
+    "name": "sub_20A2AF0",
+    "module": "optimization_framework",
+    "size": 25016,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:25016"
+    ]
+  },
+  {
+    "addr": "0x20a8cb0",
+    "name": "sub_20A8CB0",
+    "module": "optimization_framework",
+    "size": 11885,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11885"
+    ]
+  },
+  {
+    "addr": "0x20acae0",
+    "name": "sub_20ACAE0",
+    "module": "optimization_framework",
+    "size": 30626,
+    "call_frequency": 7,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:30626"
+    ]
+  },
+  {
+    "addr": "0x20ceb70",
+    "name": "sub_20CEB70",
+    "module": "optimization_framework",
+    "size": 10640,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10640"
+    ]
+  },
+  {
+    "addr": "0x20d3380",
+    "name": "sub_20D3380",
+    "module": "optimization_framework",
+    "size": 11605,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11605"
+    ]
+  },
+  {
+    "addr": "0x20d8b60",
+    "name": "sub_20D8B60",
+    "module": "register_allocation",
+    "size": 6584,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6584",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x20da7f0",
+    "name": "sub_20DA7F0",
+    "module": "register_allocation",
+    "size": 5258,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5258",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x20e14f0",
+    "name": "sub_20E14F0",
+    "module": "register_allocation",
+    "size": 6388,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6388",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x20e37f0",
+    "name": "sub_20E37F0",
+    "module": "register_allocation",
+    "size": 7951,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7951",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x20eebc0",
+    "name": "sub_20EEBC0",
+    "module": "optimization_framework",
+    "size": 10735,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10735"
+    ]
+  },
+  {
+    "addr": "0x21174b0",
+    "name": "sub_21174B0",
+    "module": "optimization_framework",
+    "size": 12040,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12040"
+    ]
+  },
+  {
+    "addr": "0x2179030",
+    "name": "sub_2179030",
+    "module": "architecture_detection",
+    "size": 7858,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7858",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x21d1160",
+    "name": "sub_21D1160",
+    "module": "optimization_framework",
+    "size": 14951,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14951"
+    ]
+  },
+  {
+    "addr": "0x21eeb40",
+    "name": "sub_21EEB40",
+    "module": "optimization_framework",
+    "size": 10864,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10864"
+    ]
+  },
+  {
+    "addr": "0x2200150",
+    "name": "sub_2200150",
+    "module": "optimization_framework",
+    "size": 12161,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12161"
+    ]
+  },
+  {
+    "addr": "0x225a270",
+    "name": "sub_225A270",
+    "module": "optimization_framework",
+    "size": 12998,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12998"
+    ]
+  },
+  {
+    "addr": "0x22623c0",
+    "name": "sub_22623C0",
+    "module": "optimization_framework",
+    "size": 11583,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11583"
+    ]
+  },
+  {
+    "addr": "0x22660a0",
+    "name": "sub_22660A0",
+    "module": "register_allocation",
+    "size": 5184,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5184",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x22674e0",
+    "name": "sub_22674E0",
+    "module": "optimization_framework",
+    "size": 11277,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11277"
+    ]
+  },
+  {
+    "addr": "0x2277440",
+    "name": "sub_2277440",
+    "module": "optimization_framework",
+    "size": 12497,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12497"
+    ]
+  },
+  {
+    "addr": "0x22bada0",
+    "name": "sub_22BADA0",
+    "module": "optimization_framework",
+    "size": 10136,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10136"
+    ]
+  },
+  {
+    "addr": "0x22eec20",
+    "name": "sub_22EEC20",
+    "module": "optimization_framework",
+    "size": 11767,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11767"
+    ]
+  },
+  {
+    "addr": "0x22f5d60",
+    "name": "sub_22F5D60",
+    "module": "register_allocation",
+    "size": 5245,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5245",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x233c410",
+    "name": "sub_233C410",
+    "module": "optimization_framework",
+    "size": 11216,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11216"
+    ]
+  },
+  {
+    "addr": "0x2342890",
+    "name": "sub_2342890",
+    "module": "optimization_framework",
+    "size": 32277,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:32277"
+    ]
+  },
+  {
+    "addr": "0x2368220",
+    "name": "sub_2368220",
+    "module": "optimization_framework",
+    "size": 61476,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:61476"
+    ]
+  },
+  {
+    "addr": "0x2377300",
+    "name": "sub_2377300",
+    "module": "optimization_framework",
+    "size": 44516,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:44516"
+    ]
+  },
+  {
+    "addr": "0x2382460",
+    "name": "sub_2382460",
+    "module": "optimization_framework",
+    "size": 74227,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:74227"
+    ]
+  },
+  {
+    "addr": "0x23d5750",
+    "name": "sub_23D5750",
+    "module": "optimization_framework",
+    "size": 11787,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11787"
+    ]
+  },
+  {
+    "addr": "0x23e7330",
+    "name": "sub_23E7330",
+    "module": "optimization_framework",
+    "size": 12096,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12096"
+    ]
+  },
+  {
+    "addr": "0x23ed8f0",
+    "name": "sub_23ED8F0",
+    "module": "optimization_framework",
+    "size": 12940,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12940"
+    ]
+  },
+  {
+    "addr": "0x23f0b80",
+    "name": "sub_23F0B80",
+    "module": "optimization_framework",
+    "size": 12225,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12225"
+    ]
+  },
+  {
+    "addr": "0x2408da0",
+    "name": "sub_2408DA0",
+    "module": "optimization_framework",
+    "size": 11818,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11818"
+    ]
+  },
+  {
+    "addr": "0x241b970",
+    "name": "sub_241B970",
+    "module": "optimization_framework",
+    "size": 12696,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12696"
+    ]
+  },
+  {
+    "addr": "0x241eb10",
+    "name": "sub_241EB10",
+    "module": "register_allocation",
+    "size": 5572,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5572",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2422000",
+    "name": "sub_2422000",
+    "module": "optimization_framework",
+    "size": 12563,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12563"
+    ]
+  },
+  {
+    "addr": "0x242aeb0",
+    "name": "sub_242AEB0",
+    "module": "optimization_framework",
+    "size": 11540,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11540"
+    ]
+  },
+  {
+    "addr": "0x242eca0",
+    "name": "sub_242ECA0",
+    "module": "optimization_framework",
+    "size": 13491,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13491"
+    ]
+  },
+  {
+    "addr": "0x243ccf0",
+    "name": "sub_243CCF0",
+    "module": "optimization_framework",
+    "size": 13257,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13257"
+    ]
+  },
+  {
+    "addr": "0x24408b0",
+    "name": "sub_24408B0",
+    "module": "optimization_framework",
+    "size": 10293,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10293"
+    ]
+  },
+  {
+    "addr": "0x245bb80",
+    "name": "sub_245BB80",
+    "module": "optimization_framework",
+    "size": 11781,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11781"
+    ]
+  },
+  {
+    "addr": "0x247f0e0",
+    "name": "sub_247F0E0",
+    "module": "optimization_framework",
+    "size": 10361,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10361"
+    ]
+  },
+  {
+    "addr": "0x2481960",
+    "name": "sub_2481960",
+    "module": "optimization_framework",
+    "size": 13375,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13375"
+    ]
+  },
+  {
+    "addr": "0x24979c0",
+    "name": "sub_24979C0",
+    "module": "optimization_framework",
+    "size": 11894,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11894"
+    ]
+  },
+  {
+    "addr": "0x249ab60",
+    "name": "sub_249AB60",
+    "module": "optimization_framework",
+    "size": 12436,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12436"
+    ]
+  },
+  {
+    "addr": "0x24a0c70",
+    "name": "sub_24A0C70",
+    "module": "register_allocation",
+    "size": 6469,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6469",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x24b8750",
+    "name": "sub_24B8750",
+    "module": "optimization_framework",
+    "size": 13757,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13757"
+    ]
+  },
+  {
+    "addr": "0x24c6ab0",
+    "name": "sub_24C6AB0",
+    "module": "optimization_framework",
+    "size": 12260,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12260"
+    ]
+  },
+  {
+    "addr": "0x24ccbb0",
+    "name": "sub_24CCBB0",
+    "module": "optimization_framework",
+    "size": 11407,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11407"
+    ]
+  },
+  {
+    "addr": "0x24cfec0",
+    "name": "sub_24CFEC0",
+    "module": "optimization_framework",
+    "size": 10907,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10907"
+    ]
+  },
+  {
+    "addr": "0x24d8060",
+    "name": "sub_24D8060",
+    "module": "optimization_framework",
+    "size": 11028,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11028"
+    ]
+  },
+  {
+    "addr": "0x24df350",
+    "name": "sub_24DF350",
+    "module": "optimization_framework",
+    "size": 11272,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11272"
+    ]
+  },
+  {
+    "addr": "0x24ef980",
+    "name": "sub_24EF980",
+    "module": "optimization_framework",
+    "size": 11517,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11517"
+    ]
+  },
+  {
+    "addr": "0x24f6730",
+    "name": "sub_24F6730",
+    "module": "optimization_framework",
+    "size": 11249,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11249"
+    ]
+  },
+  {
+    "addr": "0x2500970",
+    "name": "sub_2500970",
+    "module": "optimization_framework",
+    "size": 13518,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13518"
+    ]
+  },
+  {
+    "addr": "0x25b1010",
+    "name": "sub_25B1010",
+    "module": "optimization_framework",
+    "size": 11156,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11156"
+    ]
+  },
+  {
+    "addr": "0x25ca370",
+    "name": "sub_25CA370",
+    "module": "optimization_framework",
+    "size": 10968,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10968"
+    ]
+  },
+  {
+    "addr": "0x25eb480",
+    "name": "sub_25EB480",
+    "module": "optimization_framework",
+    "size": 12845,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12845"
+    ]
+  },
+  {
+    "addr": "0x2609820",
+    "name": "sub_2609820",
+    "module": "optimization_framework",
+    "size": 11276,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11276"
+    ]
+  },
+  {
+    "addr": "0x2613930",
+    "name": "sub_2613930",
+    "module": "optimization_framework",
+    "size": 11704,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11704"
+    ]
+  },
+  {
+    "addr": "0x2635fd0",
+    "name": "sub_2635FD0",
+    "module": "optimization_framework",
+    "size": 12032,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12032"
+    ]
+  },
+  {
+    "addr": "0x2638ed0",
+    "name": "sub_2638ED0",
+    "module": "optimization_framework",
+    "size": 12841,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12841"
+    ]
+  },
+  {
+    "addr": "0x2652eb0",
+    "name": "sub_2652EB0",
+    "module": "register_allocation",
+    "size": 7533,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7533",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2655460",
+    "name": "sub_2655460",
+    "module": "optimization_framework",
+    "size": 12645,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12645"
+    ]
+  },
+  {
+    "addr": "0x2660640",
+    "name": "sub_2660640",
+    "module": "optimization_framework",
+    "size": 12083,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12083"
+    ]
+  },
+  {
+    "addr": "0x2680940",
+    "name": "sub_2680940",
+    "module": "optimization_framework",
+    "size": 10056,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10056"
+    ]
+  },
+  {
+    "addr": "0x2686d90",
+    "name": "sub_2686D90",
+    "module": "optimization_framework",
+    "size": 59791,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:59791"
+    ]
+  },
+  {
+    "addr": "0x26968a0",
+    "name": "sub_26968A0",
+    "module": "optimization_framework",
+    "size": 10564,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10564"
+    ]
+  },
+  {
+    "addr": "0x269f530",
+    "name": "sub_269F530",
+    "module": "optimization_framework",
+    "size": 10361,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10361"
+    ]
+  },
+  {
+    "addr": "0x26af660",
+    "name": "sub_26AF660",
+    "module": "optimization_framework",
+    "size": 12942,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12942"
+    ]
+  },
+  {
+    "addr": "0x26b4480",
+    "name": "sub_26B4480",
+    "module": "optimization_framework",
+    "size": 11439,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11439"
+    ]
+  },
+  {
+    "addr": "0x26dc630",
+    "name": "sub_26DC630",
+    "module": "optimization_framework",
+    "size": 11707,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11707"
+    ]
+  },
+  {
+    "addr": "0x2703170",
+    "name": "sub_2703170",
+    "module": "optimization_framework",
+    "size": 13077,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13077"
+    ]
+  },
+  {
+    "addr": "0x2714c60",
+    "name": "sub_2714C60",
+    "module": "optimization_framework",
+    "size": 13091,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13091"
+    ]
+  },
+  {
+    "addr": "0x272a760",
+    "name": "sub_272A760",
+    "module": "optimization_framework",
+    "size": 12092,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12092"
+    ]
+  },
+  {
+    "addr": "0x2747fc0",
+    "name": "sub_2747FC0",
+    "module": "optimization_framework",
+    "size": 11029,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11029"
+    ]
+  },
+  {
+    "addr": "0x274f1a0",
+    "name": "sub_274F1A0",
+    "module": "optimization_framework",
+    "size": 12725,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12725"
+    ]
+  },
+  {
+    "addr": "0x2761e70",
+    "name": "sub_2761E70",
+    "module": "optimization_framework",
+    "size": 12525,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12525"
+    ]
+  },
+  {
+    "addr": "0x2770ac0",
+    "name": "sub_2770AC0",
+    "module": "optimization_framework",
+    "size": 12652,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12652"
+    ]
+  },
+  {
+    "addr": "0x27757a0",
+    "name": "sub_27757A0",
+    "module": "optimization_framework",
+    "size": 10604,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10604"
+    ]
+  },
+  {
+    "addr": "0x2780b00",
+    "name": "sub_2780B00",
+    "module": "optimization_framework",
+    "size": 12350,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12350"
+    ]
+  },
+  {
+    "addr": "0x27b5ca0",
+    "name": "sub_27B5CA0",
+    "module": "optimization_framework",
+    "size": 12596,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12596"
+    ]
+  },
+  {
+    "addr": "0x27c71b0",
+    "name": "sub_27C71B0",
+    "module": "optimization_framework",
+    "size": 12470,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12470"
+    ]
+  },
+  {
+    "addr": "0x27d4e70",
+    "name": "sub_27D4E70",
+    "module": "optimization_framework",
+    "size": 11968,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11968"
+    ]
+  },
+  {
+    "addr": "0x27f57a0",
+    "name": "sub_27F57A0",
+    "module": "optimization_framework",
+    "size": 11139,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11139"
+    ]
+  },
+  {
+    "addr": "0x27ff780",
+    "name": "sub_27FF780",
+    "module": "optimization_framework",
+    "size": 11346,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11346"
+    ]
+  },
+  {
+    "addr": "0x280bcf0",
+    "name": "sub_280BCF0",
+    "module": "optimization_framework",
+    "size": 13038,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13038"
+    ]
+  },
+  {
+    "addr": "0x2819120",
+    "name": "sub_2819120",
+    "module": "optimization_framework",
+    "size": 12369,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12369"
+    ]
+  },
+  {
+    "addr": "0x282ac90",
+    "name": "sub_282AC90",
+    "module": "optimization_framework",
+    "size": 11804,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11804"
+    ]
+  },
+  {
+    "addr": "0x28342f0",
+    "name": "sub_28342F0",
+    "module": "optimization_framework",
+    "size": 12635,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12635"
+    ]
+  },
+  {
+    "addr": "0x2839ed0",
+    "name": "sub_2839ED0",
+    "module": "optimization_framework",
+    "size": 12220,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12220"
+    ]
+  },
+  {
+    "addr": "0x28418c0",
+    "name": "sub_28418C0",
+    "module": "optimization_framework",
+    "size": 12172,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12172"
+    ]
+  },
+  {
+    "addr": "0x28487c0",
+    "name": "sub_28487C0",
+    "module": "optimization_framework",
+    "size": 12105,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12105"
+    ]
+  },
+  {
+    "addr": "0x2869060",
+    "name": "sub_2869060",
+    "module": "optimization_framework",
+    "size": 12600,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12600"
+    ]
+  },
+  {
+    "addr": "0x28748d0",
+    "name": "sub_28748D0",
+    "module": "optimization_framework",
+    "size": 12969,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12969"
+    ]
+  },
+  {
+    "addr": "0x2877b80",
+    "name": "sub_2877B80",
+    "module": "optimization_framework",
+    "size": 12575,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12575"
+    ]
+  },
+  {
+    "addr": "0x28873f0",
+    "name": "sub_28873F0",
+    "module": "optimization_framework",
+    "size": 13068,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13068"
+    ]
+  },
+  {
+    "addr": "0x28a2a70",
+    "name": "sub_28A2A70",
+    "module": "optimization_framework",
+    "size": 11862,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11862"
+    ]
+  },
+  {
+    "addr": "0x28a58d0",
+    "name": "sub_28A58D0",
+    "module": "optimization_framework",
+    "size": 12534,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12534"
+    ]
+  },
+  {
+    "addr": "0x28bc410",
+    "name": "sub_28BC410",
+    "module": "optimization_framework",
+    "size": 11878,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11878"
+    ]
+  },
+  {
+    "addr": "0x28d9850",
+    "name": "sub_28D9850",
+    "module": "optimization_framework",
+    "size": 10265,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10265"
+    ]
+  },
+  {
+    "addr": "0x28e0e30",
+    "name": "sub_28E0E30",
+    "module": "optimization_framework",
+    "size": 13094,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13094"
+    ]
+  },
+  {
+    "addr": "0x290c520",
+    "name": "sub_290C520",
+    "module": "optimization_framework",
+    "size": 13879,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13879"
+    ]
+  },
+  {
+    "addr": "0x292a4f0",
+    "name": "sub_292A4F0",
+    "module": "optimization_framework",
+    "size": 11033,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11033"
+    ]
+  },
+  {
+    "addr": "0x292d810",
+    "name": "sub_292D810",
+    "module": "optimization_framework",
+    "size": 13183,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13183"
+    ]
+  },
+  {
+    "addr": "0x2930b90",
+    "name": "sub_2930B90",
+    "module": "optimization_framework",
+    "size": 14691,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14691"
+    ]
+  },
+  {
+    "addr": "0x2935c30",
+    "name": "sub_2935C30",
+    "module": "optimization_framework",
+    "size": 10610,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10610"
+    ]
+  },
+  {
+    "addr": "0x2942ce0",
+    "name": "sub_2942CE0",
+    "module": "optimization_framework",
+    "size": 11521,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11521"
+    ]
+  },
+  {
+    "addr": "0x294d310",
+    "name": "sub_294D310",
+    "module": "optimization_framework",
+    "size": 11516,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11516"
+    ]
+  },
+  {
+    "addr": "0x2953bc0",
+    "name": "sub_2953BC0",
+    "module": "optimization_framework",
+    "size": 11872,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11872"
+    ]
+  },
+  {
+    "addr": "0x296adf0",
+    "name": "sub_296ADF0",
+    "module": "optimization_framework",
+    "size": 12356,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12356"
+    ]
+  },
+  {
+    "addr": "0x296de40",
+    "name": "sub_296DE40",
+    "module": "optimization_framework",
+    "size": 12031,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12031"
+    ]
+  },
+  {
+    "addr": "0x2970d40",
+    "name": "sub_2970D40",
+    "module": "optimization_framework",
+    "size": 11004,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11004"
+    ]
+  },
+  {
+    "addr": "0x29851f0",
+    "name": "sub_29851F0",
+    "module": "optimization_framework",
+    "size": 10610,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10610"
+    ]
+  },
+  {
+    "addr": "0x29b4e00",
+    "name": "sub_29B4E00",
+    "module": "optimization_framework",
+    "size": 10723,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10723"
+    ]
+  },
+  {
+    "addr": "0x29bb2b0",
+    "name": "sub_29BB2B0",
+    "module": "register_allocation",
+    "size": 7376,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7376",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x29c8000",
+    "name": "sub_29C8000",
+    "module": "optimization_framework",
+    "size": 12480,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12480"
+    ]
+  },
+  {
+    "addr": "0x29ed7a0",
+    "name": "sub_29ED7A0",
+    "module": "optimization_framework",
+    "size": 20311,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:20311"
+    ]
+  },
+  {
+    "addr": "0x2a07de0",
+    "name": "sub_2A07DE0",
+    "module": "optimization_framework",
+    "size": 13334,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13334"
+    ]
+  },
+  {
+    "addr": "0x2a0cfd0",
+    "name": "sub_2A0CFD0",
+    "module": "optimization_framework",
+    "size": 12128,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12128"
+    ]
+  },
+  {
+    "addr": "0x2a15a20",
+    "name": "sub_2A15A20",
+    "module": "optimization_framework",
+    "size": 13434,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13434"
+    ]
+  },
+  {
+    "addr": "0x2a1cf00",
+    "name": "sub_2A1CF00",
+    "module": "optimization_framework",
+    "size": 12912,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12912"
+    ]
+  },
+  {
+    "addr": "0x2a25260",
+    "name": "sub_2A25260",
+    "module": "optimization_framework",
+    "size": 13831,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13831"
+    ]
+  },
+  {
+    "addr": "0x2a2e910",
+    "name": "sub_2A2E910",
+    "module": "register_allocation",
+    "size": 5581,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5581",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2a33580",
+    "name": "sub_2A33580",
+    "module": "register_allocation",
+    "size": 8762,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8762",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2a535d0",
+    "name": "sub_2A535D0",
+    "module": "register_allocation",
+    "size": 5479,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5479",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2a54b40",
+    "name": "sub_2A54B40",
+    "module": "optimization_framework",
+    "size": 12334,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12334"
+    ]
+  },
+  {
+    "addr": "0x2a76a40",
+    "name": "sub_2A76A40",
+    "module": "optimization_framework",
+    "size": 12007,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12007"
+    ]
+  },
+  {
+    "addr": "0x2a79ee0",
+    "name": "sub_2A79EE0",
+    "module": "optimization_framework",
+    "size": 12718,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12718"
+    ]
+  },
+  {
+    "addr": "0x2a99860",
+    "name": "sub_2A99860",
+    "module": "optimization_framework",
+    "size": 11167,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11167"
+    ]
+  },
+  {
+    "addr": "0x2aa00b0",
+    "name": "sub_2AA00B0",
+    "module": "optimization_framework",
+    "size": 12497,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12497"
+    ]
+  },
+  {
+    "addr": "0x2aa3190",
+    "name": "sub_2AA3190",
+    "module": "optimization_framework",
+    "size": 10785,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10785"
+    ]
+  },
+  {
+    "addr": "0x2ada390",
+    "name": "sub_2ADA390",
+    "module": "optimization_framework",
+    "size": 10928,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10928"
+    ]
+  },
+  {
+    "addr": "0x2aee460",
+    "name": "sub_2AEE460",
+    "module": "optimization_framework",
+    "size": 11562,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11562"
+    ]
+  },
+  {
+    "addr": "0x2af1970",
+    "name": "sub_2AF1970",
+    "module": "optimization_framework",
+    "size": 16833,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16833"
+    ]
+  },
+  {
+    "addr": "0x2b60a30",
+    "name": "sub_2B60A30",
+    "module": "optimization_framework",
+    "size": 11351,
+    "call_frequency": 7,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11351"
+    ]
+  },
+  {
+    "addr": "0x2b8a960",
+    "name": "sub_2B8A960",
+    "module": "optimization_framework",
+    "size": 14208,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14208"
+    ]
+  },
+  {
+    "addr": "0x2b8f390",
+    "name": "sub_2B8F390",
+    "module": "optimization_framework",
+    "size": 12119,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12119"
+    ]
+  },
+  {
+    "addr": "0x2b922f0",
+    "name": "sub_2B922F0",
+    "module": "optimization_framework",
+    "size": 10114,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10114"
+    ]
+  },
+  {
+    "addr": "0x2b94a80",
+    "name": "sub_2B94A80",
+    "module": "optimization_framework",
+    "size": 12572,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12572"
+    ]
+  },
+  {
+    "addr": "0x2b97ba0",
+    "name": "sub_2B97BA0",
+    "module": "optimization_framework",
+    "size": 11431,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11431"
+    ]
+  },
+  {
+    "addr": "0x2b9a8c0",
+    "name": "sub_2B9A8C0",
+    "module": "optimization_framework",
+    "size": 20787,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:20787"
+    ]
+  },
+  {
+    "addr": "0x2ba65a0",
+    "name": "sub_2BA65A0",
+    "module": "optimization_framework",
+    "size": 18181,
+    "call_frequency": 7,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18181"
+    ]
+  },
+  {
+    "addr": "0x2bacc10",
+    "name": "sub_2BACC10",
+    "module": "optimization_framework",
+    "size": 12417,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12417"
+    ]
+  },
+  {
+    "addr": "0x2bb0460",
+    "name": "sub_2BB0460",
+    "module": "optimization_framework",
+    "size": 10880,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10880"
+    ]
+  },
+  {
+    "addr": "0x2bbfb60",
+    "name": "sub_2BBFB60",
+    "module": "optimization_framework",
+    "size": 11963,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11963"
+    ]
+  },
+  {
+    "addr": "0x2bc2a20",
+    "name": "sub_2BC2A20",
+    "module": "optimization_framework",
+    "size": 10997,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10997"
+    ]
+  },
+  {
+    "addr": "0x2bc6be0",
+    "name": "sub_2BC6BE0",
+    "module": "optimization_framework",
+    "size": 13497,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13497"
+    ]
+  },
+  {
+    "addr": "0x2bd1c50",
+    "name": "sub_2BD1C50",
+    "module": "optimization_framework",
+    "size": 18080,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:18080"
+    ]
+  },
+  {
+    "addr": "0x2c007b0",
+    "name": "sub_2C007B0",
+    "module": "optimization_framework",
+    "size": 13859,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13859"
+    ]
+  },
+  {
+    "addr": "0x2c09e20",
+    "name": "sub_2C09E20",
+    "module": "optimization_framework",
+    "size": 12438,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12438"
+    ]
+  },
+  {
+    "addr": "0x2c40480",
+    "name": "sub_2C40480",
+    "module": "register_allocation",
+    "size": 8354,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8354",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2c63fb0",
+    "name": "sub_2C63FB0",
+    "module": "optimization_framework",
+    "size": 12279,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12279"
+    ]
+  },
+  {
+    "addr": "0x2c771d0",
+    "name": "sub_2C771D0",
+    "module": "architecture_detection",
+    "size": 6848,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6848",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x2c7b6a0",
+    "name": "sub_2C7B6A0",
+    "module": "error_handling",
+    "size": 21985,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:21985"
+    ]
+  },
+  {
+    "addr": "0x2c80c90",
+    "name": "sub_2C80C90",
+    "module": "architecture_detection",
+    "size": 8557,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8557",
+      "module:architecture_detection"
+    ]
+  },
+  {
+    "addr": "0x2c84ba0",
+    "name": "sub_2C84BA0",
+    "module": "optimization_framework",
+    "size": 13427,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13427"
+    ]
+  },
+  {
+    "addr": "0x2c8b400",
+    "name": "sub_2C8B400",
+    "module": "optimization_framework",
+    "size": 12780,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12780"
+    ]
+  },
+  {
+    "addr": "0x2c98900",
+    "name": "sub_2C98900",
+    "module": "register_allocation",
+    "size": 6078,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6078",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2ca4a10",
+    "name": "sub_2CA4A10",
+    "module": "optimization_framework",
+    "size": 12419,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12419"
+    ]
+  },
+  {
+    "addr": "0x2cabb50",
+    "name": "sub_2CABB50",
+    "module": "optimization_framework",
+    "size": 12034,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12034"
+    ]
+  },
+  {
+    "addr": "0x2cb5e90",
+    "name": "sub_2CB5E90",
+    "module": "optimization_framework",
+    "size": 12509,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12509"
+    ]
+  },
+  {
+    "addr": "0x2cbbe90",
+    "name": "sub_2CBBE90",
+    "module": "optimization_framework",
+    "size": 11248,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11248"
+    ]
+  },
+  {
+    "addr": "0x2cc5900",
+    "name": "sub_2CC5900",
+    "module": "optimization_framework",
+    "size": 11252,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11252"
+    ]
+  },
+  {
+    "addr": "0x2ccf450",
+    "name": "sub_2CCF450",
+    "module": "optimization_framework",
+    "size": 12205,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12205"
+    ]
+  },
+  {
+    "addr": "0x2cda660",
+    "name": "sub_2CDA660",
+    "module": "optimization_framework",
+    "size": 10469,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10469"
+    ]
+  },
+  {
+    "addr": "0x2d13e90",
+    "name": "sub_2D13E90",
+    "module": "optimization_framework",
+    "size": 13493,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13493"
+    ]
+  },
+  {
+    "addr": "0x2d387c0",
+    "name": "sub_2D387C0",
+    "module": "optimization_framework",
+    "size": 10013,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10013"
+    ]
+  },
+  {
+    "addr": "0x2d3c2b0",
+    "name": "sub_2D3C2B0",
+    "module": "optimization_framework",
+    "size": 11753,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11753"
+    ]
+  },
+  {
+    "addr": "0x2d3f710",
+    "name": "sub_2D3F710",
+    "module": "optimization_framework",
+    "size": 11420,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11420"
+    ]
+  },
+  {
+    "addr": "0x2d4c710",
+    "name": "sub_2D4C710",
+    "module": "optimization_framework",
+    "size": 12369,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12369"
+    ]
+  },
+  {
+    "addr": "0x2d75700",
+    "name": "sub_2D75700",
+    "module": "optimization_framework",
+    "size": 11755,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11755"
+    ]
+  },
+  {
+    "addr": "0x2d784f0",
+    "name": "sub_2D784F0",
+    "module": "optimization_framework",
+    "size": 11600,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11600"
+    ]
+  },
+  {
+    "addr": "0x2d80050",
+    "name": "sub_2D80050",
+    "module": "optimization_framework",
+    "size": 10233,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10233"
+    ]
+  },
+  {
+    "addr": "0x2d82850",
+    "name": "sub_2D82850",
+    "module": "optimization_framework",
+    "size": 12529,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12529"
+    ]
+  },
+  {
+    "addr": "0x2d88660",
+    "name": "sub_2D88660",
+    "module": "optimization_framework",
+    "size": 12748,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12748"
+    ]
+  },
+  {
+    "addr": "0x2da98b0",
+    "name": "sub_2DA98B0",
+    "module": "optimization_framework",
+    "size": 11354,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11354"
+    ]
+  },
+  {
+    "addr": "0x2dbbd60",
+    "name": "sub_2DBBD60",
+    "module": "optimization_framework",
+    "size": 13243,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13243"
+    ]
+  },
+  {
+    "addr": "0x2dbf120",
+    "name": "sub_2DBF120",
+    "module": "optimization_framework",
+    "size": 10476,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10476"
+    ]
+  },
+  {
+    "addr": "0x2dc4260",
+    "name": "sub_2DC4260",
+    "module": "optimization_framework",
+    "size": 12932,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12932"
+    ]
+  },
+  {
+    "addr": "0x2dcca90",
+    "name": "sub_2DCCA90",
+    "module": "optimization_framework",
+    "size": 12389,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12389"
+    ]
+  },
+  {
+    "addr": "0x2dde8c0",
+    "name": "sub_2DDE8C0",
+    "module": "optimization_framework",
+    "size": 12240,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12240"
+    ]
+  },
+  {
+    "addr": "0x2de7cb0",
+    "name": "sub_2DE7CB0",
+    "module": "optimization_framework",
+    "size": 10607,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10607"
+    ]
+  },
+  {
+    "addr": "0x2e02a20",
+    "name": "sub_2E02A20",
+    "module": "optimization_framework",
+    "size": 11280,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11280"
+    ]
+  },
+  {
+    "addr": "0x2e06810",
+    "name": "sub_2E06810",
+    "module": "optimization_framework",
+    "size": 10871,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10871"
+    ]
+  },
+  {
+    "addr": "0x2ea0a20",
+    "name": "sub_2EA0A20",
+    "module": "optimization_framework",
+    "size": 11726,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11726"
+    ]
+  },
+  {
+    "addr": "0x2eddf20",
+    "name": "sub_2EDDF20",
+    "module": "optimization_framework",
+    "size": 11722,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11722"
+    ]
+  },
+  {
+    "addr": "0x2ef1130",
+    "name": "sub_2EF1130",
+    "module": "register_allocation",
+    "size": 5135,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5135",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2efab50",
+    "name": "sub_2EFAB50",
+    "module": "register_allocation",
+    "size": 6345,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6345",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2efc610",
+    "name": "sub_2EFC610",
+    "module": "register_allocation",
+    "size": 5916,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5916",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2efdf10",
+    "name": "sub_2EFDF10",
+    "module": "register_allocation",
+    "size": 5323,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5323",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2f2d9f0",
+    "name": "sub_2F2D9F0",
+    "module": "optimization_framework",
+    "size": 11841,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11841"
+    ]
+  },
+  {
+    "addr": "0x2f336b0",
+    "name": "sub_2F336B0",
+    "module": "optimization_framework",
+    "size": 11347,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11347"
+    ]
+  },
+  {
+    "addr": "0x2f49070",
+    "name": "sub_2F49070",
+    "module": "optimization_framework",
+    "size": 10875,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10875"
+    ]
+  },
+  {
+    "addr": "0x2f6ddb0",
+    "name": "sub_2F6DDB0",
+    "module": "optimization_framework",
+    "size": 11893,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11893"
+    ]
+  },
+  {
+    "addr": "0x2f71140",
+    "name": "sub_2F71140",
+    "module": "register_allocation",
+    "size": 9590,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9590",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x2f86ad0",
+    "name": "sub_2F86AD0",
+    "module": "optimization_framework",
+    "size": 12136,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12136"
+    ]
+  },
+  {
+    "addr": "0x2fa9880",
+    "name": "sub_2FA9880",
+    "module": "optimization_framework",
+    "size": 12157,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12157"
+    ]
+  },
+  {
+    "addr": "0x2fc4fc0",
+    "name": "sub_2FC4FC0",
+    "module": "optimization_framework",
+    "size": 12900,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12900"
+    ]
+  },
+  {
+    "addr": "0x2ffced0",
+    "name": "sub_2FFCED0",
+    "module": "optimization_framework",
+    "size": 10714,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10714"
+    ]
+  },
+  {
+    "addr": "0x3000ec0",
+    "name": "sub_3000EC0",
+    "module": "optimization_framework",
+    "size": 12259,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12259"
+    ]
+  },
+  {
+    "addr": "0x300c890",
+    "name": "sub_300C890",
+    "module": "register_allocation",
+    "size": 8145,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8145",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x3017f80",
+    "name": "sub_3017F80",
+    "module": "optimization_framework",
+    "size": 10346,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10346"
+    ]
+  },
+  {
+    "addr": "0x3040bf0",
+    "name": "sub_3040BF0",
+    "module": "optimization_framework",
+    "size": 20273,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:20273"
+    ]
+  },
+  {
+    "addr": "0x30462a0",
+    "name": "sub_30462A0",
+    "module": "instruction_selection",
+    "size": 5182,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5182",
+      "module:instruction_selection"
+    ]
+  },
+  {
+    "addr": "0x304e6c0",
+    "name": "sub_304E6C0",
+    "module": "instruction_selection",
+    "size": 5382,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5382",
+      "module:instruction_selection"
+    ]
+  },
+  {
+    "addr": "0x306d850",
+    "name": "sub_306D850",
+    "module": "optimization_framework",
+    "size": 14970,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14970"
+    ]
+  },
+  {
+    "addr": "0x30811d0",
+    "name": "sub_30811D0",
+    "module": "optimization_framework",
+    "size": 11204,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11204"
+    ]
+  },
+  {
+    "addr": "0x3090f90",
+    "name": "sub_3090F90",
+    "module": "optimization_framework",
+    "size": 12814,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12814"
+    ]
+  },
+  {
+    "addr": "0x309a610",
+    "name": "sub_309A610",
+    "module": "optimization_framework",
+    "size": 12680,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12680"
+    ]
+  },
+  {
+    "addr": "0x30c4110",
+    "name": "sub_30C4110",
+    "module": "ptx_emission",
+    "size": 7158,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7158",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x3122a50",
+    "name": "sub_3122A50",
+    "module": "optimization_framework",
+    "size": 42231,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:42231"
+    ]
+  },
+  {
+    "addr": "0x312cf50",
+    "name": "sub_312CF50",
+    "module": "optimization_framework",
+    "size": 35260,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:35260"
+    ]
+  },
+  {
+    "addr": "0x313d1b0",
+    "name": "sub_313D1B0",
+    "module": "optimization_framework",
+    "size": 10707,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10707"
+    ]
+  },
+  {
+    "addr": "0x3149320",
+    "name": "sub_3149320",
+    "module": "optimization_framework",
+    "size": 11101,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11101"
+    ]
+  },
+  {
+    "addr": "0x314dbb0",
+    "name": "sub_314DBB0",
+    "module": "optimization_framework",
+    "size": 10545,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10545"
+    ]
+  },
+  {
+    "addr": "0x3150d70",
+    "name": "sub_3150D70",
+    "module": "optimization_framework",
+    "size": 10503,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10503"
+    ]
+  },
+  {
+    "addr": "0x3169200",
+    "name": "sub_3169200",
+    "module": "optimization_framework",
+    "size": 10174,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10174"
+    ]
+  },
+  {
+    "addr": "0x316d160",
+    "name": "sub_316D160",
+    "module": "optimization_framework",
+    "size": 10081,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10081"
+    ]
+  },
+  {
+    "addr": "0x3190d00",
+    "name": "sub_3190D00",
+    "module": "optimization_framework",
+    "size": 10081,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10081"
+    ]
+  },
+  {
+    "addr": "0x31ec4f0",
+    "name": "sub_31EC4F0",
+    "module": "optimization_framework",
+    "size": 12387,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12387"
+    ]
+  },
+  {
+    "addr": "0x31f26a0",
+    "name": "sub_31F26A0",
+    "module": "ptx_emission",
+    "size": 5481,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5481",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x32983b0",
+    "name": "sub_32983B0",
+    "module": "error_handling",
+    "size": 13741,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13741"
+    ]
+  },
+  {
+    "addr": "0x32a1ef0",
+    "name": "sub_32A1EF0",
+    "module": "optimization_framework",
+    "size": 17649,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:17649"
+    ]
+  },
+  {
+    "addr": "0x32a9030",
+    "name": "sub_32A9030",
+    "module": "optimization_framework",
+    "size": 11796,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11796"
+    ]
+  },
+  {
+    "addr": "0x32c3760",
+    "name": "sub_32C3760",
+    "module": "optimization_framework",
+    "size": 11570,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11570"
+    ]
+  },
+  {
+    "addr": "0x32cbcb0",
+    "name": "sub_32CBCB0",
+    "module": "optimization_framework",
+    "size": 11668,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11668"
+    ]
+  },
+  {
+    "addr": "0x32d2680",
+    "name": "sub_32D2680",
+    "module": "optimization_framework",
+    "size": 13249,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13249"
+    ]
+  },
+  {
+    "addr": "0x32e3060",
+    "name": "sub_32E3060",
+    "module": "optimization_framework",
+    "size": 20796,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:20796"
+    ]
+  },
+  {
+    "addr": "0x32ec4f0",
+    "name": "sub_32EC4F0",
+    "module": "optimization_framework",
+    "size": 13494,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13494"
+    ]
+  },
+  {
+    "addr": "0x32fe970",
+    "name": "sub_32FE970",
+    "module": "optimization_framework",
+    "size": 15272,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15272"
+    ]
+  },
+  {
+    "addr": "0x33067c0",
+    "name": "sub_33067C0",
+    "module": "optimization_framework",
+    "size": 16502,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:16502"
+    ]
+  },
+  {
+    "addr": "0x3314670",
+    "name": "sub_3314670",
+    "module": "optimization_framework",
+    "size": 13657,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13657"
+    ]
+  },
+  {
+    "addr": "0x3318640",
+    "name": "sub_3318640",
+    "module": "error_handling",
+    "size": 11794,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11794"
+    ]
+  },
+  {
+    "addr": "0x331c5b0",
+    "name": "sub_331C5B0",
+    "module": "optimization_framework",
+    "size": 12522,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12522"
+    ]
+  },
+  {
+    "addr": "0x331f6a0",
+    "name": "sub_331F6A0",
+    "module": "optimization_framework",
+    "size": 10936,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10936"
+    ]
+  },
+  {
+    "addr": "0x332fea0",
+    "name": "sub_332FEA0",
+    "module": "optimization_framework",
+    "size": 15905,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15905"
+    ]
+  },
+  {
+    "addr": "0x3333cd0",
+    "name": "sub_3333CD0",
+    "module": "optimization_framework",
+    "size": 24678,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:24678"
+    ]
+  },
+  {
+    "addr": "0x333bf30",
+    "name": "sub_333BF30",
+    "module": "optimization_framework",
+    "size": 55293,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:55293"
+    ]
+  },
+  {
+    "addr": "0x3349730",
+    "name": "sub_3349730",
+    "module": "optimization_framework",
+    "size": 12136,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12136"
+    ]
+  },
+  {
+    "addr": "0x334ec10",
+    "name": "sub_334EC10",
+    "module": "register_allocation",
+    "size": 9589,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9589",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x336bb10",
+    "name": "sub_336BB10",
+    "module": "error_handling",
+    "size": 11614,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11614"
+    ]
+  },
+  {
+    "addr": "0x3377410",
+    "name": "sub_3377410",
+    "module": "optimization_framework",
+    "size": 14672,
+    "call_frequency": 18,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14672"
+    ]
+  },
+  {
+    "addr": "0x33b0210",
+    "name": "sub_33B0210",
+    "module": "optimization_framework",
+    "size": 61601,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:61601"
+    ]
+  },
+  {
+    "addr": "0x33c0ca0",
+    "name": "sub_33C0CA0",
+    "module": "optimization_framework",
+    "size": 13507,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13507"
+    ]
+  },
+  {
+    "addr": "0x33d25a0",
+    "name": "sub_33D25A0",
+    "module": "optimization_framework",
+    "size": 10206,
+    "call_frequency": 7,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10206"
+    ]
+  },
+  {
+    "addr": "0x33d4ef0",
+    "name": "sub_33D4EF0",
+    "module": "optimization_framework",
+    "size": 29438,
+    "call_frequency": 9,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:29438"
+    ]
+  },
+  {
+    "addr": "0x3425710",
+    "name": "sub_3425710",
+    "module": "optimization_framework",
+    "size": 23818,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:23818"
+    ]
+  },
+  {
+    "addr": "0x34530e0",
+    "name": "sub_34530E0",
+    "module": "optimization_framework",
+    "size": 13627,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13627"
+    ]
+  },
+  {
+    "addr": "0x3475bb0",
+    "name": "sub_3475BB0",
+    "module": "optimization_framework",
+    "size": 19729,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:19729"
+    ]
+  },
+  {
+    "addr": "0x347a8d0",
+    "name": "sub_347A8D0",
+    "module": "optimization_framework",
+    "size": 51382,
+    "call_frequency": 4,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:51382"
+    ]
+  },
+  {
+    "addr": "0x3487360",
+    "name": "sub_3487360",
+    "module": "optimization_framework",
+    "size": 10683,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10683"
+    ]
+  },
+  {
+    "addr": "0x348d3e0",
+    "name": "sub_348D3E0",
+    "module": "optimization_framework",
+    "size": 27329,
+    "call_frequency": 5,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:27329"
+    ]
+  },
+  {
+    "addr": "0x34af4a0",
+    "name": "sub_34AF4A0",
+    "module": "optimization_framework",
+    "size": 12084,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12084"
+    ]
+  },
+  {
+    "addr": "0x34d9e20",
+    "name": "sub_34D9E20",
+    "module": "optimization_framework",
+    "size": 14153,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14153"
+    ]
+  },
+  {
+    "addr": "0x34ed530",
+    "name": "sub_34ED530",
+    "module": "optimization_framework",
+    "size": 15453,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15453"
+    ]
+  },
+  {
+    "addr": "0x34fe8d0",
+    "name": "sub_34FE8D0",
+    "module": "optimization_framework",
+    "size": 12254,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12254"
+    ]
+  },
+  {
+    "addr": "0x351ebb0",
+    "name": "sub_351EBB0",
+    "module": "optimization_framework",
+    "size": 11588,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11588"
+    ]
+  },
+  {
+    "addr": "0x3521ff0",
+    "name": "sub_3521FF0",
+    "module": "optimization_framework",
+    "size": 12408,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12408"
+    ]
+  },
+  {
+    "addr": "0x3537010",
+    "name": "sub_3537010",
+    "module": "optimization_framework",
+    "size": 11877,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11877"
+    ]
+  },
+  {
+    "addr": "0x3539e80",
+    "name": "sub_3539E80",
+    "module": "optimization_framework",
+    "size": 11860,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11860"
+    ]
+  },
+  {
+    "addr": "0x355f610",
+    "name": "sub_355F610",
+    "module": "optimization_framework",
+    "size": 11701,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11701"
+    ]
+  },
+  {
+    "addr": "0x3563190",
+    "name": "sub_3563190",
+    "module": "optimization_framework",
+    "size": 12980,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12980"
+    ]
+  },
+  {
+    "addr": "0x35946f0",
+    "name": "sub_35946F0",
+    "module": "register_allocation",
+    "size": 5256,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5256",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x35b1110",
+    "name": "sub_35B1110",
+    "module": "optimization_framework",
+    "size": 13494,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13494"
+    ]
+  },
+  {
+    "addr": "0x35cc920",
+    "name": "sub_35CC920",
+    "module": "optimization_framework",
+    "size": 12296,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12296"
+    ]
+  },
+  {
+    "addr": "0x35d1120",
+    "name": "sub_35D1120",
+    "module": "register_allocation",
+    "size": 9209,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:9209",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x35d98d0",
+    "name": "sub_35D98D0",
+    "module": "register_allocation",
+    "size": 6132,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6132",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x35e1200",
+    "name": "sub_35E1200",
+    "module": "optimization_framework",
+    "size": 11914,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11914"
+    ]
+  },
+  {
+    "addr": "0x35f6d40",
+    "name": "sub_35F6D40",
+    "module": "optimization_framework",
+    "size": 875188,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:875188"
+    ]
+  },
+  {
+    "addr": "0x36ec510",
+    "name": "sub_36EC510",
+    "module": "tensor_core_codegen",
+    "size": 6111,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:6111",
+      "module:tensor_core_codegen"
+    ]
+  },
+  {
+    "addr": "0x372fee0",
+    "name": "sub_372FEE0",
+    "module": "optimization_framework",
+    "size": 13093,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13093"
+    ]
+  },
+  {
+    "addr": "0x374dd20",
+    "name": "sub_374DD20",
+    "module": "optimization_framework",
+    "size": 11247,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11247"
+    ]
+  },
+  {
+    "addr": "0x376de90",
+    "name": "sub_376DE90",
+    "module": "optimization_framework",
+    "size": 24199,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:24199"
+    ]
+  },
+  {
+    "addr": "0x37c8d80",
+    "name": "sub_37C8D80",
+    "module": "optimization_framework",
+    "size": 10905,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10905"
+    ]
+  },
+  {
+    "addr": "0x37d8c20",
+    "name": "sub_37D8C20",
+    "module": "optimization_framework",
+    "size": 13796,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:13796"
+    ]
+  },
+  {
+    "addr": "0x37e41d0",
+    "name": "sub_37E41D0",
+    "module": "optimization_framework",
+    "size": 10650,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10650"
+    ]
+  },
+  {
+    "addr": "0x37eeb90",
+    "name": "sub_37EEB90",
+    "module": "register_allocation",
+    "size": 7681,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7681",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x3881ff0",
+    "name": "sub_3881FF0",
+    "module": "optimization_framework",
+    "size": 15429,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:15429"
+    ]
+  },
+  {
+    "addr": "0x38f9390",
+    "name": "sub_38F9390",
+    "module": "optimization_framework",
+    "size": 14378,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:14378"
+    ]
+  },
+  {
+    "addr": "0x3917fe0",
+    "name": "sub_3917FE0",
+    "module": "register_allocation",
+    "size": 5197,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5197",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x3928080",
+    "name": "sub_3928080",
+    "module": "register_allocation",
+    "size": 8349,
+    "call_frequency": 1,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:8349",
+      "module:register_allocation"
+    ]
+  },
+  {
+    "addr": "0x3932580",
+    "name": "sub_3932580",
+    "module": "optimization_framework",
+    "size": 12402,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:12402"
+    ]
+  },
+  {
+    "addr": "0x394cf20",
+    "name": "sub_394CF20",
+    "module": "optimization_framework",
+    "size": 11445,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11445"
+    ]
+  },
+  {
+    "addr": "0x395dd20",
+    "name": "sub_395DD20",
+    "module": "optimization_framework",
+    "size": 11309,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:11309"
+    ]
+  },
+  {
+    "addr": "0x3979400",
+    "name": "sub_3979400",
+    "module": "optimization_framework",
+    "size": 10933,
+    "call_frequency": 3,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10933"
+    ]
+  },
+  {
+    "addr": "0x397df10",
+    "name": "sub_397DF10",
+    "module": "ptx_emission",
+    "size": 5825,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:5825",
+      "module:ptx_emission"
+    ]
+  },
+  {
+    "addr": "0x39c3100",
+    "name": "sub_39C3100",
+    "module": "unknown",
+    "size": 10553,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "huge:10553"
+    ]
+  },
+  {
+    "addr": "0x39dce30",
+    "name": "sub_39DCE30",
+    "module": "register_allocation",
+    "size": 7770,
+    "call_frequency": 2,
+    "priority_score": 1000,
+    "priority_tier": "CRITICAL",
+    "reasons": [
+      "very_large:7770",
+      "module:register_allocation"
+    ]
+  }
+]

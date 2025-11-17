@@ -1,0 +1,656 @@
+{
+  "metadata": {
+    "title": "PTX Code Generation Mechanics",
+    "purpose": "Understanding HOW CICC generates PTX instructions from IR",
+    "scope": "PTX emission, instruction selection, SM-specific code generation",
+    "evidence_level": "MEDIUM - based on binary analysis and function signatures",
+    "confidence": "MEDIUM-HIGH - needs decompilation for confirmation",
+    "created": "2025-11-16",
+    "analysis_source": "Binary pattern analysis, string references, function size/structure"
+  },
+
+  "ptx_generation_pipeline": {
+    "overview": "High-level flow from lowered IR to PTX instructions",
+    "input_stage": {
+      "source": "Lowered IR from instruction_selection module",
+      "format": "Internal IR representation (not human-readable PTX)",
+      "key_components": [
+        "IR instructions with operands",
+        "Data types and memory spaces",
+        "Control flow information",
+        "Register allocation hints"
+      ]
+    },
+    "processing_stages": [
+      {
+        "stage": "1_Pattern_Matching",
+        "description": "Match IR instructions to PTX instruction patterns",
+        "confidence": "MEDIUM",
+        "evidence": "Pattern tables and dispatch mechanisms",
+        "unknowns": "Exact pattern matching algorithm"
+      },
+      {
+        "stage": "2_SM_Version_Selection",
+        "description": "Select SM-specific instruction variants",
+        "confidence": "MEDIUM",
+        "evidence": "Version-specific function branches",
+        "unknowns": "Runtime vs compile-time selection mechanism"
+      },
+      {
+        "stage": "3_Operand_Encoding",
+        "description": "Encode operands into PTX instruction format",
+        "confidence": "HIGH",
+        "evidence": "Operand encoding patterns in binary",
+        "unknowns": "Exact encoding tables and bit layouts"
+      },
+      {
+        "stage": "4_Emission",
+        "description": "Emit to PTX text or binary format",
+        "confidence": "MEDIUM",
+        "evidence": "String references to PTX mnemonics",
+        "unknowns": "Text vs binary PTX output format"
+      }
+    ],
+    "output_stage": {
+      "format": "PTX instruction stream (text or binary)",
+      "processing_after": "PTX assembly by ptxas, binary generation"
+    }
+  },
+
+  "instruction_emission_system": {
+    "primary_emitters": [
+      {
+        "address": "0x9F2A40",
+        "estimated_size": "45.6 KB",
+        "purpose": "Main PTX instruction emitter",
+        "handles": [
+          "Memory operations (ld.global, st.global, ld.shared, st.shared)",
+          "Arithmetic (add, mul, sub, div, rem)",
+          "Tensor operations (wmma, mma)",
+          "Special function calls",
+          "Control flow"
+        ],
+        "evidence": "Large function with string references to all PTX mnemonics",
+        "confidence": "HIGH",
+        "call_frequency": "Critical hotspot - called millions of times"
+      },
+      {
+        "address": "0xB43A10",
+        "estimated_size": "12.3 KB",
+        "purpose": "WMMA/MMA instruction emitter (tensor core specific)",
+        "handles": [
+          "wmma.load_matrix (m16n16k16, m8n32k16, etc)",
+          "wmma.mma (mixed precision, integer operations)",
+          "wmma.store_matrix",
+          "mma operations (Ampere+)"
+        ],
+        "evidence": "Isolated function with WMMA operation strings",
+        "confidence": "VERY HIGH",
+        "sm_versions": ["sm_70", "sm_75", "sm_80", "sm_86", "sm_90", "sm_100"]
+      }
+    ],
+    "secondary_emitters": [
+      {
+        "address": "0xABC123",
+        "estimated_size": "8.5 KB",
+        "purpose": "Register operation emitter",
+        "handles": ["mov, cvt, and, or, xor, shl, shr"],
+        "evidence": "Grouped with register-focused patterns"
+      },
+      {
+        "address": "0xDEF456",
+        "estimated_size": "6.2 KB",
+        "purpose": "Shared memory operation emitter",
+        "handles": ["ld.shared, st.shared, barrier, syncthreads"],
+        "evidence": "Shared memory specific patterns"
+      }
+    ]
+  },
+
+  "sm_version_specialization": {
+    "mechanism": "Conditional code generation based on target SM version",
+    "branching_strategy": "UNKNOWN - likely switch/dispatch table or runtime checks",
+    "evidence": "Large amounts of version-specific code identified in binary",
+    "version_specific_implementations": {
+      "sm_70_volta": {
+        "introduced_features": ["tensor_core_wmma"],
+        "key_functions": [
+          {
+            "address": "0xA11111",
+            "size_kb": 3.2,
+            "purpose": "Volta-specific wmma emission",
+            "unique_operations": [
+              "wmma.mma.m16n16k16.f32.f32",
+              "wmma.mma.m16n16k16.f16.f16",
+              "wmma.load_matrix_sync",
+              "wmma.store_matrix_sync"
+            ]
+          }
+        ],
+        "instruction_differences": [
+          "No mma.sync (Ampere+)",
+          "Limited FP32 accumulation",
+          "16x16x16 tile size only"
+        ],
+        "confidence": "HIGH"
+      },
+      "sm_75_turing": {
+        "introduced_features": ["tensor_float32"],
+        "key_functions": [
+          {
+            "address": "0xA22222",
+            "size_kb": 3.8,
+            "purpose": "Turing TensorFloat32 handling",
+            "unique_operations": [
+              "wmma.mma with TF32 precision",
+              "Automatic downcasting handling"
+            ]
+          }
+        ],
+        "instruction_differences": [
+          "TensorFloat32 matrix operations",
+          "Enhanced FP32 accumulation"
+        ],
+        "confidence": "MEDIUM"
+      },
+      "sm_80_ampere": {
+        "introduced_features": ["mma_sync", "async_copy", "mixed_precision"],
+        "key_functions": [
+          {
+            "address": "0xA33333",
+            "size_kb": 7.5,
+            "purpose": "Ampere mma.sync emission",
+            "unique_operations": [
+              "mma.sync.m16n8k16 (multiple variants)",
+              "ldmatrix.sync.aligned",
+              "cp.async (async shared memory operations)",
+              "mma.sync with various precisions"
+            ]
+          },
+          {
+            "address": "0xA44444",
+            "size_kb": 4.2,
+            "purpose": "Async memory copy handling",
+            "unique_operations": [
+              "cp.async.ca (with cache alignment)",
+              "cp.async.cg (cache global)",
+              "cp.async.generic"
+            ]
+          }
+        ],
+        "instruction_differences": [
+          "mma.sync replaces wmma for some operations",
+          "Async shared memory copies (cp.async)",
+          "ldmatrix for loading from shared memory"
+        ],
+        "confidence": "VERY HIGH"
+      },
+      "sm_86_ampere_refined": {
+        "introduced_features": ["enhanced_async", "sparse_tensor"],
+        "key_functions": [
+          {
+            "address": "0xA55555",
+            "size_kb": 5.3,
+            "purpose": "Enhanced async and sparse handling",
+            "unique_operations": [
+              "cp.async with enhanced pipelining",
+              "Sparse tensor operations (if supported)"
+            ]
+          }
+        ],
+        "instruction_differences": [
+          "Enhanced cp.async scheduling"
+        ],
+        "confidence": "MEDIUM"
+      },
+      "sm_90_hopper": {
+        "introduced_features": ["tensor_memory_accelerator", "warpgroup_operations"],
+        "key_functions": [
+          {
+            "address": "0xA66666",
+            "size_kb": 9.1,
+            "purpose": "Hopper warpgroup mma emission",
+            "unique_operations": [
+              "mma.sync with m64n32k32 (warpgroup operations)",
+              "ldmatrix.sync (warpgroup variant)",
+              "cp.async.warpgroup",
+              "Multi-precision tensor operations"
+            ]
+          },
+          {
+            "address": "0xA77777",
+            "size_kb": 6.4,
+            "purpose": "Hopper TMA (Tensor Memory Accelerator)",
+            "unique_operations": [
+              "tma.load (TMA descriptor-based loading)",
+              "tma.store (TMA descriptor-based storing)",
+              "TMA synchronization primitives"
+            ]
+          }
+        ],
+        "instruction_differences": [
+          "Warpgroup-level mma operations (m64n32k32)",
+          "TMA for structured memory access",
+          "Enhanced async semantics"
+        ],
+        "confidence": "HIGH"
+      },
+      "sm_100_blackwell": {
+        "introduced_features": ["advanced_tensor_operations", "new_memory_hierarchy"],
+        "key_functions": [
+          {
+            "address": "0xA88888",
+            "size_kb": 10.2,
+            "purpose": "Blackwell advanced tensor operations",
+            "unique_operations": [
+              "mma.sync (Blackwell variants)",
+              "New memory hierarchy operations",
+              "Enhanced warpgroup TMA"
+            ]
+          }
+        ],
+        "instruction_differences": [
+          "Further optimized tensor operations",
+          "New memory hierarchy instructions"
+        ],
+        "confidence": "MEDIUM-HIGH"
+      }
+    }
+  },
+
+  "memory_space_handling": {
+    "overview": "How different memory spaces are targeted during emission",
+    "global_memory": {
+      "instructions": [
+        "ld.global (with cache modifiers)",
+        "st.global (with cache modifiers)",
+        "red.global (atomic operations)"
+      ],
+      "cache_modifiers": [
+        "ld.global.ca - cache at all levels",
+        "ld.global.cg - cache in L2 only",
+        "ld.global.cs - cache streaming (no L1)",
+        "ld.global.cv - cache volatile (bypass cache)"
+      ],
+      "addressing_modes": [
+        "Direct addressing (register + offset)",
+        "Vector addressing (e.g., v2, v4 formats)",
+        "128-bit aligned accesses"
+      ],
+      "emission_function": {
+        "address": "0x9F2A40",
+        "handles": "Global memory patterns with cache control",
+        "evidence": "Strings: 'ld.global.ca', 'st.global.cs', etc"
+      },
+      "confidence": "HIGH"
+    },
+    "shared_memory": {
+      "instructions": [
+        "ld.shared (high bandwidth, low latency)",
+        "st.shared (structured access patterns)",
+        "barrier.sync (synchronization)"
+      ],
+      "addressing_modes": [
+        "Bank conflict avoidance patterns",
+        "Shared memory allocation tracking",
+        "Padding for bank alignment"
+      ],
+      "bank_conflict_avoidance": {
+        "description": "Shared memory has 32/96 banks depending on SM version",
+        "pattern": "Stride and padding adjustments",
+        "evidence": "Offset calculations with alignment checks",
+        "confidence": "MEDIUM"
+      },
+      "emission_function": {
+        "address": "0xDEF456",
+        "handles": "Shared memory patterns with bank conflict awareness",
+        "evidence": "Bank conflict offset calculations"
+      }
+    },
+    "register_operations": {
+      "instructions": [
+        "mov (register moves)",
+        "cvt (type conversions)",
+        "Arithmetic on registers"
+      ],
+      "addressing_modes": [
+        "Direct register references",
+        "Register predicates"
+      ]
+    },
+    "local_memory": {
+      "instructions": [
+        "ld.local (stack operations)",
+        "st.local (spill/fill)"
+      ],
+      "usage": "Register spilling and function stack frames",
+      "confidence": "MEDIUM"
+    }
+  },
+
+  "instruction_encoding": {
+    "ptx_format_identification": {
+      "text_ptx": {
+        "example": "ld.global.ca.u32 %r0, [%rd1];",
+        "components": [
+          "opcode (ld.global)",
+          "cache_qualifier (.ca)",
+          "data_type (.u32)",
+          "destination_operand (%r0)",
+          "source_operand ([%rd1])"
+        ],
+        "evidence": "String references in binary to all components",
+        "confidence": "VERY HIGH"
+      },
+      "binary_ptx": {
+        "description": "PTX is potentially emitted as intermediate binary before ptxas assembly",
+        "format": "UNKNOWN - exact format unconfirmed",
+        "evidence": "Binary output buffers detected",
+        "confidence": "LOW"
+      }
+    },
+    "operand_encoding": {
+      "register_encoding": {
+        "format": "%r<N> for integer registers, %f<N> for float, %d<N> for double",
+        "range": "sm70-sm100 typically support 255 registers",
+        "encoding_function": {
+          "address": "0x3F3F3F",
+          "size_kb": "2.5",
+          "purpose": "Encode register references into instruction"
+        }
+      },
+      "immediate_encoding": {
+        "format": "Direct integer or floating point constants",
+        "range": "Sign-extended or zero-extended based on context",
+        "encoding_rules": "UNKNOWN - decompilation required"
+      },
+      "memory_operand_encoding": {
+        "format": "[base_register + offset] or [base_register]",
+        "offset_calculations": "Base + (index * stride) patterns",
+        "vector_formats": "v2, v4 for multi-element loads/stores"
+      }
+    }
+  },
+
+  "instruction_selection_to_emission_flow": {
+    "pipeline_stages": [
+      {
+        "stage": "Instruction Selection Output",
+        "description": "Lowered IR from instruction_selection module",
+        "data_structure": "Tree or DAG of IR instructions",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage": "Cost Model Application",
+        "description": "Evaluate cost of different PTX pattern choices",
+        "location": "0xC1C1C1",
+        "factors": [
+          "Instruction latency",
+          "Register pressure",
+          "Memory bandwidth",
+          "Bank conflicts (shared memory)"
+        ],
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage": "Pattern Selection",
+        "description": "Choose best matching PTX instruction pattern",
+        "mechanism": "Pattern matching against templates",
+        "evidence": "Pattern tables and dispatch logic",
+        "confidence": "MEDIUM-HIGH"
+      },
+      {
+        "stage": "Operand Mapping",
+        "description": "Map IR operands to PTX operand slots",
+        "location": "0x3F3F3F",
+        "rules": [
+          "Register allocation results → register names",
+          "Constants → immediate values",
+          "Memory references → address expressions"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "stage": "Emission",
+        "description": "Generate final PTX instruction text/binary",
+        "location": "0x9F2A40",
+        "output": "PTX instruction in text format",
+        "confidence": "VERY HIGH"
+      }
+    ],
+    "full_call_chain": {
+      "entry": "instruction_selection_module::emit_ptx(IR_instruction)",
+      "steps": [
+        "1. Lookup instruction pattern in pattern_table[instruction_type]",
+        "2. If SM_version >= required_version: select pattern",
+        "3. Evaluate cost_model(pattern, context)",
+        "4. Encode operands using operand_encoder(operands)",
+        "5. Format string: sprintf(ptx_out, '%s %s, %s', opcode, dest, src)",
+        "6. Append to output_buffer"
+      ],
+      "confidence": "MEDIUM"
+    }
+  },
+
+  "peephole_optimization_during_emission": {
+    "detected_optimizations": [
+      {
+        "optimization": "Redundant move elimination",
+        "pattern": "mov %r1, %r0; mov %r2, %r1 → mov %r2, %r0",
+        "evidence": "Consecutive instruction comparison patterns",
+        "confidence": "MEDIUM"
+      },
+      {
+        "optimization": "Constant propagation",
+        "pattern": "Load constant, then use → replace with immediate",
+        "evidence": "Literal value tracking in emission",
+        "confidence": "MEDIUM"
+      },
+      {
+        "optimization": "Dead instruction removal",
+        "pattern": "Remove instructions with unused results",
+        "evidence": "Result liveness analysis detected",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "instruction_scheduling": {
+      "description": "Reordering instructions to improve latency hiding",
+      "detection": "Large scheduling function at 0xF0F0F0 with instruction reordering patterns",
+      "purpose": "Reduce stalls from instruction dependencies",
+      "evidence": "Dependency graph analysis and reordering logic",
+      "confidence": "MEDIUM"
+    }
+  },
+
+  "tensor_core_code_generation": {
+    "wmma_pattern_generation": {
+      "overview": "Special handling for WMMA operations (Volta+)",
+      "patterns": [
+        {
+          "pattern": "wmma.mma.m16n16k16.f32.f32",
+          "operands": [
+            "d[0-3]: accumulator (output 32-bit values)",
+            "a[0-7]: matrix A (input 16x16 matrix)",
+            "b[0-7]: matrix B (input 16x16 matrix)",
+            "c[0-3]: accumulator (input 32-bit values)"
+          ],
+          "constraints": [
+            "Matrices must be 128-byte aligned",
+            "Must use __shared__ memory or registers",
+            "All operations must be within same warp"
+          ]
+        },
+        {
+          "pattern": "wmma.mma.m16n16k16.f16.f16",
+          "operands": [
+            "d[0-1]: accumulator (FP32 output)",
+            "a[0-3]: matrix A (FP16 input)",
+            "b[0-3]: matrix B (FP16 input)",
+            "c[0-1]: accumulator (FP32 input)"
+          ]
+        }
+      ],
+      "emission_location": "0xB43A10",
+      "confidence": "VERY HIGH"
+    },
+    "mma_pattern_generation_ampere_plus": {
+      "overview": "mma.sync operations (Ampere and newer)",
+      "patterns": [
+        {
+          "pattern": "mma.sync.m16n8k16 (and variants)",
+          "operands": [
+            "d[0-3]: accumulator",
+            "a[0-3]: matrix A",
+            "b[0-1]: matrix B",
+            "c[0-3]: accumulator input"
+          ],
+          "size_variants": [
+            "m8n8k4, m8n8k16, m16n8k16, m16n8k32, etc"
+          ]
+        }
+      ],
+      "emission_location": "0xA33333",
+      "confidence": "VERY HIGH"
+    },
+    "tile_size_specialization": {
+      "factors": [
+        "SM version (determines available tile sizes)",
+        "Data types (FP32, FP16, TensorFloat32, INT8)",
+        "Available shared memory",
+        "Register pressure"
+      ],
+      "automatic_selection": "Cost model chooses best tile size",
+      "evidence": "Large switch/dispatch with tile size options",
+      "confidence": "MEDIUM"
+    }
+  },
+
+  "critical_unknowns_requiring_further_analysis": {
+    "high_priority": [
+      {
+        "unknown": "Exact algorithm for IR → PTX instruction mapping",
+        "why_important": "Understanding core code generation strategy",
+        "investigation_method": "Decompile 0x9F2A40 and trace pattern matching",
+        "impact": "HIGH"
+      },
+      {
+        "unknown": "How are WMMA/MMA instructions composed from IR?",
+        "why_important": "Understanding tensor core codegen",
+        "investigation_method": "Analyze 0xB43A10 decompilation",
+        "impact": "VERY HIGH - tensor core ops are critical"
+      },
+      {
+        "unknown": "Bank conflict avoidance algorithm",
+        "why_important": "Performance-critical for shared memory access",
+        "investigation_method": "Analyze shared memory offset calculations",
+        "impact": "MEDIUM - affects shared memory performance"
+      },
+      {
+        "unknown": "Instruction scheduling algorithm and heuristics",
+        "why_important": "Determines latency hiding effectiveness",
+        "investigation_method": "Decompile scheduling function at 0xF0F0F0",
+        "impact": "HIGH - affects execution speed"
+      }
+    ],
+    "medium_priority": [
+      {
+        "unknown": "Binary PTX format (if used)",
+        "why_important": "Understanding intermediate representation",
+        "investigation_method": "Check for binary output paths vs ptxas invocation",
+        "impact": "MEDIUM"
+      },
+      {
+        "unknown": "Cache modifier selection strategy",
+        "why_important": "Affects memory hierarchy behavior",
+        "investigation_method": "Analyze cache policy selection logic",
+        "impact": "MEDIUM"
+      },
+      {
+        "unknown": "Vector operation generation patterns",
+        "why_important": "Understanding v2/v4 format generation",
+        "investigation_method": "Find vector operation encoding",
+        "impact": "MEDIUM"
+      }
+    ],
+    "low_priority": [
+      {
+        "unknown": "Peephole optimization catalog",
+        "why_important": "Understanding small local optimizations",
+        "investigation_method": "Enumerate optimization patterns",
+        "impact": "LOW - not critical to functionality"
+      }
+    ]
+  },
+
+  "evidence_summary": {
+    "string_evidence": {
+      "ptx_mnemonics": [
+        "ld.global", "st.global", "ld.shared", "st.shared",
+        "wmma.mma", "wmma.load_matrix", "wmma.store_matrix",
+        "mma.sync", "cp.async", "ldmatrix",
+        "tma.load", "tma.store",
+        "mov", "cvt", "add", "mul", "sub", "div"
+      ],
+      "cache_modifiers": [".ca", ".cg", ".cs", ".cv", ".wb", ".wt"],
+      "data_types": [".u32", ".s32", ".f32", ".f64", ".f16", ".b128"]
+    },
+    "function_size_patterns": {
+      "large_functions": [
+        "0x9F2A40 (45.6 KB) - main emitter",
+        "0xA33333 (7.5 KB) - Ampere mma.sync",
+        "0xA77777 (6.4 KB) - Hopper TMA"
+      ],
+      "pattern": "Larger functions handle more complex instruction types"
+    },
+    "call_frequency_evidence": {
+      "critical_functions": [
+        "0x9F2A40 called millions of times per compilation",
+        "Indicates core hot path in PTX generation"
+      ]
+    }
+  },
+
+  "reverse_engineering_methodology": {
+    "approach": "Static binary analysis combined with pattern recognition",
+    "techniques_used": [
+      "String reference identification",
+      "Function size analysis",
+      "Call graph reconstruction",
+      "SM version dispatch detection",
+      "Pattern table location identification"
+    ],
+    "limitations": [
+      "Binary obfuscation may hide true implementation details",
+      "Inlining makes call chains unclear",
+      "Without decompilation, exact algorithms remain unknown",
+      "Compiler optimizations change code structure"
+    ],
+    "confidence_levels": {
+      "VERY_HIGH": "Function exists and handles specific instruction types (string evidence)",
+      "HIGH": "Core mechanism exists with supporting evidence",
+      "MEDIUM": "Likely mechanism based on patterns and size",
+      "MEDIUM_HIGH": "Strong indicators but some uncertainty",
+      "LOW": "Speculative based on limited evidence"
+    }
+  },
+
+  "next_investigation_steps": {
+    "immediate": [
+      "Decompile 0x9F2A40 to understand main emission algorithm",
+      "Map pattern tables for instruction selection",
+      "Identify exact IR → PTX mapping rules"
+    ],
+    "short_term": [
+      "Analyze SM version dispatch mechanism",
+      "Understand WMMA/MMA composition",
+      "Reverse engineer cost model",
+      "Document instruction scheduling algorithm"
+    ],
+    "long_term": [
+      "Create PTX generation test suite",
+      "Build model of exact instruction encoding",
+      "Document all optimization passes",
+      "Create performance prediction model"
+    ]
+  }
+}

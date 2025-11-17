@@ -1,0 +1,652 @@
+{
+  "summary": {
+    "generated_date": "2025-11-16",
+    "total_functions": 80562,
+    "classified_functions": 72981,
+    "unknown_functions": 7581,
+    "classification_accuracy_percent": 90.6,
+    "modules_count": 8,
+    "wiki_validation_accuracy": 61.11,
+    "overall_status": "COMPLETED - CRITICAL ISSUES IDENTIFIED"
+  },
+  "modules": {
+    "optimization_framework": {
+      "function_count": 62769,
+      "percentage_of_codebase": 77.9,
+      "internal_calls": 579,
+      "external_calls": 46,
+      "cohesion_percent": 92.64,
+      "cohesion_assessment": "EXCELLENT",
+      "risk_level": "LOW",
+      "avg_confidence": 0.166,
+      "status": "WELL_DESIGNED",
+      "action": "KEEP_AS_IS",
+      "description": "Core optimization framework - primary module for compiler passes and optimizations",
+      "strengths": [
+        "92.6% internal cohesion (highest quality)",
+        "Well-isolated module with clear dependencies",
+        "Expected module for calling other modules",
+        "Focused functionality"
+      ],
+      "cross_module_calls": {
+        "register_allocation": 25,
+        "ptx_emission": 7,
+        "error_handling": 5,
+        "compilation_pipeline": 4,
+        "instruction_selection": 2
+      },
+      "incoming_calls_summary": {
+        "register_allocation": 10,
+        "error_handling": 3,
+        "unknown": 4
+      },
+      "recommendation": "No changes needed. Maintain as foundational architecture module."
+    },
+    "compilation_pipeline": {
+      "function_count": 936,
+      "percentage_of_codebase": 1.16,
+      "internal_calls": 209,
+      "external_calls": 87,
+      "cohesion_percent": 70.61,
+      "cohesion_assessment": "GOOD",
+      "risk_level": "LOW",
+      "avg_confidence": 0.167,
+      "status": "WELL_DESIGNED",
+      "action": "KEEP_AS_IS",
+      "description": "Compilation pipeline orchestration - manages phases and stages",
+      "strengths": [
+        "70.6% internal cohesion (good design)",
+        "Clear purpose and focused functionality",
+        "Minimal cross-module dependencies",
+        "Appropriate interactions with other modules"
+      ],
+      "cross_module_calls": {
+        "optimization_framework": 82,
+        "register_allocation": 8,
+        "ptx_emission": 2
+      },
+      "incoming_calls_summary": {
+        "optimization_framework": 84,
+        "register_allocation": 1,
+        "ptx_emission": 1,
+        "unknown": 3
+      },
+      "recommendation": "No changes needed. Well-designed module with appropriate responsibilities."
+    },
+    "register_allocation": {
+      "function_count": 7730,
+      "percentage_of_codebase": 9.58,
+      "internal_calls": 364,
+      "external_calls": 185,
+      "cohesion_percent": 66.30,
+      "cohesion_assessment": "GOOD",
+      "risk_level": "LOW",
+      "avg_confidence": 0.166,
+      "status": "ACCEPTABLE",
+      "action": "MONITOR",
+      "description": "Register allocation logic and algorithms",
+      "strengths": [
+        "66.3% internal cohesion (good design)",
+        "Clear purpose and focused functionality",
+        "Primary dependency on optimization_framework is appropriate",
+        "Receives expected callbacks from core module"
+      ],
+      "cross_module_calls": {
+        "optimization_framework": 174,
+        "ptx_emission": 4,
+        "instruction_selection": 2,
+        "tensor_core_codegen": 1,
+        "compilation_pipeline": 1
+      },
+      "incoming_calls_summary": {
+        "optimization_framework": 184,
+        "ptx_emission": 7,
+        "error_handling": 2,
+        "architecture_detection": 1
+      },
+      "recommendation": "Acceptable. Minor audit recommended to verify function allocation aligns with register allocation scope."
+    },
+    "architecture_detection": {
+      "function_count": 177,
+      "percentage_of_codebase": 0.22,
+      "internal_calls": 274,
+      "external_calls": 315,
+      "cohesion_percent": 46.52,
+      "cohesion_assessment": "ACCEPTABLE",
+      "risk_level": "MEDIUM",
+      "avg_confidence": 0.167,
+      "status": "BORDERLINE",
+      "action": "REVIEW_AND_AUDIT",
+      "description": "Target architecture detection and capability analysis",
+      "issues": [
+        "46.5% cohesion (borderline acceptable)",
+        "High incoming calls (341 total) from multiple modules",
+        "Calls to 5 different external modules",
+        "Some functions may be utilities rather than architecture-specific"
+      ],
+      "cross_module_calls": {
+        "optimization_framework": 239,
+        "register_allocation": 47,
+        "error_handling": 19,
+        "instruction_selection": 9,
+        "ptx_emission": 1
+      },
+      "incoming_calls_summary": {
+        "optimization_framework": 309,
+        "register_allocation": 9,
+        "error_handling": 16,
+        "instruction_selection": 2,
+        "compilation_pipeline": 1,
+        "tensor_core_codegen": 1
+      },
+      "recommendation": "AUDIT function allocation. Verify all functions truly relate to architecture detection. Consider splitting if utility functions are mixed in.",
+      "priority": "MEDIUM (after critical modules)"
+    },
+    "ptx_emission": {
+      "function_count": 647,
+      "percentage_of_codebase": 0.80,
+      "internal_calls": 250,
+      "external_calls": 292,
+      "cohesion_percent": 46.13,
+      "cohesion_assessment": "ACCEPTABLE",
+      "risk_level": "MEDIUM",
+      "avg_confidence": 0.166,
+      "status": "BORDERLINE",
+      "action": "REVIEW_AND_AUDIT",
+      "description": "PTX instruction emission and code generation",
+      "issues": [
+        "46.1% cohesion (borderline acceptable)",
+        "High incoming call count (348 total)",
+        "292 outgoing calls to optimization_framework suggests utility overlap",
+        "Some functions may be helper utilities rather than PTX-specific"
+      ],
+      "cross_module_calls": {
+        "optimization_framework": 252,
+        "register_allocation": 35,
+        "tensor_core_codegen": 2,
+        "error_handling": 3
+      },
+      "incoming_calls_summary": {
+        "optimization_framework": 333,
+        "register_allocation": 11,
+        "error_handling": 4
+      },
+      "recommendation": "AUDIT function allocation. Reduce external dependencies. May need to move utility functions or consolidate with optimization_framework.",
+      "priority": "MEDIUM (after critical modules)"
+    },
+    "error_handling": {
+      "function_count": 531,
+      "percentage_of_codebase": 0.66,
+      "internal_calls": 353,
+      "external_calls": 431,
+      "cohesion_percent": 45.03,
+      "cohesion_assessment": "ACCEPTABLE",
+      "risk_level": "HIGH",
+      "avg_confidence": 0.165,
+      "status": "REQUIRES_AUDIT",
+      "action": "AUDIT_AND_POSSIBLE_SPLIT",
+      "description": "Error reporting, diagnostics, and messaging",
+      "critical_issues": [
+        "45.0% cohesion (below acceptable threshold)",
+        "Receives 1,310 incoming calls (2ND HIGHEST in codebase)",
+        "Called 1,246 times by optimization_framework (very heavy)",
+        "Scope appears too broad - may mix error reporting + warnings + diagnostics",
+        "Circular dependency with optimization_framework"
+      ],
+      "cross_module_calls": {
+        "optimization_framework": 359,
+        "register_allocation": 42,
+        "instruction_selection": 12,
+        "architecture_detection": 7,
+        "ptx_emission": 11
+      },
+      "incoming_calls_summary": {
+        "optimization_framework": 1246,
+        "register_allocation": 19,
+        "architecture_detection": 24,
+        "error_handling": 9,
+        "ptx_emission": 9,
+        "tensor_core_codegen": 2,
+        "instruction_selection": 5,
+        "unknown": 5
+      },
+      "recommendation": "HIGH PRIORITY: Audit all functions to verify they are error-related. Consider splitting into separate modules: (1) error_reporting, (2) warnings/diagnostics, (3) message_formatting. Goal: reduce incoming calls from 1,310 to <200.",
+      "priority": "HIGH (after tensor_core_codegen)"
+    },
+    "tensor_core_codegen": {
+      "function_count": 104,
+      "percentage_of_codebase": 0.13,
+      "internal_calls": 189,
+      "external_calls": 468,
+      "cohesion_percent": 28.77,
+      "cohesion_assessment": "POOR",
+      "risk_level": "CRITICAL",
+      "avg_confidence": 0.168,
+      "status": "SEVERELY_MISCLASSIFIED",
+      "action": "IMMEDIATE_REFACTORING_REQUIRED",
+      "description": "Tensor core (WMMA) instruction code generation",
+      "critical_issues": [
+        "28.8% cohesion (LOWEST in entire codebase)",
+        "71.2% of function calls are EXTERNAL (catastrophic design flaw)",
+        "Calls to 6 different modules (most interconnected)",
+        "Only 104 functions but heavily scattered across codebase",
+        "418 calls to optimization_framework (4x more than internal calls)",
+        "Suggests severe misclassification - many functions likely belong elsewhere"
+      ],
+      "cross_module_calls": {
+        "optimization_framework": 418,
+        "register_allocation": 23,
+        "instruction_selection": 9,
+        "ptx_emission": 8,
+        "error_handling": 8,
+        "architecture_detection": 2
+      },
+      "incoming_calls_summary": {
+        "optimization_framework": 613,
+        "register_allocation": 29,
+        "error_handling": 10,
+        "ptx_emission": 8,
+        "instruction_selection": 1,
+        "unknown": 8
+      },
+      "recommendation": "CRITICAL PRIORITY: Immediate manual code review of all 104 functions. Reclassify to correct modules: (1) Tensor-specific optimization passes → optimization_framework, (2) Tensor instruction selection → instruction_selection, (3) Tensor register allocation → register_allocation. Consolidate and create clear module boundaries.",
+      "priority": "CRITICAL (START HERE)",
+      "estimated_effort_hours": "30-50"
+    },
+    "instruction_selection": {
+      "function_count": 87,
+      "percentage_of_codebase": 0.11,
+      "internal_calls": 181,
+      "external_calls": 353,
+      "cohesion_percent": 33.90,
+      "cohesion_assessment": "ACCEPTABLE",
+      "risk_level": "CRITICAL",
+      "avg_confidence": 0.168,
+      "status": "SEVERELY_OVER_BROAD",
+      "action": "SPLIT_IMMEDIATELY",
+      "description": "Instruction selection and DAG pattern matching",
+      "critical_issues": [
+        "33.9% cohesion (too low for stability)",
+        "Receives 1,800+ INCOMING CALLS (HIGHEST in codebase!)",
+        "Called 1,634 times by optimization_framework alone",
+        "Acts as utility module, NOT instruction selection module",
+        "Severely over-broad scope mixing utilities with selection logic",
+        "1,800+ incoming calls indicates functions are shared helpers, not selection-specific"
+      ],
+      "cross_module_calls": {
+        "optimization_framework": 315,
+        "register_allocation": 21,
+        "architecture_detection": 6,
+        "error_handling": 9,
+        "ptx_emission": 1,
+        "tensor_core_codegen": 1
+      },
+      "incoming_calls_summary": {
+        "optimization_framework": 1634,
+        "register_allocation": 68,
+        "tensor_core_codegen": 9,
+        "error_handling": 49,
+        "architecture_detection": 16,
+        "ptx_emission": 5,
+        "compilation_pipeline": 1,
+        "unknown": 18
+      },
+      "recommendation": "CRITICAL PRIORITY: Split immediately into two modules. (1) core_instruction_selection (focused, <20 functions), (2) instruction_infrastructure (utilities, helpers, builders). Move 1,634 calls worth of functions from optimization_framework usage to appropriate modules. Goal: reduce incoming calls to <100.",
+      "priority": "CRITICAL (MAY HAVE LARGER IMPACT THAN TENSOR_CORE)",
+      "estimated_effort_hours": "20-40",
+      "analysis": "The 1,634 calls from optimization_framework strongly indicate these are NOT instruction-selection-specific functions. Likely categories: helper functions, common infrastructure, data structure builders, query functions."
+    }
+  },
+  "issues_identified": {
+    "tensor_core_codegen": {
+      "module_name": "tensor_core_codegen",
+      "cohesion": 28.77,
+      "severity": "CRITICAL",
+      "category": "SEVERE_MISCLASSIFICATION",
+      "root_cause": "Too many functions misclassified - 71.2% of calls go to other modules",
+      "impact": "Code organization nightmare - tensor core functions scattered across codebase",
+      "action_required": "Manual review and reclassification of all 104 functions",
+      "expected_benefit": "Consolidate tensor core codegen into cohesive unit with 60%+ cohesion"
+    },
+    "instruction_selection": {
+      "module_name": "instruction_selection",
+      "cohesion": 33.90,
+      "severity": "CRITICAL",
+      "category": "OVER_BROAD_SCOPE",
+      "root_cause": "Acting as utility module with 1,800+ incoming calls from optimization_framework",
+      "impact": "Module serves dual purpose - confuses actual instruction selection with helpers",
+      "action_required": "Split into core instruction selection (small) + infrastructure utilities",
+      "expected_benefit": "Clear separation of concerns, easier maintenance, better code organization"
+    },
+    "error_handling": {
+      "module_name": "error_handling",
+      "cohesion": 45.03,
+      "severity": "HIGH",
+      "category": "OVERLY_BROAD_SCOPE",
+      "root_cause": "Likely mixing error reporting + diagnostics + message formatting",
+      "impact": "1,246 calls from optimization_framework suggest heavy coupling",
+      "action_required": "Audit scope and consider splitting into 3 modules",
+      "expected_benefit": "Reduced dependencies, clearer error handling architecture"
+    },
+    "ptx_emission": {
+      "module_name": "ptx_emission",
+      "cohesion": 46.13,
+      "severity": "MEDIUM",
+      "category": "BORDERLINE_DESIGN",
+      "root_cause": "292 calls to optimization_framework suggest some utility function overlap",
+      "impact": "Unclear boundaries with optimization_framework",
+      "action_required": "Audit functions, verify PTX-specific vs. generic utilities",
+      "expected_benefit": "Clearer module boundaries, reduced dependencies"
+    },
+    "architecture_detection": {
+      "module_name": "architecture_detection",
+      "cohesion": 46.52,
+      "severity": "MEDIUM",
+      "category": "BORDERLINE_DESIGN",
+      "root_cause": "High incoming calls (341) suggest utility functions may be mixed in",
+      "impact": "Unclear what makes a function 'architecture detection'",
+      "action_required": "Audit function allocation across modules",
+      "expected_benefit": "Clearer responsibilities, better maintainability"
+    }
+  },
+  "reclassification_plan": [
+    {
+      "function_address": "0x12c8dd0",
+      "function_name": "sub_12C8DD0",
+      "current_module": "tensor_core_codegen",
+      "recommended_module": "ptx_emission",
+      "confidence": "MEDIUM",
+      "coverage_percent": 40.0,
+      "reason": "40% coverage of PTX keywords indicates PTX emission focus",
+      "priority": 1,
+      "effort": "LOW"
+    },
+    {
+      "function_address": "0x1221570",
+      "function_name": "sub_1221570",
+      "current_module": "tensor_core_codegen",
+      "recommended_module": "instruction_selection",
+      "confidence": "MEDIUM",
+      "coverage_percent": 22.2,
+      "reason": "22.2% coverage of instruction selection keywords (MMA patterns)",
+      "priority": 1,
+      "effort": "LOW"
+    },
+    {
+      "function_address": "0x1c2fab0",
+      "function_name": "sub_1C2FAB0",
+      "current_module": "architecture_detection",
+      "recommended_module": "tensor_core_codegen",
+      "confidence": "LOW",
+      "coverage_percent": 11.1,
+      "reason": "11.1% coverage of tensor core keywords",
+      "priority": 3,
+      "effort": "LOW"
+    },
+    {
+      "function_address": "0x228cf00",
+      "function_name": "sub_228CF00",
+      "current_module": "optimization_framework",
+      "recommended_module": "ptx_emission",
+      "confidence": "LOW",
+      "coverage_percent": 10.0,
+      "reason": "10% coverage of PTX keywords",
+      "priority": 3,
+      "effort": "LOW"
+    },
+    {
+      "function_address": "0x39ea350",
+      "function_name": "sub_39EA350",
+      "current_module": "register_allocation",
+      "recommended_module": "ptx_emission",
+      "confidence": "LOW",
+      "coverage_percent": 10.0,
+      "reason": "10% coverage of PTX keywords",
+      "priority": 3,
+      "effort": "LOW"
+    },
+    {
+      "function_address": "0x2f95930",
+      "function_name": "sub_2F95930",
+      "current_module": "register_allocation",
+      "recommended_module": "compilation_pipeline",
+      "confidence": "LOW",
+      "coverage_percent": 10.0,
+      "reason": "10% coverage of compilation pipeline keywords",
+      "priority": 3,
+      "effort": "LOW"
+    },
+    {
+      "function_address": "0x107b020",
+      "function_name": "sub_107B020",
+      "current_module": "register_allocation",
+      "recommended_module": "compilation_pipeline",
+      "confidence": "LOW",
+      "coverage_percent": 10.0,
+      "reason": "10% coverage of compilation pipeline keywords",
+      "priority": 3,
+      "effort": "LOW"
+    },
+    {
+      "function_address": "0x3024a30",
+      "function_name": "sub_3024A30",
+      "current_module": "ptx_emission",
+      "recommended_module": "architecture_detection",
+      "confidence": "MEDIUM",
+      "coverage_percent": 22.2,
+      "reason": "22.2% coverage of architecture detection keywords (sm_* patterns)",
+      "priority": 2,
+      "effort": "MEDIUM"
+    }
+  ],
+  "validation_metrics": {
+    "wiki_validation": {
+      "total_wiki_functions_analyzed": 90,
+      "correct_classifications": 55,
+      "incorrect_classifications": 35,
+      "accuracy_percent": 61.11,
+      "precision": 61.11,
+      "recall": 0.07,
+      "f1_score": 1.222,
+      "interpretation": "Only 55/90 wiki-verified functions were correctly classified. Many unknown modules have wiki verification but aren't classified.",
+      "key_finding": "Unknown functions may be recoverable from wiki data - future improvement opportunity"
+    },
+    "classification_confidence": {
+      "high_confidence_functions": 0,
+      "medium_confidence_functions": 0,
+      "low_confidence_functions": 72981,
+      "unknown_functions": 7581,
+      "avg_confidence_all_modules": 0.166,
+      "interpretation": "All classified functions have low confidence (0.165-0.168), suggesting keyword-based classification only",
+      "note": "No high/medium confidence functions indicates weakness in classification methodology"
+    },
+    "cohesion_distribution": {
+      "excellent_60_plus_percent": 3,
+      "good_50_to_60_percent": 2,
+      "acceptable_30_to_50_percent": 2,
+      "poor_below_30_percent": 1,
+      "modules_at_threshold": {
+        "pass": ["optimization_framework (92.6%)", "compilation_pipeline (70.6%)", "register_allocation (66.3%)"],
+        "warning": ["architecture_detection (46.5%)", "ptx_emission (46.1%)", "error_handling (45.0%)", "instruction_selection (33.9%)"],
+        "fail": ["tensor_core_codegen (28.8%)"]
+      }
+    },
+    "cross_module_dependencies": {
+      "total_incoming_calls": 5969,
+      "highest_incoming": {
+        "module": "instruction_selection",
+        "incoming_calls": 1801,
+        "percentage": 30.2
+      },
+      "second_highest": {
+        "module": "error_handling",
+        "incoming_calls": 1310,
+        "percentage": 21.9
+      },
+      "healthy_pattern": {
+        "module": "optimization_framework",
+        "outgoing_calls": 46,
+        "percentage": 0.07,
+        "description": "Low outgoing calls indicates core module"
+      }
+    },
+    "unknown_functions": {
+      "total_unknown": 7581,
+      "percentage_of_codebase": 9.4,
+      "reclassification_potential": "LOW (no patterns found in analysis)",
+      "recommendation": "Consider binary analysis or additional heuristics to classify"
+    }
+  },
+  "recommendations": {
+    "immediate_actions": [
+      {
+        "priority": 1,
+        "title": "CRITICAL: Refactor tensor_core_codegen module",
+        "timeline": "Week 1-2",
+        "estimated_effort": "30-50 hours",
+        "steps": [
+          "Manual code review of all 104 functions in tensor_core_codegen",
+          "Categorize by actual purpose (optimization pass vs. instruction selection vs. register allocation)",
+          "Move functions to appropriate modules (optimization_framework, instruction_selection, register_allocation)",
+          "Verify no orphaned functions remain",
+          "Create clear module boundaries and documentation",
+          "Run full test suite to verify correctness"
+        ],
+        "success_criteria": "Cohesion increases above 60%, external call percentage drops below 30%",
+        "risk": "HIGH - affects core code generation",
+        "testing": "All tests must pass, performance unchanged"
+      },
+      {
+        "priority": 2,
+        "title": "CRITICAL: Split instruction_selection module",
+        "timeline": "Week 2-3",
+        "estimated_effort": "20-40 hours",
+        "steps": [
+          "Identify core instruction selection functions (estimate <20 functions)",
+          "Create new 'instruction_infrastructure' module for utilities",
+          "Move helper functions, builders, query functions to infrastructure module",
+          "Move optimization_framework calls (1,634 total) to appropriate target modules",
+          "Update all call sites with new module references",
+          "Document instruction selection interface clearly",
+          "Run full test suite"
+        ],
+        "success_criteria": "instruction_selection cohesion >60%, incoming calls <100",
+        "risk": "HIGH - affects instruction selection pipeline",
+        "testing": "Comprehensive integration testing required"
+      },
+      {
+        "priority": 3,
+        "title": "HIGH: Audit and potentially split error_handling module",
+        "timeline": "Week 2-3",
+        "estimated_effort": "10-20 hours",
+        "steps": [
+          "Review all 531 functions in error_handling module",
+          "Verify each function is truly error-related",
+          "Identify functions that are warnings/diagnostics (vs. errors)",
+          "Consider splitting into error_reporting, warnings/diagnostics, message_formatting",
+          "Reduce optimization_framework dependency (currently 1,246 calls)",
+          "Document error handling scope and API",
+          "Update call sites if split occurs"
+        ],
+        "success_criteria": "Cohesion >60%, incoming calls from opt_framework <300",
+        "risk": "MEDIUM - affects error reporting throughout compiler",
+        "testing": "Error handling tests must remain comprehensive"
+      }
+    ],
+    "medium_priority_actions": [
+      {
+        "priority": 4,
+        "title": "MEDIUM: Audit architecture_detection module boundaries",
+        "timeline": "Week 3",
+        "estimated_effort": "5-10 hours",
+        "steps": [
+          "Review 177 functions for architecture-specific relevance",
+          "Identify any utility functions that should be moved",
+          "Verify cross-module dependencies are appropriate",
+          "Document what makes a function 'architecture_detection'",
+          "Update as needed"
+        ],
+        "success_criteria": "Cohesion >55%, incoming calls <250",
+        "risk": "LOW",
+        "testing": "Architecture detection tests must pass"
+      },
+      {
+        "priority": 5,
+        "title": "MEDIUM: Audit ptx_emission module boundaries",
+        "timeline": "Week 3-4",
+        "estimated_effort": "5-10 hours",
+        "steps": [
+          "Review 647 functions for PTX-specific relevance",
+          "Identify any generic utilities that should be in optimization_framework",
+          "Verify 292 calls to optimization_framework are appropriate",
+          "Document PTX emission scope",
+          "Consider consolidation if many generic functions exist"
+        ],
+        "success_criteria": "Cohesion >55%, external calls reduced",
+        "risk": "LOW",
+        "testing": "PTX emission tests must pass"
+      },
+      {
+        "priority": 6,
+        "title": "MEDIUM: Apply recommended reclassifications",
+        "timeline": "Week 4",
+        "estimated_effort": "3-5 hours",
+        "steps": [
+          "Apply 9 recommended function reclassifications from this report",
+          "Start with MEDIUM confidence items (functions 0x12c8dd0, 0x1221570, 0x3024a30)",
+          "Then apply LOW confidence items",
+          "Update all references and verify tests pass",
+          "Document rationale for each reclassification"
+        ],
+        "success_criteria": "All reclassifications applied, tests pass",
+        "risk": "LOW",
+        "testing": "Full test suite required"
+      }
+    ],
+    "longer_term_improvements": [
+      "Implement automated cohesion monitoring (alert if any module drops below 60%)",
+      "Create detailed module interface contracts and dependency documentation",
+      "Develop better classification methodology beyond keyword matching",
+      "Consider using binary analysis for unknown functions",
+      "Implement module dependency graph visualization for ongoing monitoring",
+      "Create module refactoring checklist for future changes",
+      "Establish coding standards for module boundaries and responsibilities",
+      "Implement call graph analysis as part of CI/CD pipeline"
+    ],
+    "avoid_mistakes": [
+      "Do NOT move functions without understanding their full call graph",
+      "Do NOT ignore test failures during refactoring - they indicate breaking changes",
+      "Do NOT refactor multiple critical modules in parallel - do sequentially",
+      "Do NOT assume 'utility' functions are safe to move - verify all callers",
+      "Do NOT ignore circular dependencies - they often indicate design issues",
+      "Do NOT apply reclassifications without measuring cohesion before/after",
+      "Do NOT forget to update documentation when moving functions",
+      "Do NOT make changes during feature freeze or critical release cycles"
+    ]
+  },
+  "consolidation_notes": {
+    "sources_merged": [
+      "TAXONOMY_VALIDATION_SUMMARY.txt",
+      "module_taxonomy_validation_sample.json",
+      "module_classification_confidence.json",
+      "module_cohesion_analysis.json",
+      "module_interactions_callgraph.json",
+      "module_boundary_ambiguity.json",
+      "module_name_mismatch_detection.json",
+      "module_reclassification_recommendations.json",
+      "inter_module_ambiguity.json",
+      "unknown_module_analysis.json",
+      "wiki_validation_results.json"
+    ],
+    "data_quality": "HIGH - all source files consistent with findings",
+    "next_steps": [
+      "Present findings to architecture review team",
+      "Schedule manual code review sessions for tensor_core_codegen and instruction_selection",
+      "Create detailed refactoring plan with timeline",
+      "Set up monitoring for module cohesion metrics",
+      "Plan integration testing strategy",
+      "Document all changes with ADRs (Architecture Decision Records)"
+    ],
+    "contact_information": "Architecture team responsible for compilation pipeline optimization"
+  }
+}

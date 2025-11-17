@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "title": "CICC Execution Tracing Guide",
+    "version": "1.0",
+    "purpose": "Comprehensive methodology for dynamic analysis and execution tracing of CICC compilation pipeline",
+    "difficulty": "MEDIUM - requires debugger proficiency and CUDA knowledge",
+    "target_audience": "Reverse engineers analyzing CICC compiler behavior",
+    "last_updated": "2025-11-16"
+  },
+
+  "setup_requirements": {
+    "tools_required": {
+      "debugger": ["GDB >= 12.0", "LLDB >= 14.0"],
+      "compiler": "NVIDIA CUDA Toolkit 12.x",
+      "build_system": "CMake or Make",
+      "kernel_analysis": "objdump, nm, strings, readelf"
+    },
+    "system_requirements": {
+      "architecture": "x86_64 Linux",
+      "memory": "16GB minimum (32GB recommended for large binaries)",
+      "disk_space": "50GB for source code and debug symbols"
+    },
+    "test_inputs": [
+      "Simple vector addition kernel (5-10 lines)",
+      "Complex kernel with optimizations (50+ lines)",
+      "Tensor core utilization kernel",
+      "Multi-SM version compilation",
+      "Kernel with high register pressure (>200 registers)",
+      "Kernel using shared memory patterns"
+    ],
+    "expected_artifact_addresses": {
+      "note": "These are approximate addresses from previous analysis - will vary per build",
+      "ptx_emission_function": "0x9F2A40 (approximate)",
+      "register_allocator_entry": "0xB612D0 (approximate)",
+      "suspected_pass_manager": "varies by binary compilation",
+      "main_compilation_entry": "depends on entry point selection"
+    }
+  },
+
+  "tracing_scenarios": {
+    "scenario_1_simple_pipeline_trace": {
+      "goal": "Trace complete CICC compilation pipeline from entry to PTX output",
+      "difficulty": "MEDIUM",
+      "time_estimate": "16 hours",
+      "input_specification": {
+        "kernel_code": "Simple vector addition (32-64 threads)",
+        "optimization_level": "default",
+        "target_sm": "sm_70",
+        "features": "no tensor cores, basic register usage"
+      },
+      "trace_points": [
+        "Entry point: main() or nvcc invocation wrapper",
+        "IR parsing and construction phase",
+        "Front-end optimization passes",
+        "Middle-end optimization sequence",
+        "Instruction selection phase",
+        "Register allocation phase",
+        "Back-end optimization passes",
+        "PTX code generation",
+        "PTX output buffer writing",
+        "File I/O operations"
+      ],
+      "breakpoint_strategy": [
+        {
+          "location": "main entry function",
+          "action": "log arguments, set trace on calls",
+          "data_capture": "command-line parameters"
+        },
+        {
+          "location": "suspected IR construction",
+          "action": "breakpoint before/after IR allocation",
+          "data_capture": "IR memory region dump"
+        },
+        {
+          "location": "pass manager entry (if discoverable)",
+          "action": "trace all function calls during optimization",
+          "data_capture": "call sequence, pass identifiers"
+        },
+        {
+          "location": "PTX emission entry (0x9F2A40 range)",
+          "action": "step through code generation",
+          "data_capture": "PTX text buffer contents"
+        },
+        {
+          "location": "output writing (file I/O)",
+          "action": "breakpoint at write syscalls",
+          "data_capture": "final PTX output"
+        }
+      ],
+      "data_structures_to_capture": [
+        "IR module structure (memory layout)",
+        "Function representation in IR",
+        "Basic block organization",
+        "Instruction representation",
+        "Control flow graph",
+        "Data dependency graph"
+      ],
+      "expected_outputs": {
+        "primary": "Complete pipeline sequence with function addresses",
+        "secondary": [
+          "Approximate size of IR structure",
+          "Number of passes executed",
+          "Register allocation decisions for test kernel",
+          "PTX instruction count"
+        ]
+      },
+      "confidence_improvement": "MEDIUM (50-70%) → CONFIRMED (90%+)"
+    },
+
+    "scenario_2_register_allocation_deep_dive": {
+      "goal": "Understand register allocation algorithm, constraints, and decisions",
+      "difficulty": "HARD",
+      "time_estimate": "24 hours",
+      "input_specification": {
+        "kernel_code": "High register pressure kernel (200+ registers needed)",
+        "optimization_level": "with register optimization",
+        "target_sm": "sm_70 (96 registers per thread)",
+        "features": "intentionally force register spilling"
+      },
+      "methodology": "DEEP SINGLE-STEP ANALYSIS",
+      "focus_modules": [
+        "Register allocator main entry",
+        "Live range analysis",
+        "Interference graph construction",
+        "Graph coloring algorithm",
+        "Spill insertion logic",
+        "Rematerialization decisions"
+      ],
+      "trace_phases": [
+        {
+          "phase": "Live range computation",
+          "trace_method": "step through range calculation",
+          "data_extraction": "live interval for each virtual register"
+        },
+        {
+          "phase": "Interference graph construction",
+          "trace_method": "monitor graph building, dump after completion",
+          "data_extraction": "graph structure, edge relationships"
+        },
+        {
+          "phase": "Graph coloring",
+          "trace_method": "step through coloring algorithm, watch register assignments",
+          "data_extraction": "virtual-to-physical mappings"
+        },
+        {
+          "phase": "Spill decisions",
+          "trace_method": "breakpoint at spill insertion points",
+          "data_extraction": "which intervals are spilled, spill locations"
+        },
+        {
+          "phase": "Final register assignment",
+          "trace_method": "verify all assignments, check for violations",
+          "data_extraction": "final register mapping table"
+        }
+      ],
+      "memory_analysis": {
+        "live_ranges": "capture live interval data structure",
+        "interference_graph": "dump adjacency representation",
+        "spill_decisions": "log each spill operation",
+        "constraint_analysis": "identify SM-specific register constraints applied"
+      },
+      "expected_discoveries": [
+        "Algorithm type (graph coloring vs other approach)",
+        "SM-specific constraint implementation",
+        "Heuristic prioritization for coloring",
+        "Spill cost model and decisions",
+        "Register pressure limits per SM"
+      ],
+      "confidence_improvement": "MEDIUM (40-50%) → HIGH (80-90%)"
+    },
+
+    "scenario_3_optimization_pass_identification": {
+      "goal": "Identify all optimization passes, their order, and implementation details",
+      "difficulty": "MEDIUM",
+      "time_estimate": "12 hours",
+      "approach": "Breakpoint at pass manager level, trace execution",
+      "tracing_strategy": [
+        {
+          "step": 1,
+          "action": "identify pass manager initialization",
+          "method": "search for 'Pass Manager', 'PassManager', or similar patterns"
+        },
+        {
+          "step": 2,
+          "action": "breakpoint at pass manager::run() equivalent",
+          "method": "set breakpoint, inspect pass registry"
+        },
+        {
+          "step": 3,
+          "action": "trace pass execution sequence",
+          "method": "single-step through pass invocation loop"
+        },
+        {
+          "step": 4,
+          "action": "log each pass name and function address",
+          "method": "extract from pass object or call stack"
+        },
+        {
+          "step": 5,
+          "action": "capture pass effects on IR",
+          "method": "dump IR before/after each major pass group"
+        }
+      ],
+      "data_to_extract": {
+        "pass_sequence": "ordered list of passes executed",
+        "pass_categories": "function passes vs module passes",
+        "pass_effects": "what IR modifications each pass makes",
+        "pass_dependencies": "order constraints and dependencies",
+        "skip_logic": "which passes are conditional"
+      },
+      "expected_pass_categories": [
+        "IR verification passes",
+        "Control flow simplification",
+        "Dead code elimination",
+        "Loop optimization passes",
+        "Instruction combining",
+        "SM-specific optimization",
+        "Spill code insertion",
+        "Final lowering passes"
+      ],
+      "confidence_improvement": "LOW (20-30%) → CONFIRMED (95%+)"
+    },
+
+    "scenario_4_sm_specific_code_generation": {
+      "goal": "Understand how code generation differs across SM versions (sm_70, sm_80, sm_90)",
+      "difficulty": "MEDIUM",
+      "time_estimate": "20 hours",
+      "comparative_analysis": true,
+      "test_matrix": [
+        {
+          "kernel": "same source code",
+          "sm_targets": ["sm_70", "sm_80", "sm_90"],
+          "comparison": "execution path differences"
+        }
+      ],
+      "tracing_approach": "DIFFERENTIAL EXECUTION ANALYSIS",
+      "trace_steps": [
+        {
+          "step": "compile kernel for each SM target",
+          "output": "three separate binaries with debug symbols"
+        },
+        {
+          "step": "trace first compilation (sm_70), log all major decisions",
+          "output": "execution trace for sm_70"
+        },
+        {
+          "step": "trace second compilation (sm_80), record differences",
+          "output": "execution trace for sm_80"
+        },
+        {
+          "step": "trace third compilation (sm_90), record differences",
+          "output": "execution trace for sm_90"
+        },
+        {
+          "step": "diff all three traces to identify SM-specific branching",
+          "output": "list of SM-detection and SM-specific code paths"
+        }
+      ],
+      "focus_areas": [
+        {
+          "area": "SM version detection logic",
+          "trace": "identify where and how SM version is determined",
+          "data": "SM version checks, conditional branches"
+        },
+        {
+          "area": "Register file size handling",
+          "trace": "how register limits are applied per SM",
+          "data": "register limit values, constraint adjustments"
+        },
+        {
+          "area": "Memory hierarchy configuration",
+          "trace": "shared memory vs global memory optimization differences",
+          "data": "memory access pattern generation changes"
+        },
+        {
+          "area": "Tensor core usage (if applicable)",
+          "trace": "sm_90 specific tensor core instruction generation",
+          "data": "wmma instruction generation differences"
+        },
+        {
+          "area": "Instruction scheduling",
+          "trace": "SM-specific instruction scheduling differences",
+          "data": "latency model differences per SM"
+        }
+      ],
+      "expected_discoveries": [
+        "SM version detection mechanism",
+        "Register limit handling",
+        "Memory optimization strategies per SM",
+        "Instruction availability per SM",
+        "Scheduling differences"
+      ],
+      "confidence_improvement": "MEDIUM (45-55%) → HIGH (85-95%)"
+    },
+
+    "scenario_5_ptx_emission_analysis": {
+      "goal": "Understand PTX code generation and emission process",
+      "difficulty": "MEDIUM",
+      "time_estimate": "18 hours",
+      "input_specification": {
+        "kernel": "simple kernel with mixed instruction types",
+        "optimization": "default",
+        "focus": "PTX instruction generation and formatting"
+      },
+      "trace_strategy": [
+        {
+          "phase": "Identify PTX generation entry point",
+          "method": "search for PTX, ptx, or emit patterns",
+          "target_address": "0x9F2A40 (approximate from previous analysis)"
+        },
+        {
+          "phase": "Trace instruction emission",
+          "method": "breakpoint at instruction-to-PTX conversion",
+          "capture": "each instruction conversion"
+        },
+        {
+          "phase": "Trace PTX string construction",
+          "method": "monitor string buffer growth",
+          "capture": "PTX text buffer contents"
+        },
+        {
+          "phase": "Trace PTX output writing",
+          "method": "breakpoint at I/O operations",
+          "capture": "final PTX file"
+        }
+      ],
+      "data_structures": [
+        "PTX instruction format tables",
+        "Register name mappings",
+        "Instruction mnemonic strings",
+        "PTX output buffer"
+      ],
+      "expected_outputs": [
+        "PTX instruction generation order",
+        "Register naming convention",
+        "Instruction formatting rules",
+        "Directives and metadata generation"
+      ],
+      "confidence_improvement": "MEDIUM (60%) → HIGH (90%)"
+    }
+  },
+
+  "tracing_techniques": {
+    "breakpoint_strategy": {
+      "entry_points": {
+        "method": "identify main entry, set initial breakpoint",
+        "actions": ["log arguments", "inspect registers", "set recursive trace"]
+      },
+      "function_call_tracing": {
+        "method": "use 'call' or 'trace' commands in debugger",
+        "capture": ["function name", "arguments", "return value", "call stack depth"]
+      },
+      "memory_watchpoints": {
+        "method": "set write-access breakpoints on suspected data structures",
+        "use_cases": ["IR structure modifications", "register assignments", "graph updates"]
+      },
+      "conditional_breakpoints": {
+        "method": "breakpoint with conditions (function name contains 'Pass', etc)",
+        "efficiency": "reduces manual stepping"
+      }
+    },
+
+    "memory_analysis": {
+      "ir_structure_dump": {
+        "method": "break after IR construction, dump memory region",
+        "tools": "gdb 'dump binary memory', hexdump analysis",
+        "analysis": "identify field offsets, pointer relationships"
+      },
+      "graph_structure_visualization": {
+        "method": "extract interference graph from memory, reconstruct structure",
+        "format": "DOT graph format for visualization",
+        "tools": "graphviz for visualization"
+      },
+      "string_table_extraction": {
+        "method": "dump string pools, extract identifiers and literals",
+        "use": "identify hidden configuration, algorithm details in strings"
+      },
+      "register_state_inspection": {
+        "method": "examine CPU registers at strategic points",
+        "focus": "arguments, return values, register allocation outcomes"
+      }
+    },
+
+    "differential_tracing": {
+      "purpose": "identify algorithm behavior by comparing different inputs",
+      "method_1_size_variation": {
+        "description": "trace same operation on small vs large inputs",
+        "example": "trace register allocation for 10-register vs 200-register kernel",
+        "insight": "reveals algorithm scaling behavior"
+      },
+      "method_2_feature_variation": {
+        "description": "trace with/without specific features",
+        "example": "with/without tensor core usage",
+        "insight": "identifies feature-specific code paths"
+      },
+      "method_3_target_variation": {
+        "description": "trace same kernel for different SM targets",
+        "example": "sm_70 vs sm_90",
+        "insight": "reveals SM-specific branching"
+      },
+      "comparison_process": [
+        "record execution trace 1",
+        "record execution trace 2",
+        "diff function call sequences",
+        "identify divergence points",
+        "analyze decision logic at divergence"
+      ]
+    },
+
+    "call_graph_extraction": {
+      "method": "record all function calls during compilation",
+      "tools": ["gdb 'record', 'reverse-step'", "perf for call graph"],
+      "output": "call graph visualization"
+    },
+
+    "performance_profiling_during_trace": {
+      "method": "measure time spent in each major phase",
+      "data": "identify bottlenecks",
+      "tools": ["gdb 'info frame'", "perf stat for timing"]
+    }
+  },
+
+  "expected_discoveries": {
+    "pipeline_architecture": {
+      "current_confidence": "MEDIUM (50-70%)",
+      "target_confidence": "CONFIRMED (95%+)",
+      "method": "scenario_1 complete pipeline trace",
+      "expected_outcome": "documented sequence of all compilation stages",
+      "validation": "trace should match expected LLVM-based pipeline structure"
+    },
+    "register_allocation_algorithm": {
+      "current_confidence": "MEDIUM (40-50%)",
+      "target_confidence": "HIGH (85-95%)",
+      "method": "scenario_2 deep RA analysis",
+      "expected_outcome": "algorithm classification (graph coloring, linear scan, etc)",
+      "validation": "identified algorithm matches LLVM default for that CUDA version"
+    },
+    "optimization_pass_ordering": {
+      "current_confidence": "LOW (20-30%)",
+      "target_confidence": "CONFIRMED (98%+)",
+      "method": "scenario_3 pass manager tracing",
+      "expected_outcome": "complete list of passes and execution order",
+      "validation": "can reproduce same pass sequence in subsequent traces"
+    },
+    "sm_specific_code_generation": {
+      "current_confidence": "MEDIUM (50-60%)",
+      "target_confidence": "HIGH (85-95%)",
+      "method": "scenario_4 SM-specific analysis",
+      "expected_outcome": "documented differences for sm_70, sm_80, sm_90",
+      "validation": "differences should explain observed output variations"
+    },
+    "ptx_emission_process": {
+      "current_confidence": "MEDIUM (55-65%)",
+      "target_confidence": "HIGH (80-90%)",
+      "method": "scenario_5 PTX emission tracing",
+      "expected_outcome": "complete PTX generation pipeline",
+      "validation": "generated PTX matches standard NVIDIA PTX format"
+    }
+  },
+
+  "effort_estimates": {
+    "setup_phase": {
+      "task": "environment setup, debugger configuration, CICC build",
+      "duration_hours": 8,
+      "skills_required": ["Linux", "build systems", "GDB/LLDB"]
+    },
+    "scenario_1_simple_pipeline": {
+      "task": "trace complete pipeline for simple kernel",
+      "duration_hours": 16,
+      "prerequisite": "setup_phase"
+    },
+    "scenario_2_register_allocation": {
+      "task": "deep analysis of register allocation algorithm",
+      "duration_hours": 24,
+      "prerequisite": "scenario_1"
+    },
+    "scenario_3_pass_identification": {
+      "task": "identify and document optimization passes",
+      "duration_hours": 12,
+      "prerequisite": "scenario_1"
+    },
+    "scenario_4_sm_specific": {
+      "task": "analyze SM-specific code generation",
+      "duration_hours": 20,
+      "prerequisite": "scenario_1"
+    },
+    "scenario_5_ptx_emission": {
+      "task": "understand PTX emission process",
+      "duration_hours": 18,
+      "prerequisite": "scenario_1"
+    },
+    "analysis_and_documentation": {
+      "task": "consolidate findings into documentation",
+      "duration_hours": 12,
+      "prerequisite": "all scenarios"
+    },
+    "total_effort": {
+      "hours": 110,
+      "working_days": 14,
+      "calendar_weeks": 4,
+      "note": "assumes full-time dedication and no blockers"
+    }
+  },
+
+  "tools_and_commands": {
+    "gdb_essential_commands": [
+      "break <address/function> - set breakpoint",
+      "watch <address> - set memory watchpoint",
+      "continue/step/next - execution control",
+      "info registers - view CPU registers",
+      "x/format <address> - examine memory",
+      "record - start recording for reverse debugging",
+      "reverse-step - go back one step",
+      "disassemble - view assembly",
+      "backtrace - view call stack"
+    ],
+    "lldb_essential_commands": [
+      "breakpoint set --function <name> - set breakpoint",
+      "watchpoint set variable <name> - set watchpoint",
+      "process continue/step/next - execution control",
+      "register read - view CPU registers",
+      "memory read <address> - examine memory",
+      "thread backtrace - view call stack",
+      "disassemble --pc - view disassembly at current location"
+    ],
+    "analysis_tools": {
+      "objdump": "disassembly and binary analysis",
+      "nm": "extract symbol table",
+      "strings": "extract string literals (algorithm hints)",
+      "readelf": "examine ELF sections and symbols",
+      "hexdump": "raw memory analysis",
+      "perf": "performance profiling and call graph"
+    }
+  },
+
+  "gotchas_and_challenges": {
+    "challenge_1_symbol_stripping": {
+      "issue": "CICC binary may be stripped of symbols",
+      "solution": [
+        "build CICC from source with debug symbols (-g)",
+        "use binary analysis to find function entry points",
+        "rely on address-based breakpoints"
+      ]
+    },
+    "challenge_2_optimization_obscuring_logic": {
+      "issue": "compiler optimizations may obscure original logic",
+      "solution": [
+        "compile CICC with -O0 or -g (disables some optimizations)",
+        "use source-level debugging",
+        "correlate assembly with suspected source algorithm"
+      ]
+    },
+    "challenge_3_large_data_structures": {
+      "issue": "IR and graph structures may be very large, difficult to inspect",
+      "solution": [
+        "use test inputs with minimal IR",
+        "write debugging scripts to parse memory structures",
+        "focus on key data structure fields"
+      ]
+    },
+    "challenge_4_debugger_performance": {
+      "issue": "single-stepping through large functions very slow",
+      "solution": [
+        "use conditional breakpoints to skip uninteresting code",
+        "set breakpoints at suspected key functions",
+        "use sampling profilers instead of step-by-step for overview"
+      ]
+    },
+    "challenge_5_non_deterministic_behavior": {
+      "issue": "memory addresses, pass execution may vary between runs",
+      "solution": [
+        "document baseline from first successful trace",
+        "use relative offsets, pattern matching for reproducibility",
+        "compare across multiple runs"
+      ]
+    }
+  },
+
+  "success_criteria": {
+    "scenario_1_success": [
+      "documented all major compilation stages",
+      "function addresses for each stage identified",
+      "execution flow diagram created",
+      "intermediate representations verified"
+    ],
+    "scenario_2_success": [
+      "register allocation algorithm identified",
+      "live range analysis process documented",
+      "interference graph construction verified",
+      "spill decisions understood"
+    ],
+    "scenario_3_success": [
+      "all optimization passes identified",
+      "pass execution order documented",
+      "pass effects on IR verified",
+      "conditional pass logic identified"
+    ],
+    "scenario_4_success": [
+      "SM-specific code paths documented",
+      "register limit handling verified",
+      "instruction set differences identified",
+      "scheduling differences documented"
+    ],
+    "scenario_5_success": [
+      "PTX generation process documented",
+      "instruction emission order verified",
+      "register naming convention identified",
+      "output formatting rules documented"
+    ]
+  },
+
+  "next_steps_after_tracing": [
+    "consolidate all findings into comprehensive documentation",
+    "create function address map for different CUDA versions",
+    "develop CICC modification toolkit based on discovered structure",
+    "implement cross-version compatibility layer (if applicable)",
+    "document any unexpected or anomalous findings",
+    "validate findings against official NVIDIA documentation",
+    "plan for integration into broader analysis framework"
+  ]
+}

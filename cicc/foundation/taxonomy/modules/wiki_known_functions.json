@@ -1,0 +1,452 @@
+{
+  "0x35f2270": {
+    "module": "tensor_core_codegen",
+    "wiki_file": "tensor-core-codegen.md",
+    "source": "wiki_documentation"
+  },
+  "0xc0000c03": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x36e9630": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x36ec510": {
+    "module": "tensor_core_codegen",
+    "wiki_file": "tensor-core-codegen.md",
+    "source": "wiki_documentation"
+  },
+  "0x12c8dd0": {
+    "module": "tensor_core_codegen",
+    "wiki_file": "tensor-core-codegen.md",
+    "source": "wiki_documentation"
+  },
+  "0x35f3330": {
+    "module": "tensor_core_codegen",
+    "wiki_file": "tensor-core-codegen.md",
+    "source": "wiki_documentation"
+  },
+  "0x20000000": {
+    "module": "tensor_core_codegen",
+    "wiki_file": "tensor-core-codegen.md",
+    "source": "wiki_documentation"
+  },
+  "0x10000000": {
+    "module": "tensor_core_codegen",
+    "wiki_file": "tensor-core-codegen.md",
+    "source": "wiki_documentation"
+  },
+  "0x43a24b0": {
+    "module": "architecture_detection",
+    "wiki_file": "architecture-detection.md",
+    "source": "wiki_documentation"
+  },
+  "0x445905e": {
+    "module": "architecture_detection",
+    "wiki_file": "architecture-detection.md",
+    "source": "wiki_documentation"
+  },
+  "0x95eb40": {
+    "module": "architecture_detection",
+    "wiki_file": "architecture-detection.md",
+    "source": "wiki_documentation"
+  },
+  "0x2c80c90": {
+    "module": "architecture_detection",
+    "wiki_file": "architecture-detection.md",
+    "source": "wiki_documentation"
+  },
+  "0x7fffffff": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f5a580": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f58c00": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f5d4a0": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x578b50": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2fad5e0": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2fada5e0": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f5e080": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f58670": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f51120": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f5a640": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x1ecac00": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f54d60": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x2f50510": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x1ec7760": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x35b4b20": {
+    "module": "register_allocation",
+    "wiki_file": "register-allocation.md",
+    "source": "wiki_documentation"
+  },
+  "0x5e3a50": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x5e3ad0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x42e1be0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4396a0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1265970": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x905ee0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x39fcb0a": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x10000000000200": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x42e0370": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1cee790": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x5d2a80": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1cc6200": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x3c23d64": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x8d0bc0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x905880": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x12658e0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x3c23d51": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4370958": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x5e3680": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4283b20": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4282b13": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x8d0f00": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4283bb0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x44c8458": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x8f9c90": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4283300": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4283a50": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x42d0470": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x908750": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x42e1c68": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4283a80": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x3c23d33": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x3c23d3e": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4283a20": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4368470": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x902d10": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1cecec0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1cc5240": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x5db980": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1cee880": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1cc5230": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x42e0600": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x5dfb80": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4282af2": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x44c8200": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x44cadc0": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x42e03b8": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x709330": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x705d80": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x905e50": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x4283b68": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x1262860": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x44c8338": {
+    "module": "compilation_pipeline",
+    "wiki_file": "compilation-pipeline.md",
+    "source": "wiki_documentation"
+  },
+  "0x433c970": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x304e6c0": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0xae2980": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x36d67a0": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x2e79000": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x30462a0": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x36d6720": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x33e66d0": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  },
+  "0x3400bd0": {
+    "module": "instruction_selection",
+    "wiki_file": "instruction-selection.md",
+    "source": "wiki_documentation"
+  }
+}

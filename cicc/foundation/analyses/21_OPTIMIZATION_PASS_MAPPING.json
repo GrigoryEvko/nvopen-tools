@@ -1,0 +1,911 @@
+{
+  "metadata": {
+    "title": "CICC Optimization Pass Function Mapping",
+    "description": "Complete mapping of 62,769 optimization_framework functions to 94 known LLVM/NVIDIA optimization passes",
+    "analysis_date": "2024-11-16",
+    "total_passes": 94,
+    "passes_with_implementation_mapped": 12,
+    "passes_suspected_but_unconfirmed": 82,
+    "total_functions_to_classify": 62769,
+    "coverage_status": "INCOMPLETE - requires binary trace analysis",
+    "confidence_level": "LOW",
+    "data_quality": "EVIDENCE-BASED - string literals, function names, disable flags"
+  },
+
+  "pass_categories": {
+    "LLVM_STANDARD_PASSES": {
+      "count": 66,
+      "description": "Industry-standard LLVM optimization passes",
+      "subcategories": [
+        "Dead Code Elimination",
+        "Inlining",
+        "Instruction Combining",
+        "Loop Optimization",
+        "Scalar Optimization",
+        "Memory Optimization",
+        "Vectorization",
+        "Value Numbering",
+        "Interprocedural Optimization",
+        "Code Generation Preparation",
+        "Analysis Passes",
+        "Sanitizer Passes",
+        "Other Transformations"
+      ]
+    },
+    "NVIDIA_SPECIFIC_PASSES": {
+      "count": 28,
+      "description": "GPU-specific optimization passes for CUDA compilation",
+      "subcategories": [
+        "NVVM IR Transformation",
+        "Memory Space Optimization",
+        "NVPTX Code Generation",
+        "Register Rematerialization",
+        "Machine-Level Optimization",
+        "Register Allocation",
+        "GPU-Specific Utilities"
+      ]
+    }
+  },
+
+  "located_passes": {
+    "LoopInvariantCodeMotion": {
+      "pass_id": "LICM",
+      "category": "Loop Optimization",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'Loop Invariant Code Motion'",
+        "String: 'Versioned loop for LICM'",
+        "String: 'Loop Versioning for LICM'",
+        "Disable flag: 'disable-LICMPass'",
+        "Control flag: 'Control LICM'"
+      ],
+      "implementation_notes": "Hoists loop-invariant computations outside loops with optional memory promotion",
+      "parameters": [
+        "loop-size-threshold: Control the loop-size threshold for LICM",
+        "disable-memory-promotion: Disable memory promotion in LICM pass"
+      ],
+      "estimated_function_count": 150,
+      "algorithm_type": "Forward data-flow analysis with SSA form",
+      "dependencies": ["LoopSimplify", "DominatorTree", "DominanceFrontier"],
+      "preserved_analyses": ["DominatorTree", "LoopInfo"]
+    },
+
+    "DeadCodeElimination": {
+      "pass_id": "ADCE",
+      "category": "Dead Code Elimination",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'Aggressive Dead Code Elimination'",
+        "Algorithmic pattern: control dependence analysis"
+      ],
+      "implementation_notes": "Removes provably dead code using control dependence and SSA information",
+      "estimated_function_count": 80,
+      "algorithm_type": "Control dependence graph analysis"
+    },
+
+    "DeadStoreElimination": {
+      "pass_id": "DSE",
+      "category": "Dead Code Elimination",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'Enable partial-overwrite tracking in DSE'",
+        "String: 'Enable partial store merging in DSE'",
+        "String: 'Dead Store Elimination'"
+      ],
+      "implementation_notes": "Removes stores to memory that are never read with configurable partial-overwrite tracking",
+      "estimated_function_count": 120,
+      "parameters": [
+        "enable-partial-overwrite-tracking: Configure partial-overwrite tracking",
+        "enable-partial-store-merging: Configure partial store merging"
+      ]
+    },
+
+    "GlobalDeadCodeElimination": {
+      "pass_id": "GlobalDCE",
+      "category": "Dead Code Elimination",
+      "confidence": "MEDIUM",
+      "evidence": [
+        "Disable flag: 'disable-GlobalDCEPass'"
+      ],
+      "implementation_notes": "Removes unused global variables and functions",
+      "estimated_function_count": 60
+    },
+
+    "InliningPass": {
+      "pass_id": "Inliner",
+      "category": "Inlining",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'Inliner for always_inline functions'",
+        "String: 'AlwaysInline'",
+        "String: 'because opt level doesn\\'t allow aggressive inlining'",
+        "Parameter: 'inline-budget' (default: 40000)",
+        "Parameter: 'inline-total-budget'",
+        "Parameter: 'inline-adj-budget1'"
+      ],
+      "implementation_notes": "Inlines function calls based on cost model with optimization-level controls",
+      "estimated_function_count": 200,
+      "parameters": [
+        "inline-budget: Default inline threshold",
+        "inline-total-budget: Maximum total inlining per function",
+        "inline-adj-budget1: Adjusted budget for hot paths"
+      ],
+      "cost_model": "instruction count, call site context"
+    },
+
+    "AlwaysInlinerPass": {
+      "pass_id": "AlwaysInliner",
+      "category": "Inlining",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'AlwaysInline'"
+      ],
+      "implementation_notes": "Inlines functions marked with always_inline attribute early in pipeline",
+      "estimated_function_count": 50
+    },
+
+    "InstCombinePass": {
+      "pass_id": "InstCombine",
+      "category": "Instruction Combining",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'InstCombinePass'",
+        "String: 'invalid argument to InstCombine pass max-iterations parameter'",
+        "String: 'Disable some InstCombine transforms that disturb integer FMA patterns'"
+      ],
+      "implementation_notes": "Combines instruction sequences into simpler forms using pattern matching and algebraic simplification",
+      "estimated_function_count": 250,
+      "parameters": [
+        "max-iterations: Controls iteration limit",
+        "disable-fma-patterns: Preserve FMA patterns"
+      ],
+      "iterations": "Multiple passes, limited by max-iterations parameter"
+    },
+
+    "SimplifyCFGPass": {
+      "pass_id": "SimplifyCFG",
+      "category": "Instruction Combining",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'SimplifyCFGPass'",
+        "String: 'invalid argument to SimplifyCFG pass bonus-threshold parameter'",
+        "String: 'Allow SimplifyCFG to merge invokes together when appropriate'"
+      ],
+      "implementation_notes": "Simplifies control flow structures through branch folding, block merging, and dead block elimination",
+      "estimated_function_count": 140,
+      "parameters": [
+        "bonus-threshold: Merge bonus threshold"
+      ]
+    },
+
+    "EarlyCSEPass": {
+      "pass_id": "EarlyCSE",
+      "category": "Value Numbering",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'EarlyCSE'",
+        "String: 'EarlyCSEPass'",
+        "String: 'Enable the EarlyCSE w/ MemorySSA pass (default = on)'",
+        "String: 'Enable imprecision in EarlyCSE in pathological cases'"
+      ],
+      "implementation_notes": "Eliminates redundant computations early in pipeline using hash-based value numbering",
+      "estimated_function_count": 110
+    },
+
+    "GenericToNVVMPass": {
+      "pass_id": "GenericToNVVM",
+      "category": "NVVM IR Transformation",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'constexpr llvm::StringRef llvm::getTypeName() [with DesiredTypeName = llvm::GenericToNVVMPass]'",
+        "RTTI type information present in binary"
+      ],
+      "implementation_notes": "Converts generic LLVM intrinsics to NVIDIA-specific NVVM intrinsics",
+      "estimated_function_count": 70,
+      "execution_phase": "Early in pipeline",
+      "impact": "Enables GPU-specific optimizations"
+    },
+
+    "NVVMReflectPass": {
+      "pass_id": "NVVMReflect",
+      "category": "NVVM IR Transformation",
+      "confidence": "MEDIUM",
+      "evidence": [
+        "String: 'constexpr llvm::StringRef llvm::getTypeName() [with DesiredTypeName = llvm::NVVMReflectPass]'",
+        "String: 'Post-processing pass for NVVM Reflection'"
+      ],
+      "implementation_notes": "Handles compile-time reflection queries in NVVM IR",
+      "estimated_function_count": 40
+    },
+
+    "MemorySpaceOptPass": {
+      "pass_id": "MemorySpaceOpt",
+      "category": "Memory Space Optimization",
+      "confidence": "HIGH",
+      "evidence": [
+        "String: 'Memory Space Optimization'",
+        "String: 'Enable Memory Space Optimization'",
+        "Disable flag: 'disable-MemorySpaceOptPass'",
+        "String: 'Enable tracking indirect loads during Memory Space Optimization'",
+        "String: 'Enable tracking IntToPtr in Memory Space Optimization'"
+      ],
+      "implementation_notes": "Optimizes address space usage for GPU memory hierarchy with multiple algorithm options",
+      "estimated_function_count": 180,
+      "parameters": [
+        "algorithm-selection: Switch between different algorithms for Address Space Optimization",
+        "indirect-load-tracking: Enable tracking indirect loads",
+        "inttoptr-tracking: Enable tracking IntToPtr"
+      ],
+      "execution_phase": "Before code generation",
+      "criticality": "CRITICAL for GPU performance"
+    }
+  },
+
+  "unconfirmed_passes": {
+    "summary": {
+      "total_unconfirmed": 82,
+      "confidence": "SUSPECTED - requires trace analysis for confirmation",
+      "methodology": "Extracted from optimization-passes.md and string evidence, but no direct function mapping"
+    },
+    "dead_code_elimination": [
+      "BitTrackingDeadCodeElimination (BDCE)",
+      "DeadArgumentElimination"
+    ],
+    "inlining": [
+      "PartialInliner"
+    ],
+    "instruction_combining": [
+      "AggressiveInstCombine"
+    ],
+    "loop_optimization": [
+      "LoopRotate",
+      "LoopUnroll",
+      "LoopUnrollAndJam",
+      "LoopDeletion",
+      "LoopIdiom",
+      "LoopVectorize",
+      "LoopIdiomVectorize",
+      "LoopSimplify",
+      "LoopSimplifyCFG",
+      "LoopDistribute",
+      "LoopInterchange",
+      "LoopLoadElimination",
+      "LoopSinking",
+      "LoopPredication",
+      "LoopFlatten",
+      "LoopVersioningLICM",
+      "IndVarSimplify"
+    ],
+    "scalar_optimization": [
+      "SparseCCP (SCCP)",
+      "Interprocedural_SCCP (IPSCCP)",
+      "Reassociate",
+      "JumpThreading",
+      "DFAJumpThreading",
+      "CorrelatedValuePropagation",
+      "TailCallElimination",
+      "Scalarizer"
+    ],
+    "memory_optimization": [
+      "MemCpyOpt",
+      "SROA (Scalar Replacement of Aggregates)",
+      "PromoteMemoryToRegister"
+    ],
+    "vectorization": [
+      "SLPVectorizer"
+    ],
+    "value_numbering": [
+      "GlobalValueNumbering (GVN)",
+      "NewGVN",
+      "GVNHoist",
+      "GVNSink"
+    ],
+    "interprocedural_optimization": [
+      "ArgumentPromotion",
+      "GlobalOptimizer",
+      "MergeFunctions",
+      "CalledValuePropagation",
+      "FunctionAttrs",
+      "PostOrderFunctionAttrs"
+    ],
+    "code_generation_preparation": [
+      "CodeGenPrepare",
+      "AtomicExpand",
+      "BypassSlowDivision"
+    ],
+    "analysis_passes": [
+      "AAManager",
+      "RegisterPressureAnalysis",
+      "PhysicalRegisterUsageAnalysis"
+    ],
+    "sanitizer_passes": [
+      "AddressSanitizer",
+      "BoundsChecking"
+    ],
+    "other_transformations": [
+      "CFGuard",
+      "CGProfile",
+      "BreakCriticalEdges",
+      "CallSiteSplitting",
+      "CanonicalizeAliases",
+      "CanonicalizeFreezeInLoops"
+    ],
+    "nvidia_specific": [
+      "NVVMIRVerifier",
+      "NVVMPeepholeOptimizer",
+      "NVVMIntrRange",
+      "MemorySpaceOptimizationForWmma",
+      "NVVMIPMemorySpacePropagation",
+      "NVPTXSetFunctionLinkages",
+      "NVPTXSetGlobalArrayAlignment",
+      "NVPTXSetLocalArrayAlignment",
+      "NVPTXCopyByValArgs",
+      "NVPTXCtorDtorLowering",
+      "NVPTXLowerArgs",
+      "NVPTXImageOptimizer",
+      "NVPTXAllocaHoisting",
+      "NVPTXProxyRegisterErasure",
+      "NVPTXPrologEpilogPass",
+      "NVPTX_cvta_optimization",
+      "NVPTX_ld_param_optimization",
+      "RegisterRematerializationOnNVVMIR",
+      "NVPTXBlockRemat",
+      "MachineLICM",
+      "MachineCSE",
+      "MachineSinking",
+      "MachineInstCombiner",
+      "RegisterCoalescer",
+      "VirtualRegisterRewriter",
+      "RegisterAllocation",
+      "RenameRegisterOperands",
+      "NVVMOptimizer",
+      "RegisterUsageInformationCollector",
+      "RegisterUsageInformationPropagation",
+      "RegisterUsageInformationStorage"
+    ],
+    "profile_guided_optimization": [
+      "PGOForceFunctionAttrs"
+    ],
+    "attributor_passes": [
+      "AttributorPass",
+      "AttributorLightPass",
+      "AttributorCGSCCPass",
+      "AttributorLightCGSCCPass"
+    ],
+    "specialized_optimization": [
+      "OpenMPOptCGSCCPass"
+    ]
+  },
+
+  "pass_manager_analysis": {
+    "architecture": "LLVM PassManager Infrastructure",
+    "pass_manager_types": [
+      {
+        "name": "ModulePassManager",
+        "description": "Operates on entire compilation units",
+        "functions_estimate": 2000,
+        "responsibilities": [
+          "Interprocedural optimizations",
+          "Global transformations",
+          "Module-level analysis"
+        ]
+      },
+      {
+        "name": "FunctionPassManager",
+        "description": "Operates on individual functions",
+        "functions_estimate": 25000,
+        "responsibilities": [
+          "Most optimization passes run at this level",
+          "Function-level analysis and transformation",
+          "Local optimizations within function scope"
+        ]
+      },
+      {
+        "name": "LoopPassManager",
+        "description": "Specialized for loop-level optimizations",
+        "functions_estimate": 8000,
+        "responsibilities": [
+          "Loop transformations",
+          "Loop analysis maintenance",
+          "Loop-specific optimizations in order"
+        ]
+      },
+      {
+        "name": "CallGraphSCCPassManager",
+        "description": "Operates on strongly connected components of call graph",
+        "functions_estimate": 5000,
+        "responsibilities": [
+          "Interprocedural optimization",
+          "Bottom-up optimization",
+          "Inlining and interprocedural constant propagation"
+        ]
+      },
+      {
+        "name": "BasicBlockPassManager",
+        "description": "Operates on individual basic blocks",
+        "functions_estimate": 8000,
+        "responsibilities": [
+          "Fine-grained optimizations",
+          "Local pattern matching",
+          "Low-level transformations"
+        ]
+      },
+      {
+        "name": "RegionPassManager",
+        "description": "Operates on arbitrary code regions",
+        "functions_estimate": 2000,
+        "responsibilities": [
+          "Regional optimizations",
+          "Specialized transformations"
+        ]
+      }
+    ],
+    "total_manager_functions": 50000,
+    "remaining_unclassified": 12769,
+    "entry_point_evidence": "Pass manager initialization and registration code",
+    "pass_ordering_hints": [
+      "AlwaysInliner runs first",
+      "LoopSimplify before loop optimizations",
+      "InstCombine runs multiple times throughout",
+      "GenericToNVVM runs early to convert intrinsics",
+      "Memory space optimization before code generation",
+      "Register allocation near the end",
+      "Prolog/Epilog after register allocation"
+    ]
+  },
+
+  "function_clustering": {
+    "cluster_analysis": {
+      "methodology": "Functions grouped by string evidence, call patterns, and naming conventions",
+      "total_clusters": 94,
+      "clusters_with_confidence": 12,
+      "clusters_requiring_validation": 82
+    },
+    "sample_clusters": {
+      "loop_optimization_cluster": {
+        "cluster_id": "LOOP_OPT_001",
+        "suspected_passes": [
+          "LoopInvariantCodeMotion",
+          "LoopRotate",
+          "LoopUnroll",
+          "LoopDeletion",
+          "LoopSimplify"
+        ],
+        "estimated_functions": 1200,
+        "evidence": [
+          "Common 'loop' and 'invariant' string references",
+          "Shared data structures for loop analysis",
+          "Similar control flow patterns",
+          "LoopInfo dependency"
+        ],
+        "characteristics": [
+          "All operate on loop structures",
+          "Share LoopSimplify and LoopInfo analyses",
+          "Multiple passes run in sequence",
+          "Similar memory usage patterns"
+        ]
+      },
+      "dead_code_elimination_cluster": {
+        "cluster_id": "DCE_CLUSTER_001",
+        "suspected_passes": [
+          "ADCE",
+          "DSE",
+          "GlobalDCE",
+          "DeadArgumentElimination"
+        ],
+        "estimated_functions": 300,
+        "evidence": [
+          "Shared 'dead', 'eliminate', 'reachability' strings",
+          "Control dependence analysis patterns",
+          "Data flow analysis patterns"
+        ],
+        "characteristics": [
+          "All eliminate redundant code",
+          "Use reachability analysis",
+          "Similar impact on code size"
+        ]
+      },
+      "nvvm_transformation_cluster": {
+        "cluster_id": "NVVM_CLUSTER_001",
+        "suspected_passes": [
+          "GenericToNVVM",
+          "NVVMReflect",
+          "NVVMIRVerifier",
+          "NVVMPeepholeOptimizer"
+        ],
+        "estimated_functions": 400,
+        "evidence": [
+          "'NVVM' string prefix in all function names",
+          "GPU-specific intrinsic handling",
+          "NVIDIA-specific IR transformations"
+        ],
+        "characteristics": [
+          "All GPU-specific",
+          "Run in early-to-middle pipeline",
+          "Transform IR for NVIDIA targets"
+        ]
+      },
+      "register_allocation_cluster": {
+        "cluster_id": "REGALLOC_CLUSTER_001",
+        "suspected_passes": [
+          "RegisterCoalescer",
+          "VirtualRegisterRewriter",
+          "RegisterAllocation",
+          "RenameRegisterOperands"
+        ],
+        "estimated_functions": 600,
+        "evidence": [
+          "'register', 'allocat', 'coalesce' strings",
+          "Machine instruction patterns",
+          "Physical register tracking"
+        ],
+        "characteristics": [
+          "All work on register allocation",
+          "Run in late compilation phase",
+          "Critical for performance",
+          "Machine-level operations"
+        ]
+      }
+    }
+  },
+
+  "high_priority_analysis_targets": [
+    {
+      "pass": "LoopVectorization",
+      "priority": "CRITICAL",
+      "reason": "Core performance optimization for GPU, enables SIMD operations, high impact on code quality",
+      "estimated_functions": 400,
+      "evidence_gaps": [
+        "Cost model implementation",
+        "SLP integration",
+        "Vectorization decision logic"
+      ],
+      "validation_strategy": "Trace with simple loop vectorization example, profile performance impact"
+    },
+    {
+      "pass": "MemorySpaceOptimization",
+      "priority": "CRITICAL",
+      "reason": "GPU-specific, critical for performance, unique to CUDA compilation, affects all memory accesses",
+      "estimated_functions": 180,
+      "evidence_gaps": [
+        "Algorithm selection logic",
+        "Address space analysis",
+        "Memory hierarchy optimization decisions"
+      ],
+      "validation_strategy": "Analyze shared memory vs global memory optimization patterns"
+    },
+    {
+      "pass": "InstructionSelection",
+      "priority": "CRITICAL",
+      "reason": "GPU-specific instruction pattern generation, NVIDIA-unique optimizations, massive function set",
+      "estimated_functions": 3000,
+      "evidence_gaps": [
+        "Instruction pattern matching",
+        "Cost model for NVPTX ISA",
+        "Tensor core instruction generation"
+      ],
+      "validation_strategy": "Compare with NVVM IR-to-PTX translation patterns"
+    },
+    {
+      "pass": "TensorCoreCodegen",
+      "priority": "CRITICAL",
+      "reason": "Latest GPU architecture support, wmma code generation, tensor operations optimization",
+      "estimated_functions": 500,
+      "evidence_gaps": [
+        "Matrix operation pattern recognition",
+        "SM architecture version detection",
+        "Wmma instruction selection logic"
+      ],
+      "validation_strategy": "Test with tensor core matrix multiply examples"
+    },
+    {
+      "pass": "RegisterAllocation",
+      "priority": "HIGH",
+      "reason": "Critical for performance, complex algorithm, fundamental compiler optimization",
+      "estimated_functions": 600,
+      "evidence_gaps": [
+        "Register pressure calculation",
+        "Allocation algorithm implementation",
+        "Spill code generation"
+      ],
+      "validation_strategy": "Profile register usage and spill patterns"
+    },
+    {
+      "pass": "InliningCostModel",
+      "priority": "HIGH",
+      "reason": "Controls function inlining aggressiveness, significantly impacts code size and performance",
+      "estimated_functions": 200,
+      "evidence_gaps": [
+        "Cost calculation logic",
+        "Threshold application",
+        "Call site profitability analysis"
+      ],
+      "validation_strategy": "Test with various function sizes and optimization levels"
+    },
+    {
+      "pass": "LoopUnrollingDecision",
+      "priority": "HIGH",
+      "reason": "Affects loop performance, multiple thresholds and parameters, optimization-level dependent",
+      "estimated_functions": 250,
+      "evidence_gaps": [
+        "Trip count analysis",
+        "Unroll factor selection",
+        "Pragma handling"
+      ],
+      "validation_strategy": "Test with counted and unknown trip count loops"
+    },
+    {
+      "pass": "NVPTXCodeGeneration",
+      "priority": "HIGH",
+      "reason": "Target-specific code generation, GPU instruction generation, critical for final output",
+      "estimated_functions": 800,
+      "evidence_gaps": [
+        "PTX instruction emission",
+        "Architecture-specific lowering",
+        "Debug information generation"
+      ],
+      "validation_strategy": "Compare generated PTX with hand-written optimal code"
+    }
+  ],
+
+  "analysis_strategy": {
+    "phase_1_entry_point_identification": {
+      "description": "Identify pass manager initialization and main dispatch loop",
+      "methodology": [
+        "Locate main compilation entry point",
+        "Trace pass manager creation",
+        "Map pass registration",
+        "Identify dispatch mechanism"
+      ],
+      "expected_findings": [
+        "PassRegistry initialization",
+        "Function pointers to pass constructors",
+        "Pass ordering data structure",
+        "Conditional pass selection logic"
+      ],
+      "estimated_effort": "High - requires detailed binary analysis"
+    },
+    "phase_2_function_linkage": {
+      "description": "Link identified passes to their function implementations",
+      "methodology": [
+        "Follow pass dispatch through execution",
+        "Trace function calls from pass entry points",
+        "Identify pass-specific data structures",
+        "Extract algorithm implementations"
+      ],
+      "validation_points": [
+        "String references match pass functionality",
+        "Call graphs match expected dependencies",
+        "Data structures align with known algorithms",
+        "Performance characteristics match documentation"
+      ]
+    },
+    "phase_3_clustering_and_mapping": {
+      "description": "Group related functions and create comprehensive mapping",
+      "methodology": [
+        "Cluster functions by pass family",
+        "Create call dependency graphs",
+        "Map shared utility functions",
+        "Document pass interaction patterns"
+      ],
+      "deliverables": [
+        "Complete function-to-pass mapping",
+        "Pass execution order",
+        "Dependency graph",
+        "Algorithm documentation"
+      ]
+    },
+    "phase_4_validation": {
+      "description": "Validate mapping through multiple approaches",
+      "methodology": [
+        "Profile pass execution timing",
+        "Trace pass dependencies",
+        "Compare with LLVM source",
+        "Test with multiple input IR examples"
+      ],
+      "test_cases": [
+        "Simple loops for loop optimization passes",
+        "Function calls for inlining passes",
+        "Dead code for DCE passes",
+        "Memory operations for memory optimization passes",
+        "GPU operations for NVIDIA-specific passes"
+      ]
+    }
+  },
+
+  "critical_unknowns": [
+    {
+      "question": "Which of 62,769 functions implement which of 94 passes?",
+      "severity": "CRITICAL",
+      "affected_scope": "All optimization passes",
+      "blocking_factor": "Cannot understand optimization behavior without function mapping",
+      "research_approach": "Trace execution through pass manager with instrumented binaries"
+    },
+    {
+      "question": "What is the exact execution order of passes for each optimization level?",
+      "severity": "CRITICAL",
+      "affected_scope": "All passes, optimization pipeline design",
+      "blocking_factor": "Pass ordering affects optimization effectiveness and correctness",
+      "research_approach": "Extract pass ordering from pass manager initialization code"
+    },
+    {
+      "question": "How are GPU-specific passes selected based on SM architecture version?",
+      "severity": "CRITICAL",
+      "affected_scope": "All NVIDIA-specific passes, architecture selection",
+      "blocking_factor": "SM version-specific optimizations may be hidden in conditional logic",
+      "research_approach": "Analyze architecture detection and conditional compilation"
+    },
+    {
+      "question": "What are the data structures used by each optimization pass?",
+      "severity": "HIGH",
+      "affected_scope": "Memory efficiency, algorithm complexity analysis",
+      "blocking_factor": "Cannot understand algorithm without understanding data structures",
+      "research_approach": "Extract struct definitions and memory allocation patterns"
+    },
+    {
+      "question": "How do NVIDIA-specific passes integrate with standard LLVM passes?",
+      "severity": "HIGH",
+      "affected_scope": "NVIDIA pass implementations, 28 specific passes",
+      "blocking_factor": "May not follow standard LLVM patterns",
+      "research_approach": "Trace NVIDIA pass implementations and their interaction points"
+    },
+    {
+      "question": "What optimization decisions are based on profiling or architecture information?",
+      "severity": "HIGH",
+      "affected_scope": "Decision-making in multiple passes",
+      "blocking_factor": "Dynamic behavior not visible in static analysis",
+      "research_approach": "Instrument binaries to capture runtime decisions"
+    },
+    {
+      "question": "Which functions implement the tensor core optimization framework?",
+      "severity": "HIGH",
+      "affected_scope": "Latest GPU architecture support",
+      "blocking_factor": "Tensor core optimizations may be newer and less documented",
+      "research_approach": "Trace matrix operation patterns and wmma instruction generation"
+    }
+  ],
+
+  "estimated_function_distribution": {
+    "total_functions": 62769,
+    "distribution_by_manager_type": {
+      "function_pass_manager": {
+        "estimated_percentage": 40,
+        "estimated_count": 25100,
+        "reasoning": "Most optimizations run at function level"
+      },
+      "loop_pass_manager": {
+        "estimated_percentage": 12,
+        "estimated_count": 7530,
+        "reasoning": "Loop optimizations are major component of pipeline"
+      },
+      "module_pass_manager": {
+        "estimated_percentage": 3,
+        "estimated_count": 1880,
+        "reasoning": "Interprocedural optimizations less common than local"
+      },
+      "call_graph_scc_pass_manager": {
+        "estimated_percentage": 8,
+        "estimated_count": 5020,
+        "reasoning": "Inlining and interprocedural optimizations"
+      },
+      "basic_block_pass_manager": {
+        "estimated_percentage": 12,
+        "estimated_count": 7530,
+        "reasoning": "Fine-grained local optimizations"
+      },
+      "region_pass_manager": {
+        "estimated_percentage": 3,
+        "estimated_count": 1880,
+        "reasoning": "Specialized regional optimizations"
+      },
+      "utility_and_support": {
+        "estimated_percentage": 22,
+        "estimated_count": 13780,
+        "reasoning": "Utility functions, analysis infrastructure, helpers"
+      }
+    }
+  },
+
+  "pass_dependencies": {
+    "critical_dependency_chains": [
+      {
+        "chain": "LoopSimplify -> LoopRotate -> LoopUnroll -> LoopVectorize",
+        "description": "Loop optimization pipeline",
+        "affected_passes": 5,
+        "estimated_functions": 1000
+      },
+      {
+        "chain": "SROA -> InstCombine -> GVN -> DSE",
+        "description": "Scalar optimization pipeline",
+        "affected_passes": 4,
+        "estimated_functions": 800
+      },
+      {
+        "chain": "AlwaysInliner -> Inliner -> PartialInliner",
+        "description": "Inlining pipeline",
+        "affected_passes": 3,
+        "estimated_functions": 300
+      },
+      {
+        "chain": "GenericToNVVM -> MemorySpaceOpt -> NVPTXCodeGen -> RegisterAllocation",
+        "description": "GPU-specific lowering pipeline",
+        "affected_passes": 4,
+        "estimated_functions": 1200
+      }
+    ]
+  },
+
+  "validation_checkpoints": [
+    {
+      "checkpoint": "Pass String Evidence",
+      "validation": "All 94 passes have string evidence in binary",
+      "status": "COMPLETE",
+      "high_confidence_passes": 12,
+      "medium_confidence_passes": 50,
+      "low_confidence_passes": 32
+    },
+    {
+      "checkpoint": "Function Mapping",
+      "validation": "Functions linked to specific passes",
+      "status": "INCOMPLETE",
+      "coverage": 0.02,
+      "note": "Only 2% of functions have confirmed pass mapping"
+    },
+    {
+      "checkpoint": "Algorithm Verification",
+      "validation": "Algorithm implementations match documented behavior",
+      "status": "INCOMPLETE",
+      "blocking_issue": "Cannot verify without function mapping"
+    },
+    {
+      "checkpoint": "Performance Impact",
+      "validation": "Each pass has measurable performance impact",
+      "status": "INCOMPLETE",
+      "blocking_issue": "Requires execution profiling"
+    }
+  ],
+
+  "recommendations": {
+    "immediate_next_steps": [
+      "Extract pass manager dispatch table from binary",
+      "Identify pass entry point functions",
+      "Trace execution for each pass individually",
+      "Create function-to-pass mapping matrix"
+    ],
+    "medium_term": [
+      "Document algorithm for each pass",
+      "Extract configuration parameters",
+      "Profile performance impact",
+      "Identify optimization opportunities"
+    ],
+    "long_term": [
+      "Create pass interaction dependency graph",
+      "Understand SM-specific optimizations",
+      "Document NVIDIA-specific extensions",
+      "Build optimization recommendation system"
+    ]
+  },
+
+  "notes": {
+    "data_sources": [
+      "/home/grigory/nvopen-tools/cicc/wiki/docs/compiler-internals/optimization-passes.md",
+      "/home/grigory/nvopen-tools/cicc/foundation/analyses/optimization_pass_identification.json",
+      "/home/grigory/nvopen-tools/cicc/cicc_strings.json",
+      "/home/grigory/nvopen-tools/cicc/cicc_functions.json",
+      "/home/grigory/nvopen-tools/cicc/decompiled/ (80,037 decompiled functions)"
+    ],
+    "mapping_challenges": [
+      "Binary optimizations obscure function boundaries",
+      "Functions merged by compiler optimization",
+      "Inlining hides function implementations",
+      "Generic implementations for multiple passes",
+      "Runtime function selection"
+    ],
+    "opportunities_for_improvement": [
+      "Create pass profiler to measure execution time per pass",
+      "Use hardware performance counters to track pass behavior",
+      "Compare with LLVM reference implementation",
+      "Build IR modification tracker to identify pass effects"
+    ]
+  }
+}

@@ -1,0 +1,6459 @@
+[
+  {
+    "addr": "0x3a1028b",
+    "value": "register_clobbered_twice",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a102a4",
+    "value": "register_in_address_space",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a102be",
+    "value": "register_in_use",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a102ce",
+    "value": "register_keyword_deprecated",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a102ea",
+    "value": "register_keyword_disallowed",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a10306",
+    "value": "register_name_on_nonregister",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a10323",
+    "value": "register_params_not_enabled",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a1033f",
+    "value": "register_too_small",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a10352",
+    "value": "register_used_and_clobbered",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a1036e",
+    "value": "register_used_twice",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a13553",
+    "value": "unknown register name \"%s\"",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a138aa",
+    "value": "named register",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a20b70",
+    "value": "register_mapped_variable_cannot_have_initializer",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a20ba8",
+    "value": "register_mapped_variable_must_be_POD",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a20bd0",
+    "value": "register_params_ellipsis_function",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a20bf8",
+    "value": "register_params_unsupported_arch",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a20c20",
+    "value": "register_params_unsupported_function",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a20c48",
+    "value": "register_storage_class_conflict",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a23b70",
+    "value": "taking the address of a register variable is not allowed",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e670",
+    "value": "register \"%s\" used more than once",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e698",
+    "value": "register \"%s\" is both used and clobbered",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e6c8",
+    "value": "register \"%s\" clobbered more than once",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e6f0",
+    "value": "register \"%s\" has a fixed purpose and may not be used in an asm statement",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e740",
+    "value": "register \"%s\" has a fixed purpose and may not be clobbered in an asm statement",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e7c0",
+    "value": "expected a register to clobber",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2e9f8",
+    "value": "storage class must be auto or register",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a2eea8",
+    "value": "an asm name is ignored on a non-register automatic variable",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a30ec0",
+    "value": "a named-register storage class is not allowed here",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a30ef8",
+    "value": "%nd redeclared with incompatible named-register storage class",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a30f38",
+    "value": "named-register storage class cannot be specified for aliased variable",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a30f80",
+    "value": "named-register storage specifier is already in use",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a310a0",
+    "value": "redeclaration of %nd is missing a named-register storage class",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a310e0",
+    "value": "named register is too small for the type of the variable",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a31120",
+    "value": "arrays cannot be declared with named-register storage class",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a31340",
+    "value": "a register variable cannot be allocated in a named address space",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a31640",
+    "value": "register names can only be used for register variables",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a31678",
+    "value": "named-register variables cannot have void type",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a32ea8",
+    "value": "a variable with static storage duration allocated in a specific register cannot be declared with an initializer",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a32f18",
+    "value": "a variable allocated in a specific register must be trivially copyable",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a36420",
+    "value": "attribute %sq does not apply to register variables",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a36458",
+    "value": "attribute %sq requires a register variable",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a3f048",
+    "value": "an initializer is not allowed on a local declaration of a named register variable",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a43c18",
+    "value": "use of the \"register\" storage class specifier is not allowed",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a43c58",
+    "value": "use of the \"register\" storage class specifier is deprecated",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a4d820",
+    "value": "__device__ or __host__ __device__ function with ellipsis requires compute_30 or higher architecture",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a4e130",
+    "value": "Use of a virtual base (%t) requires the compute_20 or higher architecture",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a4e950",
+    "value": "__managed__ variables require architecture compute_30 or higher",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a510f0",
+    "value": "__nv_register_params__ is only supported for compute_80 or later architecture",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a51b20",
+    "value": "alloca() is not supported for architectures lower than compute_52",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a52100",
+    "value": "__grid_constant__ annotation is only allowed for architecture compute_70 or later",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a524a8",
+    "value": "The maximum number of registers that can be allocated per thread must be positive",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a52500",
+    "value": "The maximum number of registers that can be allocated per thread is too large",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a53630",
+    "value": "128-bit atomic load and store are supported on architecture sm_70 or above.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a53680",
+    "value": "atomic load and store's scope of cluster is supported on architecture sm_90 or above. Using device scope instead.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a536f8",
+    "value": "atomic operations' scope argument is supported on architecture sm_60 or above. Fall back to use membar.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a53760",
+    "value": "atomic add and sub for 64-bit float is supported on architecture sm_60 or above.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a537b8",
+    "value": "atomic operations' argument of memory order is supported on architecture sm_70 or above. Fall back to use membar.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a53830",
+    "value": "atomic operations' scope of cluster is supported on architecture sm_90 or above. Using device scope instead.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a538a0",
+    "value": "128-bit atomic exchange or compare-and-exchange is supported on architecture sm_90 or above.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a53900",
+    "value": "16-bit atomic compare-and-exchange is supported on architecture sm_70 or above.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a53950",
+    "value": "__nv_atomic_* functions are not supported on arch < sm_60.",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3a55b4c",
+    "value": "warpSize",
+    "xrefs": [
+      {
+        "from": "0x6a55bf",
+        "func": "sub_6A49A0",
+        "type": 1
+      },
+      {
+        "from": "0x920488",
+        "func": "sub_920430",
+        "type": 1
+      },
+      {
+        "from": "0x127f7f8",
+        "func": "sub_127F7A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f126c0",
+    "value": "unexpected overloaded mma intrinsic call!",
+    "xrefs": [
+      {
+        "from": "0x953c60",
+        "func": "sub_953BA0",
+        "type": 1
+      },
+      {
+        "from": "0x12b16d0",
+        "func": "sub_12B1610",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f126f0",
+    "value": "unexpected overloaded mma store intrinsic call!",
+    "xrefs": [
+      {
+        "from": "0x9543e0",
+        "func": "sub_954350",
+        "type": 1
+      },
+      {
+        "from": "0x12b2550",
+        "func": "sub_12B24C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f12720",
+    "value": "unexpected overloaded mma load intrinsic call!",
+    "xrefs": [
+      {
+        "from": "0x954870",
+        "func": "sub_9547E0",
+        "type": 1
+      },
+      {
+        "from": "0x12b2ea0",
+        "func": "sub_12B2E10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f1497f",
+    "value": "-opt-arch=sm_75",
+    "xrefs": [
+      {
+        "from": "0x95f5c1",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9851",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f1498f",
+    "value": "-mcpu=sm_75",
+    "xrefs": [
+      {
+        "from": "0x95f5dc",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c986c",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f1499b",
+    "value": "-arch=compute_75",
+    "xrefs": [
+      {
+        "from": "0x95f5e8",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9878",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f149bf",
+    "value": "-opt-arch=sm_80",
+    "xrefs": [
+      {
+        "from": "0x95f6b3",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9943",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f149cf",
+    "value": "-mcpu=sm_80",
+    "xrefs": [
+      {
+        "from": "0x95f6ce",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c995e",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f149db",
+    "value": "-arch=compute_80",
+    "xrefs": [
+      {
+        "from": "0x95f6da",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c996a",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f149ff",
+    "value": "-opt-arch=sm_86",
+    "xrefs": [
+      {
+        "from": "0x95f7a5",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c99cb",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a0f",
+    "value": "-mcpu=sm_86",
+    "xrefs": [
+      {
+        "from": "0x95f7c0",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c99b7",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a1b",
+    "value": "-arch=compute_86",
+    "xrefs": [
+      {
+        "from": "0x95f7cc",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c99de",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a3f",
+    "value": "-opt-arch=sm_87",
+    "xrefs": [
+      {
+        "from": "0x95f897",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9a3f",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a4f",
+    "value": "-mcpu=sm_87",
+    "xrefs": [
+      {
+        "from": "0x95f8b2",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9a2b",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a5b",
+    "value": "-arch=compute_87",
+    "xrefs": [
+      {
+        "from": "0x95f8be",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9a52",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a7f",
+    "value": "-opt-arch=sm_88",
+    "xrefs": [
+      {
+        "from": "0x95f989",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9ab3",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a8f",
+    "value": "-mcpu=sm_88",
+    "xrefs": [
+      {
+        "from": "0x95f9a4",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9a9f",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14a9b",
+    "value": "-arch=compute_88",
+    "xrefs": [
+      {
+        "from": "0x95f9b0",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9ac6",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14abf",
+    "value": "-opt-arch=sm_89",
+    "xrefs": [
+      {
+        "from": "0x95fa7b",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9b91",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14acf",
+    "value": "-mcpu=sm_89",
+    "xrefs": [
+      {
+        "from": "0x95fa96",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9bac",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14adb",
+    "value": "-arch=compute_89",
+    "xrefs": [
+      {
+        "from": "0x95faa2",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9bb8",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14aec",
+    "value": "-mcpu=sm_90",
+    "xrefs": [
+      {
+        "from": "0x95faef",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9c9e",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14af8",
+    "value": "-opt-arch=sm_90",
+    "xrefs": [
+      {
+        "from": "0x95fb03",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9c83",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14b1b",
+    "value": "-arch=compute_90",
+    "xrefs": [
+      {
+        "from": "0x95fb16",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9caa",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14b70",
+    "value": "-opt-arch=sm_100",
+    "xrefs": [
+      {
+        "from": "0x95fc55",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9e67",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14b81",
+    "value": "-mcpu=sm_100",
+    "xrefs": [
+      {
+        "from": "0x95fc70",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9e82",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14b8e",
+    "value": "-arch=compute_100",
+    "xrefs": [
+      {
+        "from": "0x95fc7c",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12c9e8e",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14c06",
+    "value": "-mcpu=sm_103",
+    "xrefs": [
+      {
+        "from": "0x95fe2f",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca05c",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14c13",
+    "value": "-opt-arch=sm_103",
+    "xrefs": [
+      {
+        "from": "0x95fe43",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca041",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14c38",
+    "value": "-arch=compute_103",
+    "xrefs": [
+      {
+        "from": "0x95fe56",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca068",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14cc4",
+    "value": "-opt-arch=sm_110",
+    "xrefs": [
+      {
+        "from": "0x960105",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca317",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14cd5",
+    "value": "-mcpu=sm_110",
+    "xrefs": [
+      {
+        "from": "0x960120",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca332",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14ce2",
+    "value": "-arch=compute_110",
+    "xrefs": [
+      {
+        "from": "0x96012c",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca33e",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14d6e",
+    "value": "-opt-arch=sm_120",
+    "xrefs": [
+      {
+        "from": "0x9603db",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca5ed",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14d7f",
+    "value": "-mcpu=sm_120",
+    "xrefs": [
+      {
+        "from": "0x9603f6",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca608",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14d8c",
+    "value": "-arch=compute_120",
+    "xrefs": [
+      {
+        "from": "0x960402",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca614",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14e18",
+    "value": "-opt-arch=sm_121",
+    "xrefs": [
+      {
+        "from": "0x9605b5",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca845",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14e29",
+    "value": "-mcpu=sm_121",
+    "xrefs": [
+      {
+        "from": "0x9605d0",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca860",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f14e36",
+    "value": "-arch=compute_121",
+    "xrefs": [
+      {
+        "from": "0x9605dc",
+        "func": "sub_95EB40",
+        "type": 1
+      },
+      {
+        "from": "0x12ca86c",
+        "func": "sub_12C8DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2636e",
+    "value": "tcgen05.commit.",
+    "xrefs": [
+      {
+        "from": "0xa8e9f8",
+        "func": "sub_A8E250",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f263b0",
+    "value": "cp.async.bulk.tensor.g2s.",
+    "xrefs": [
+      {
+        "from": "0xa9016b",
+        "func": "sub_A8E250",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f2640e",
+    "value": "tensor.gmem.to.smem.",
+    "xrefs": [
+      {
+        "from": "0xa90881",
+        "func": "sub_A8E250",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f56234",
+    "value": "print register pressure",
+    "xrefs": [
+      {
+        "from": "0x48b832",
+        "func": "ctor_033_0",
+        "type": 1
+      },
+      {
+        "from": "0x4cd0cf",
+        "func": "ctor_147_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f642f8",
+    "value": "Unable to find target for this triple (no targets are registered)",
+    "xrefs": [
+      {
+        "from": "0xc0da62",
+        "func": "sub_C0D4F0",
+        "type": 1
+      },
+      {
+        "from": "0x16d3f4d",
+        "func": "sub_16D3AC0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f643e0",
+    "value": "  Registered Tarinput module has no datalayout",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f65a44",
+    "value": "' registered more than once!\n",
+    "xrefs": [
+      {
+        "from": "0xc52119",
+        "func": "sub_C52060",
+        "type": 1
+      },
+      {
+        "from": "0xc5229d",
+        "func": "sub_C521F0",
+        "type": 1
+      },
+      {
+        "from": "0xc53995",
+        "func": "sub_C538D0",
+        "type": 1
+      },
+      {
+        "from": "0x16b0fc5",
+        "func": "sub_16B0F40",
+        "type": 1
+      },
+      {
+        "from": "0x16b102d",
+        "func": "sub_16B0F40",
+        "type": 1
+      },
+      {
+        "from": "0x16b7dd4",
+        "func": "sub_16B7D30",
+        "type": 1
+      },
+      {
+        "from": "0x16b86d6",
+        "func": "sub_16B85B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f65a68",
+    "value": "inconsistency in registered CommandLine options",
+    "xrefs": [
+      {
+        "from": "0xc5212d",
+        "func": "sub_C52060",
+        "type": 1
+      },
+      {
+        "from": "0xc522b1",
+        "func": "sub_C521F0",
+        "type": 1
+      },
+      {
+        "from": "0xc539ec",
+        "func": "sub_C538D0",
+        "type": 1
+      },
+      {
+        "from": "0x16b0fe1",
+        "func": "sub_16B0F40",
+        "type": 1
+      },
+      {
+        "from": "0x16b7de8",
+        "func": "sub_16B7D30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f666d6",
+    "value": " is not a registered counter\n",
+    "xrefs": [
+      {
+        "from": "0xc6267d",
+        "func": "sub_C62320",
+        "type": 1
+      },
+      {
+        "from": "0x16bc155",
+        "func": "sub_16BBAA0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f6f661",
+    "value": "register-usage-level",
+    "xrefs": [
+      {
+        "from": "0x48ef5b",
+        "func": "ctor_043_0",
+        "type": 1
+      },
+      {
+        "from": "0x4f2162",
+        "func": "ctor_259_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f74fd8",
+    "value": "Generic::Unknown Register Class",
+    "xrefs": [
+      {
+        "from": "0xdf5fee",
+        "func": "sub_DF5FE0",
+        "type": 1
+      },
+      {
+        "from": "0x305bd8e",
+        "func": "unknown",
+        "type": 1
+      },
+      {
+        "from": "0x34cce0e",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f814a0",
+    "value": "target does not implement codeview register mapping",
+    "xrefs": [
+      {
+        "from": "0xe9202e",
+        "func": "sub_E91F10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f814d4",
+    "value": "unknown codeview register ",
+    "xrefs": [
+      {
+        "from": "0xe91fb5",
+        "func": "sub_E91F10",
+        "type": 1
+      },
+      {
+        "from": "0xe9204f",
+        "func": "sub_E91F10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f82480",
+    "value": "frame register and offset can be set at most once",
+    "xrefs": [
+      {
+        "from": "0xe9bc58",
+        "func": "sub_E9BB60",
+        "type": 1
+      },
+      {
+        "from": "0x38e0b68",
+        "func": "sub_38E0A80",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f82508",
+    "value": "register save offset is not 8 byte aligned",
+    "xrefs": [
+      {
+        "from": "0xe9bfcf",
+        "func": "sub_E9BEF0",
+        "type": 1
+      },
+      {
+        "from": "0x38e0e8f",
+        "func": "sub_38E0DD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f845a8",
+    "value": "expected comma before register number in .cv_def_range directive",
+    "xrefs": [
+      {
+        "from": "0xeb931e",
+        "func": "sub_EB8FB0",
+        "type": 1
+      },
+      {
+        "from": "0xeb936c",
+        "func": "sub_EB8FB0",
+        "type": 1
+      },
+      {
+        "from": "0xeb93f4",
+        "func": "sub_EB8FB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8470d",
+    "value": "expected register number",
+    "xrefs": [
+      {
+        "from": "0xeb93d9",
+        "func": "sub_EB8FB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8473c",
+    "value": "expected register value",
+    "xrefs": [
+      {
+        "from": "0xeb9351",
+        "func": "sub_EB8FB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f889cc",
+    "value": "+fp16",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f88a84",
+    "value": "+fp64",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f88a8a",
+    "value": "-fp64",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f88d9a",
+    "value": "vfpv3-fp16",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f88da5",
+    "value": "vfpv3-d16-fp16",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f88dbc",
+    "value": "vfpv3xd-fp16",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f88df8",
+    "value": "neon-fp16",
+    "xrefs": []
+  },
+  {
+    "addr": "0x3f8be2c",
+    "value": "Register pressure analysis",
+    "xrefs": [
+      {
+        "from": "0xfcd3d3",
+        "func": "sub_FCD3A0",
+        "type": 1
+      },
+      {
+        "from": "0x3953597",
+        "func": "sub_3953550",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8be7e",
+    "value": " Register Target: ",
+    "xrefs": [
+      {
+        "from": "0xfcea29",
+        "func": "sub_FCE270",
+        "type": 1
+      },
+      {
+        "from": "0x1df91c7",
+        "func": "sub_1DF8C50",
+        "type": 1
+      },
+      {
+        "from": "0x2d06cf8",
+        "func": "sub_2D06940",
+        "type": 1
+      },
+      {
+        "from": "0x2e51110",
+        "func": "sub_2E50B90",
+        "type": 1
+      },
+      {
+        "from": "0x3963234",
+        "func": "sub_3962EB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8bf08",
+    "value": "RegisterPressureInfo for function: ",
+    "xrefs": [
+      {
+        "from": "0xfd5368",
+        "func": "sub_FD5150",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8bfb8",
+    "value": "Register target adjustment, range (-10, +10), default 0",
+    "xrefs": [
+      {
+        "from": "0x49ae5d",
+        "func": "ctor_074",
+        "type": 1
+      },
+      {
+        "from": "0x5c30a6",
+        "func": "ctor_725",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f8c070",
+    "value": "Enable CTA reconfig aware register pressure analysis.",
+    "xrefs": [
+      {
+        "from": "0x49b3db",
+        "func": "ctor_074",
+        "type": 1
+      },
+      {
+        "from": "0x5c34ee",
+        "func": "ctor_725",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f9d3a0",
+    "value": "amx-fp16",
+    "xrefs": [
+      {
+        "from": "0x1259566",
+        "func": "sub_1257FE0",
+        "type": 1
+      },
+      {
+        "from": "0x1259ee5",
+        "func": "sub_1257FE0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x3f9d472",
+    "value": "amx-fp8",
+    "xrefs": [
+      {
+        "from": "0x12599e6",
+        "func": "sub_1257FE0",
+        "type": 1
+      },
+      {
+        "from": "0x1259c30",
+        "func": "sub_1257FE0",
+        "type": 1
+      },
+      {
+        "from": "0x125b940",
+        "func": "sub_1257FE0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4284ad0",
+    "value": "Hard float ABI (uses FP registers)",
+    "xrefs": [
+      {
+        "from": "0x4a884f",
+        "func": "ctor_107_0",
+        "type": 1
+      },
+      {
+        "from": "0x2d9ca24",
+        "func": "sub_2D97F20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42afbfb",
+    "value": "fp4-sp-d16",
+    "xrefs": []
+  },
+  {
+    "addr": "0x42afc13",
+    "value": "fp4-dp-d16",
+    "xrefs": []
+  },
+  {
+    "addr": "0x42b4777",
+    "value": "Do counter register promotion",
+    "xrefs": [
+      {
+        "from": "0x4d31ee",
+        "func": "ctor_172_0",
+        "type": 1
+      },
+      {
+        "from": "0x525684",
+        "func": "ctor_400_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42b4a10",
+    "value": "Max number counter promotions per loop to avoid increasing register pressure too much",
+    "xrefs": [
+      {
+        "from": "0x4d3341",
+        "func": "ctor_172_0",
+        "type": 1
+      },
+      {
+        "from": "0x52584d",
+        "func": "ctor_400_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c0548",
+    "value": "Narrow LSR complex solution using expectation of registers number",
+    "xrefs": [
+      {
+        "from": "0x4e4c5a",
+        "func": "ctor_214_0",
+        "type": 1
+      },
+      {
+        "from": "0x54a230",
+        "func": "ctor_470_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c0668",
+    "value": "Check register pressure for LSR",
+    "xrefs": [
+      {
+        "from": "0x4e4f44",
+        "func": "ctor_214_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c0688",
+    "value": "Skip LSR for loops with register pressure over the limit",
+    "xrefs": [
+      {
+        "from": "0x4e5043",
+        "func": "ctor_214_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c0798",
+    "value": "Disable applying LSR for 32-bit shared memory pointer expressions",
+    "xrefs": [
+      {
+        "from": "0x4e5565",
+        "func": "ctor_214_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c750c",
+    "value": "Promote Memory to Register",
+    "xrefs": [
+      {
+        "from": "0x1b261a7",
+        "func": "sub_1B26160",
+        "type": 1
+      },
+      {
+        "from": "0x2a36a73",
+        "func": "sub_2A36A40",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c9098",
+    "value": "A flag that overrides the target's number of scalar registers.",
+    "xrefs": [
+      {
+        "from": "0x4ee7c6",
+        "func": "ctor_247_0",
+        "type": 1
+      },
+      {
+        "from": "0x55f657",
+        "func": "ctor_515_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42c90d8",
+    "value": "A flag that overrides the target's number of vector registers.",
+    "xrefs": [
+      {
+        "from": "0x4ee821",
+        "func": "ctor_247_0",
+        "type": 1
+      },
+      {
+        "from": "0x55f6c1",
+        "func": "ctor_515_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ca1c8",
+    "value": "Attempt to vectorize for this register size in bits",
+    "xrefs": [
+      {
+        "from": "0x4ef3ce",
+        "func": "ctor_248_0",
+        "type": 1
+      },
+      {
+        "from": "0x4ef5b4",
+        "func": "ctor_248_0",
+        "type": 1
+      },
+      {
+        "from": "0x5616b4",
+        "func": "ctor_517_0",
+        "type": 1
+      },
+      {
+        "from": "0x561927",
+        "func": "ctor_517_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ccef8",
+    "value": "Cluster dimensions and cluster maximum blocks are not supported on pre-Hopper Architectures\n",
+    "xrefs": [
+      {
+        "from": "0x1c341bb",
+        "func": "sub_1C32740",
+        "type": 1
+      },
+      {
+        "from": "0x2c78c4b",
+        "func": "sub_2C771D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cd9b7",
+    "value": "Invalid MMA FragASize",
+    "xrefs": [
+      {
+        "from": "0x1c395bc",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7e3d9",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cd9cd",
+    "value": "Invalid MMA FragBSize",
+    "xrefs": [
+      {
+        "from": "0x1c395b2",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7e3cf",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cdb19",
+    "value": "Invalid MMA MNK",
+    "xrefs": [
+      {
+        "from": "0x1c394d5",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7e2df",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cdb29",
+    "value": "Invalid MMA AType",
+    "xrefs": [
+      {
+        "from": "0x1c39527",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7e331",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cdb3b",
+    "value": "Invalid MMA FragCSize",
+    "xrefs": [
+      {
+        "from": "0x1c39c10",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7eed1",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cdb64",
+    "value": "Invalid MMA Rounding Mode",
+    "xrefs": [
+      {
+        "from": "0x1c39cb1",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7ef6f",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cdb7e",
+    "value": "Invalid MMA Opcode",
+    "xrefs": [
+      {
+        "from": "0x1c39d07",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7efc5",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cdb91",
+    "value": "Mismatched MMA A B Type",
+    "xrefs": [
+      {
+        "from": "0x1c39d5e",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7f01d",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ce608",
+    "value": "atomic.cast works on shared memory, so cannot be ordered",
+    "xrefs": [
+      {
+        "from": "0x1c386bb",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7d608",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ce6e0",
+    "value": "this intrinsic is only supported for Hopper+",
+    "xrefs": [
+      {
+        "from": "0x1c392a3",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x1c3aada",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x1c3afca",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x1c3b072",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7cb1c",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      },
+      {
+        "from": "0x2c7d012",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      },
+      {
+        "from": "0x2c7e292",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      },
+      {
+        "from": "0x2c7ffb7",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ce810",
+    "value": "this instrinsic is only supported for Volta (sm_72)+",
+    "xrefs": [
+      {
+        "from": "0x1c3addb",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7d6db",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ce870",
+    "value": "conversion type only supported for Turing (sm_75)+",
+    "xrefs": [
+      {
+        "from": "0x1c3b5b6",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c8091e",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ce8a8",
+    "value": "this instrinsic is only supported for Ada (sm_89)+",
+    "xrefs": [
+      {
+        "from": "0x1c3ac1d",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c8000b",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cece0",
+    "value": ".offset.bindless intrinsics are not supported on pre-Blackwell architectures",
+    "xrefs": [
+      {
+        "from": "0x1c396af",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7c8ed",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cf1e8",
+    "value": "Destination must be in shared memory space",
+    "xrefs": [
+      {
+        "from": "0x1c398cf",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7d49b",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cf240",
+    "value": "Barrier pointer must be in shared memory space",
+    "xrefs": [
+      {
+        "from": "0x1c3a5ea",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c7f751",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cf270",
+    "value": "llvm.nvvm.branch.if.all.convergent is not supported on pre-Volta Architectures",
+    "xrefs": [
+      {
+        "from": "0x1c3b833",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c809c8",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42cf2c0",
+    "value": "llvm.nvvm.branch.if.convergent is not supported on pre-Ampere Architectures",
+    "xrefs": [
+      {
+        "from": "0x1c3b98f",
+        "func": "sub_1C36530",
+        "type": 1
+      },
+      {
+        "from": "0x2c80a43",
+        "func": "sub_2C7B6A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42df9d0",
+    "value": ": Warning: Cannot to vector atomic on shared memory",
+    "xrefs": [
+      {
+        "from": "0x1ca422f",
+        "func": "sub_1CA2920",
+        "type": 1
+      },
+      {
+        "from": "0x2cec44b",
+        "func": "sub_2CEAC10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42dfb10",
+    "value": ": Warning: Cannot do vector atomic on shared memory",
+    "xrefs": [
+      {
+        "from": "0x1cab526",
+        "func": "sub_1CA9E90",
+        "type": 1
+      },
+      {
+        "from": "0x2cf4244",
+        "func": "sub_2CF2C20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e0370",
+    "value": "NVVM pass to set alignment of statically sized shared memory arrays",
+    "xrefs": [
+      {
+        "from": "0x1cc5230",
+        "func": "sub_1CC5230",
+        "type": 1
+      },
+      {
+        "from": "0x2d198b0",
+        "func": "sub_2D198B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e17a0",
+    "value": "The ceiling of maximum number of registers used for rematerialization",
+    "xrefs": [
+      {
+        "from": "0x4f8580",
+        "func": "ctor_277_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e2368",
+    "value": "Can't handle live physical register dependency!",
+    "xrefs": [
+      {
+        "from": "0x1cfeed5",
+        "func": "sub_1CFDD60",
+        "type": 1
+      },
+      {
+        "from": "0x1d09003",
+        "func": "sub_1D07BB0",
+        "type": 1
+      },
+      {
+        "from": "0x334ffc5",
+        "func": "sub_334EC10",
+        "type": 1
+      },
+      {
+        "from": "0x33598c2",
+        "func": "sub_33583E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e23d8",
+    "value": "Bottom-up register reduction list scheduling",
+    "xrefs": [
+      {
+        "from": "0x4f8f81",
+        "func": "ctor_282_0",
+        "type": 1
+      },
+      {
+        "from": "0x599ef1",
+        "func": "ctor_652_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e2450",
+    "value": "Bottom-up register pressure aware list scheduling which tries to balance latency and register pressure",
+    "xrefs": [
+      {
+        "from": "0x4f9019",
+        "func": "ctor_282_0",
+        "type": 1
+      },
+      {
+        "from": "0x599f8d",
+        "func": "ctor_652_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e24b8",
+    "value": "Bottom-up register pressure aware list scheduling which tries to balance ILP and register pressure",
+    "xrefs": [
+      {
+        "from": "0x4f9050",
+        "func": "ctor_282_0",
+        "type": 1
+      },
+      {
+        "from": "0x599fc4",
+        "func": "ctor_652_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e25b8",
+    "value": "Disable virtual register cycle interference checks",
+    "xrefs": [
+      {
+        "from": "0x4f93f0",
+        "func": "ctor_282_0",
+        "type": 1
+      },
+      {
+        "from": "0x59a443",
+        "func": "ctor_652_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42e82a0",
+    "value": "Instruction schedulers available (before register allocation):",
+    "xrefs": [
+      {
+        "from": "0x4fa67c",
+        "func": "ctor_286",
+        "type": 1
+      },
+      {
+        "from": "0x59c69f",
+        "func": "ctor_658",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ea870",
+    "value": "Controls which register COPYs are forwarded",
+    "xrefs": []
+  },
+  {
+    "addr": "0x42ea980",
+    "value": "Register Pressure Aware MachineCSE",
+    "xrefs": [
+      {
+        "from": "0x4fecab",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x572c5e",
+        "func": "ctor_564_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ea9a8",
+    "value": "Pred Register Pressure Aware MachineCSE",
+    "xrefs": [
+      {
+        "from": "0x4fee0e",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x572d2e",
+        "func": "ctor_564_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ea9f8",
+    "value": "Incrementally update register pressure analysis",
+    "xrefs": [
+      {
+        "from": "0x4ff104",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x56aaa4",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x572fc3",
+        "func": "ctor_564_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c456a",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eaa28",
+    "value": "[DebugOnly] Verify incremental update by full register pressure analysis",
+    "xrefs": [
+      {
+        "from": "0x4ff262",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x56ab7d",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x57308e",
+        "func": "ctor_564_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c4650",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eaa78",
+    "value": "[DebugOnly] Print problematic register pressure info if verification failed",
+    "xrefs": [
+      {
+        "from": "0x4ff3be",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x56ac56",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x573161",
+        "func": "ctor_564_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c4709",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eaac8",
+    "value": "[DebugOnly] Print register pressure info for the machine function",
+    "xrefs": [
+      {
+        "from": "0x4ff5d2",
+        "func": "ctor_302",
+        "type": 1
+      },
+      {
+        "from": "0x5732b8",
+        "func": "ctor_564_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eb3a8",
+    "value": "MachineLICM should sink instructions into loops to avoid register spills",
+    "xrefs": [
+      {
+        "from": "0x4ffbb6",
+        "func": "ctor_305",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eb918",
+    "value": "Number of registers to limit to when printing regmask operands in IR dumps. unlimited = -1",
+    "xrefs": [
+      {
+        "from": "0x5001ad",
+        "func": "ctor_306",
+        "type": 1
+      },
+      {
+        "from": "0x574308",
+        "func": "ctor_570",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ec170",
+    "value": "Enable register pressure scheduling.",
+    "xrefs": [
+      {
+        "from": "0x50113f",
+        "func": "ctor_310_0",
+        "type": 1
+      },
+      {
+        "from": "0x57501d",
+        "func": "ctor_572_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eca97",
+    "value": "- v. register: ",
+    "xrefs": [
+      {
+        "from": "0x1e8595e",
+        "func": "sub_1E85940",
+        "type": 1
+      },
+      {
+        "from": "0x2eef7c8",
+        "func": "sub_2EEF700",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ecd78",
+    "value": "Expected implicit register after groups",
+    "xrefs": [
+      {
+        "from": "0x1e87960",
+        "func": "sub_1E87320",
+        "type": 1
+      },
+      {
+        "from": "0x2ef79c7",
+        "func": "sub_2EF7830",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ece58",
+    "value": "Generic instruction is missing a virtual register type",
+    "xrefs": [
+      {
+        "from": "0x1e877ee",
+        "func": "sub_1E87320",
+        "type": 1
+      },
+      {
+        "from": "0x2ef33fc",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ece90",
+    "value": "Generic instruction cannot have physical register",
+    "xrefs": [
+      {
+        "from": "0x1e87661",
+        "func": "sub_1E87320",
+        "type": 1
+      },
+      {
+        "from": "0x1e8769a",
+        "func": "sub_1E87320",
+        "type": 1
+      },
+      {
+        "from": "0x2ef328d",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ed2e0",
+    "value": "Defining instruction does not modify register",
+    "xrefs": [
+      {
+        "from": "0x1e8949e",
+        "func": "sub_1E88360",
+        "type": 1
+      },
+      {
+        "from": "0x2ef291a",
+        "func": "sub_2EF2540",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ed348",
+    "value": "Non-PHI, non-early clobber def must be at a register slot",
+    "xrefs": [
+      {
+        "from": "0x1e894fe",
+        "func": "sub_1E88360",
+        "type": 1
+      },
+      {
+        "from": "0x2ef296f",
+        "func": "sub_2EF2540",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ed580",
+    "value": "Instruction ending live segment doesn't read the register",
+    "xrefs": [
+      {
+        "from": "0x1e89389",
+        "func": "sub_1E88360",
+        "type": 1
+      },
+      {
+        "from": "0x2ef2423",
+        "func": "sub_2EF1130",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ed5c0",
+    "value": "Register not marked live out of predecessor",
+    "xrefs": [
+      {
+        "from": "0x1e88c6f",
+        "func": "sub_1E88360",
+        "type": 1
+      },
+      {
+        "from": "0x2ef1d47",
+        "func": "sub_2EF1130",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee2c8",
+    "value": "MBB live-in list contains non-physical register",
+    "xrefs": [
+      {
+        "from": "0x1e8cd1d",
+        "func": "sub_1E8C0A0",
+        "type": 1
+      },
+      {
+        "from": "0x2efb6ef",
+        "func": "sub_2EFAB50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee310",
+    "value": "Explicit definition must be a register",
+    "xrefs": [
+      {
+        "from": "0x1e8dafe",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f03a36",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee3f8",
+    "value": "Tied counterpart must be a register",
+    "xrefs": [
+      {
+        "from": "0x1e8e682",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04c7e",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee420",
+    "value": "Tied physical registers must match.",
+    "xrefs": [
+      {
+        "from": "0x1e8e6a8",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04e45",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee4c8",
+    "value": "Virtual register has no live interval",
+    "xrefs": [
+      {
+        "from": "0x1e8f39e",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2efe50c",
+        "func": "sub_2EFDF10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee4f0",
+    "value": "Using an undefined physical register",
+    "xrefs": [
+      {
+        "from": "0x1e8f1fd",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2efee43",
+        "func": "sub_2EFDF10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee518",
+    "value": "Using a killed virtual register",
+    "xrefs": [
+      {
+        "from": "0x1e8f1ce",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2efedcc",
+        "func": "sub_2EFDF10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee538",
+    "value": "Virtual register has no Live interval",
+    "xrefs": [
+      {
+        "from": "0x1e8f2a0",
+        "func": "sub_1E8D750",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee630",
+    "value": "Illegal subregister index for physical register",
+    "xrefs": [
+      {
+        "from": "0x1e8ecbe",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f047f5",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee660",
+    "value": "Illegal physical register for instruction",
+    "xrefs": [
+      {
+        "from": "0x1e8e315",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f049d5",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee690",
+    "value": "isRenamable set on reserved register",
+    "xrefs": [
+      {
+        "from": "0x1e8d99f",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04c96",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee6e0",
+    "value": "Generic virtual register invalid in a Selected function",
+    "xrefs": [
+      {
+        "from": "0x1e8eddd",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f05024",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee718",
+    "value": "Generic virtual register must have a valid type",
+    "xrefs": [
+      {
+        "from": "0x1e8eeaa",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f050a7",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee748",
+    "value": "Generic virtual register must have a bank in a RegBankSelected function",
+    "xrefs": [
+      {
+        "from": "0x1e8ed7a",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f052cc",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee790",
+    "value": "Register bank is too small for virtual register",
+    "xrefs": [
+      {
+        "from": "0x1e8f0bc",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04687",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee7c0",
+    "value": "Generic virtual register does not subregister index",
+    "xrefs": [
+      {
+        "from": "0x1e8efff",
+        "func": "sub_1E8D750",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee7f8",
+    "value": "Virtual register does not match instruction constraint",
+    "xrefs": [
+      {
+        "from": "0x1e8e4e8",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04bbe",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee830",
+    "value": "Invalid subregister index for virtual register",
+    "xrefs": [
+      {
+        "from": "0x1e8ef21",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04e74",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee880",
+    "value": "Invalid register class for subregister index",
+    "xrefs": [
+      {
+        "from": "0x1e8efa6",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04d2c",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee900",
+    "value": "No matching super-reg register class.",
+    "xrefs": [
+      {
+        "from": "0x1e8f4e9",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f0538c",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee928",
+    "value": "Illegal virtual register for instruction",
+    "xrefs": [
+      {
+        "from": "0x1e8df40",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f03e34",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee9c8",
+    "value": "Multiple virtual register defs in SSA form",
+    "xrefs": [
+      {
+        "from": "0x1e8f054",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2efe4ed",
+        "func": "sub_2EFDF10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ee9f8",
+    "value": "Reading virtual register without a def",
+    "xrefs": [
+      {
+        "from": "0x1e8f414",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2efefae",
+        "func": "sub_2EFDF10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eea1f",
+    "value": "Tied use must be a register",
+    "xrefs": [
+      {
+        "from": "0x1e8d802",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f03ec6",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eea6a",
+    "value": "Must be tied to a register",
+    "xrefs": [
+      {
+        "from": "0x1e8ed04",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f047bc",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeaa7",
+    "value": " register.\n",
+    "xrefs": [
+      {
+        "from": "0x1e8e391",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04a74",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeab3",
+    "value": "Register bank ",
+    "xrefs": [
+      {
+        "from": "0x1e8f0cd",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f0469b",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeadf",
+    "value": "Expect register class ",
+    "xrefs": [
+      {
+        "from": "0x1e8e4f9",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04bce",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeb08",
+    "value": "Register class ",
+    "xrefs": [
+      {
+        "from": "0x1e8ef36",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x1e8efbb",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f04d44",
+        "func": "sub_2F02A10",
+        "type": 1
+      },
+      {
+        "from": "0x2f04e8c",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeb24",
+    "value": " register, but got a ",
+    "xrefs": [
+      {
+        "from": "0x1e8df7e",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f03e73",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeb3a",
+    "value": " register\n",
+    "xrefs": [
+      {
+        "from": "0x1e8dfa7",
+        "func": "sub_1E8D750",
+        "type": 1
+      },
+      {
+        "from": "0x2f03ea0",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eed40",
+    "value": "Expected first PHI operand to be a register def",
+    "xrefs": [
+      {
+        "from": "0x1e8fcc9",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x2f009f9",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eed90",
+    "value": "Expected first PHI operand to be a virtual register",
+    "xrefs": [
+      {
+        "from": "0x1e8ff6c",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x2f00a7d",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eedc8",
+    "value": "Expected PHI operand to be a register",
+    "xrefs": [
+      {
+        "from": "0x1e901f7",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x2f00c7c",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeea8",
+    "value": "Virtual register killed in block, but needed live out.",
+    "xrefs": [
+      {
+        "from": "0x1e9055e",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x2f01054",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42eeee0",
+    "value": "Virtual register defs don't dominate all uses.",
+    "xrefs": [
+      {
+        "from": "0x1e92142",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x2f02829",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef060",
+    "value": "Missing live interval for virtual register",
+    "xrefs": [
+      {
+        "from": "0x1e91d94",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x2f01fc7",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef109",
+    "value": "Virtual register ",
+    "xrefs": [
+      {
+        "from": "0x1e9066e",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x1e91e88",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x1e91ea4",
+        "func": "sub_1E8F660",
+        "type": 1
+      },
+      {
+        "from": "0x2f01178",
+        "func": "sub_2EFFE00",
+        "type": 1
+      },
+      {
+        "from": "0x2f01e91",
+        "func": "sub_2EFFE00",
+        "type": 1
+      },
+      {
+        "from": "0x2f02201",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef210",
+    "value": "Rename register operands in a canonical ordering.",
+    "xrefs": [
+      {
+        "from": "0x1e92a00",
+        "func": "sub_1E92A00",
+        "type": 1
+      },
+      {
+        "from": "0x357c440",
+        "func": "sub_357C440",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef248",
+    "value": "Rename Register Operands Canonically",
+    "xrefs": [
+      {
+        "from": "0x1e94677",
+        "func": "sub_1E94640",
+        "type": 1
+      },
+      {
+        "from": "0x357c5a6",
+        "func": "sub_357C580",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef4c0",
+    "value": "Disable non-allocatable physical register copy optimization",
+    "xrefs": [
+      {
+        "from": "0x5028f0",
+        "func": "ctor_314",
+        "type": 1
+      },
+      {
+        "from": "0x577600",
+        "func": "ctor_577",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef588",
+    "value": "Eliminate PHI nodes for register allocation",
+    "xrefs": [
+      {
+        "from": "0x1ea3acf",
+        "func": "sub_1EA3A90",
+        "type": 1
+      },
+      {
+        "from": "0x2f30ffb",
+        "func": "sub_2F30FD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef7a0",
+    "value": "Enable scheduling after register allocation",
+    "xrefs": [
+      {
+        "from": "0x502fe2",
+        "func": "ctor_316",
+        "type": 1
+      },
+      {
+        "from": "0x578152",
+        "func": "ctor_579",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef9a6",
+    "value": "Basic Register Allocator",
+    "xrefs": [
+      {
+        "from": "0x1eb3bb0",
+        "func": "sub_1EB3BB0",
+        "type": 1
+      },
+      {
+        "from": "0x1eb5cfa",
+        "func": "sub_1EB5C70",
+        "type": 1
+      },
+      {
+        "from": "0x35b58b0",
+        "func": "sub_35B58B0",
+        "type": 1
+      },
+      {
+        "from": "0x35b597a",
+        "func": "sub_35B5900",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef9cd",
+    "value": "basic register allocator",
+    "xrefs": [
+      {
+        "from": "0x503492",
+        "func": "ctor_318",
+        "type": 1
+      },
+      {
+        "from": "0x5a61ef",
+        "func": "ctor_686",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42ef9e6",
+    "value": "Fast Register Allocator",
+    "xrefs": [
+      {
+        "from": "0x1eb63d0",
+        "func": "sub_1EB63D0",
+        "type": 1
+      },
+      {
+        "from": "0x1eb7887",
+        "func": "sub_1EB7850",
+        "type": 1
+      },
+      {
+        "from": "0x2f41130",
+        "func": "sub_2F41130",
+        "type": 1
+      },
+      {
+        "from": "0x2f411e6",
+        "func": "sub_2F411C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efa10",
+    "value": "inline assembly requires more registers than available",
+    "xrefs": [
+      {
+        "from": "0x1eb86e5",
+        "func": "sub_1EB8380",
+        "type": 1
+      },
+      {
+        "from": "0x210c309",
+        "func": "sub_210BE60",
+        "type": 1
+      },
+      {
+        "from": "0x2f41a35",
+        "func": "sub_2F418E0",
+        "type": 1
+      },
+      {
+        "from": "0x35b52d0",
+        "func": "sub_35B51A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efa48",
+    "value": "ran out of registers during register allocation",
+    "xrefs": [
+      {
+        "from": "0x1eb8644",
+        "func": "sub_1EB8380",
+        "type": 1
+      },
+      {
+        "from": "0x210c3be",
+        "func": "sub_210BE60",
+        "type": 1
+      },
+      {
+        "from": "0x2f41a99",
+        "func": "sub_2F418E0",
+        "type": 1
+      },
+      {
+        "from": "0x35b5359",
+        "func": "sub_35B51A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efa78",
+    "value": "fast register allocator",
+    "xrefs": [
+      {
+        "from": "0x503522",
+        "func": "ctor_319",
+        "type": 1
+      },
+      {
+        "from": "0x578adc",
+        "func": "ctor_582",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efa90",
+    "value": "Greedy Register Allocator",
+    "xrefs": [
+      {
+        "from": "0x1ebafb0",
+        "func": "sub_1EBAFB0",
+        "type": 1
+      },
+      {
+        "from": "0x1ec04a2",
+        "func": "sub_1EC0400",
+        "type": 1
+      },
+      {
+        "from": "0x2f4c100",
+        "func": "sub_2F4C100",
+        "type": 1
+      },
+      {
+        "from": "0x2f4c372",
+        "func": "sub_2F4C2E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efb63",
+    "value": "exhaustive-register-search",
+    "xrefs": [
+      {
+        "from": "0x503a3c",
+        "func": "ctor_320_0",
+        "type": 1
+      },
+      {
+        "from": "0x57918a",
+        "func": "ctor_583_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efbfc",
+    "value": "greedy register allocator",
+    "xrefs": [
+      {
+        "from": "0x5042f0",
+        "func": "ctor_320_0",
+        "type": 1
+      },
+      {
+        "from": "0x579d88",
+        "func": "ctor_583_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efcb8",
+    "value": "Exhaustive Search for registers bypassing the depth and interference cutoffs of last chance recoloring",
+    "xrefs": [
+      {
+        "from": "0x503b52",
+        "func": "ctor_320_0",
+        "type": 1
+      },
+      {
+        "from": "0x57920e",
+        "func": "ctor_583_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42efec0",
+    "value": "Cost for first time use of callee-saved register.",
+    "xrefs": [
+      {
+        "from": "0x504104",
+        "func": "ctor_320_0",
+        "type": 1
+      },
+      {
+        "from": "0x5795b4",
+        "func": "ctor_583_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42effd0",
+    "value": "Before greedy register allocator",
+    "xrefs": [
+      {
+        "from": "0x1ec4578",
+        "func": "sub_1EC3170",
+        "type": 1
+      },
+      {
+        "from": "0x2f5adab",
+        "func": "sub_2F5A640",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0048",
+    "value": "register allocation failed: maximum depth for recoloring reached. Use -fexhaustive-register-search to skip cutoffs",
+    "xrefs": [
+      {
+        "from": "0x1ecad41",
+        "func": "sub_1ECAC00",
+        "type": 1
+      },
+      {
+        "from": "0x2f5e219",
+        "func": "sub_2F5E080",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f00c0",
+    "value": "register allocation failed: maximum interference for recoloring reached. Use -fexhaustive-register-search to skip cutoffs",
+    "xrefs": [
+      {
+        "from": "0x1ecad51",
+        "func": "sub_1ECAC00",
+        "type": 1
+      },
+      {
+        "from": "0x2f5e229",
+        "func": "sub_2F5E080",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0140",
+    "value": "register allocation failed: maximum interference and depth for recoloring reached. Use -fexhaustive-register-search to skip cutoffs",
+    "xrefs": [
+      {
+        "from": "0x1ecad11",
+        "func": "sub_1ECAC00",
+        "type": 1
+      },
+      {
+        "from": "0x2f5e1e5",
+        "func": "sub_2F5E080",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f01cc",
+    "value": "PBQP Register Allocator",
+    "xrefs": [
+      {
+        "from": "0x1ecadd0",
+        "func": "sub_1ECADD0",
+        "type": 1
+      },
+      {
+        "from": "0x35b80f0",
+        "func": "sub_35B80F0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f01e9",
+    "value": "PBQP register allocator",
+    "xrefs": [
+      {
+        "from": "0x504392",
+        "func": "ctor_321",
+        "type": 1
+      },
+      {
+        "from": "0x5a628f",
+        "func": "ctor_687",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0218",
+    "value": "Attempt coalescing during PBQP register allocation.",
+    "xrefs": [
+      {
+        "from": "0x50451c",
+        "func": "ctor_321",
+        "type": 1
+      },
+      {
+        "from": "0x5a6497",
+        "func": "ctor_687",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0260",
+    "value": "Limit all regclasses to N registers",
+    "xrefs": [
+      {
+        "from": "0x504707",
+        "func": "ctor_322",
+        "type": 1
+      },
+      {
+        "from": "0x57a4a6",
+        "func": "ctor_585",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0284",
+    "value": "Simple Register Coalescing",
+    "xrefs": [
+      {
+        "from": "0x1edaa1a",
+        "func": "sub_1EDA9C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f029f",
+    "value": "simple-register-coalescing",
+    "xrefs": [
+      {
+        "from": "0x1edaa2c",
+        "func": "sub_1EDA9C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f02ba",
+    "value": "Before register coalescing",
+    "xrefs": [
+      {
+        "from": "0x1ee3fc6",
+        "func": "sub_1EE3B80",
+        "type": 1
+      },
+      {
+        "from": "0x2f71c88",
+        "func": "sub_2F71140",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f02d5",
+    "value": "After register coalescing",
+    "xrefs": [
+      {
+        "from": "0x1ee4339",
+        "func": "sub_1EE3B80",
+        "type": 1
+      },
+      {
+        "from": "0x2f71d76",
+        "func": "sub_2F71140",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f03f0",
+    "value": "Verify machine instrs before and after register coalescing",
+    "xrefs": [
+      {
+        "from": "0x504e3d",
+        "func": "ctor_323",
+        "type": 1
+      },
+      {
+        "from": "0x57add0",
+        "func": "ctor_586",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0430",
+    "value": "Scavenge virtual registers inside basic blocks",
+    "xrefs": [
+      {
+        "from": "0x1eea607",
+        "func": "sub_1EEA5D0",
+        "type": 1
+      },
+      {
+        "from": "0x35c5906",
+        "func": "sub_35C58E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0498",
+    "value": ": Cannot scavenge register without an emergency spill slot!",
+    "xrefs": [
+      {
+        "from": "0x1eeaad8",
+        "func": "sub_1EEA6B0",
+        "type": 1
+      },
+      {
+        "from": "0x35c60e2",
+        "func": "sub_35C5CB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0500",
+    "value": "Register Usage Information Collector Pass",
+    "xrefs": [
+      {
+        "from": "0x1eeb870",
+        "func": "sub_1EEB870",
+        "type": 1
+      },
+      {
+        "from": "0x2f7b4d0",
+        "func": "sub_2F7B4D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0530",
+    "value": "Register Usage Information Collector",
+    "xrefs": [
+      {
+        "from": "0x1eeb9af",
+        "func": "sub_1EEB970",
+        "type": 1
+      },
+      {
+        "from": "0x2f7b50b",
+        "func": "sub_2F7B4E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f0570",
+    "value": "Register Usage Information Propagation",
+    "xrefs": [
+      {
+        "from": "0x1eec570",
+        "func": "sub_1EEC570",
+        "type": 1
+      },
+      {
+        "from": "0x1eec8bf",
+        "func": "sub_1EEC880",
+        "type": 1
+      },
+      {
+        "from": "0x2f7c160",
+        "func": "sub_2F7C160",
+        "type": 1
+      },
+      {
+        "from": "0x2f7c19b",
+        "func": "sub_2F7C170",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3043",
+    "value": "\" pass is not registered.",
+    "xrefs": [
+      {
+        "from": "0x1f459bf",
+        "func": "sub_1F45960",
+        "type": 1
+      },
+      {
+        "from": "0x2fef652",
+        "func": "sub_2FEF600",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f31a8",
+    "value": "Must use fast (default) register allocator for unoptimized regalloc.",
+    "xrefs": [
+      {
+        "from": "0x1f47dbc",
+        "func": "sub_1F476F0",
+        "type": 1
+      },
+      {
+        "from": "0x2ff1c0d",
+        "func": "sub_2FF1B90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3220",
+    "value": "Enable interprocedural register allocation to reduce load/store at procedure calls.",
+    "xrefs": [
+      {
+        "from": "0x5074a0",
+        "func": "ctor_335_0",
+        "type": 1
+      },
+      {
+        "from": "0x57f3df",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3298",
+    "value": "Disable pre-register allocation tail duplication",
+    "xrefs": [
+      {
+        "from": "0x50792b",
+        "func": "ctor_335_0",
+        "type": 1
+      },
+      {
+        "from": "0x57f9b6",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3398",
+    "value": "Enable optimized register allocation compilation path.",
+    "xrefs": [
+      {
+        "from": "0x507ee1",
+        "func": "ctor_335_0",
+        "type": 1
+      },
+      {
+        "from": "0x57ff49",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f37c8",
+    "value": "pick register allocator based on -O option",
+    "xrefs": [
+      {
+        "from": "0x509c23",
+        "func": "ctor_335_0",
+        "type": 1
+      },
+      {
+        "from": "0x58356d",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3c19",
+    "value": "Register allocator to use",
+    "xrefs": [
+      {
+        "from": "0x509ba9",
+        "func": "ctor_335_0",
+        "type": 1
+      },
+      {
+        "from": "0x5834f1",
+        "func": "ctor_600_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f3c85",
+    "value": "Error: Super register ",
+    "xrefs": []
+  },
+  {
+    "addr": "0x42f3c9c",
+    "value": " of reserved register ",
+    "xrefs": []
+  },
+  {
+    "addr": "0x42f4e40",
+    "value": "********** REGISTER MAP **********\n",
+    "xrefs": [
+      {
+        "from": "0x1f5b54d",
+        "func": "sub_1F5AFB0",
+        "type": 1
+      },
+      {
+        "from": "0x300c6cd",
+        "func": "sub_300C150",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f4e6c",
+    "value": "Virtual Register Map",
+    "xrefs": [
+      {
+        "from": "0x1f5bab7",
+        "func": "sub_1F5BA80",
+        "type": 1
+      },
+      {
+        "from": "0x300ad16",
+        "func": "sub_300ACF0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f4e8c",
+    "value": "Virtual Register Rewriter",
+    "xrefs": [
+      {
+        "from": "0x1f5bfc2",
+        "func": "sub_1F5BF60",
+        "type": 1
+      },
+      {
+        "from": "0x300ba63",
+        "func": "sub_300BA10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x42f4eb8",
+    "value": "register rewriting failed: cycle in copy bundle",
+    "xrefs": [
+      {
+        "from": "0x1f5d5d7",
+        "func": "sub_1F5C060",
+        "type": 1
+      },
+      {
+        "from": "0x300d9b7",
+        "func": "sub_300C890",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43071c8",
+    "value": "couldn't allocate output register for constraint '",
+    "xrefs": [
+      {
+        "from": "0x207db53",
+        "func": "sub_2079C70",
+        "type": 1
+      },
+      {
+        "from": "0x338f28e",
+        "func": "sub_338BA40",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4307200",
+    "value": "inline asm not supported yet: don't know how to handle tied indirect register inputs",
+    "xrefs": [
+      {
+        "from": "0x207dbba",
+        "func": "sub_2079C70",
+        "type": 1
+      },
+      {
+        "from": "0x338f328",
+        "func": "sub_338BA40",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4307288",
+    "value": "Don't know how to handle indirect register inputs yet for constraint '",
+    "xrefs": [
+      {
+        "from": "0x207d711",
+        "func": "sub_2079C70",
+        "type": 1
+      },
+      {
+        "from": "0x338f412",
+        "func": "sub_338BA40",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4307300",
+    "value": "inline asm error: This value type register class is not natively supported!",
+    "xrefs": [
+      {
+        "from": "0x207c264",
+        "func": "sub_2079C70",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4307dff",
+    "value": "RegisterMask",
+    "xrefs": [
+      {
+        "from": "0x2095e41",
+        "func": "sub_2095B00",
+        "type": 1
+      },
+      {
+        "from": "0x341a3c0",
+        "func": "sub_3418C90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4308c40",
+    "value": "Named registers not implemented for this target",
+    "xrefs": [
+      {
+        "from": "0x20a09b6",
+        "func": "sub_20A09B0",
+        "type": 1
+      },
+      {
+        "from": "0x302edb6",
+        "func": "sub_302EDB0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430ae10",
+    "value": "*** Inconsistent CFA register and/or offset between pred and succ ***\n",
+    "xrefs": [
+      {
+        "from": "0x20e451f",
+        "func": "sub_20E37F0",
+        "type": 1
+      },
+      {
+        "from": "0x37efe25",
+        "func": "sub_37EEB90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b114",
+    "value": "Live Register Matrix",
+    "xrefs": [
+      {
+        "from": "0x2102c77",
+        "func": "sub_2102C30",
+        "type": 1
+      },
+      {
+        "from": "0x2e205e3",
+        "func": "sub_2E205B0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b278",
+    "value": "Verify during register allocation",
+    "xrefs": [
+      {
+        "from": "0x50c343",
+        "func": "ctor_352",
+        "type": 1
+      },
+      {
+        "from": "0x5a6171",
+        "func": "ctor_685",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b2a0",
+    "value": "Register Allocation",
+    "xrefs": [
+      {
+        "from": "0x1ec6bd1",
+        "func": "sub_1EC6BB0",
+        "type": 1
+      },
+      {
+        "from": "0x1ec7836",
+        "func": "sub_1EC7760",
+        "type": 1
+      },
+      {
+        "from": "0x1ec8bba",
+        "func": "sub_1EC7760",
+        "type": 1
+      },
+      {
+        "from": "0x1ec9fd8",
+        "func": "sub_1EC7760",
+        "type": 1
+      },
+      {
+        "from": "0x210bc56",
+        "func": "sub_210BC20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b2c1",
+    "value": "Clobbered Registers: ",
+    "xrefs": [
+      {
+        "from": "0x210d548",
+        "func": "sub_210D080",
+        "type": 1
+      },
+      {
+        "from": "0x2f7a9b5",
+        "func": "sub_2F7A520",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b2d8",
+    "value": "Register Usage Information Storage",
+    "xrefs": [
+      {
+        "from": "0x210d617",
+        "func": "sub_210D5E0",
+        "type": 1
+      },
+      {
+        "from": "0x2f79976",
+        "func": "sub_2F79950",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x430b320",
+    "value": "print register usage details collected for analysis.",
+    "xrefs": [
+      {
+        "from": "0x50c509",
+        "func": "ctor_353",
+        "type": 1
+      },
+      {
+        "from": "0x57b360",
+        "func": "ctor_587",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431105c",
+    "value": "sm_101",
+    "xrefs": [
+      {
+        "from": "0x50cf23",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50db59",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x58452c",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985c20",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43110f2",
+    "value": "sm_20",
+    "xrefs": [
+      {
+        "from": "0x50d293",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50dec0",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x5846a7",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985cc0",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311106",
+    "value": "sm_21",
+    "xrefs": [
+      {
+        "from": "0x50d2eb",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50df18",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x5846b5",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985cd0",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431111a",
+    "value": "sm_30",
+    "xrefs": [
+      {
+        "from": "0x50d343",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50df70",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x5846c3",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985ce0",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431112e",
+    "value": "sm_32",
+    "xrefs": [
+      {
+        "from": "0x50d367",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50dfc8",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x5846d1",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985cf0",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311142",
+    "value": "sm_35",
+    "xrefs": [
+      {
+        "from": "0x50d3b8",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e020",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x5846df",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d00",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311156",
+    "value": "sm_37",
+    "xrefs": [
+      {
+        "from": "0x50d410",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e078",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x5846ed",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d10",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431116a",
+    "value": "sm_50",
+    "xrefs": [
+      {
+        "from": "0x50d468",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e0d0",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x5846fb",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d20",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431117e",
+    "value": "sm_52",
+    "xrefs": [
+      {
+        "from": "0x50d4fb",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e128",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x584709",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x2164ef6",
+        "func": "sub_2164EC0",
+        "type": 1
+      },
+      {
+        "from": "0x305b094",
+        "func": "sub_305B070",
+        "type": 1
+      },
+      {
+        "from": "0x4985d30",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311192",
+    "value": "sm_53",
+    "xrefs": [
+      {
+        "from": "0x50d553",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e18a",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x584717",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d40",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43111a6",
+    "value": "sm_60",
+    "xrefs": [
+      {
+        "from": "0x50d5ab",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e1d8",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x584725",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d50",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43111ba",
+    "value": "sm_61",
+    "xrefs": [
+      {
+        "from": "0x50d603",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e230",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x584733",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d60",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43111ce",
+    "value": "sm_62",
+    "xrefs": [
+      {
+        "from": "0x50d627",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e288",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x584741",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d70",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43111e2",
+    "value": "sm_70",
+    "xrefs": [
+      {
+        "from": "0x50d678",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e2e0",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x58474f",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d80",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43111f6",
+    "value": "sm_72",
+    "xrefs": [
+      {
+        "from": "0x50d70b",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e338",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x58475d",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985d90",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431120a",
+    "value": "sm_73",
+    "xrefs": [
+      {
+        "from": "0x50d763",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x50e390",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x58476b",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985da0",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431123a",
+    "value": "sm_82",
+    "xrefs": [
+      {
+        "from": "0x50d4c7",
+        "func": "ctor_356_0",
+        "type": 1
+      },
+      {
+        "from": "0x584845",
+        "func": "ctor_605",
+        "type": 1
+      },
+      {
+        "from": "0x4985dd0",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43112a0",
+    "value": "Select the sm_100 processor",
+    "xrefs": [
+      {
+        "from": "0x50dade",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43112d9",
+    "value": "Select the sm_101 processor",
+    "xrefs": [
+      {
+        "from": "0x50db63",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311312",
+    "value": "Select the sm_103 processor",
+    "xrefs": [
+      {
+        "from": "0x50dc0a",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431134b",
+    "value": "Select the sm_110 processor",
+    "xrefs": [
+      {
+        "from": "0x50dcb0",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311384",
+    "value": "Select the sm_120 processor",
+    "xrefs": [
+      {
+        "from": "0x50dd7c",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43113bd",
+    "value": "Select the sm_121 processor",
+    "xrefs": [
+      {
+        "from": "0x50de1a",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43113f6",
+    "value": "Select the sm_20 processor",
+    "xrefs": [
+      {
+        "from": "0x50deca",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311411",
+    "value": "Select the sm_21 processor",
+    "xrefs": [
+      {
+        "from": "0x50df24",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431142c",
+    "value": "Select the sm_30 processor",
+    "xrefs": [
+      {
+        "from": "0x50df7a",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311447",
+    "value": "Select the sm_32 processor",
+    "xrefs": [
+      {
+        "from": "0x50dfd4",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311462",
+    "value": "Select the sm_35 processor",
+    "xrefs": [
+      {
+        "from": "0x50e02a",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431147d",
+    "value": "Select the sm_37 processor",
+    "xrefs": [
+      {
+        "from": "0x50e084",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311498",
+    "value": "Select the sm_50 processor",
+    "xrefs": [
+      {
+        "from": "0x50e0ec",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43114b3",
+    "value": "Select the sm_52 processor",
+    "xrefs": [
+      {
+        "from": "0x50e132",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43114ce",
+    "value": "Select the sm_53 processor",
+    "xrefs": [
+      {
+        "from": "0x50e180",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43114e9",
+    "value": "Select the sm_60 processor",
+    "xrefs": [
+      {
+        "from": "0x50e1f8",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311504",
+    "value": "Select the sm_61 processor",
+    "xrefs": [
+      {
+        "from": "0x50e24c",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431151f",
+    "value": "Select the sm_62 processor",
+    "xrefs": [
+      {
+        "from": "0x50e292",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431153a",
+    "value": "Select the sm_70 processor",
+    "xrefs": [
+      {
+        "from": "0x50e2fc",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311555",
+    "value": "Select the sm_72 processor",
+    "xrefs": [
+      {
+        "from": "0x50e342",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311570",
+    "value": "Select the sm_73 processor",
+    "xrefs": [
+      {
+        "from": "0x50e3ac",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431158b",
+    "value": "Select the sm_75 processor",
+    "xrefs": [
+      {
+        "from": "0x50e3e8",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43115a6",
+    "value": "Select the sm_80 processor",
+    "xrefs": [
+      {
+        "from": "0x50e439",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43115c1",
+    "value": "Select the sm_82 processor",
+    "xrefs": [
+      {
+        "from": "0x50e48a",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43115dc",
+    "value": "Select the sm_86 processor",
+    "xrefs": [
+      {
+        "from": "0x50e4e5",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43115f7",
+    "value": "Select the sm_87 processor",
+    "xrefs": [
+      {
+        "from": "0x50e53d",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311612",
+    "value": "Select the sm_88 processor",
+    "xrefs": [
+      {
+        "from": "0x50e595",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x431162d",
+    "value": "Select the sm_89 processor",
+    "xrefs": [
+      {
+        "from": "0x50e5ed",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4311648",
+    "value": "Select the sm_90 processor",
+    "xrefs": [
+      {
+        "from": "0x50e645",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43116a8",
+    "value": "Use 32 bit ptrs for Shared Memory",
+    "xrefs": [
+      {
+        "from": "0x50ce37",
+        "func": "ctor_356_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4326df1",
+    "value": "Bad register class",
+    "xrefs": [
+      {
+        "from": "0x2158810",
+        "func": "sub_21583D0",
+        "type": 1
+      },
+      {
+        "from": "0x302b5e1",
+        "func": "sub_302B130",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43272f0",
+    "value": "Copy one register into another with a different width",
+    "xrefs": [
+      {
+        "from": "0x21625eb",
+        "func": "sub_2162350",
+        "type": 1
+      },
+      {
+        "from": "0x36d62d2",
+        "func": "sub_36D6230",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x432bfc0",
+    "value": "Threshold for special registers rematerialization",
+    "xrefs": [
+      {
+        "from": "0x5108e1",
+        "func": "ctor_361_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x432c1f8",
+    "value": "Kind of Max Register Pressure Information",
+    "xrefs": [
+      {
+        "from": "0x511309",
+        "func": "ctor_361_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x432c5f5",
+    "value": "Bad virtual register encoding",
+    "xrefs": [
+      {
+        "from": "0x2189756",
+        "func": "sub_21893D0",
+        "type": 1
+      },
+      {
+        "from": "0x35ee7ce",
+        "func": "sub_35EE4F0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4359e58",
+    "value": "Inline asm with 128 bit operands is only supported for sm_70 and higher!",
+    "xrefs": [
+      {
+        "from": "0x21ca700",
+        "func": "unknown",
+        "type": 1
+      },
+      {
+        "from": "0x302eedf",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x435d590",
+    "value": "NVPTX Specific: schedule for register pressue",
+    "xrefs": [
+      {
+        "from": "0x511583",
+        "func": "ctor_362",
+        "type": 1
+      },
+      {
+        "from": "0x584cf1",
+        "func": "ctor_607",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x435ee50",
+    "value": "Wrong MMA element type",
+    "xrefs": [
+      {
+        "from": "0x21e5e5a",
+        "func": "sub_21E74C0",
+        "type": 1
+      },
+      {
+        "from": "0x35edd8f",
+        "func": "sub_35EDAD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x435f22c",
+    "value": "Unhandled special register",
+    "xrefs": [
+      {
+        "from": "0x21e8766",
+        "func": "sub_21E86B0",
+        "type": 1
+      },
+      {
+        "from": "0x35f1006",
+        "func": "sub_35F0F50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x435f720",
+    "value": "Register pressure analysis on Machine IRs",
+    "xrefs": [
+      {
+        "from": "0x21eaa47",
+        "func": "sub_21EAA00",
+        "type": 1
+      },
+      {
+        "from": "0x307b563",
+        "func": "sub_307B530",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x435f770",
+    "value": "Enable CTA reconfig aware machine register pressure analysis.",
+    "xrefs": [
+      {
+        "from": "0x511fc9",
+        "func": "ctor_365",
+        "type": 1
+      },
+      {
+        "from": "0x589320",
+        "func": "ctor_611",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x436bb18",
+    "value": "constexpr llvm::StringRef llvm::getTypeName() [with DesiredTypeName = llvm::RegisterPressureAnalysis]",
+    "xrefs": []
+  },
+  {
+    "addr": "0x436f210",
+    "value": "constexpr llvm::StringRef llvm::getTypeName() [with DesiredTypeName = llvm::RegisterPressurePrinterPass]",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4371a38",
+    "value": "constexpr llvm::StringRef llvm::getTypeName() [with DesiredTypeName = llvm::InvalidateAnalysisPass<llvm::RegisterPressureAnalysis>]",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4372cf8",
+    "value": "constexpr llvm::StringRef llvm::getTypeName() [with DesiredTypeName = llvm::RequireAnalysisPass<llvm::RegisterPressureAnalysis, llvm::Function>]",
+    "xrefs": []
+  },
+  {
+    "addr": "0x43741f8",
+    "value": "constexpr llvm::StringRef llvm::getTypeName() [with DesiredTypeName = llvm::RegisterCoalescerPass]",
+    "xrefs": []
+  },
+  {
+    "addr": "0x437bac9",
+    "value": "register-coalescer",
+    "xrefs": [
+      {
+        "from": "0x233ed67",
+        "func": "sub_233C410",
+        "type": 1
+      },
+      {
+        "from": "0x234a3bb",
+        "func": "sub_2342890",
+        "type": 1
+      },
+      {
+        "from": "0x235eb30",
+        "func": "sub_235E150",
+        "type": 1
+      },
+      {
+        "from": "0x2395d7d",
+        "func": "sub_2394710",
+        "type": 1
+      },
+      {
+        "from": "0x2f60c96",
+        "func": "sub_2F60C50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437bc78",
+    "value": "modify-shared-mem;skip-shared-mem;modify-global-mem;skip-global-mem",
+    "xrefs": [
+      {
+        "from": "0x233cecd",
+        "func": "sub_233C410",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437d2f8",
+    "value": "invalid regallocfast register filter '{0}' ",
+    "xrefs": [
+      {
+        "from": "0x23616c6",
+        "func": "sub_235E150",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x437d358",
+    "value": "invalid regallocgreedy register filter '{0}' ",
+    "xrefs": [
+      {
+        "from": "0x235fdd9",
+        "func": "sub_235E150",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438d91f",
+    "value": "warp.size",
+    "xrefs": [
+      {
+        "from": "0x2678e49",
+        "func": "sub_2678420",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438dc5e",
+    "value": "of shared memory.",
+    "xrefs": [
+      {
+        "from": "0x267ad47",
+        "func": "sub_267AC90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x438e200",
+    "value": "Maximum amount of shared memory to use.",
+    "xrefs": [
+      {
+        "from": "0x537b53",
+        "func": "ctor_430_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4395ea0",
+    "value": "Avoid using scaled registers with vscale-relative addressing",
+    "xrefs": [
+      {
+        "from": "0x54a94f",
+        "func": "ctor_470_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4399430",
+    "value": "Consider register pressure impact when sinking",
+    "xrefs": [
+      {
+        "from": "0x552e18",
+        "func": "ctor_486",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439bba0",
+    "value": "Epilogues in waterfall unrolled loops can only execute 0-1 times. This would remove the backedge.Seems to increase register pressure sometimes.",
+    "xrefs": [
+      {
+        "from": "0x55a999",
+        "func": "ctor_502",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439bcfc",
+    "value": "register_call_dtors",
+    "xrefs": [
+      {
+        "from": "0x2a2f304",
+        "func": "sub_2A2E910",
+        "type": 1
+      },
+      {
+        "from": "0x2a2f928",
+        "func": "sub_2A2E910",
+        "type": 1
+      },
+      {
+        "from": "0x2a2fcc8",
+        "func": "sub_2A2E910",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x439fe60",
+    "value": "' not registered!\n",
+    "xrefs": [
+      {
+        "from": "0x2bde706",
+        "func": "sub_2BDE5C0",
+        "type": 1
+      },
+      {
+        "from": "0x31b5f36",
+        "func": "sub_31B5DF0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x43a24b0",
+    "value": "Tensor Memory loads/stores are not supported\n",
+    "xrefs": [
+      {
+        "from": "0x2c8248f",
+        "func": "sub_2C80C90",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444b038",
+    "value": "Register Rematerialization on NVVM IR",
+    "xrefs": [
+      {
+        "from": "0x2d03e93",
+        "func": "sub_2D03E50",
+        "type": 1
+      },
+      {
+        "from": "0x3962252",
+        "func": "sub_39621F0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444ba30",
+    "value": "The ratio relative to the register target to determine high register pressure when collecting remat candidates.",
+    "xrefs": [
+      {
+        "from": "0x56a2b0",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c3df9",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bc28",
+    "value": "Move Insert/Extract to imporve register pressure analysis",
+    "xrefs": [
+      {
+        "from": "0x56a9b1",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c44b9",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bc68",
+    "value": "[DebugOnly] Print register pressure info for the function",
+    "xrefs": [
+      {
+        "from": "0x56ac90",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c473a",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bca8",
+    "value": "[DebugOnly] Print the register target",
+    "xrefs": [
+      {
+        "from": "0x56ada4",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c48ea",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bcd0",
+    "value": "[DebugOnly] Set a R register pressure number",
+    "xrefs": [
+      {
+        "from": "0x56ae8c",
+        "func": "ctor_536_0",
+        "type": 1
+      },
+      {
+        "from": "0x5c49be",
+        "func": "ctor_727_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bd5d",
+    "value": " Register Pressure: ",
+    "xrefs": [
+      {
+        "from": "0x2d0e313",
+        "func": "sub_2D0DB80",
+        "type": 1
+      },
+      {
+        "from": "0x396af45",
+        "func": "sub_396A6C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444bda4",
+    "value": "-shared-mem;",
+    "xrefs": [
+      {
+        "from": "0x2d1a8a5",
+        "func": "sub_2D1A690",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444e2a0",
+    "value": "Enable frame pointer elimination, but reserve the frame pointer register",
+    "xrefs": [
+      {
+        "from": "0x2d9dc07",
+        "func": "sub_2D97F20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444f238",
+    "value": "Allow spill in spill slot of greater size than register size",
+    "xrefs": [
+      {
+        "from": "0x56e71b",
+        "func": "ctor_551",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444f278",
+    "value": "Allow passing GC Pointer arguments in callee saved registers",
+    "xrefs": [
+      {
+        "from": "0x56e8ed",
+        "func": "ctor_551",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444f2e0",
+    "value": "Enable simple copy propagation during register reloading",
+    "xrefs": [
+      {
+        "from": "0x56eab6",
+        "func": "ctor_551",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444f320",
+    "value": "Max number of statepoints allowed to pass GC Ptrs in registers",
+    "xrefs": [
+      {
+        "from": "0x56ec7e",
+        "func": "ctor_551",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x444fdbd",
+    "value": "Virtual register '%",
+    "xrefs": [
+      {
+        "from": "0x2e25438",
+        "func": "sub_2E25370",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44511e8",
+    "value": "Sink instructions into cycles to avoid register spills",
+    "xrefs": [
+      {
+        "from": "0x576583",
+        "func": "ctor_573",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4451394",
+    "value": " cannot change register bank",
+    "xrefs": [
+      {
+        "from": "0x2ef60f3",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4451520",
+    "value": "generic instruction must use register operands",
+    "xrefs": [
+      {
+        "from": "0x2ef3426",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44515a8",
+    "value": " source and destination register classes must match",
+    "xrefs": [
+      {
+        "from": "0x2ef6a40",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4451fb0",
+    "value": "extract source must be a register",
+    "xrefs": [
+      {
+        "from": "0x2ef5d2b",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4452030",
+    "value": "extract reads past end of register",
+    "xrefs": [
+      {
+        "from": "0x2ef67cc",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4452058",
+    "value": "insert source must be a register",
+    "xrefs": [
+      {
+        "from": "0x2ef5cfd",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44520a8",
+    "value": "inserted size must be smaller than total register",
+    "xrefs": [
+      {
+        "from": "0x2ef70c2",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44520e0",
+    "value": "insert writes past end of register",
+    "xrefs": [
+      {
+        "from": "0x2ef61f4",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4452430",
+    "value": "G_INSERT_SUBVECTOR first source must be a register",
+    "xrefs": [
+      {
+        "from": "0x2ef5d14",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4452468",
+    "value": "G_INSERT_SUBVECTOR second source must be a register",
+    "xrefs": [
+      {
+        "from": "0x2ef620b",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4452668",
+    "value": "G_EXTRACT_SUBVECTOR first source must be a register",
+    "xrefs": [
+      {
+        "from": "0x2ef5ee3",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4452cd0",
+    "value": "All register operands must have scalar types",
+    "xrefs": [
+      {
+        "from": "0x2ef6c33",
+        "func": "sub_2EF30A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453658",
+    "value": "Invalid register operand for REG_SEQUENCE",
+    "xrefs": [
+      {
+        "from": "0x2ef7d45",
+        "func": "sub_2EF7830",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44536c0",
+    "value": "REG_SEQUENCE does not support physical register results",
+    "xrefs": [
+      {
+        "from": "0x2ef86de",
+        "func": "sub_2EF7830",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x445394a",
+    "value": "- p. register: ",
+    "xrefs": [
+      {
+        "from": "0x2efc1c8",
+        "func": "sub_2EFAB50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453b10",
+    "value": "Live in register not found to be live out from predecessor.",
+    "xrefs": [
+      {
+        "from": "0x2f017f8",
+        "func": "sub_2EFFE00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453be0",
+    "value": "Expected a non-register operand.",
+    "xrefs": [
+      {
+        "from": "0x2f03eff",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453c08",
+    "value": "Register operand must be marked debug",
+    "xrefs": [
+      {
+        "from": "0x2f04754",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453c30",
+    "value": "Register operand must not be marked debug",
+    "xrefs": [
+      {
+        "from": "0x2f03a5c",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453c60",
+    "value": "Undef virtual register def operands require a subregister",
+    "xrefs": [
+      {
+        "from": "0x2f04f86",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453ca0",
+    "value": "Generic virtual register use cannot be undef",
+    "xrefs": [
+      {
+        "from": "0x2f04994",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453cd0",
+    "value": "Generic virtual register does not allow subregister index",
+    "xrefs": [
+      {
+        "from": "0x2f050e0",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453d32",
+    "value": "Expected a register operand.",
+    "xrefs": [
+      {
+        "from": "0x2f04484",
+        "func": "sub_2F02A10",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4453f99",
+    "value": "callee-saved-register",
+    "xrefs": [
+      {
+        "from": "0x2f0ef9b",
+        "func": "sub_2F0EDE0",
+        "type": 1
+      },
+      {
+        "from": "0x2f0f693",
+        "func": "sub_2F0F4A0",
+        "type": 1
+      },
+      {
+        "from": "0x39d1d92",
+        "func": "sub_39D1C00",
+        "type": 1
+      },
+      {
+        "from": "0x39d2468",
+        "func": "sub_39D22A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4454278",
+    "value": "entry-value-register",
+    "xrefs": [
+      {
+        "from": "0x2f1d8c9",
+        "func": "sub_2F1D7D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44543c4",
+    "value": "registers",
+    "xrefs": [
+      {
+        "from": "0x2f1ffcf",
+        "func": "sub_2F1FBF0",
+        "type": 1
+      },
+      {
+        "from": "0x39dcffb",
+        "func": "sub_39DCE30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44543ce",
+    "value": "preferred-register",
+    "xrefs": [
+      {
+        "from": "0x2f213ba",
+        "func": "sub_2F1FBF0",
+        "type": 1
+      },
+      {
+        "from": "0x39d1aef",
+        "func": "sub_39D1A30",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4454b10",
+    "value": "no registers from class available to allocate",
+    "xrefs": [
+      {
+        "from": "0x2f419ee",
+        "func": "sub_2F418E0",
+        "type": 1
+      },
+      {
+        "from": "0x35b525b",
+        "func": "sub_35B51A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4454c4f",
+    "value": " virtual registers copies ",
+    "xrefs": [
+      {
+        "from": "0x2f55667",
+        "func": "sub_2F551D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4454da0",
+    "value": "Change the greedy register allocator's live range priority calculation to make the AllocationPriority of the register class more important then whether the range is global",
+    "xrefs": [
+      {
+        "from": "0x57997f",
+        "func": "ctor_583_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4454f10",
+    "value": "The threshold for splitting a virtual register with a hint, in percentage",
+    "xrefs": [
+      {
+        "from": "0x579d0a",
+        "func": "ctor_583_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4455068",
+    "value": "prioritize low virtual register numbers for test and debug",
+    "xrefs": [
+      {
+        "from": "0x579fcd",
+        "func": "ctor_584_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44550c9",
+    "value": "Register Coalescer",
+    "xrefs": [
+      {
+        "from": "0x2f60c8b",
+        "func": "sub_2F60C50",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4457c18",
+    "value": "sm_102",
+    "xrefs": [
+      {
+        "from": "0x58454c",
+        "func": "ctor_605",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x445905e",
+    "value": "Has support for Tensor Memory",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44c2959",
+    "value": "Register name ",
+    "xrefs": [
+      {
+        "from": "0x3023bf4",
+        "func": "sub_3023AD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c2a40",
+    "value": ".attribute(.managed) requires PTX version >= 4.0 and sm_30",
+    "xrefs": [
+      {
+        "from": "0x3024ddb",
+        "func": "sub_3024A30",
+        "type": 1
+      },
+      {
+        "from": "0x302abe2",
+        "func": "sub_3029BF0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c2d10",
+    "value": ".alias requires PTX version >= 6.3 and sm_30",
+    "xrefs": [
+      {
+        "from": "0x302db4c",
+        "func": "sub_302DB00",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c3838",
+    "value": "nvvm.mma.blockscale currently supports non-sync aligned variants only!",
+    "xrefs": [
+      {
+        "from": "0x30332ea",
+        "func": "sub_3032470",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c3880",
+    "value": "nvvm.mma.sparse.blockscale currently supports non-sync aligned variants only!",
+    "xrefs": [
+      {
+        "from": "0x303329c",
+        "func": "sub_3032470",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6a48",
+    "value": "Support for dynamic alloca introduced in PTX ISA version 7.3 and requires target sm_52.",
+    "xrefs": [
+      {
+        "from": "0x3038425",
+        "func": "sub_30381D0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6aa0",
+    "value": "Support for stackrestore requires PTX ISA version >= 7.3 and target >= sm_52.",
+    "xrefs": [
+      {
+        "from": "0x30385aa",
+        "func": "sub_3038500",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6af0",
+    "value": "Support for stacksave requires PTX ISA version >= 7.3 and target >= sm_52.",
+    "xrefs": [
+      {
+        "from": "0x30387cf",
+        "func": "sub_3038700",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6b50",
+    "value": "tcgen05.wait supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x304644d",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6bb8",
+    "value": "tcgen05.fence supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x3046d61",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6c20",
+    "value": "tcgen05.alloc supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x304635e",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6c88",
+    "value": "tcgen05.dealloc supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x304649d",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6cf0",
+    "value": "tcgen05.relinquish.alloc supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x3046409",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6d60",
+    "value": "tcgen05.cp.* supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x3046b05",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6dc8",
+    "value": "tcgen05.commit.* supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x3046d26",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c6e30",
+    "value": "tcgen05.commit.* supports only 16-bit and 32-bit multicast mask size.",
+    "xrefs": [
+      {
+        "from": "0x30476d2",
+        "func": "sub_30462A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c7160",
+    "value": "tcgen05.mma supported only on arch-conditional or family-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x304e89d",
+        "func": "sub_304E6C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c7370",
+    "value": "{fp6/fp4}x2 types in cvt_packfloat intrinsic supported only in arch-conditional variants from SM100 onwards.",
+    "xrefs": [
+      {
+        "from": "0x304fc75",
+        "func": "sub_304FBD0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c8606",
+    "value": "register-pressure-analysis",
+    "xrefs": [
+      {
+        "from": "0x305edb8",
+        "func": "sub_305ED20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44c86e0",
+    "value": "Only run old NVPTX remat on kernels without register targets",
+    "xrefs": [
+      {
+        "from": "0x587b92",
+        "func": "ctor_609_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44cf120",
+    "value": "tensor_spec",
+    "xrefs": []
+  },
+  {
+    "addr": "0x44d2c60",
+    "value": "Override the vector register size in bits, which is otherwise found by querying TTI.",
+    "xrefs": [
+      {
+        "from": "0x595d5d",
+        "func": "ctor_641",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d3948",
+    "value": "no GCMetadataPrinter registered for GC: ",
+    "xrefs": [
+      {
+        "from": "0x31e501d",
+        "func": "sub_31E4CF0",
+        "type": 1
+      },
+      {
+        "from": "0x3971f3e",
+        "func": "sub_3971E20",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d45f0",
+    "value": "Reserved registers on the clobber list may not be preserved across the asm statement, and clobbering them may lead to undefined behaviour.",
+    "xrefs": [
+      {
+        "from": "0x31f3401",
+        "func": "sub_31F26A0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d4d78",
+    "value": "Bytes of callee saved registers",
+    "xrefs": [
+      {
+        "from": "0x320aa6c",
+        "func": "sub_320A500",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d4d98",
+    "value": "Flags (defines frame register)",
+    "xrefs": [
+      {
+        "from": "0x320ab28",
+        "func": "sub_320A500",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d5f20",
+    "value": "super-register",
+    "xrefs": [
+      {
+        "from": "0x3242b16",
+        "func": "sub_3242390",
+        "type": 1
+      },
+      {
+        "from": "0x399f3f7",
+        "func": "sub_399EB70",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d5f2f",
+    "value": "no DWARF register encoding",
+    "xrefs": [
+      {
+        "from": "0x3242d43",
+        "func": "sub_3242390",
+        "type": 1
+      },
+      {
+        "from": "0x3242dba",
+        "func": "sub_3242390",
+        "type": 1
+      },
+      {
+        "from": "0x399f2dc",
+        "func": "sub_399EB70",
+        "type": 1
+      },
+      {
+        "from": "0x399f4f8",
+        "func": "sub_399EB70",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44d5f4a",
+    "value": "sub-register",
+    "xrefs": [
+      {
+        "from": "0x32426d9",
+        "func": "sub_3242390",
+        "type": 1
+      },
+      {
+        "from": "0x3242ee6",
+        "func": "sub_3242390",
+        "type": 1
+      },
+      {
+        "from": "0x399ee6d",
+        "func": "sub_399EB70",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44da2a6",
+    "value": "write to reserved register '",
+    "xrefs": [
+      {
+        "from": "0x3382d48",
+        "func": "sub_3382C80",
+        "type": 1
+      },
+      {
+        "from": "0x3382dd8",
+        "func": "sub_3382C80",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e1340",
+    "value": "use-registers-for-deopt-values",
+    "xrefs": [
+      {
+        "from": "0x59c8cd",
+        "func": "ctor_659",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e1360",
+    "value": "Allow using registers for non pointer deopt args",
+    "xrefs": [
+      {
+        "from": "0x59c989",
+        "func": "ctor_659",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e1398",
+    "value": "use-registers-for-gc-values-in-landing-pad",
+    "xrefs": [
+      {
+        "from": "0x59caa4",
+        "func": "ctor_659",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e13c8",
+    "value": "Allow using registers for gc pointer in landing pad",
+    "xrefs": [
+      {
+        "from": "0x59cb59",
+        "func": "ctor_659",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e143c",
+    "value": "max-registers-for-gc-values",
+    "xrefs": [
+      {
+        "from": "0x59cc71",
+        "func": "ctor_659",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e55ed",
+    "value": "pipeliner-register-pressure",
+    "xrefs": [
+      {
+        "from": "0x5a3f50",
+        "func": "ctor_676_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e57c0",
+    "value": "Limit register pressure of scheduled loop",
+    "xrefs": [
+      {
+        "from": "0x5a3fd4",
+        "func": "ctor_676_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e57f0",
+    "value": "pipeliner-register-pressure-margin",
+    "xrefs": [
+      {
+        "from": "0x5a4056",
+        "func": "ctor_676_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5818",
+    "value": "Margin representing the unused percentage of the register pressure limit",
+    "xrefs": [
+      {
+        "from": "0x5a40bc",
+        "func": "ctor_676_0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5bc8",
+    "value": "Rename virtual register operands",
+    "xrefs": [
+      {
+        "from": "0x35832c0",
+        "func": "sub_35832C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5be9",
+    "value": "Rename Register Operands",
+    "xrefs": [
+      {
+        "from": "0x3583406",
+        "func": "sub_35833E0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5eb8",
+    "value": "Register Allocation Pass Scoring",
+    "xrefs": [
+      {
+        "from": "0x3592740",
+        "func": "unknown",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e5ee0",
+    "value": "Register Allocation Scoring Pass",
+    "xrefs": [
+      {
+        "from": "0x35927b6",
+        "func": "sub_3592790",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e6420",
+    "value": "Register Allocation",
+    "xrefs": [
+      {
+        "from": "0x2f51141",
+        "func": "sub_2F51120",
+        "type": 1
+      },
+      {
+        "from": "0x2f57ca5",
+        "func": "sub_2F57C30",
+        "type": 1
+      },
+      {
+        "from": "0x2f5d629",
+        "func": "sub_2F5D4A0",
+        "type": 1
+      },
+      {
+        "from": "0x35b4fa6",
+        "func": "sub_35B4F70",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e73d2",
+    "value": "Unexpected tcgen05.cp shape",
+    "xrefs": [
+      {
+        "from": "0x35f5465",
+        "func": "sub_35F5090",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e73ee",
+    "value": ".warpx2::02_13",
+    "xrefs": [
+      {
+        "from": "0x35f55b6",
+        "func": "sub_35F5090",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e73fd",
+    "value": ".warpx2::01_23",
+    "xrefs": [
+      {
+        "from": "0x35f55c7",
+        "func": "sub_35F5090",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e740c",
+    "value": ".warpx4",
+    "xrefs": [
+      {
+        "from": "0x35f55a5",
+        "func": "sub_35F5090",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e7438",
+    "value": "Unsupported tcgen05.cp shape and multicast flags",
+    "xrefs": [
+      {
+        "from": "0x35f55d8",
+        "func": "sub_35F5090",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44e7470",
+    "value": "Unsupported tcgen05.cp destination format",
+    "xrefs": [
+      {
+        "from": "0x35f5476",
+        "func": "sub_35F5090",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x44ffbf0",
+    "value": "PTX does not support \"atomic\" for orderings different than\"NotAtomic\" or \"Monotonic\" for sm_60 or older, but order is: \"{}\".",
+    "xrefs": [
+      {
+        "from": "0x36e1e82",
+        "func": "sub_36E1BC0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4500198",
+    "value": "ashift is not supported with tcgen05.mma.block_scale variants",
+    "xrefs": [
+      {
+        "from": "0x36e9977",
+        "func": "sub_36E9630",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4500210",
+    "value": "Cannot use weight stationary with mxf8f6f4 and fp4 types",
+    "xrefs": [
+      {
+        "from": "0x36ea563",
+        "func": "sub_36E9630",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x451d0e8",
+    "value": "NVPTX Proxy Register Instruction Erasure",
+    "xrefs": [
+      {
+        "from": "0x36f5b40",
+        "func": "sub_36F5B40",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x452f868",
+    "value": "register can't be represented in SEH unwind info",
+    "xrefs": [
+      {
+        "from": "0x38ff87e",
+        "func": "sub_38FF7C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x452f899",
+    "value": "register number is too high",
+    "xrefs": [
+      {
+        "from": "0x38ff894",
+        "func": "sub_38FF7C0",
+        "type": 1
+      }
+    ]
+  },
+  {
+    "addr": "0x4ce1123",
+    "value": "\tmma;~od",
+    "xrefs": []
+  },
+  {
+    "addr": "0x4ce1b78",
+    "value": "eb`?lxhnIDH\u0007MMA\u001b^\n\b9vgCM=2.w$0",
+    "xrefs": []
+  }
+]

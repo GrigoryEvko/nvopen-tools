@@ -1,0 +1,65 @@
+[
+  {
+    "name": "optimization_framework",
+    "function_count": 62769,
+    "high_confidence": 500,
+    "medium_confidence": 62269,
+    "low_confidence": 0
+  },
+  {
+    "name": "register_allocation",
+    "function_count": 7730,
+    "high_confidence": 1225,
+    "medium_confidence": 6505,
+    "low_confidence": 0
+  },
+  {
+    "name": "unknown",
+    "function_count": 7581,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0
+  },
+  {
+    "name": "compilation_pipeline",
+    "function_count": 936,
+    "high_confidence": 26,
+    "medium_confidence": 910,
+    "low_confidence": 0
+  },
+  {
+    "name": "ptx_emission",
+    "function_count": 647,
+    "high_confidence": 48,
+    "medium_confidence": 599,
+    "low_confidence": 0
+  },
+  {
+    "name": "error_handling",
+    "function_count": 531,
+    "high_confidence": 40,
+    "medium_confidence": 491,
+    "low_confidence": 0
+  },
+  {
+    "name": "architecture_detection",
+    "function_count": 177,
+    "high_confidence": 34,
+    "medium_confidence": 143,
+    "low_confidence": 0
+  },
+  {
+    "name": "tensor_core_codegen",
+    "function_count": 104,
+    "high_confidence": 26,
+    "medium_confidence": 78,
+    "low_confidence": 0
+  },
+  {
+    "name": "instruction_selection",
+    "function_count": 87,
+    "high_confidence": 26,
+    "medium_confidence": 61,
+    "low_confidence": 0
+  }
+]
