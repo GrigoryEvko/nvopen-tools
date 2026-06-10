@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moved to crucible-notes</title>
+  <script>
+    // Deep-link redirect: rewrite /nvopen-tools/<path> -> /crucible-notes/<path>,
+    // preserving the full sub-path, query string, and fragment so old wiki
+    // links (e.g. /nvopen-tools/cicc/reference/foo.html) land on the same page
+    // under the new name.
+    (function () {
+      var path = location.pathname.replace(/^\/nvopen-tools(?=\/|$)/, "/crucible-notes");
+      if (path === location.pathname) {
+        // Not under the old base for some reason; fall back to the new root.
+        path = "/crucible-notes/";
+      }
+      location.replace(location.origin + path + location.search + location.hash);
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0; url=https://gh.evko.io/crucible-notes/">
+</head>
+<body>
+  <p>This page has moved to
+     <a href="https://gh.evko.io/crucible-notes/">crucible-notes</a>. Redirecting…</p>
+</body>
+</html>
